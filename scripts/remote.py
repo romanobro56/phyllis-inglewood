@@ -68,7 +68,7 @@ def tar_bytes(paths):
         for p in paths:
             src = ROOT / p
             if src.exists():
-                t.add(src, arcname=p, filter=lambda ti: None if Path(ti.name).name in SKIP else ti)
+                t.add(src, arcname=p, filter=lambda ti, p=p: None if ti.name != p and Path(ti.name).name in SKIP else ti)   # never skip the folder asked for (flies/jobs)
     return buf.getvalue()
 
 
