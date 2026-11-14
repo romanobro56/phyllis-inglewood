@@ -14,5 +14,3 @@ __pycache__/
 # secrets
 .env
 
-# test splats
-web/scenes/_test/

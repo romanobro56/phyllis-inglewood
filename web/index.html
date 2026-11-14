@@ -2,101 +2,208 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>flyhack</title>
+<title>Fly Brain World</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="importmap">
 { "imports": {
     "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
-    "@sparkjsdev/spark": "https://cdn.jsdelivr.net/npm/@sparkjsdev/spark@2.4.0/dist/spark.module.js"
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
 } }
 </script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/latin-600.css">
 <style>
-  html, body { margin: 0; height: 100%; overflow: hidden; background: #000; color: #fff;
-               font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  :root {
+    --claude: #d97757;
+    --bg: #ecbbab;            /* Claude orange, five 10% tints lighter (50% toward white) */
+    --band: #f4d6cb;
+    --ink: #2b1a14;
+    --muted: #7a4f42;
+    --ph: 300px;              /* brain panel height, set from main.js */
+    --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--bg); color: var(--ink);
+               font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
   #world { position: fixed; inset: 0; }
-  #world canvas { display: block; transition: filter .25s ease; }
-  #world canvas.dim { filter: saturate(.25) brightness(.55) !important; }
+  button { font: inherit; color: inherit; }
 
-  /* film: grain and vignette over everything, so the fly and the photo read as one picture */
-  #vignette { position: fixed; inset: 0; pointer-events: none;
-              background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.5) 100%); }
-  #grain { position: fixed; inset: -50%; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
-           animation: grain .5s steps(4) infinite; }
-  @keyframes grain { 0% { transform: translate(0,0) } 25% { transform: translate(-3%,2%) }
-                     50% { transform: translate(2%,-3%) } 75% { transform: translate(-2%,-1%) } }
+  /* overview text */
+  #hud { position: fixed; left: 22px; top: 18px; max-width: 400px; font-size: 13px; line-height: 1.55; color: var(--muted);
+         transition: opacity .4s; pointer-events: none; }
+  #hud h1 { font-size: 20px; font-weight: 600; color: var(--ink); margin: 0 0 4px; letter-spacing: -.01em; }
+  #hud b { color: var(--ink); font-weight: 600; }
+  #status { position: fixed; right: 18px; bottom: 16px; font: 11px var(--mono); color: var(--muted); letter-spacing: .04em; }
 
-  /* the switch: map and aerial images over the canvas, and the flash */
-  #switch { position: fixed; inset: 0; overflow: hidden; opacity: 0; pointer-events: none; background: #000; }
-  #switch img { position: absolute; left: 0; top: 0; opacity: 0; }
-  #switch .map { transform-origin: 0 0; }
-  #switch .aerial { width: 100%; height: 100%; object-fit: cover; }
-  #switch::after { content: ""; position: absolute; inset: 0; background: #2b4a6b; mix-blend-mode: soft-light; opacity: .55; }
-  #flash { position: fixed; inset: 0; background: #fff; opacity: 0; pointer-events: none; }
-  #cover { position: fixed; inset: 0; background: #000; transition: opacity 1.2s ease; pointer-events: none; }
-  #cover.gone { opacity: 0; }
+  /* labels floating over the stations */
+  .label { padding: 4px 9px; border-radius: 8px; background: rgba(255, 246, 242, .82); font-size: 12px; white-space: nowrap;
+           border: 1px solid rgba(43, 26, 20, .12); box-shadow: 0 2px 10px rgba(120, 50, 30, .12); pointer-events: none; color: var(--ink); }
+  .label b { color: #a8432a; font-weight: 600; }
+  .label.untrained b { color: #9a6a00; }
+  .label .cap { display: block; color: var(--muted); font-size: 11px; }
+  .label.lesioned { border-color: #d0312d; box-shadow: 0 0 0 1px #d0312d; }
 
-  /* the fly's name, bottom right, on arrival */
-  #name { position: fixed; right: 56px; bottom: 52px; text-align: right; opacity: 0; transform: translateY(6px);
-          transition: opacity .5s ease, transform .5s ease; text-shadow: 0 1px 12px rgba(0,0,0,.6); pointer-events: none; }
-  #name.on { opacity: 1; transform: none; }
-  #name b { display: block; font-size: 30px; font-weight: 600; letter-spacing: -.01em; }
-  #name i { display: block; font-style: normal; font-size: 13px; opacity: .7; margin-top: 4px; }
+  /* the brain panel across the top (its background and the neurons are drawn by WebGL) */
+  #panel { position: fixed; left: 0; right: 0; top: 0; height: var(--ph); display: grid; grid-template-columns: 27% 1fr 27%;
+           transform: translateY(-101%); transition: transform .6s cubic-bezier(.2, .8, .2, 1);
+           border-bottom: 1px solid rgba(43, 26, 20, .14); z-index: 5; }
+  #panel.open { transform: none; }
+  #p-left, #p-right { padding: 18px 22px; font-size: 12px; overflow: hidden; }
+  #p-brain { cursor: grab; }
+  #p-brain:active { cursor: grabbing; }
+  .kicker { font: 10px var(--mono); letter-spacing: .14em; color: var(--claude); text-transform: uppercase; }
+  .kicker i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: currentColor; margin-right: 6px;
+              animation: blink 1.2s infinite; vertical-align: 0; }
+  #p-title { font-size: 22px; margin: 6px 0 2px; font-weight: 600; letter-spacing: -.01em; }
+  #p-sub { font: 11px var(--mono); color: var(--muted); }
+  #p-caption { margin: 14px 0 12px; font-size: 15px; min-height: 2.6em; }
+  #p-lesion { background: transparent; border: 1px solid rgba(43, 26, 20, .35); border-radius: 999px; padding: 6px 12px;
+              font-size: 12px; cursor: pointer; }
+  #p-lesion.on { background: #d0312d; border-color: #d0312d; color: #fff; }
+  .hint { margin-top: 12px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+  .bar { margin: 0 0 7px; font-size: 12px; }
+  .bar .row { display: flex; justify-content: space-between; }
+  .bar .name { font-weight: 500; }
+  .bar .pct { font-family: var(--mono); color: var(--muted); }
+  .bar .track { height: 6px; background: rgba(43, 26, 20, .1); border-radius: 3px; overflow: hidden; margin-top: 3px; }
+  .bar .fill { height: 100%; border-radius: 3px; transition: width .35s; }
+  .bar.chosen .name::after { content: "  \2190 chosen"; font-weight: 400; color: var(--muted); font-size: 11px; }
+  #p-legend { margin-top: 10px; font: 10px/1.6 var(--mono); color: var(--muted); }
+  #tip { position: fixed; padding: 4px 8px; border-radius: 6px; background: rgba(43, 26, 20, .9); color: #fff; font: 11px var(--mono);
+         pointer-events: none; display: none; z-index: 20; }
 
-  /* its latest line, like a subtitle */
-  #sub { position: fixed; left: 50%; bottom: 44px; transform: translateX(-50%); max-width: 60vw; text-align: center;
-         font-size: 17px; line-height: 1.4; opacity: 0; transition: opacity .4s ease; pointer-events: none;
-         text-shadow: 0 1px 3px #000, 0 0 14px rgba(0,0,0,.6); }
-  #sub.on { opacity: .92; }
+  /* the panel inside the pods: dark */
+  body.wall #panel { color: #ffc2c8; border-bottom-color: rgba(255, 60, 80, .25); }
+  body.wall #p-sub, body.wall .hint, body.wall .bar .pct, body.wall #p-legend { color: #b0606b; }
+  body.wall .kicker { color: #ff4458; }
+  body.wall #p-lesion { border-color: rgba(255, 160, 170, .45); }
+  body.wall .bar .track { background: rgba(255, 120, 140, .15); }
 
-  /* the wheel */
-  #wheel { position: fixed; inset: 0; display: grid; place-items: center; pointer-events: none; opacity: 0; transition: opacity .15s ease; }
-  #wheel.open { opacity: 1; pointer-events: auto; }
-  #wheel .ring { position: relative; width: 0; height: 0; }
-  #wheel .slot { position: absolute; left: -60px; top: -60px; width: 120px; text-align: center; cursor: pointer; }
-  #wheel .face { width: 104px; height: 104px; margin: 0 auto; border-radius: 50%; overflow: hidden; background: #1a1a1c;
-                 box-shadow: 0 0 0 2px rgba(255,255,255,.35), 0 6px 24px rgba(0,0,0,.5); transition: transform .12s ease, box-shadow .12s ease; }
-  #wheel .face img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  #wheel .face img:not([src]) { visibility: hidden; }
-  #wheel .name { margin-top: 10px; font-size: 13px; font-weight: 600; opacity: .75; text-shadow: 0 1px 6px #000; white-space: nowrap; }
-  #wheel .slot.sel .face { transform: scale(1.14); box-shadow: 0 0 0 3px #fff, 0 8px 30px rgba(0,0,0,.6); }
-  #wheel .slot.sel .name { opacity: 1; }
+  /* navigation */
+  #nav { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); display: flex; flex-direction: column;
+         align-items: center; gap: 8px; z-index: 10; user-select: none; }
+  #nav .row { display: flex; gap: 10px; align-items: center; }
+  #nav button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(43, 26, 20, .28); background: rgba(255, 245, 240, .35);
+                backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); cursor: pointer; display: grid; place-items: center;
+                transition: background .2s, transform .15s, border-color .2s; padding: 0; }
+  #nav button:hover { background: rgba(255, 245, 240, .7); }
+  #nav button:active { transform: scale(.94); }
+  #nav svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  #nav #up svg { transition: transform .4s; }
+  #nav-label { font: 10px var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); min-height: 12px; }
+  body.wall #nav button { border-color: rgba(255, 170, 180, .4); background: rgba(30, 0, 5, .35); color: #ffd3d8; }
+  body.wall #nav button:hover { background: rgba(60, 0, 10, .6); }
+  body.wall #nav #up svg { transform: rotate(180deg); }
+  body.wall #nav-label { color: #ffd3d8; }
 
-  /* dishes for flies that wait to be fed */
-  #menu { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); display: none; gap: 6px;
-          max-width: 80vw; overflow-x: auto; scrollbar-width: none; }
-  #menu.on { display: flex; }
-  #menu.waiting { opacity: .35; pointer-events: none; }
-  #menu button { font-size: 24px; width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer;
-                 background: rgba(0,0,0,.35); backdrop-filter: blur(6px); transition: transform .1s ease; }
-  #menu button:hover { transform: scale(1.15); }
+  /* the pods */
+  #wallfx { position: fixed; inset: 0; pointer-events: none; opacity: 0; transition: opacity 1.6s; z-index: 1;
+            background: radial-gradient(ellipse at 50% 45%, transparent 35%, rgba(70, 0, 8, .55) 80%, rgba(20, 0, 2, .9) 100%); }
+  #wallfx::after { content: ""; position: absolute; inset: 0;
+                   background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .07) 0 1px, transparent 1px 3px);
+                   animation: flicker 5s infinite steps(1); }
+  body.wall #wallfx { opacity: 1; }
+  #wallhud { position: fixed; left: 22px; bottom: 18px; font: 11px/1.7 var(--mono); color: #ffb3bc; letter-spacing: .06em;
+             opacity: 0; transition: opacity 1s .6s; pointer-events: none; z-index: 2; text-shadow: 0 0 8px rgba(255, 0, 30, .6); }
+  #wallhud .rec { color: #ff2a3e; }
+  #wallhud .rec i { display: inline-block; width: 8px; height: 8px; background: #ff2a3e; border-radius: 50%; margin-right: 6px; animation: blink 1s infinite; }
+  body.wall #wallhud { opacity: 1; }
+  body.wall #hud, body.fly #hud { opacity: 0; }
+  body.wall #status { color: #b0606b; }
+  .plaque { font: 8px/1.45 var(--mono); color: #ff9aa5; background: rgba(12, 2, 4, .82); border-left: 2px solid #c0182c;
+            padding: 4px 7px; letter-spacing: .04em; pointer-events: none; width: 104px; }
+  .plaque .more { display: none !important; }
+  .plaque.focus { width: 180px; font-size: 9px; }
+  .plaque.focus .more { display: block !important; margin-top: 2px; }
+  .plaque b { display: block; color: #ffd6da; font-weight: 600; }
+  .plaque span { display: block; }
+  .plaque .cap { display: block; color: #fff; font-style: italic; margin-top: 3px; white-space: normal; }
+  .plaque.lesioned { border-left-color: #fff; }
+  .plaque.lesioned .cap::before { content: "SIGNAL LOST \2014 "; color: #ff2a3e; font-style: normal; }
 
-  #status { position: fixed; left: 24px; bottom: 20px; font-size: 12px; opacity: 0; transition: opacity .3s; }
-  #status.on { opacity: .6; }
-  #edit { position: fixed; left: 16px; top: 14px; font: 11px/1.6 ui-monospace, Menlo, monospace; background: rgba(0,0,0,.55);
-          padding: 8px 10px; border-radius: 6px; white-space: pre; }
-  #edit::after { content: attr(data-msg); display: block; color: #9fe; }
+  /* the menu: scroll through dishes, pick one, feed it (flies with a menu, e.g. the critic) */
+  #menu { position: fixed; left: 50%; bottom: 96px; transform: translate(-50%, 12px); width: min(760px, 94vw);
+          display: flex; align-items: stretch; gap: 8px; opacity: 0; pointer-events: none; transition: opacity .35s, transform .35s;
+          z-index: 9; }
+  #menu.open { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+  #menu-strip { flex: 1; display: flex; gap: 6px; overflow-x: auto; scroll-snap-type: x proximity; padding: 8px;
+                border-radius: 14px; background: rgba(255, 246, 242, .55); border: 1px solid rgba(43, 26, 20, .14);
+                backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); scrollbar-width: thin;
+                mask-image: linear-gradient(90deg, transparent, #000 18px, #000 calc(100% - 18px), transparent); }
+  #menu-strip .grp { flex: none; writing-mode: vertical-rl; transform: rotate(180deg); font: 9px var(--mono); letter-spacing: .14em;
+                     text-transform: uppercase; color: var(--muted); padding: 0 2px; align-self: center; }
+  .dish { flex: none; width: 66px; padding: 6px 2px 5px; border-radius: 10px; border: 1px solid transparent; background: transparent;
+          cursor: pointer; scroll-snap-align: center; display: flex; flex-direction: column; align-items: center; gap: 3px;
+          transition: background .15s, border-color .15s, transform .15s; }
+  .dish:hover { background: rgba(255, 255, 255, .55); }
+  .dish.sel { border-color: var(--claude); background: rgba(255, 255, 255, .8); transform: translateY(-2px); }
+  .dish .e { font-size: 26px; line-height: 1.1; }
+  .dish.rotten .e { filter: sepia(.8) hue-rotate(40deg) saturate(.6) brightness(.8); }
+  .dish .n { font-size: 10px; line-height: 1.2; text-align: center; color: var(--ink); max-width: 62px; }
+  #menu-feed { flex: none; width: 104px; border-radius: 14px; border: 0; background: var(--claude); color: #fff; cursor: pointer;
+               font-size: 13px; font-weight: 600; display: flex; flex-direction: column; align-items: center; justify-content: center;
+               gap: 2px; transition: filter .15s, opacity .2s; }
+  #menu-feed:hover { filter: brightness(1.07); }
+  #menu-feed:disabled { opacity: .55; cursor: wait; }
+  #menu-feed .e { font-size: 24px; }
+  #menu-feed small { font-weight: 400; font-size: 10px; opacity: .9; }
+  body.wall #menu-strip { background: rgba(25, 3, 7, .6); border-color: rgba(255, 90, 110, .25); }
+  body.wall .dish .n, body.wall #menu-strip .grp { color: #ffc2c8; }
+  body.wall .dish:hover, body.wall .dish.sel { background: rgba(120, 10, 25, .45); }
+  body.wall #menu-feed { background: #b0182c; }
+
+  @keyframes blink { 50% { opacity: .15; } }
+  @keyframes flicker { 0%, 100% { opacity: 1; } 41% { opacity: .4; } 42% { opacity: 1; } 77% { opacity: .7; } 78% { opacity: 1; } }
+  @media (max-width: 760px) {
+    #panel { grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; }
+    #p-brain { grid-column: 1 / 3; grid-row: 2; }
+    #p-left, #p-right { padding: 10px 14px; }
+    .hint, #p-legend { display: none; }
+  }
 </style>
 </head>
-<body>
+<body class="overview">
 <div id="world"></div>
-<div id="vignette"></div>
-<svg id="grain" width="200%" height="200%"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
-<div id="name"></div>
-<div id="sub"></div>
-<div id="menu"></div>
-<div id="wheel"><div class="ring"></div></div>
-<div id="switch"><img class="map" alt=""><img class="aerial" alt=""></div>
-<div id="flash"></div>
-<div id="cover"></div>
-<div id="status">offline</div>
-<div id="edit" hidden>shift+click  place fly
-[ ]  turn      - =  size
-c  fly frame   v  scene frame
-k  collision mesh
-p  copy scene.json</div>
-<script type="module" src="./world.js"></script>
+<div id="wallfx"></div>
+
+<div id="hud">
+  <h1>Fly Brain World</h1>
+  Every fly runs on its own copy of the real fruit-fly connectome (FlyWire, 134k neurons).
+  Each thing you see a fly do was chosen by its descending neurons a moment ago.<br>
+  <b>&lsaquo; &rsaquo;</b> visit each fly and watch its brain live. <b>&#710;</b> see where they really are.
+</div>
+<div id="status">connecting...</div>
+
+<div id="panel">
+  <div id="p-left">
+    <div class="kicker"><i></i><span id="p-kicker">live brain</span></div>
+    <div id="p-title"></div>
+    <div id="p-sub"></div>
+    <div id="p-caption"></div>
+    <button id="p-lesion">Lesion connectome: off</button>
+    <div class="hint">Hover a neuron for its FlyWire ID, click to open it in Codex. Drag to turn the brain.</div>
+  </div>
+  <div id="p-brain"></div>
+  <div id="p-right">
+    <div class="kicker" style="margin-bottom:10px">descending neurons &rarr; action</div>
+    <div id="p-bars"></div>
+    <div id="p-legend"></div>
+  </div>
+</div>
+<div id="tip"></div>
+
+<div id="wallhud"></div>
+
+<div id="menu">
+  <div id="menu-strip"></div>
+  <button id="menu-feed"></button>
+</div>
+
+<div id="nav">
+  <div class="row">
+    <button id="prev" title="Previous (&larr;)"><svg viewBox="0 0 16 16"><path d="M10 3 5 8l5 5"/></svg></button>
+    <button id="up" title="Up to the pods (&uarr;) / back down (&darr;)"><svg viewBox="0 0 16 16"><path d="M3 10l5-5 5 5"/></svg></button>
+    <button id="next" title="Next (&rarr;)"><svg viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></button>
+  </div>
+  <div id="nav-label"></div>
+</div>
+<script type="module" src="./main.js"></script>
 </body>
 </html>

@@ -1,7 +1,0 @@
-{
-  "camera": { "position": [0, 0, 0], "target": [0, -0.25, -3], "fov": 55 },
-  "light": { "direction": [-0.3, 1, 0.2], "intensity": 1.3, "ambient": 0.45 },
-  "flies": {
-    "orchestra": { "position": [-0.45, -0.59, -2.1], "yaw": 1.4, "scale": 2.0 }
-  }
-}

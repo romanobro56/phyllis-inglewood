@@ -1,7 +1,0 @@
-{
-  "camera": { "position": [0, 0, 0], "target": [0, -0.25, -3], "fov": 50 },
-  "light": { "direction": [0.6, 0.7, 0.2], "intensity": 0.55, "ambient": 0.15 },
-  "flies": {
-    "inbox": { "position": [0, -0.64, -2.2], "yaw": 0.5, "scale": 1.5 }
-  }
-}
