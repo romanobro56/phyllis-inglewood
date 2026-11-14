@@ -42,10 +42,24 @@ cmd_add() {
   local u="${1:-}" key="${2:-}"
   check_name "$u"
   [ -n "$key" ] || die "usage: sudo bash scripts/team_mac.sh add <user> \"ssh-ed25519 AAAA... name@laptop\""
+  # Repair keys copied out of email/chat: drop wrap markers (│) and rejoin a base64 body that got
+  # split across lines, e.g. "ssh-ed25519 AAAA...Jfg6\n │ ce7I... ali-flyhack".
+  [[ "$key" == *"ssh-ed25519 "* ]] && key="ssh-ed25519 ${key#*ssh-ed25519 }"   # drop a pasted "cat ..." line
+  key="${key//│/ }"
+  local -a t; read -ra t <<< "$(echo $key)"
+  if [ "${t[0]:-}" = "ssh-ed25519" ]; then
+    local body="${t[1]:-}" i=2
+    while [ ${#body} -lt 68 ] && [ $i -lt ${#t[@]} ] && [[ "${t[$i]}" =~ ^[A-Za-z0-9+/=]+$ ]]; do
+      body="$body${t[$i]}"; i=$((i + 1))
+    done
+    key="ssh-ed25519 $body ${t[*]:$i}"; key="${key% }"
+  fi
   [[ "$key" != *$'\n'* ]] || die "paste exactly one key line"
   local re='^(ssh-ed25519|ssh-rsa|ecdsa-sha2-nistp[0-9]+|sk-ssh-ed25519@openssh\.com) '
   [[ "$key" =~ $re ]] || die "that doesn't look like a public key (it should start with ssh-ed25519). Never accept a private key."
-  echo "$key" | ssh-keygen -l -f - >/dev/null 2>&1 || die "ssh-keygen can't read that public key"
+  local fp; fp="$(echo "$key" | ssh-keygen -l -f - 2>/dev/null)" || die "ssh-keygen can't read that public key"
+  echo "key for $u: $fp"
+  echo "  (the teammate can confirm it matches: ssh-keygen -lf ~/.ssh/id_ed25519.pub)"
 
   if user_exists "$u"; then
     echo "account $u already exists"
