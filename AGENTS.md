@@ -1,6 +1,8 @@
 # Agent brief: build and train a fly brain for the flyhack project
 
 You are helping one teammate build **one or more "flies"** for a hackathon. Read this whole file before acting.
+**If you are running on Roman's Mac** (your teammate logged in over SSH), also read `docs/SHARED_MAC.md` and
+follow its rules (own account, own port, no sudo).
 
 ## What the project is
 
