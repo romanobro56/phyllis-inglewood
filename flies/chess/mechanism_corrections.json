@@ -1,0 +1,8 @@
+{
+  "reason": "Identity constructor labels any checkpoint as TRAINED by default; explicitly label untrained/parent/restricted/entropy/frozen-opponent controls.",
+  "affected_source": "mechanism_eval.py",
+  "frozen_source_sha256": "9de3ac2338bc98a58525b39315156fef8368534d06f0011fd1aab05dc1873988",
+  "corrected_source_sha256": "5f9112c3f1ac0cc9eafb35e4a35ef64cfc30ef3b42790d634c5c5c5129d2ed14",
+  "gameplay_probabilities_metrics_and_checkpoints_changed": false,
+  "primary_protocol_unchanged": true
+}

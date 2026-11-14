@@ -1,0 +1,10131 @@
+{
+  "version": "matched-legal-trees-v1",
+  "seed": 1907,
+  "attempts": 677,
+  "excluded_families": 413,
+  "train": [
+    {
+      "family": "267685e6f22a2f07a37df4f1142eb622b44234d1fe84ebb40ebee22e790e0855",
+      "positions": [
+        "k7/3R4/8/8/6Q1/5K2/8/8 w - - 0 1",
+        "7k/3R4/8/8/6Q1/5K2/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g4g8"
+        ],
+        [
+          "g4g7"
+        ]
+      ],
+      "legal_moves": [
+        "d7a7",
+        "d7b7",
+        "d7c7",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7",
+        "f3e2",
+        "f3e3",
+        "f3e4",
+        "f3f2",
+        "f3f4",
+        "f3g2",
+        "f3g3",
+        "g4a4",
+        "g4b4",
+        "g4c4",
+        "g4d4",
+        "g4e4",
+        "g4e6",
+        "g4f4",
+        "g4f5",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h3",
+        "g4h4",
+        "g4h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "0f1473ab3074f0db60decf1498718d0e18352f99e7cca210dd4ba1d7f52d1158",
+      "positions": [
+        "8/7Q/7K/8/1R6/8/8/k7 w - - 0 1",
+        "k7/7Q/7K/8/1R6/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h7a7",
+          "h7b1"
+        ],
+        [
+          "h7b7"
+        ]
+      ],
+      "legal_moves": [
+        "b4a4",
+        "b4b1",
+        "b4b2",
+        "b4b3",
+        "b4b5",
+        "b4b6",
+        "b4b7",
+        "b4b8",
+        "b4c4",
+        "b4d4",
+        "b4e4",
+        "b4f4",
+        "b4g4",
+        "b4h4",
+        "h6g5",
+        "h6g6",
+        "h6g7",
+        "h6h5",
+        "h7a7",
+        "h7b1",
+        "h7b7",
+        "h7c2",
+        "h7c7",
+        "h7d3",
+        "h7d7",
+        "h7e4",
+        "h7e7",
+        "h7f5",
+        "h7f7",
+        "h7g6",
+        "h7g7",
+        "h7g8",
+        "h7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a5f1a27005f0d2a5911a2a636d3edaeceeaa4925aee8914fe8fc651eaa9d2068",
+      "positions": [
+        "4Q3/8/7k/8/8/6R1/4K3/8 w - - 0 1",
+        "4Q3/7k/8/8/8/6R1/4K3/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e8h8",
+          "e8g6"
+        ],
+        [
+          "e8h5"
+        ]
+      ],
+      "legal_moves": [
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2e3",
+        "e2f1",
+        "e2f2",
+        "e2f3",
+        "e8a4",
+        "e8a8",
+        "e8b5",
+        "e8b8",
+        "e8c6",
+        "e8c8",
+        "e8d7",
+        "e8d8",
+        "e8e3",
+        "e8e4",
+        "e8e5",
+        "e8e6",
+        "e8e7",
+        "e8f7",
+        "e8f8",
+        "e8g6",
+        "e8g8",
+        "e8h5",
+        "e8h8",
+        "g3a3",
+        "g3b3",
+        "g3c3",
+        "g3d3",
+        "g3e3",
+        "g3f3",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "cc867b59da6246e68cdfb9bf421a08806d2e3fe458821a403d02e0ee0e466913",
+      "positions": [
+        "8/8/8/8/8/7R/KQ6/3k4 w - - 0 1",
+        "8/8/8/k7/8/7R/KQ6/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h3h1"
+        ],
+        [
+          "h3a3"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2b1",
+        "a2b3",
+        "b2a1",
+        "b2a3",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c1",
+        "b2c2",
+        "b2c3",
+        "b2d2",
+        "b2d4",
+        "b2e2",
+        "b2e5",
+        "b2f2",
+        "b2f6",
+        "b2g2",
+        "b2g7",
+        "b2h2",
+        "b2h8",
+        "h3a3",
+        "h3b3",
+        "h3c3",
+        "h3d3",
+        "h3e3",
+        "h3f3",
+        "h3g3",
+        "h3h1",
+        "h3h2",
+        "h3h4",
+        "h3h5",
+        "h3h6",
+        "h3h7",
+        "h3h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "3c2b5211a5815315f4fd3de3151a345fef6ce7356a64251a82d04a46998c8009",
+      "positions": [
+        "6K1/8/8/8/3R4/1Q6/8/2k5 w - - 0 1",
+        "6K1/8/8/k7/3R4/1Q6/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d4d1"
+        ],
+        [
+          "d4a4"
+        ]
+      ],
+      "legal_moves": [
+        "b3a2",
+        "b3a3",
+        "b3a4",
+        "b3b1",
+        "b3b2",
+        "b3b4",
+        "b3b5",
+        "b3b6",
+        "b3b7",
+        "b3b8",
+        "b3c2",
+        "b3c3",
+        "b3c4",
+        "b3d1",
+        "b3d3",
+        "b3d5",
+        "b3e3",
+        "b3e6",
+        "b3f3",
+        "b3f7",
+        "b3g3",
+        "b3h3",
+        "d4a4",
+        "d4b4",
+        "d4c4",
+        "d4d1",
+        "d4d2",
+        "d4d3",
+        "d4d5",
+        "d4d6",
+        "d4d7",
+        "d4d8",
+        "d4e4",
+        "d4f4",
+        "d4g4",
+        "d4h4",
+        "g8f7",
+        "g8f8",
+        "g8g7",
+        "g8h7",
+        "g8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "3a23dcc776cafb25702001c23e482758fc31d59a14e4919ef1680bf0e609d863",
+      "positions": [
+        "6Q1/1R6/8/8/8/8/8/k2K4 w - - 0 1",
+        "6Q1/1R6/8/8/8/8/8/3K3k w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g8a8"
+        ],
+        [
+          "b7h7"
+        ]
+      ],
+      "legal_moves": [
+        "b7a7",
+        "b7b1",
+        "b7b2",
+        "b7b3",
+        "b7b4",
+        "b7b5",
+        "b7b6",
+        "b7b8",
+        "b7c7",
+        "b7d7",
+        "b7e7",
+        "b7f7",
+        "b7g7",
+        "b7h7",
+        "d1c1",
+        "d1c2",
+        "d1d2",
+        "d1e1",
+        "d1e2",
+        "g8a2",
+        "g8a8",
+        "g8b3",
+        "g8b8",
+        "g8c4",
+        "g8c8",
+        "g8d5",
+        "g8d8",
+        "g8e6",
+        "g8e8",
+        "g8f7",
+        "g8f8",
+        "g8g1",
+        "g8g2",
+        "g8g3",
+        "g8g4",
+        "g8g5",
+        "g8g6",
+        "g8g7",
+        "g8h7",
+        "g8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "dc90ccffc8eb83d6f65eac42cd18f990d0e8fdc0af33472a8a7ba2fdad5f1b8a",
+      "positions": [
+        "k7/3R4/8/5Q2/5K2/8/8/8 w - - 0 1",
+        "4k3/3R4/8/5Q2/5K2/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f5f8"
+        ],
+        [
+          "f5f7"
+        ]
+      ],
+      "legal_moves": [
+        "d7a7",
+        "d7b7",
+        "d7c7",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7",
+        "f4e3",
+        "f4e4",
+        "f4e5",
+        "f4f3",
+        "f4g3",
+        "f4g4",
+        "f4g5",
+        "f5a5",
+        "f5b1",
+        "f5b5",
+        "f5c2",
+        "f5c5",
+        "f5d3",
+        "f5d5",
+        "f5e4",
+        "f5e5",
+        "f5e6",
+        "f5f6",
+        "f5f7",
+        "f5f8",
+        "f5g4",
+        "f5g5",
+        "f5g6",
+        "f5h3",
+        "f5h5",
+        "f5h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "2cac71e3b31a53905ea142702ea61d49efe945017a7ee5b74447d55948849d95",
+      "positions": [
+        "8/1R5Q/8/8/8/5K2/8/k7 w - - 0 1",
+        "2k5/1R5Q/8/8/8/5K2/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h7b1"
+        ],
+        [
+          "h7d7",
+          "h7c7"
+        ]
+      ],
+      "legal_moves": [
+        "b7a7",
+        "b7b1",
+        "b7b2",
+        "b7b3",
+        "b7b4",
+        "b7b5",
+        "b7b6",
+        "b7b8",
+        "b7c7",
+        "b7d7",
+        "b7e7",
+        "b7f7",
+        "b7g7",
+        "f3e2",
+        "f3e3",
+        "f3e4",
+        "f3f2",
+        "f3f4",
+        "f3g2",
+        "f3g3",
+        "f3g4",
+        "h7b1",
+        "h7c2",
+        "h7c7",
+        "h7d3",
+        "h7d7",
+        "h7e4",
+        "h7e7",
+        "h7f5",
+        "h7f7",
+        "h7g6",
+        "h7g7",
+        "h7g8",
+        "h7h1",
+        "h7h2",
+        "h7h3",
+        "h7h4",
+        "h7h5",
+        "h7h6",
+        "h7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "3fef7c9a917551025a5c102a81a5f70014e0886e348aeed6a829355fe400b2a3",
+      "positions": [
+        "8/8/8/5Q2/8/8/1R6/k6K w - - 0 1",
+        "8/k7/8/5Q2/8/8/1R6/7K w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f5b1"
+        ],
+        [
+          "f5a5"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "f5a5",
+        "f5b1",
+        "f5b5",
+        "f5c2",
+        "f5c5",
+        "f5c8",
+        "f5d3",
+        "f5d5",
+        "f5d7",
+        "f5e4",
+        "f5e5",
+        "f5e6",
+        "f5f1",
+        "f5f2",
+        "f5f3",
+        "f5f4",
+        "f5f6",
+        "f5f7",
+        "f5f8",
+        "f5g4",
+        "f5g5",
+        "f5g6",
+        "f5h3",
+        "f5h5",
+        "f5h7",
+        "h1g1",
+        "h1g2",
+        "h1h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "c86399020feb515f077bb303ec864c5c2afb96263738d97d6a1a4a5059ef0b02",
+      "positions": [
+        "8/8/3K4/8/1Q6/8/3R4/k7 w - - 0 1",
+        "8/8/3K4/8/1Q6/8/3R4/5k2 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b4b2"
+        ],
+        [
+          "b4b1"
+        ]
+      ],
+      "legal_moves": [
+        "b4a3",
+        "b4a4",
+        "b4a5",
+        "b4b1",
+        "b4b2",
+        "b4b3",
+        "b4b5",
+        "b4b6",
+        "b4b7",
+        "b4b8",
+        "b4c3",
+        "b4c4",
+        "b4c5",
+        "b4d4",
+        "b4e4",
+        "b4f4",
+        "b4g4",
+        "b4h4",
+        "d2a2",
+        "d2b2",
+        "d2c2",
+        "d2d1",
+        "d2d3",
+        "d2d4",
+        "d2d5",
+        "d2e2",
+        "d2f2",
+        "d2g2",
+        "d2h2",
+        "d6c5",
+        "d6c6",
+        "d6c7",
+        "d6d5",
+        "d6d7",
+        "d6e5",
+        "d6e6",
+        "d6e7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "2b7e98f96075280a3dcd71df4d31e53ed3059a72a1e430081057798d614caa44",
+      "positions": [
+        "7Q/8/8/8/8/1R6/k2K4/8 w - - 0 1",
+        "7Q/8/8/k7/8/1R6/3K4/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h8b2"
+        ],
+        [
+          "h8a8",
+          "h8a1"
+        ]
+      ],
+      "legal_moves": [
+        "b3a3",
+        "b3b1",
+        "b3b2",
+        "b3b4",
+        "b3b5",
+        "b3b6",
+        "b3b7",
+        "b3b8",
+        "b3c3",
+        "b3d3",
+        "b3e3",
+        "b3f3",
+        "b3g3",
+        "b3h3",
+        "d2c1",
+        "d2c2",
+        "d2c3",
+        "d2d1",
+        "d2d3",
+        "d2e1",
+        "d2e2",
+        "d2e3",
+        "h8a1",
+        "h8a8",
+        "h8b2",
+        "h8b8",
+        "h8c3",
+        "h8c8",
+        "h8d4",
+        "h8d8",
+        "h8e5",
+        "h8e8",
+        "h8f6",
+        "h8f8",
+        "h8g7",
+        "h8g8",
+        "h8h1",
+        "h8h2",
+        "h8h3",
+        "h8h4",
+        "h8h5",
+        "h8h6",
+        "h8h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "3a07b2aaa88556ea03491d57428a3353c9d1791eca3328c75bc4b9d251b5b552",
+      "positions": [
+        "8/8/8/6Q1/8/8/3R4/K6k w - - 0 1",
+        "8/7k/8/6Q1/8/8/3R4/K7 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g5g2"
+        ],
+        [
+          "d2h2"
+        ]
+      ],
+      "legal_moves": [
+        "a1a2",
+        "a1b1",
+        "a1b2",
+        "d2a2",
+        "d2b2",
+        "d2c2",
+        "d2d1",
+        "d2d3",
+        "d2d4",
+        "d2d5",
+        "d2d6",
+        "d2d7",
+        "d2d8",
+        "d2e2",
+        "d2f2",
+        "d2g2",
+        "d2h2",
+        "g5a5",
+        "g5b5",
+        "g5c5",
+        "g5d5",
+        "g5d8",
+        "g5e3",
+        "g5e5",
+        "g5e7",
+        "g5f4",
+        "g5f5",
+        "g5f6",
+        "g5g1",
+        "g5g2",
+        "g5g3",
+        "g5g4",
+        "g5g6",
+        "g5g7",
+        "g5g8",
+        "g5h4",
+        "g5h5",
+        "g5h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "fa8b9f56c75db018482d43469f35e91f30808593002cdb564252e6651a3927a5",
+      "positions": [
+        "4Q3/8/8/k7/8/8/1R2K3/8 w - - 0 1",
+        "4Q3/k7/8/8/8/8/1R2K3/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e8a8",
+          "e8b5"
+        ],
+        [
+          "e8a4"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c2",
+        "b2d2",
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2e3",
+        "e2f1",
+        "e2f2",
+        "e2f3",
+        "e8a4",
+        "e8a8",
+        "e8b5",
+        "e8b8",
+        "e8c6",
+        "e8c8",
+        "e8d7",
+        "e8d8",
+        "e8e3",
+        "e8e4",
+        "e8e5",
+        "e8e6",
+        "e8e7",
+        "e8f7",
+        "e8f8",
+        "e8g6",
+        "e8g8",
+        "e8h5",
+        "e8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "ead4472afb672ef303759ee8ada639e4256e29cbfd713dedc615e14ee668ec78",
+      "positions": [
+        "1R4Q1/8/8/8/4K3/k7/8/8 w - - 0 1",
+        "1R4Q1/8/8/8/k3K3/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g8b3"
+        ],
+        [
+          "g8a2"
+        ]
+      ],
+      "legal_moves": [
+        "b8a8",
+        "b8b1",
+        "b8b2",
+        "b8b3",
+        "b8b4",
+        "b8b5",
+        "b8b6",
+        "b8b7",
+        "b8c8",
+        "b8d8",
+        "b8e8",
+        "b8f8",
+        "e4d3",
+        "e4d4",
+        "e4d5",
+        "e4e3",
+        "e4e5",
+        "e4f3",
+        "e4f4",
+        "e4f5",
+        "g8a2",
+        "g8b3",
+        "g8c4",
+        "g8c8",
+        "g8d5",
+        "g8d8",
+        "g8e6",
+        "g8e8",
+        "g8f7",
+        "g8f8",
+        "g8g1",
+        "g8g2",
+        "g8g3",
+        "g8g4",
+        "g8g5",
+        "g8g6",
+        "g8g7",
+        "g8h7",
+        "g8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "c91a6cbf28d20c63b2c0f92b60d41fc3894808f4c58a43447a00631e4712cffb",
+      "positions": [
+        "1K6/8/8/8/8/8/1R3Q2/2k5 w - - 0 1",
+        "1K6/8/8/8/8/8/1R3Q2/7k w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f2d2",
+          "f2c2"
+        ],
+        [
+          "f2h2",
+          "f2g2",
+          "f2f1",
+          "f2e1",
+          "b2b1"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b8a7",
+        "b8a8",
+        "b8b7",
+        "b8c7",
+        "b8c8",
+        "f2a7",
+        "f2b6",
+        "f2c2",
+        "f2c5",
+        "f2d2",
+        "f2d4",
+        "f2e1",
+        "f2e2",
+        "f2e3",
+        "f2f1",
+        "f2f3",
+        "f2f4",
+        "f2f5",
+        "f2f6",
+        "f2f7",
+        "f2f8",
+        "f2g1",
+        "f2g2",
+        "f2g3",
+        "f2h2",
+        "f2h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "170c032210c9278e16a8a7ceb02bf9cf72da9fbdc82c45aafc57457babf3f991",
+      "positions": [
+        "8/8/4K3/5R2/8/8/6Q1/k7 w - - 0 1",
+        "8/7k/4K3/5R2/8/8/6Q1/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f5f1"
+        ],
+        [
+          "f5h5"
+        ]
+      ],
+      "legal_moves": [
+        "e6d5",
+        "e6d6",
+        "e6d7",
+        "e6e5",
+        "e6e7",
+        "e6f6",
+        "e6f7",
+        "f5a5",
+        "f5b5",
+        "f5c5",
+        "f5d5",
+        "f5e5",
+        "f5f1",
+        "f5f2",
+        "f5f3",
+        "f5f4",
+        "f5f6",
+        "f5f7",
+        "f5f8",
+        "f5g5",
+        "f5h5",
+        "g2a2",
+        "g2a8",
+        "g2b2",
+        "g2b7",
+        "g2c2",
+        "g2c6",
+        "g2d2",
+        "g2d5",
+        "g2e2",
+        "g2e4",
+        "g2f1",
+        "g2f2",
+        "g2f3",
+        "g2g1",
+        "g2g3",
+        "g2g4",
+        "g2g5",
+        "g2g6",
+        "g2g7",
+        "g2g8",
+        "g2h1",
+        "g2h2",
+        "g2h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "68351e4168cef51fc0bcf05640be7bd51fdef61117d7c0ee54500853d200a57e",
+      "positions": [
+        "8/1R6/8/8/8/k2K4/8/1Q6 w - - 0 1",
+        "8/1R6/k7/8/8/3K4/8/1Q6 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b7a7",
+          "b1b3",
+          "b1a1"
+        ],
+        [
+          "b1b6",
+          "b1b5"
+        ]
+      ],
+      "legal_moves": [
+        "b1a1",
+        "b1a2",
+        "b1b2",
+        "b1b3",
+        "b1b4",
+        "b1b5",
+        "b1b6",
+        "b1c1",
+        "b1c2",
+        "b1d1",
+        "b1e1",
+        "b1f1",
+        "b1g1",
+        "b1h1",
+        "b7a7",
+        "b7b2",
+        "b7b3",
+        "b7b4",
+        "b7b5",
+        "b7b6",
+        "b7b8",
+        "b7c7",
+        "b7d7",
+        "b7e7",
+        "b7f7",
+        "b7g7",
+        "b7h7",
+        "d3c2",
+        "d3c3",
+        "d3c4",
+        "d3d2",
+        "d3d4",
+        "d3e2",
+        "d3e3",
+        "d3e4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "2ee1401d57901516519725397d9b6fd8d8fb5146238a5ee515cef3efb3939836",
+      "positions": [
+        "3Q4/8/8/7k/8/6R1/8/6K1 w - - 0 1",
+        "3Q4/7k/8/8/8/6R1/8/6K1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d8h8",
+          "d8g5"
+        ],
+        [
+          "d8h4"
+        ]
+      ],
+      "legal_moves": [
+        "d8a5",
+        "d8a8",
+        "d8b6",
+        "d8b8",
+        "d8c7",
+        "d8c8",
+        "d8d1",
+        "d8d2",
+        "d8d3",
+        "d8d4",
+        "d8d5",
+        "d8d6",
+        "d8d7",
+        "d8e7",
+        "d8e8",
+        "d8f6",
+        "d8f8",
+        "d8g5",
+        "d8g8",
+        "d8h4",
+        "d8h8",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1h1",
+        "g1h2",
+        "g3a3",
+        "g3b3",
+        "g3c3",
+        "g3d3",
+        "g3e3",
+        "g3f3",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "5a0410b23bdcd7c3979ccad42799583715ddbac0818aa07a32efa678c98b578e",
+      "positions": [
+        "2k5/R7/8/8/8/Q7/4K3/8 w - - 0 1",
+        "4k3/R7/8/8/8/Q7/4K3/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a3f8"
+        ],
+        [
+          "a3e7"
+        ]
+      ],
+      "legal_moves": [
+        "a3a1",
+        "a3a2",
+        "a3a4",
+        "a3a5",
+        "a3a6",
+        "a3b2",
+        "a3b3",
+        "a3b4",
+        "a3c1",
+        "a3c3",
+        "a3c5",
+        "a3d3",
+        "a3d6",
+        "a3e3",
+        "a3e7",
+        "a3f3",
+        "a3f8",
+        "a3g3",
+        "a3h3",
+        "a7a4",
+        "a7a5",
+        "a7a6",
+        "a7a8",
+        "a7b7",
+        "a7c7",
+        "a7d7",
+        "a7e7",
+        "a7f7",
+        "a7g7",
+        "a7h7",
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2e3",
+        "e2f1",
+        "e2f2",
+        "e2f3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "16c87665a3b5f66e0521fc0487a036b9750a3de1a50518ad41f5a809e28ebfea",
+      "positions": [
+        "2Q5/3K4/8/8/8/k7/8/1R6 w - - 0 1",
+        "2Q5/k2K4/8/8/8/8/8/1R6 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c8a8",
+          "c8a6"
+        ],
+        [
+          "c8b7"
+        ]
+      ],
+      "legal_moves": [
+        "b1a1",
+        "b1b2",
+        "b1b3",
+        "b1b4",
+        "b1b5",
+        "b1b6",
+        "b1b7",
+        "b1b8",
+        "b1c1",
+        "b1d1",
+        "b1e1",
+        "b1f1",
+        "b1g1",
+        "b1h1",
+        "c8a6",
+        "c8a8",
+        "c8b7",
+        "c8b8",
+        "c8c1",
+        "c8c2",
+        "c8c3",
+        "c8c4",
+        "c8c5",
+        "c8c6",
+        "c8c7",
+        "c8d8",
+        "c8e8",
+        "c8f8",
+        "c8g8",
+        "c8h8",
+        "d7c6",
+        "d7c7",
+        "d7d6",
+        "d7d8",
+        "d7e6",
+        "d7e7",
+        "d7e8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "eb0b838b7b47bba6060ee783f5c4fb9c890f512279a6cc497544fd5b837392eb",
+      "positions": [
+        "8/1K4Q1/1R6/8/8/8/8/7k w - - 0 1",
+        "8/1K4Q1/1R6/8/8/8/k7/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b6h6"
+        ],
+        [
+          "g7b2"
+        ]
+      ],
+      "legal_moves": [
+        "b6a6",
+        "b6b1",
+        "b6b2",
+        "b6b3",
+        "b6b4",
+        "b6b5",
+        "b6c6",
+        "b6d6",
+        "b6e6",
+        "b6f6",
+        "b6g6",
+        "b6h6",
+        "b7a6",
+        "b7a7",
+        "b7a8",
+        "b7b8",
+        "b7c6",
+        "b7c7",
+        "b7c8",
+        "g7a1",
+        "g7b2",
+        "g7c3",
+        "g7c7",
+        "g7d4",
+        "g7d7",
+        "g7e5",
+        "g7e7",
+        "g7f6",
+        "g7f7",
+        "g7f8",
+        "g7g1",
+        "g7g2",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h6",
+        "g7h7",
+        "g7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "1e72138f801b507ea9638bbaeeaf5ccc41b9e8c32138629e608c4c1597bb789a",
+      "positions": [
+        "3Q4/8/1R6/8/8/8/8/k5K1 w - - 0 1",
+        "3Q4/k7/1R6/8/8/8/8/6K1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d8a8"
+        ],
+        [
+          "d8b8"
+        ]
+      ],
+      "legal_moves": [
+        "b6a6",
+        "b6b1",
+        "b6b2",
+        "b6b3",
+        "b6b4",
+        "b6b5",
+        "b6b7",
+        "b6b8",
+        "b6c6",
+        "b6d6",
+        "b6e6",
+        "b6f6",
+        "b6g6",
+        "b6h6",
+        "d8a8",
+        "d8b8",
+        "d8c7",
+        "d8c8",
+        "d8d1",
+        "d8d2",
+        "d8d3",
+        "d8d4",
+        "d8d5",
+        "d8d6",
+        "d8d7",
+        "d8e7",
+        "d8e8",
+        "d8f6",
+        "d8f8",
+        "d8g5",
+        "d8g8",
+        "d8h4",
+        "d8h8",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1h1",
+        "g1h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a5d48de810e86308b849f5c00594e6a57a30fff91def353536d09f9ae7451318",
+      "positions": [
+        "8/6Q1/8/8/R7/8/3K4/7k w - - 0 1",
+        "2k5/6Q1/8/8/R7/8/3K4/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a4h4"
+        ],
+        [
+          "a4a8"
+        ]
+      ],
+      "legal_moves": [
+        "a4a1",
+        "a4a2",
+        "a4a3",
+        "a4a5",
+        "a4a6",
+        "a4a7",
+        "a4a8",
+        "a4b4",
+        "a4c4",
+        "a4d4",
+        "a4e4",
+        "a4f4",
+        "a4g4",
+        "a4h4",
+        "d2c1",
+        "d2c2",
+        "d2c3",
+        "d2d1",
+        "d2d3",
+        "d2e1",
+        "d2e2",
+        "d2e3",
+        "g7a1",
+        "g7a7",
+        "g7b2",
+        "g7b7",
+        "g7c3",
+        "g7c7",
+        "g7d4",
+        "g7d7",
+        "g7e5",
+        "g7e7",
+        "g7f6",
+        "g7f7",
+        "g7f8",
+        "g7g1",
+        "g7g2",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h6",
+        "g7h7",
+        "g7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a3af8edf93f58728d52111050ad827a026edfced38dd5a5e5109e45eace68141",
+      "positions": [
+        "k5K1/2R2Q2/8/8/8/8/8/8 w - - 0 1",
+        "3k2K1/2R2Q2/8/8/8/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f7f8",
+          "f7e8",
+          "c7c8"
+        ],
+        [
+          "f7e7",
+          "f7d7"
+        ]
+      ],
+      "legal_moves": [
+        "c7a7",
+        "c7b7",
+        "c7c1",
+        "c7c2",
+        "c7c3",
+        "c7c4",
+        "c7c5",
+        "c7c6",
+        "c7c8",
+        "c7d7",
+        "c7e7",
+        "f7a2",
+        "f7b3",
+        "f7c4",
+        "f7d5",
+        "f7d7",
+        "f7e6",
+        "f7e7",
+        "f7e8",
+        "f7f1",
+        "f7f2",
+        "f7f3",
+        "f7f4",
+        "f7f5",
+        "f7f6",
+        "f7f8",
+        "f7g6",
+        "f7g7",
+        "f7h5",
+        "f7h7",
+        "g8f8",
+        "g8g7",
+        "g8h7",
+        "g8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "ca6208b32b19c8c31755fc4acfa70d172d4223fd232e35e6045be40902e1b571",
+      "positions": [
+        "8/8/8/5Q2/6K1/8/1R6/k7 w - - 0 1",
+        "8/k7/8/5Q2/6K1/8/1R6/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f5b1"
+        ],
+        [
+          "f5a5"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "f5a5",
+        "f5b1",
+        "f5b5",
+        "f5c2",
+        "f5c5",
+        "f5c8",
+        "f5d3",
+        "f5d5",
+        "f5d7",
+        "f5e4",
+        "f5e5",
+        "f5e6",
+        "f5f1",
+        "f5f2",
+        "f5f3",
+        "f5f4",
+        "f5f6",
+        "f5f7",
+        "f5f8",
+        "f5g5",
+        "f5g6",
+        "f5h5",
+        "f5h7",
+        "g4f3",
+        "g4f4",
+        "g4g3",
+        "g4g5",
+        "g4h3",
+        "g4h4",
+        "g4h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "0fc8a72fd8800bf56bcc99ed992d8184f121622c86a4eabfdb91a1782f0c1076",
+      "positions": [
+        "8/6R1/7K/8/8/8/7k/3Q4 w - - 0 1",
+        "k7/6R1/7K/8/8/8/8/3Q4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d1h5"
+        ],
+        [
+          "d1d8"
+        ]
+      ],
+      "legal_moves": [
+        "d1a1",
+        "d1a4",
+        "d1b1",
+        "d1b3",
+        "d1c1",
+        "d1c2",
+        "d1d2",
+        "d1d3",
+        "d1d4",
+        "d1d5",
+        "d1d6",
+        "d1d7",
+        "d1d8",
+        "d1e1",
+        "d1e2",
+        "d1f1",
+        "d1f3",
+        "d1g1",
+        "d1g4",
+        "d1h1",
+        "d1h5",
+        "g7a7",
+        "g7b7",
+        "g7c7",
+        "g7d7",
+        "g7e7",
+        "g7f7",
+        "g7g1",
+        "g7g2",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h7",
+        "h6g5",
+        "h6g6",
+        "h6h5",
+        "h6h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "bde390ba4fa027d46fdb071e72d9ec5768de4d81f62d0dd01d37db0d0d5c0514",
+      "positions": [
+        "7Q/8/2K5/8/8/8/4R3/1k6 w - - 0 1",
+        "7Q/8/2K5/8/8/8/4R3/6k1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h8b2",
+          "h8h1"
+        ],
+        [
+          "h8a1"
+        ]
+      ],
+      "legal_moves": [
+        "c6b5",
+        "c6b6",
+        "c6b7",
+        "c6c5",
+        "c6c7",
+        "c6d5",
+        "c6d6",
+        "c6d7",
+        "e2a2",
+        "e2b2",
+        "e2c2",
+        "e2d2",
+        "e2e1",
+        "e2e3",
+        "e2e4",
+        "e2e5",
+        "e2e6",
+        "e2e7",
+        "e2e8",
+        "e2f2",
+        "e2g2",
+        "e2h2",
+        "h8a1",
+        "h8a8",
+        "h8b2",
+        "h8b8",
+        "h8c3",
+        "h8c8",
+        "h8d4",
+        "h8d8",
+        "h8e5",
+        "h8e8",
+        "h8f6",
+        "h8f8",
+        "h8g7",
+        "h8g8",
+        "h8h1",
+        "h8h2",
+        "h8h3",
+        "h8h4",
+        "h8h5",
+        "h8h6",
+        "h8h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "4196e74ac55019de91bc9a3ed5938a65eb579b516f655a82cab92070058cd308",
+      "positions": [
+        "6R1/8/8/8/8/2K5/7k/2Q5 w - - 0 1",
+        "6R1/8/8/7k/8/2K5/8/2Q5 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c1h6"
+        ],
+        [
+          "c1g5",
+          "c1h1"
+        ]
+      ],
+      "legal_moves": [
+        "c1a1",
+        "c1a3",
+        "c1b1",
+        "c1b2",
+        "c1c2",
+        "c1d1",
+        "c1d2",
+        "c1e1",
+        "c1e3",
+        "c1f1",
+        "c1f4",
+        "c1g1",
+        "c1g5",
+        "c1h1",
+        "c1h6",
+        "c3b2",
+        "c3b3",
+        "c3b4",
+        "c3c2",
+        "c3c4",
+        "c3d2",
+        "c3d3",
+        "c3d4",
+        "g8a8",
+        "g8b8",
+        "g8c8",
+        "g8d8",
+        "g8e8",
+        "g8f8",
+        "g8g1",
+        "g8g2",
+        "g8g3",
+        "g8g4",
+        "g8g5",
+        "g8g6",
+        "g8g7",
+        "g8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "1309446294a13d9604b3b7e6cf976dcf6ad79eb5078c43170480c60579f1b4ca",
+      "positions": [
+        "k7/5R2/8/8/8/4K3/8/3Q4 w - - 0 1",
+        "4k3/5R2/8/8/8/4K3/8/3Q4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d1d8"
+        ],
+        [
+          "d1d7"
+        ]
+      ],
+      "legal_moves": [
+        "d1a1",
+        "d1a4",
+        "d1b1",
+        "d1b3",
+        "d1c1",
+        "d1c2",
+        "d1d2",
+        "d1d3",
+        "d1d4",
+        "d1d5",
+        "d1d6",
+        "d1d7",
+        "d1d8",
+        "d1e1",
+        "d1e2",
+        "d1f1",
+        "d1f3",
+        "d1g1",
+        "d1g4",
+        "d1h1",
+        "d1h5",
+        "e3d2",
+        "e3d3",
+        "e3d4",
+        "e3e2",
+        "e3e4",
+        "e3f2",
+        "e3f3",
+        "e3f4",
+        "f7a7",
+        "f7b7",
+        "f7c7",
+        "f7d7",
+        "f7e7",
+        "f7f1",
+        "f7f2",
+        "f7f3",
+        "f7f4",
+        "f7f5",
+        "f7f6",
+        "f7f8",
+        "f7g7",
+        "f7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "3bae676d729ea059fc14ba98a318e7bb896f59bf4b6241c9493b59c142dd6e17",
+      "positions": [
+        "8/8/4Q3/8/4K3/k7/8/1R6 w - - 0 1",
+        "8/8/4Q3/k7/4K3/8/8/1R6 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e6a6",
+          "e6b3"
+        ],
+        [
+          "e6a2"
+        ]
+      ],
+      "legal_moves": [
+        "b1a1",
+        "b1b2",
+        "b1b3",
+        "b1b4",
+        "b1b5",
+        "b1b6",
+        "b1b7",
+        "b1b8",
+        "b1c1",
+        "b1d1",
+        "b1e1",
+        "b1f1",
+        "b1g1",
+        "b1h1",
+        "e4d3",
+        "e4d4",
+        "e4d5",
+        "e4e3",
+        "e4e5",
+        "e4f3",
+        "e4f4",
+        "e4f5",
+        "e6a2",
+        "e6a6",
+        "e6b3",
+        "e6b6",
+        "e6c4",
+        "e6c6",
+        "e6c8",
+        "e6d5",
+        "e6d6",
+        "e6d7",
+        "e6e5",
+        "e6e7",
+        "e6e8",
+        "e6f5",
+        "e6f6",
+        "e6f7",
+        "e6g4",
+        "e6g6",
+        "e6g8",
+        "e6h3",
+        "e6h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "6128c8f22dda53fafaa486078b7d63c8d033b90d76edc9d96552c3ba3947ba8e",
+      "positions": [
+        "K2R4/8/8/8/8/8/6Q1/k7 w - - 0 1",
+        "K2R4/8/8/8/7k/8/6Q1/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d8d1"
+        ],
+        [
+          "d8h8"
+        ]
+      ],
+      "legal_moves": [
+        "a8a7",
+        "a8b7",
+        "a8b8",
+        "d8b8",
+        "d8c8",
+        "d8d1",
+        "d8d2",
+        "d8d3",
+        "d8d4",
+        "d8d5",
+        "d8d6",
+        "d8d7",
+        "d8e8",
+        "d8f8",
+        "d8g8",
+        "d8h8",
+        "g2a2",
+        "g2b2",
+        "g2b7",
+        "g2c2",
+        "g2c6",
+        "g2d2",
+        "g2d5",
+        "g2e2",
+        "g2e4",
+        "g2f1",
+        "g2f2",
+        "g2f3",
+        "g2g1",
+        "g2g3",
+        "g2g4",
+        "g2g5",
+        "g2g6",
+        "g2g7",
+        "g2g8",
+        "g2h1",
+        "g2h2",
+        "g2h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "aa665519a3084f80f2a486decb53851678b98114833190a9f135503e3db26fbb",
+      "positions": [
+        "8/8/8/8/8/8/R7/2k2KQ1 w - - 0 1",
+        "8/8/8/8/7k/8/R7/5KQ1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f1g2",
+          "f1f2",
+          "f1e2"
+        ],
+        [
+          "a2h2"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2a4",
+        "a2a5",
+        "a2a6",
+        "a2a7",
+        "a2a8",
+        "a2b2",
+        "a2c2",
+        "a2d2",
+        "a2e2",
+        "a2f2",
+        "a2g2",
+        "a2h2",
+        "f1e1",
+        "f1e2",
+        "f1f2",
+        "f1g2",
+        "g1a7",
+        "g1b6",
+        "g1c5",
+        "g1d4",
+        "g1e3",
+        "g1f2",
+        "g1g2",
+        "g1g3",
+        "g1g4",
+        "g1g5",
+        "g1g6",
+        "g1g7",
+        "g1g8",
+        "g1h1",
+        "g1h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "c9cb55c9ced0ff2e26d225953d6cdeb4f603cf7e745e38c647e9665a042ef8f8",
+      "positions": [
+        "8/8/8/8/8/7k/4Q3/K5R1 w - - 0 1",
+        "8/8/8/8/7k/8/4Q3/K5R1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e2h5"
+        ],
+        [
+          "e2g4",
+          "e2h2"
+        ]
+      ],
+      "legal_moves": [
+        "a1a2",
+        "a1b1",
+        "a1b2",
+        "e2a2",
+        "e2a6",
+        "e2b2",
+        "e2b5",
+        "e2c2",
+        "e2c4",
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2e3",
+        "e2e4",
+        "e2e5",
+        "e2e6",
+        "e2e7",
+        "e2e8",
+        "e2f1",
+        "e2f2",
+        "e2f3",
+        "e2g2",
+        "e2g4",
+        "e2h2",
+        "e2h5",
+        "g1b1",
+        "g1c1",
+        "g1d1",
+        "g1e1",
+        "g1f1",
+        "g1g2",
+        "g1g3",
+        "g1g4",
+        "g1g5",
+        "g1g6",
+        "g1g7",
+        "g1g8",
+        "g1h1"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "9e65e42e9aa6b3846226ddcf2453a68ad5ac4badad63119bfa7b3d16a60efa8d",
+      "positions": [
+        "8/8/8/2Q5/8/8/1R2K3/k7 w - - 0 1",
+        "8/8/8/2Q5/k7/8/1R2K3/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c5a3",
+          "c5c1"
+        ],
+        [
+          "c5a7",
+          "c5b4"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c2",
+        "b2d2",
+        "c5a3",
+        "c5a5",
+        "c5a7",
+        "c5b4",
+        "c5b5",
+        "c5b6",
+        "c5c1",
+        "c5c2",
+        "c5c3",
+        "c5c4",
+        "c5c6",
+        "c5c7",
+        "c5c8",
+        "c5d4",
+        "c5d5",
+        "c5d6",
+        "c5e3",
+        "c5e5",
+        "c5e7",
+        "c5f2",
+        "c5f5",
+        "c5f8",
+        "c5g1",
+        "c5g5",
+        "c5h5",
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2e3",
+        "e2f1",
+        "e2f2",
+        "e2f3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "32c48432cefdb42c569a716bc568e4f1c78d5ba01ae0803bdb0ec8aad5ce664b",
+      "positions": [
+        "8/8/1K6/Q7/8/6R1/8/7k w - - 0 1",
+        "8/8/1K6/Q7/7k/6R1/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a5h5"
+        ],
+        [
+          "a5g5"
+        ]
+      ],
+      "legal_moves": [
+        "a5a1",
+        "a5a2",
+        "a5a3",
+        "a5a4",
+        "a5a6",
+        "a5a7",
+        "a5a8",
+        "a5b4",
+        "a5b5",
+        "a5c3",
+        "a5c5",
+        "a5d2",
+        "a5d5",
+        "a5e1",
+        "a5e5",
+        "a5f5",
+        "a5g5",
+        "a5h5",
+        "b6a6",
+        "b6a7",
+        "b6b5",
+        "b6b7",
+        "b6c5",
+        "b6c6",
+        "b6c7",
+        "g3a3",
+        "g3b3",
+        "g3c3",
+        "g3d3",
+        "g3e3",
+        "g3f3",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "d44fa646b342d1896baa3d000b873eb9743b0f8437c74a48f75c8316fe158234",
+      "positions": [
+        "k7/3R4/8/7K/5Q2/8/8/8 w - - 0 1",
+        "2k5/3R4/8/7K/5Q2/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f4f8"
+        ],
+        [
+          "f4c7"
+        ]
+      ],
+      "legal_moves": [
+        "d7a7",
+        "d7b7",
+        "d7c7",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7",
+        "f4a4",
+        "f4b4",
+        "f4b8",
+        "f4c1",
+        "f4c4",
+        "f4c7",
+        "f4d2",
+        "f4d4",
+        "f4d6",
+        "f4e3",
+        "f4e4",
+        "f4e5",
+        "f4f1",
+        "f4f2",
+        "f4f3",
+        "f4f5",
+        "f4f6",
+        "f4f7",
+        "f4f8",
+        "f4g3",
+        "f4g4",
+        "f4g5",
+        "f4h2",
+        "f4h4",
+        "f4h6",
+        "h5g4",
+        "h5g5",
+        "h5g6",
+        "h5h4",
+        "h5h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "15f9b531d295ac89b41215dcad9b159603a0acd9747bac974f725829fc4a45f9",
+      "positions": [
+        "2R5/8/8/8/8/8/5Q2/k2K4 w - - 0 1",
+        "2R5/8/8/8/8/8/5Q2/3K3k w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c8c1"
+        ],
+        [
+          "c8h8"
+        ]
+      ],
+      "legal_moves": [
+        "c8a8",
+        "c8b8",
+        "c8c1",
+        "c8c2",
+        "c8c3",
+        "c8c4",
+        "c8c5",
+        "c8c6",
+        "c8c7",
+        "c8d8",
+        "c8e8",
+        "c8f8",
+        "c8g8",
+        "c8h8",
+        "d1c1",
+        "d1c2",
+        "d1d2",
+        "d1e1",
+        "d1e2",
+        "f2a2",
+        "f2a7",
+        "f2b2",
+        "f2b6",
+        "f2c2",
+        "f2c5",
+        "f2d2",
+        "f2d4",
+        "f2e1",
+        "f2e2",
+        "f2e3",
+        "f2f1",
+        "f2f3",
+        "f2f4",
+        "f2f5",
+        "f2f6",
+        "f2f7",
+        "f2f8",
+        "f2g1",
+        "f2g2",
+        "f2g3",
+        "f2h2",
+        "f2h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "57da344df781e9755310c92fec1625d36952ecbeb43523d7cc6ea33e6c04728b",
+      "positions": [
+        "8/6K1/8/1Q6/8/8/1R6/3k4 w - - 0 1",
+        "8/6K1/8/1Q6/8/8/1R6/4k3 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b5f1"
+        ],
+        [
+          "b5e2"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "b5a4",
+        "b5a5",
+        "b5a6",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c4",
+        "b5c5",
+        "b5c6",
+        "b5d3",
+        "b5d5",
+        "b5d7",
+        "b5e2",
+        "b5e5",
+        "b5e8",
+        "b5f1",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "g7f6",
+        "g7f7",
+        "g7f8",
+        "g7g6",
+        "g7g8",
+        "g7h6",
+        "g7h7",
+        "g7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "3772f32b6a10b4a788946796d0edb25029fc171819fa610204c01829f845d1aa",
+      "positions": [
+        "1K6/6Q1/8/8/8/2R5/8/7k w - - 0 1",
+        "1K2k3/6Q1/8/8/8/2R5/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c3h3"
+        ],
+        [
+          "c3c8"
+        ]
+      ],
+      "legal_moves": [
+        "b8a7",
+        "b8a8",
+        "b8b7",
+        "b8c7",
+        "b8c8",
+        "c3a3",
+        "c3b3",
+        "c3c1",
+        "c3c2",
+        "c3c4",
+        "c3c5",
+        "c3c6",
+        "c3c7",
+        "c3c8",
+        "c3d3",
+        "c3e3",
+        "c3f3",
+        "c3g3",
+        "c3h3",
+        "g7a7",
+        "g7b7",
+        "g7c7",
+        "g7d4",
+        "g7d7",
+        "g7e5",
+        "g7e7",
+        "g7f6",
+        "g7f7",
+        "g7f8",
+        "g7g1",
+        "g7g2",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h6",
+        "g7h7",
+        "g7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "045a33cfb1f76d2419848867e062af416fe9212eff61ba2b35d604edf0b50fe9",
+      "positions": [
+        "8/3KR3/8/8/6Q1/8/8/7k w - - 0 1",
+        "7k/3KR3/8/8/6Q1/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e7h7"
+        ],
+        [
+          "g4g7"
+        ]
+      ],
+      "legal_moves": [
+        "d7c6",
+        "d7c7",
+        "d7c8",
+        "d7d6",
+        "d7d8",
+        "d7e6",
+        "d7e8",
+        "e7e1",
+        "e7e2",
+        "e7e3",
+        "e7e4",
+        "e7e5",
+        "e7e6",
+        "e7e8",
+        "e7f7",
+        "e7g7",
+        "e7h7",
+        "g4a4",
+        "g4b4",
+        "g4c4",
+        "g4d1",
+        "g4d4",
+        "g4e2",
+        "g4e4",
+        "g4e6",
+        "g4f3",
+        "g4f4",
+        "g4f5",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h3",
+        "g4h4",
+        "g4h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a049c01a753bbb137c131c3455b0e3dcb11481bd3af8ee1d7cd90381b191613b",
+      "positions": [
+        "8/5K2/4Q3/8/8/8/2R5/k7 w - - 0 1",
+        "8/5K2/4Q3/8/8/8/2R5/3k4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e6a2",
+          "e6e1"
+        ],
+        [
+          "e6e2"
+        ]
+      ],
+      "legal_moves": [
+        "c2a2",
+        "c2b2",
+        "c2c1",
+        "c2c3",
+        "c2c4",
+        "c2c5",
+        "c2c6",
+        "c2c7",
+        "c2c8",
+        "c2d2",
+        "c2e2",
+        "c2f2",
+        "c2g2",
+        "c2h2",
+        "e6a2",
+        "e6a6",
+        "e6b3",
+        "e6b6",
+        "e6c4",
+        "e6c6",
+        "e6c8",
+        "e6d5",
+        "e6d6",
+        "e6d7",
+        "e6e1",
+        "e6e2",
+        "e6e3",
+        "e6e4",
+        "e6e5",
+        "e6e7",
+        "e6e8",
+        "e6f5",
+        "e6f6",
+        "e6g4",
+        "e6g6",
+        "e6h3",
+        "e6h6",
+        "f7e7",
+        "f7e8",
+        "f7f6",
+        "f7f8",
+        "f7g6",
+        "f7g7",
+        "f7g8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "19beff08980537c1df6cd7d59db6804b4e8f2024ee30b8b7e79df0bae3c64664",
+      "positions": [
+        "4K3/8/8/8/6R1/8/7k/5Q2 w - - 0 1",
+        "4K3/8/8/7k/6R1/8/8/5Q2 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f1g2"
+        ],
+        [
+          "f1h3"
+        ]
+      ],
+      "legal_moves": [
+        "e8d7",
+        "e8d8",
+        "e8e7",
+        "e8f7",
+        "e8f8",
+        "f1a1",
+        "f1a6",
+        "f1b1",
+        "f1b5",
+        "f1c1",
+        "f1c4",
+        "f1d1",
+        "f1d3",
+        "f1e1",
+        "f1e2",
+        "f1f2",
+        "f1f3",
+        "f1f4",
+        "f1f5",
+        "f1f6",
+        "f1f7",
+        "f1f8",
+        "f1g1",
+        "f1g2",
+        "f1h1",
+        "f1h3",
+        "g4a4",
+        "g4b4",
+        "g4c4",
+        "g4d4",
+        "g4e4",
+        "g4f4",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "75a83e1bb32d4146580c4e13d4c3c7019754a05a1891d05a4765f5db530b390e",
+      "positions": [
+        "8/8/1R6/4K3/7Q/8/8/k7 w - - 0 1",
+        "8/8/1R6/k3K3/7Q/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h4a4"
+        ],
+        [
+          "h4b4"
+        ]
+      ],
+      "legal_moves": [
+        "b6a6",
+        "b6b1",
+        "b6b2",
+        "b6b3",
+        "b6b4",
+        "b6b5",
+        "b6b7",
+        "b6b8",
+        "b6c6",
+        "b6d6",
+        "b6e6",
+        "b6f6",
+        "b6g6",
+        "b6h6",
+        "e5d4",
+        "e5d5",
+        "e5d6",
+        "e5e4",
+        "e5e6",
+        "e5f4",
+        "e5f5",
+        "e5f6",
+        "h4a4",
+        "h4b4",
+        "h4c4",
+        "h4d4",
+        "h4d8",
+        "h4e1",
+        "h4e4",
+        "h4e7",
+        "h4f2",
+        "h4f4",
+        "h4f6",
+        "h4g3",
+        "h4g4",
+        "h4g5",
+        "h4h1",
+        "h4h2",
+        "h4h3",
+        "h4h5",
+        "h4h6",
+        "h4h7",
+        "h4h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "1b254dcdd0b6e680c416b801cd8cb2b0545d0c747a741c3d303c819734df0c60",
+      "positions": [
+        "6Q1/8/8/8/8/2K4k/6R1/8 w - - 0 1",
+        "6Q1/8/8/7k/8/2K5/6R1/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g8g4",
+          "g8g3"
+        ],
+        [
+          "g8h8",
+          "g8h7",
+          "g8g5",
+          "g2h2"
+        ]
+      ],
+      "legal_moves": [
+        "c3b2",
+        "c3b3",
+        "c3b4",
+        "c3c2",
+        "c3c4",
+        "c3d2",
+        "c3d3",
+        "c3d4",
+        "g2a2",
+        "g2b2",
+        "g2c2",
+        "g2d2",
+        "g2e2",
+        "g2f2",
+        "g2g1",
+        "g2g3",
+        "g2g4",
+        "g2g5",
+        "g2g6",
+        "g2g7",
+        "g2h2",
+        "g8a2",
+        "g8a8",
+        "g8b3",
+        "g8b8",
+        "g8c4",
+        "g8c8",
+        "g8d5",
+        "g8d8",
+        "g8e6",
+        "g8e8",
+        "g8f7",
+        "g8f8",
+        "g8g3",
+        "g8g4",
+        "g8g5",
+        "g8g6",
+        "g8g7",
+        "g8h7",
+        "g8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "8ce064b0e03d8b62f6cf7b21f50b9d2053d1980fcf8310476b79876907dd3eba",
+      "positions": [
+        "8/8/8/Q7/K7/6R1/8/7k w - - 0 1",
+        "8/8/8/Q7/K6k/6R1/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a5h5"
+        ],
+        [
+          "a5g5"
+        ]
+      ],
+      "legal_moves": [
+        "a4a3",
+        "a4b3",
+        "a4b4",
+        "a4b5",
+        "a5a6",
+        "a5a7",
+        "a5a8",
+        "a5b4",
+        "a5b5",
+        "a5b6",
+        "a5c3",
+        "a5c5",
+        "a5c7",
+        "a5d2",
+        "a5d5",
+        "a5d8",
+        "a5e1",
+        "a5e5",
+        "a5f5",
+        "a5g5",
+        "a5h5",
+        "g3a3",
+        "g3b3",
+        "g3c3",
+        "g3d3",
+        "g3e3",
+        "g3f3",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "e6706c93d94ccda82ecf7cc799566a810389f31f2f19af935eb81bb93a05e25e",
+      "positions": [
+        "6R1/4Q3/8/8/2K5/7k/8/8 w - - 0 1",
+        "6R1/4Q3/7k/8/2K5/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e7h7"
+        ],
+        [
+          "e7h4"
+        ]
+      ],
+      "legal_moves": [
+        "c4b3",
+        "c4b4",
+        "c4b5",
+        "c4c3",
+        "c4c5",
+        "c4d3",
+        "c4d4",
+        "c4d5",
+        "e7a3",
+        "e7a7",
+        "e7b4",
+        "e7b7",
+        "e7c5",
+        "e7c7",
+        "e7d6",
+        "e7d7",
+        "e7d8",
+        "e7e1",
+        "e7e2",
+        "e7e3",
+        "e7e4",
+        "e7e5",
+        "e7e6",
+        "e7e8",
+        "e7f6",
+        "e7f7",
+        "e7f8",
+        "e7g5",
+        "e7g7",
+        "e7h4",
+        "e7h7",
+        "g8a8",
+        "g8b8",
+        "g8c8",
+        "g8d8",
+        "g8e8",
+        "g8f8",
+        "g8g1",
+        "g8g2",
+        "g8g3",
+        "g8g4",
+        "g8g5",
+        "g8g6",
+        "g8g7",
+        "g8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "bcdc4ddbe0351e620b00c31c3167898ffe7710ac23b16aa0ece0e79625f24125",
+      "positions": [
+        "3K4/8/8/5Q2/8/8/3R4/k7 w - - 0 1",
+        "3K4/8/8/5Q2/8/8/3R4/2k5 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f5f1"
+        ],
+        [
+          "f5c2"
+        ]
+      ],
+      "legal_moves": [
+        "d2a2",
+        "d2b2",
+        "d2c2",
+        "d2d1",
+        "d2d3",
+        "d2d4",
+        "d2d5",
+        "d2d6",
+        "d2d7",
+        "d2e2",
+        "d2f2",
+        "d2g2",
+        "d2h2",
+        "d8c7",
+        "d8c8",
+        "d8d7",
+        "d8e7",
+        "d8e8",
+        "f5a5",
+        "f5b1",
+        "f5b5",
+        "f5c2",
+        "f5c5",
+        "f5c8",
+        "f5d3",
+        "f5d5",
+        "f5d7",
+        "f5e4",
+        "f5e5",
+        "f5e6",
+        "f5f1",
+        "f5f2",
+        "f5f3",
+        "f5f4",
+        "f5f6",
+        "f5f7",
+        "f5f8",
+        "f5g4",
+        "f5g5",
+        "f5g6",
+        "f5h3",
+        "f5h5",
+        "f5h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "d1527b6a2d9b4792e38adbddb312af303e257701d53c1aa214361afc39631c81",
+      "positions": [
+        "8/3Q4/8/6R1/8/8/4K3/7k w - - 0 1",
+        "8/3Q4/8/6R1/7k/8/4K3/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d7h7",
+          "d7h3"
+        ],
+        [
+          "d7g4"
+        ]
+      ],
+      "legal_moves": [
+        "d7a4",
+        "d7a7",
+        "d7b5",
+        "d7b7",
+        "d7c6",
+        "d7c7",
+        "d7c8",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e6",
+        "d7e7",
+        "d7e8",
+        "d7f5",
+        "d7f7",
+        "d7g4",
+        "d7g7",
+        "d7h3",
+        "d7h7",
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2e3",
+        "e2f1",
+        "e2f2",
+        "e2f3",
+        "g5a5",
+        "g5b5",
+        "g5c5",
+        "g5d5",
+        "g5e5",
+        "g5f5",
+        "g5g1",
+        "g5g2",
+        "g5g3",
+        "g5g4",
+        "g5g6",
+        "g5g7",
+        "g5g8",
+        "g5h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "bb27863c3ef20366e537e9d7c5633d12eaec0563c728f66e55bc995db8790e9e",
+      "positions": [
+        "8/5Q2/K6k/4R3/8/8/8/8 w - - 0 1",
+        "3k4/5Q2/K7/4R3/8/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e5h5"
+        ],
+        [
+          "e5e8"
+        ]
+      ],
+      "legal_moves": [
+        "a6a5",
+        "a6a7",
+        "a6b5",
+        "a6b6",
+        "a6b7",
+        "e5a5",
+        "e5b5",
+        "e5c5",
+        "e5d5",
+        "e5e1",
+        "e5e2",
+        "e5e3",
+        "e5e4",
+        "e5e6",
+        "e5e7",
+        "e5e8",
+        "e5f5",
+        "e5g5",
+        "e5h5",
+        "f7a2",
+        "f7a7",
+        "f7b3",
+        "f7b7",
+        "f7c4",
+        "f7c7",
+        "f7d5",
+        "f7d7",
+        "f7e6",
+        "f7e7",
+        "f7e8",
+        "f7f1",
+        "f7f2",
+        "f7f3",
+        "f7f4",
+        "f7f5",
+        "f7f6",
+        "f7f8",
+        "f7g6",
+        "f7g7",
+        "f7g8",
+        "f7h5",
+        "f7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "3df9d295e76a6efd3048a72598b07a2bd99af2334687e4256a64987f017ecad7",
+      "positions": [
+        "8/8/8/6R1/4K3/1Q6/8/k7 w - - 0 1",
+        "8/8/8/6R1/4K3/1Q6/8/7k w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g5a5",
+          "g5g1"
+        ],
+        [
+          "b3h3"
+        ]
+      ],
+      "legal_moves": [
+        "b3a2",
+        "b3a3",
+        "b3a4",
+        "b3b1",
+        "b3b2",
+        "b3b4",
+        "b3b5",
+        "b3b6",
+        "b3b7",
+        "b3b8",
+        "b3c2",
+        "b3c3",
+        "b3c4",
+        "b3d1",
+        "b3d3",
+        "b3d5",
+        "b3e3",
+        "b3e6",
+        "b3f3",
+        "b3f7",
+        "b3g3",
+        "b3g8",
+        "b3h3",
+        "e4d3",
+        "e4d4",
+        "e4d5",
+        "e4e3",
+        "e4e5",
+        "e4f3",
+        "e4f4",
+        "e4f5",
+        "g5a5",
+        "g5b5",
+        "g5c5",
+        "g5d5",
+        "g5e5",
+        "g5f5",
+        "g5g1",
+        "g5g2",
+        "g5g3",
+        "g5g4",
+        "g5g6",
+        "g5g7",
+        "g5g8",
+        "g5h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "51a18a57f9749348896f89b0c2a025a3b6ebc3923cd301fc7f654d9fff1bf3bd",
+      "positions": [
+        "8/8/8/8/K7/3Q4/2R5/k7 w - - 0 1",
+        "8/8/8/8/K7/3Q4/2R5/4k3 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d3f1",
+          "d3d1"
+        ],
+        [
+          "d3e2"
+        ]
+      ],
+      "legal_moves": [
+        "a4a3",
+        "a4a5",
+        "a4b3",
+        "a4b4",
+        "a4b5",
+        "c2a2",
+        "c2b2",
+        "c2c1",
+        "c2c3",
+        "c2c4",
+        "c2c5",
+        "c2c6",
+        "c2c7",
+        "c2c8",
+        "c2d2",
+        "c2e2",
+        "c2f2",
+        "c2g2",
+        "c2h2",
+        "d3a3",
+        "d3a6",
+        "d3b3",
+        "d3b5",
+        "d3c3",
+        "d3c4",
+        "d3d1",
+        "d3d2",
+        "d3d4",
+        "d3d5",
+        "d3d6",
+        "d3d7",
+        "d3d8",
+        "d3e2",
+        "d3e3",
+        "d3e4",
+        "d3f1",
+        "d3f3",
+        "d3f5",
+        "d3g3",
+        "d3g6",
+        "d3h3",
+        "d3h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "696114b25abb56e0750779d3c0f4d3cf5f062a57acd59f23d0e84100fd51f02d",
+      "positions": [
+        "K7/5R2/8/8/8/8/2Q5/k7 w - - 0 1",
+        "K5k1/5R2/8/8/8/8/2Q5/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f7a7",
+          "f7f1"
+        ],
+        [
+          "c2h7"
+        ]
+      ],
+      "legal_moves": [
+        "a8a7",
+        "a8b7",
+        "a8b8",
+        "c2a2",
+        "c2a4",
+        "c2b1",
+        "c2b2",
+        "c2b3",
+        "c2c1",
+        "c2c3",
+        "c2c4",
+        "c2c5",
+        "c2c6",
+        "c2c7",
+        "c2c8",
+        "c2d1",
+        "c2d2",
+        "c2d3",
+        "c2e2",
+        "c2e4",
+        "c2f2",
+        "c2f5",
+        "c2g2",
+        "c2g6",
+        "c2h2",
+        "c2h7",
+        "f7a7",
+        "f7b7",
+        "f7c7",
+        "f7d7",
+        "f7e7",
+        "f7f1",
+        "f7f2",
+        "f7f3",
+        "f7f4",
+        "f7f5",
+        "f7f6",
+        "f7f8",
+        "f7g7",
+        "f7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "68f347b595261669afc4d9d590c1d60b178e605a477092271560a4e666495d1e",
+      "positions": [
+        "2Q5/8/K7/8/8/8/R7/1k6 w - - 0 1",
+        "2Q5/8/K7/8/8/8/R7/4k3 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c8c2"
+        ],
+        [
+          "c8c1"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2a4",
+        "a2a5",
+        "a2b2",
+        "a2c2",
+        "a2d2",
+        "a2e2",
+        "a2f2",
+        "a2g2",
+        "a2h2",
+        "a6a5",
+        "a6a7",
+        "a6b5",
+        "a6b6",
+        "a6b7",
+        "c8a8",
+        "c8b7",
+        "c8b8",
+        "c8c1",
+        "c8c2",
+        "c8c3",
+        "c8c4",
+        "c8c5",
+        "c8c6",
+        "c8c7",
+        "c8d7",
+        "c8d8",
+        "c8e6",
+        "c8e8",
+        "c8f5",
+        "c8f8",
+        "c8g4",
+        "c8g8",
+        "c8h3",
+        "c8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "90ec8f036195d2cbaaa28001ba5db3b7557941ad168dad02c100bd321aafc728",
+      "positions": [
+        "8/8/8/8/1R6/4K3/k7/7Q w - - 0 1",
+        "8/k7/8/8/1R6/4K3/8/7Q w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h1a8"
+        ],
+        [
+          "h1b7",
+          "h1a1"
+        ]
+      ],
+      "legal_moves": [
+        "b4a4",
+        "b4b1",
+        "b4b2",
+        "b4b3",
+        "b4b5",
+        "b4b6",
+        "b4b7",
+        "b4b8",
+        "b4c4",
+        "b4d4",
+        "b4e4",
+        "b4f4",
+        "b4g4",
+        "b4h4",
+        "e3d2",
+        "e3d3",
+        "e3d4",
+        "e3e2",
+        "e3e4",
+        "e3f2",
+        "e3f3",
+        "e3f4",
+        "h1a1",
+        "h1a8",
+        "h1b1",
+        "h1b7",
+        "h1c1",
+        "h1c6",
+        "h1d1",
+        "h1d5",
+        "h1e1",
+        "h1e4",
+        "h1f1",
+        "h1f3",
+        "h1g1",
+        "h1g2",
+        "h1h2",
+        "h1h3",
+        "h1h4",
+        "h1h5",
+        "h1h6",
+        "h1h7",
+        "h1h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "1ec14639c5c9a8789662122c530b80add11538c5b1a17741ef48bfaacfffc1aa",
+      "positions": [
+        "8/8/6R1/8/8/1Q6/7K/k7 w - - 0 1",
+        "8/7k/6R1/8/8/1Q6/7K/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g6a6",
+          "g6g1"
+        ],
+        [
+          "b3g8"
+        ]
+      ],
+      "legal_moves": [
+        "b3a2",
+        "b3a3",
+        "b3a4",
+        "b3b1",
+        "b3b2",
+        "b3b4",
+        "b3b5",
+        "b3b6",
+        "b3b7",
+        "b3b8",
+        "b3c2",
+        "b3c3",
+        "b3c4",
+        "b3d1",
+        "b3d3",
+        "b3d5",
+        "b3e3",
+        "b3e6",
+        "b3f3",
+        "b3f7",
+        "b3g3",
+        "b3g8",
+        "b3h3",
+        "g6a6",
+        "g6b6",
+        "g6c6",
+        "g6d6",
+        "g6e6",
+        "g6f6",
+        "g6g1",
+        "g6g2",
+        "g6g3",
+        "g6g4",
+        "g6g5",
+        "g6g7",
+        "g6g8",
+        "g6h6",
+        "h2g1",
+        "h2g2",
+        "h2g3",
+        "h2h1",
+        "h2h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "86ce7e729f6b21abe1eefb6f16f7d19d8240419720995f17317805a65c32d4d1",
+      "positions": [
+        "K4k2/2R5/8/7Q/8/8/8/8 w - - 0 1",
+        "K5k1/2R5/8/7Q/8/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h5h8",
+          "h5f7"
+        ],
+        [
+          "h5e8"
+        ]
+      ],
+      "legal_moves": [
+        "a8a7",
+        "a8b7",
+        "a8b8",
+        "c7a7",
+        "c7b7",
+        "c7c1",
+        "c7c2",
+        "c7c3",
+        "c7c4",
+        "c7c5",
+        "c7c6",
+        "c7c8",
+        "c7d7",
+        "c7e7",
+        "c7f7",
+        "c7g7",
+        "c7h7",
+        "h5a5",
+        "h5b5",
+        "h5c5",
+        "h5d1",
+        "h5d5",
+        "h5e2",
+        "h5e5",
+        "h5e8",
+        "h5f3",
+        "h5f5",
+        "h5f7",
+        "h5g4",
+        "h5g5",
+        "h5g6",
+        "h5h1",
+        "h5h2",
+        "h5h3",
+        "h5h4",
+        "h5h6",
+        "h5h7",
+        "h5h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "e438155a2e06a1c643e210201764b3a8e55a87f112d03fa8eaeef9cf49a8f0b7",
+      "positions": [
+        "8/3R4/8/8/K5Q1/8/8/7k w - - 0 1",
+        "k7/3R4/8/8/K5Q1/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d7h7"
+        ],
+        [
+          "g4g8"
+        ]
+      ],
+      "legal_moves": [
+        "a4a3",
+        "a4a5",
+        "a4b3",
+        "a4b4",
+        "a4b5",
+        "d7a7",
+        "d7b7",
+        "d7c7",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7",
+        "g4b4",
+        "g4c4",
+        "g4d1",
+        "g4d4",
+        "g4e2",
+        "g4e4",
+        "g4e6",
+        "g4f3",
+        "g4f4",
+        "g4f5",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h3",
+        "g4h4",
+        "g4h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "f275ec991875fa64f8ebfee4407825559bef3f7e17fbe3279f29b3ce37d63148",
+      "positions": [
+        "8/8/8/8/3Q4/8/6R1/1k4K1 w - - 0 1",
+        "8/8/8/8/3Q4/8/6R1/2k3K1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d4b2",
+          "d4d1"
+        ],
+        [
+          "d4a1"
+        ]
+      ],
+      "legal_moves": [
+        "d4a1",
+        "d4a4",
+        "d4a7",
+        "d4b2",
+        "d4b4",
+        "d4b6",
+        "d4c3",
+        "d4c4",
+        "d4c5",
+        "d4d1",
+        "d4d2",
+        "d4d3",
+        "d4d5",
+        "d4d6",
+        "d4d7",
+        "d4d8",
+        "d4e3",
+        "d4e4",
+        "d4e5",
+        "d4f2",
+        "d4f4",
+        "d4f6",
+        "d4g4",
+        "d4g7",
+        "d4h4",
+        "d4h8",
+        "g1f1",
+        "g1f2",
+        "g1h1",
+        "g1h2",
+        "g2a2",
+        "g2b2",
+        "g2c2",
+        "g2d2",
+        "g2e2",
+        "g2f2",
+        "g2g3",
+        "g2g4",
+        "g2g5",
+        "g2g6",
+        "g2g7",
+        "g2g8",
+        "g2h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "12d6c4e71fcab9e04a38420bd38d6e56ab7172c7e2315df10df7382dd70857f7",
+      "positions": [
+        "8/1Q6/7R/k7/8/8/1K6/8 w - - 0 1",
+        "3k4/1Q6/7R/8/8/8/1K6/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h6a6"
+        ],
+        [
+          "h6h8"
+        ]
+      ],
+      "legal_moves": [
+        "b2a1",
+        "b2a2",
+        "b2a3",
+        "b2b1",
+        "b2b3",
+        "b2c1",
+        "b2c2",
+        "b2c3",
+        "b7a6",
+        "b7a7",
+        "b7a8",
+        "b7b3",
+        "b7b4",
+        "b7b5",
+        "b7b6",
+        "b7b8",
+        "b7c6",
+        "b7c7",
+        "b7c8",
+        "b7d5",
+        "b7d7",
+        "b7e4",
+        "b7e7",
+        "b7f3",
+        "b7f7",
+        "b7g2",
+        "b7g7",
+        "b7h1",
+        "b7h7",
+        "h6a6",
+        "h6b6",
+        "h6c6",
+        "h6d6",
+        "h6e6",
+        "h6f6",
+        "h6g6",
+        "h6h1",
+        "h6h2",
+        "h6h3",
+        "h6h4",
+        "h6h5",
+        "h6h7",
+        "h6h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "41f884b3c8d547fa3419a716c16f83b98b1ef27816f936d01cbd6d837458e378",
+      "positions": [
+        "5K2/7R/8/8/8/1Q6/8/k7 w - - 0 1",
+        "k4K2/7R/8/8/8/1Q6/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h7a7",
+          "h7h1"
+        ],
+        [
+          "b3b7"
+        ]
+      ],
+      "legal_moves": [
+        "b3a2",
+        "b3a3",
+        "b3a4",
+        "b3b1",
+        "b3b2",
+        "b3b4",
+        "b3b5",
+        "b3b6",
+        "b3b7",
+        "b3b8",
+        "b3c2",
+        "b3c3",
+        "b3c4",
+        "b3d1",
+        "b3d3",
+        "b3d5",
+        "b3e3",
+        "b3e6",
+        "b3f3",
+        "b3f7",
+        "b3g3",
+        "b3g8",
+        "b3h3",
+        "f8e7",
+        "f8e8",
+        "f8f7",
+        "f8g7",
+        "f8g8",
+        "h7a7",
+        "h7b7",
+        "h7c7",
+        "h7d7",
+        "h7e7",
+        "h7f7",
+        "h7g7",
+        "h7h1",
+        "h7h2",
+        "h7h3",
+        "h7h4",
+        "h7h5",
+        "h7h6",
+        "h7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "557e768b9382ef57e9e9c42b3ee136fdc66c69714b2e8c3a5d9a50420bcccecb",
+      "positions": [
+        "8/8/8/K7/8/8/R6Q/1k6 w - - 0 1",
+        "8/8/8/K7/8/8/R6Q/3k4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h2c2",
+          "h2b2"
+        ],
+        [
+          "h2d2",
+          "h2h1",
+          "h2g1",
+          "a2a1"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2a4",
+        "a2b2",
+        "a2c2",
+        "a2d2",
+        "a2e2",
+        "a2f2",
+        "a2g2",
+        "a5a4",
+        "a5a6",
+        "a5b4",
+        "a5b5",
+        "a5b6",
+        "h2b2",
+        "h2b8",
+        "h2c2",
+        "h2c7",
+        "h2d2",
+        "h2d6",
+        "h2e2",
+        "h2e5",
+        "h2f2",
+        "h2f4",
+        "h2g1",
+        "h2g2",
+        "h2g3",
+        "h2h1",
+        "h2h3",
+        "h2h4",
+        "h2h5",
+        "h2h6",
+        "h2h7",
+        "h2h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "34e3554a30a4ac3b4379afe194382625d33f9539db9585c48fa934c00d2f9ffb",
+      "positions": [
+        "8/6R1/8/2Q5/8/1K6/8/7k w - - 0 1",
+        "8/6R1/k7/2Q5/8/1K6/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c5h5",
+          "c5g1"
+        ],
+        [
+          "g7a7"
+        ]
+      ],
+      "legal_moves": [
+        "b3a2",
+        "b3a3",
+        "b3a4",
+        "b3b2",
+        "b3b4",
+        "b3c2",
+        "b3c3",
+        "b3c4",
+        "c5a3",
+        "c5a5",
+        "c5a7",
+        "c5b4",
+        "c5b5",
+        "c5b6",
+        "c5c1",
+        "c5c2",
+        "c5c3",
+        "c5c4",
+        "c5c6",
+        "c5c7",
+        "c5c8",
+        "c5d4",
+        "c5d5",
+        "c5d6",
+        "c5e3",
+        "c5e5",
+        "c5e7",
+        "c5f2",
+        "c5f5",
+        "c5f8",
+        "c5g1",
+        "c5g5",
+        "c5h5",
+        "g7a7",
+        "g7b7",
+        "g7c7",
+        "g7d7",
+        "g7e7",
+        "g7f7",
+        "g7g1",
+        "g7g2",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "4b51c55ca16ab7192099f546a10fed7e820397bc89cf4d530ae2d3ea0bd9983d",
+      "positions": [
+        "8/8/8/8/8/8/2QKR3/k7 w - - 0 1",
+        "8/8/8/8/8/8/2QKR3/6k1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e2e1"
+        ],
+        [
+          "c2d1",
+          "c2c1",
+          "c2b1"
+        ]
+      ],
+      "legal_moves": [
+        "c2a2",
+        "c2a4",
+        "c2b1",
+        "c2b2",
+        "c2b3",
+        "c2c1",
+        "c2c3",
+        "c2c4",
+        "c2c5",
+        "c2c6",
+        "c2c7",
+        "c2c8",
+        "c2d1",
+        "c2d3",
+        "c2e4",
+        "c2f5",
+        "c2g6",
+        "c2h7",
+        "d2c1",
+        "d2c3",
+        "d2d1",
+        "d2d3",
+        "d2e1",
+        "d2e3",
+        "e2e1",
+        "e2e3",
+        "e2e4",
+        "e2e5",
+        "e2e6",
+        "e2e7",
+        "e2e8",
+        "e2f2",
+        "e2g2",
+        "e2h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "9fcdc1a9d9ba65c36cba52d110a864af5e72809a3bd435f40438199af37f3586",
+      "positions": [
+        "8/6R1/Q7/8/8/K7/8/7k w - - 0 1",
+        "1k6/6R1/Q7/8/8/K7/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a6h6"
+        ],
+        [
+          "a6b7"
+        ]
+      ],
+      "legal_moves": [
+        "a3a2",
+        "a3a4",
+        "a3b2",
+        "a3b3",
+        "a3b4",
+        "a6a4",
+        "a6a5",
+        "a6a7",
+        "a6a8",
+        "a6b5",
+        "a6b6",
+        "a6b7",
+        "a6c4",
+        "a6c6",
+        "a6c8",
+        "a6d3",
+        "a6d6",
+        "a6e2",
+        "a6e6",
+        "a6f1",
+        "a6f6",
+        "a6g6",
+        "a6h6",
+        "g7a7",
+        "g7b7",
+        "g7c7",
+        "g7d7",
+        "g7e7",
+        "g7f7",
+        "g7g1",
+        "g7g2",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "d5ea723e8ca0203e02388e7d8418f465269f98e7fdbe3cb1634c7b3b17fdf862",
+      "positions": [
+        "8/4Q3/8/8/8/4K3/1R6/k7 w - - 0 1",
+        "8/4Q3/8/8/k7/4K3/1R6/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e7a3"
+        ],
+        [
+          "e7a7",
+          "e7b4"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "e3d2",
+        "e3d3",
+        "e3d4",
+        "e3e2",
+        "e3e4",
+        "e3f2",
+        "e3f3",
+        "e3f4",
+        "e7a3",
+        "e7a7",
+        "e7b4",
+        "e7b7",
+        "e7c5",
+        "e7c7",
+        "e7d6",
+        "e7d7",
+        "e7d8",
+        "e7e4",
+        "e7e5",
+        "e7e6",
+        "e7e8",
+        "e7f6",
+        "e7f7",
+        "e7f8",
+        "e7g5",
+        "e7g7",
+        "e7h4",
+        "e7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "cbfda56d0b9e4420f47d99bc7ff8d0fd931e75ac911035850f8be2d6d97137e0",
+      "positions": [
+        "1Q6/K7/8/8/6R1/8/8/k7 w - - 0 1",
+        "1Q6/K7/8/8/6R1/8/8/7k w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g4a4"
+        ],
+        [
+          "b8h8"
+        ]
+      ],
+      "legal_moves": [
+        "a7a6",
+        "a7a8",
+        "a7b6",
+        "a7b7",
+        "b8a8",
+        "b8b1",
+        "b8b2",
+        "b8b3",
+        "b8b4",
+        "b8b5",
+        "b8b6",
+        "b8b7",
+        "b8c7",
+        "b8c8",
+        "b8d6",
+        "b8d8",
+        "b8e5",
+        "b8e8",
+        "b8f4",
+        "b8f8",
+        "b8g3",
+        "b8g8",
+        "b8h2",
+        "b8h8",
+        "g4a4",
+        "g4b4",
+        "g4c4",
+        "g4d4",
+        "g4e4",
+        "g4f4",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "c31ac09b35a9199770a31206a0107d8bb5dc6d2372e31ddb779d708c23cecae6",
+      "positions": [
+        "K7/7R/8/8/8/8/5Q2/k7 w - - 0 1",
+        "K2k4/7R/8/8/8/8/5Q2/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h7h1"
+        ],
+        [
+          "f2f8"
+        ]
+      ],
+      "legal_moves": [
+        "a8a7",
+        "a8b7",
+        "a8b8",
+        "f2a2",
+        "f2a7",
+        "f2b2",
+        "f2b6",
+        "f2c2",
+        "f2c5",
+        "f2d2",
+        "f2d4",
+        "f2e1",
+        "f2e2",
+        "f2e3",
+        "f2f1",
+        "f2f3",
+        "f2f4",
+        "f2f5",
+        "f2f6",
+        "f2f7",
+        "f2f8",
+        "f2g1",
+        "f2g2",
+        "f2g3",
+        "f2h2",
+        "f2h4",
+        "h7a7",
+        "h7b7",
+        "h7c7",
+        "h7d7",
+        "h7e7",
+        "h7f7",
+        "h7g7",
+        "h7h1",
+        "h7h2",
+        "h7h3",
+        "h7h4",
+        "h7h5",
+        "h7h6",
+        "h7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "c1b2a2a5e56d4a3d4f674777c117ee12d0884f2d0a64d9ffc66e57b2aa012b1f",
+      "positions": [
+        "4K3/8/8/8/8/1R6/k7/6Q1 w - - 0 1",
+        "4K3/8/8/k7/8/1R6/8/6Q1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g1b1"
+        ],
+        [
+          "g1a7",
+          "g1a1"
+        ]
+      ],
+      "legal_moves": [
+        "b3a3",
+        "b3b1",
+        "b3b2",
+        "b3b4",
+        "b3b5",
+        "b3b6",
+        "b3b7",
+        "b3b8",
+        "b3c3",
+        "b3d3",
+        "b3e3",
+        "b3f3",
+        "b3g3",
+        "b3h3",
+        "e8d7",
+        "e8d8",
+        "e8e7",
+        "e8f7",
+        "e8f8",
+        "g1a1",
+        "g1a7",
+        "g1b1",
+        "g1b6",
+        "g1c1",
+        "g1c5",
+        "g1d1",
+        "g1d4",
+        "g1e1",
+        "g1e3",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1g3",
+        "g1g4",
+        "g1g5",
+        "g1g6",
+        "g1g7",
+        "g1g8",
+        "g1h1",
+        "g1h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "c64cb87bdf790405ad8c41964c8483d96084ca6b26cf54855d67346381aec989",
+      "positions": [
+        "8/8/5K2/8/4Q3/8/1R6/k7 w - - 0 1",
+        "8/8/5K2/8/4Q3/k7/1R6/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e4b1"
+        ],
+        [
+          "e4b4"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "e4a4",
+        "e4a8",
+        "e4b1",
+        "e4b4",
+        "e4b7",
+        "e4c2",
+        "e4c4",
+        "e4c6",
+        "e4d3",
+        "e4d4",
+        "e4d5",
+        "e4e1",
+        "e4e2",
+        "e4e3",
+        "e4e5",
+        "e4e6",
+        "e4e7",
+        "e4e8",
+        "e4f3",
+        "e4f4",
+        "e4f5",
+        "e4g2",
+        "e4g4",
+        "e4g6",
+        "e4h1",
+        "e4h4",
+        "e4h7",
+        "f6e5",
+        "f6e6",
+        "f6e7",
+        "f6f5",
+        "f6f7",
+        "f6g5",
+        "f6g6",
+        "f6g7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "aa6d5bb31ada2b2361a9ca9bafa036a776d19f97da1d3d1fc2ee1d26bd748be7",
+      "positions": [
+        "8/8/8/6R1/7k/8/6Q1/6K1 w - - 0 1",
+        "8/7k/8/6R1/8/8/6Q1/6K1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g2g4",
+          "g2g3"
+        ],
+        [
+          "g5h5",
+          "g2h3",
+          "g2h2",
+          "g2h1"
+        ]
+      ],
+      "legal_moves": [
+        "g1f1",
+        "g1f2",
+        "g1h1",
+        "g1h2",
+        "g2a2",
+        "g2a8",
+        "g2b2",
+        "g2b7",
+        "g2c2",
+        "g2c6",
+        "g2d2",
+        "g2d5",
+        "g2e2",
+        "g2e4",
+        "g2f1",
+        "g2f2",
+        "g2f3",
+        "g2g3",
+        "g2g4",
+        "g2h1",
+        "g2h2",
+        "g2h3",
+        "g5a5",
+        "g5b5",
+        "g5c5",
+        "g5d5",
+        "g5e5",
+        "g5f5",
+        "g5g3",
+        "g5g4",
+        "g5g6",
+        "g5g7",
+        "g5g8",
+        "g5h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "0c7595b09ea16f4d907145c42d6c9520f2127dc3b61430c65312ec9f12a18cf2",
+      "positions": [
+        "8/8/7K/8/8/k7/6Q1/1R6 w - - 0 1",
+        "8/k7/7K/8/8/8/6Q1/1R6 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g2a8"
+        ],
+        [
+          "g2b7",
+          "g2a2"
+        ]
+      ],
+      "legal_moves": [
+        "b1a1",
+        "b1b2",
+        "b1b3",
+        "b1b4",
+        "b1b5",
+        "b1b6",
+        "b1b7",
+        "b1b8",
+        "b1c1",
+        "b1d1",
+        "b1e1",
+        "b1f1",
+        "b1g1",
+        "b1h1",
+        "g2a2",
+        "g2a8",
+        "g2b2",
+        "g2b7",
+        "g2c2",
+        "g2c6",
+        "g2d2",
+        "g2d5",
+        "g2e2",
+        "g2e4",
+        "g2f1",
+        "g2f2",
+        "g2f3",
+        "g2g1",
+        "g2g3",
+        "g2g4",
+        "g2g5",
+        "g2g6",
+        "g2g7",
+        "g2g8",
+        "g2h1",
+        "g2h2",
+        "g2h3",
+        "h6g5",
+        "h6g6",
+        "h6g7",
+        "h6h5",
+        "h6h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "9bcf189b4827c3ca448271652722c33dc4547ccb0aae3189aed543c7186e64af",
+      "positions": [
+        "8/8/6Q1/7K/8/8/5R2/k7 w - - 0 1",
+        "8/8/6Q1/7K/8/8/5R2/7k w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g6g1"
+        ],
+        [
+          "g6g2",
+          "g6b1"
+        ]
+      ],
+      "legal_moves": [
+        "f2a2",
+        "f2b2",
+        "f2c2",
+        "f2d2",
+        "f2e2",
+        "f2f1",
+        "f2f3",
+        "f2f4",
+        "f2f5",
+        "f2f6",
+        "f2f7",
+        "f2f8",
+        "f2g2",
+        "f2h2",
+        "g6a6",
+        "g6b1",
+        "g6b6",
+        "g6c2",
+        "g6c6",
+        "g6d3",
+        "g6d6",
+        "g6e4",
+        "g6e6",
+        "g6e8",
+        "g6f5",
+        "g6f6",
+        "g6f7",
+        "g6g1",
+        "g6g2",
+        "g6g3",
+        "g6g4",
+        "g6g5",
+        "g6g7",
+        "g6g8",
+        "g6h6",
+        "g6h7",
+        "h5g4",
+        "h5g5",
+        "h5h4",
+        "h5h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "d31b95c207e9d7f5e36bb86464e3d7c5c68b6fdfcfd2f1790b1cc29a81375f98",
+      "positions": [
+        "1K2Q3/8/8/8/8/8/1R6/6k1 w - - 0 1",
+        "1K2Q3/8/8/k7/8/8/1R6/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e8e1"
+        ],
+        [
+          "e8b5"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "b8a7",
+        "b8a8",
+        "b8b7",
+        "b8c7",
+        "b8c8",
+        "e8a4",
+        "e8b5",
+        "e8c6",
+        "e8c8",
+        "e8d7",
+        "e8d8",
+        "e8e1",
+        "e8e2",
+        "e8e3",
+        "e8e4",
+        "e8e5",
+        "e8e6",
+        "e8e7",
+        "e8f7",
+        "e8f8",
+        "e8g6",
+        "e8g8",
+        "e8h5",
+        "e8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "0b26571ac5d310223055d3e67d01ac50fc7990910a0f171805e5348686141a7b",
+      "positions": [
+        "2k5/R7/7Q/8/2K5/8/8/8 w - - 0 1",
+        "6k1/R7/7Q/8/2K5/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h6h8",
+          "h6f8"
+        ],
+        [
+          "h6g7"
+        ]
+      ],
+      "legal_moves": [
+        "a7a1",
+        "a7a2",
+        "a7a3",
+        "a7a4",
+        "a7a5",
+        "a7a6",
+        "a7a8",
+        "a7b7",
+        "a7c7",
+        "a7d7",
+        "a7e7",
+        "a7f7",
+        "a7g7",
+        "a7h7",
+        "c4b3",
+        "c4b4",
+        "c4b5",
+        "c4c3",
+        "c4c5",
+        "c4d3",
+        "c4d4",
+        "c4d5",
+        "h6a6",
+        "h6b6",
+        "h6c1",
+        "h6c6",
+        "h6d2",
+        "h6d6",
+        "h6e3",
+        "h6e6",
+        "h6f4",
+        "h6f6",
+        "h6f8",
+        "h6g5",
+        "h6g6",
+        "h6g7",
+        "h6h1",
+        "h6h2",
+        "h6h3",
+        "h6h4",
+        "h6h5",
+        "h6h7",
+        "h6h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "1deb03e4f82b1fbcc6ec7161343bba4591d2d2010229557fca283b0e52bd7f50",
+      "positions": [
+        "2Q5/8/8/8/8/8/4R3/k5K1 w - - 0 1",
+        "2Q5/8/8/8/8/8/4R3/3k2K1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c8c1"
+        ],
+        [
+          "c8c2"
+        ]
+      ],
+      "legal_moves": [
+        "c8a6",
+        "c8a8",
+        "c8b7",
+        "c8b8",
+        "c8c1",
+        "c8c2",
+        "c8c3",
+        "c8c4",
+        "c8c5",
+        "c8c6",
+        "c8c7",
+        "c8d7",
+        "c8d8",
+        "c8e6",
+        "c8e8",
+        "c8f5",
+        "c8f8",
+        "c8g4",
+        "c8g8",
+        "c8h3",
+        "c8h8",
+        "e2a2",
+        "e2b2",
+        "e2c2",
+        "e2d2",
+        "e2e1",
+        "e2e3",
+        "e2e4",
+        "e2e5",
+        "e2e6",
+        "e2e7",
+        "e2e8",
+        "e2f2",
+        "e2g2",
+        "e2h2",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1h1",
+        "g1h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "c9c633f7ecf589b30018ee5924d4b2646cd9bf623b58aca2fa4be564a595eafe",
+      "positions": [
+        "8/2Q5/5K2/8/8/7k/8/6R1 w - - 0 1",
+        "k7/2Q5/5K2/8/8/8/8/6R1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c7h7",
+          "c7g3"
+        ],
+        [
+          "g1g8",
+          "g1a1"
+        ]
+      ],
+      "legal_moves": [
+        "c7a5",
+        "c7a7",
+        "c7b6",
+        "c7b7",
+        "c7b8",
+        "c7c1",
+        "c7c2",
+        "c7c3",
+        "c7c4",
+        "c7c5",
+        "c7c6",
+        "c7c8",
+        "c7d6",
+        "c7d7",
+        "c7d8",
+        "c7e5",
+        "c7e7",
+        "c7f4",
+        "c7f7",
+        "c7g3",
+        "c7g7",
+        "c7h2",
+        "c7h7",
+        "f6e5",
+        "f6e6",
+        "f6e7",
+        "f6f5",
+        "f6f7",
+        "f6g5",
+        "f6g6",
+        "f6g7",
+        "g1a1",
+        "g1b1",
+        "g1c1",
+        "g1d1",
+        "g1e1",
+        "g1f1",
+        "g1g2",
+        "g1g3",
+        "g1g4",
+        "g1g5",
+        "g1g6",
+        "g1g7",
+        "g1g8",
+        "g1h1"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "f04a277b3de962387cac24328bf6c4be2ef2a8de5bd8c6f4f872740ac5cb3814",
+      "positions": [
+        "Q7/8/6R1/8/8/8/3K3k/8 w - - 0 1",
+        "Q7/7k/6R1/8/8/8/3K4/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a8h8",
+          "a8g2"
+        ],
+        [
+          "a8g8"
+        ]
+      ],
+      "legal_moves": [
+        "a8a1",
+        "a8a2",
+        "a8a3",
+        "a8a4",
+        "a8a5",
+        "a8a6",
+        "a8a7",
+        "a8b7",
+        "a8b8",
+        "a8c6",
+        "a8c8",
+        "a8d5",
+        "a8d8",
+        "a8e4",
+        "a8e8",
+        "a8f3",
+        "a8f8",
+        "a8g2",
+        "a8g8",
+        "a8h1",
+        "a8h8",
+        "d2c1",
+        "d2c2",
+        "d2c3",
+        "d2d1",
+        "d2d3",
+        "d2e1",
+        "d2e2",
+        "d2e3",
+        "g6a6",
+        "g6b6",
+        "g6c6",
+        "g6d6",
+        "g6e6",
+        "g6f6",
+        "g6g1",
+        "g6g2",
+        "g6g3",
+        "g6g4",
+        "g6g5",
+        "g6g7",
+        "g6g8",
+        "g6h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "12e64312847b36ef941137abce62d96162354ed3210d71ecc20afe16a5d9f0d4",
+      "positions": [
+        "8/8/1R6/k7/5K2/8/1Q6/8 w - - 0 1",
+        "k7/8/1R6/8/5K2/8/1Q6/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b2b5",
+          "b2b4"
+        ],
+        [
+          "b6a6",
+          "b2a3",
+          "b2a2",
+          "b2a1"
+        ]
+      ],
+      "legal_moves": [
+        "b2a1",
+        "b2a2",
+        "b2a3",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2c1",
+        "b2c2",
+        "b2c3",
+        "b2d2",
+        "b2d4",
+        "b2e2",
+        "b2e5",
+        "b2f2",
+        "b2f6",
+        "b2g2",
+        "b2g7",
+        "b2h2",
+        "b2h8",
+        "b6a6",
+        "b6b3",
+        "b6b4",
+        "b6b5",
+        "b6b7",
+        "b6b8",
+        "b6c6",
+        "b6d6",
+        "b6e6",
+        "b6f6",
+        "b6g6",
+        "b6h6",
+        "f4e3",
+        "f4e4",
+        "f4e5",
+        "f4f3",
+        "f4f5",
+        "f4g3",
+        "f4g4",
+        "f4g5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "438045adc62f1f2ad202b1458a5d6109fa4baa532d98d47986119f245411f770",
+      "positions": [
+        "8/8/8/8/8/6QK/7R/k7 w - - 0 1",
+        "8/8/7k/8/8/6QK/7R/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g3g1",
+          "g3e1"
+        ],
+        [
+          "h3g2"
+        ]
+      ],
+      "legal_moves": [
+        "g3a3",
+        "g3b3",
+        "g3b8",
+        "g3c3",
+        "g3c7",
+        "g3d3",
+        "g3d6",
+        "g3e1",
+        "g3e3",
+        "g3e5",
+        "g3f2",
+        "g3f3",
+        "g3f4",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h4",
+        "h2a2",
+        "h2b2",
+        "h2c2",
+        "h2d2",
+        "h2e2",
+        "h2f2",
+        "h2g2",
+        "h2h1",
+        "h3g2",
+        "h3g4",
+        "h3h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a1164650f8a14db5224ab622687a3cfcdb38dbfa353c9058fc24bd673c0b4095",
+      "positions": [
+        "8/8/4Q3/1K4R1/8/8/8/7k w - - 0 1",
+        "5k2/8/4Q3/1K4R1/8/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e6h6",
+          "e6h3"
+        ],
+        [
+          "g5g8"
+        ]
+      ],
+      "legal_moves": [
+        "b5a4",
+        "b5a5",
+        "b5a6",
+        "b5b4",
+        "b5b6",
+        "b5c4",
+        "b5c5",
+        "b5c6",
+        "e6a2",
+        "e6a6",
+        "e6b3",
+        "e6b6",
+        "e6c4",
+        "e6c6",
+        "e6c8",
+        "e6d5",
+        "e6d6",
+        "e6d7",
+        "e6e1",
+        "e6e2",
+        "e6e3",
+        "e6e4",
+        "e6e5",
+        "e6e7",
+        "e6e8",
+        "e6f5",
+        "e6f6",
+        "e6f7",
+        "e6g4",
+        "e6g6",
+        "e6g8",
+        "e6h3",
+        "e6h6",
+        "g5c5",
+        "g5d5",
+        "g5e5",
+        "g5f5",
+        "g5g1",
+        "g5g2",
+        "g5g3",
+        "g5g4",
+        "g5g6",
+        "g5g7",
+        "g5g8",
+        "g5h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "b56511d3a68fbb403c6384c16e85fde96768098591d15b52a96cffacfa6838a2",
+      "positions": [
+        "3K4/8/2Q5/8/8/8/R7/1k6 w - - 0 1",
+        "3K4/8/2Q5/8/8/8/R7/3k4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c6c2"
+        ],
+        [
+          "c6h1"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2a4",
+        "a2a5",
+        "a2a6",
+        "a2a7",
+        "a2a8",
+        "a2b2",
+        "a2c2",
+        "a2d2",
+        "a2e2",
+        "a2f2",
+        "a2g2",
+        "a2h2",
+        "c6a4",
+        "c6a6",
+        "c6a8",
+        "c6b5",
+        "c6b6",
+        "c6b7",
+        "c6c1",
+        "c6c2",
+        "c6c3",
+        "c6c4",
+        "c6c5",
+        "c6c7",
+        "c6c8",
+        "c6d5",
+        "c6d6",
+        "c6d7",
+        "c6e4",
+        "c6e6",
+        "c6e8",
+        "c6f3",
+        "c6f6",
+        "c6g2",
+        "c6g6",
+        "c6h1",
+        "c6h6",
+        "d8c7",
+        "d8c8",
+        "d8d7",
+        "d8e7",
+        "d8e8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "ee7290571a94c205690e8c6e53231262c16c35eaa86bd905bdc15c67dd92d3c0",
+      "positions": [
+        "8/8/8/8/5QR1/8/4K3/7k w - - 0 1",
+        "8/8/8/8/5QR1/7k/4K3/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f4h6"
+        ],
+        [
+          "f4g3"
+        ]
+      ],
+      "legal_moves": [
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2e3",
+        "e2f1",
+        "e2f2",
+        "e2f3",
+        "f4a4",
+        "f4b4",
+        "f4b8",
+        "f4c1",
+        "f4c4",
+        "f4c7",
+        "f4d2",
+        "f4d4",
+        "f4d6",
+        "f4e3",
+        "f4e4",
+        "f4e5",
+        "f4f1",
+        "f4f2",
+        "f4f3",
+        "f4f5",
+        "f4f6",
+        "f4f7",
+        "f4f8",
+        "f4g3",
+        "f4g5",
+        "f4h2",
+        "f4h6",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "7b957c37c6b2053df280f17c3d773557bf2fabef5c7f26e4d30c3798d500b18f",
+      "positions": [
+        "Q7/8/8/8/8/1K6/6R1/4k3 w - - 0 1",
+        "Q7/8/8/8/7k/1K6/6R1/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a8a1"
+        ],
+        [
+          "a8h8"
+        ]
+      ],
+      "legal_moves": [
+        "a8a1",
+        "a8a2",
+        "a8a3",
+        "a8a4",
+        "a8a5",
+        "a8a6",
+        "a8a7",
+        "a8b7",
+        "a8b8",
+        "a8c6",
+        "a8c8",
+        "a8d5",
+        "a8d8",
+        "a8e4",
+        "a8e8",
+        "a8f3",
+        "a8f8",
+        "a8g8",
+        "a8h8",
+        "b3a2",
+        "b3a3",
+        "b3a4",
+        "b3b2",
+        "b3b4",
+        "b3c2",
+        "b3c3",
+        "b3c4",
+        "g2a2",
+        "g2b2",
+        "g2c2",
+        "g2d2",
+        "g2e2",
+        "g2f2",
+        "g2g1",
+        "g2g3",
+        "g2g4",
+        "g2g5",
+        "g2g6",
+        "g2g7",
+        "g2g8",
+        "g2h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "d4cba29e914e4b9a838f252d425873f3db7d688724d934d1566c16e51a5072f2",
+      "positions": [
+        "8/3R4/8/4K3/8/k7/8/1Q6 w - - 0 1",
+        "k7/3R4/8/4K3/8/8/8/1Q6 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d7a7"
+        ],
+        [
+          "b1b7"
+        ]
+      ],
+      "legal_moves": [
+        "b1a1",
+        "b1a2",
+        "b1b2",
+        "b1b3",
+        "b1b4",
+        "b1b5",
+        "b1b6",
+        "b1b7",
+        "b1b8",
+        "b1c1",
+        "b1c2",
+        "b1d1",
+        "b1d3",
+        "b1e1",
+        "b1e4",
+        "b1f1",
+        "b1f5",
+        "b1g1",
+        "b1g6",
+        "b1h1",
+        "b1h7",
+        "d7a7",
+        "d7b7",
+        "d7c7",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7",
+        "e5d4",
+        "e5d5",
+        "e5d6",
+        "e5e4",
+        "e5e6",
+        "e5f4",
+        "e5f5",
+        "e5f6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "03109ca5ea9d182abf220f89751e23ea36264466830d83038fec1af1164251d6",
+      "positions": [
+        "8/K7/8/8/Q7/8/R7/1k6 w - - 0 1",
+        "8/K7/8/8/Q7/8/R7/5k2 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a4c2"
+        ],
+        [
+          "a4d1"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2b2",
+        "a2c2",
+        "a2d2",
+        "a2e2",
+        "a2f2",
+        "a2g2",
+        "a2h2",
+        "a4a3",
+        "a4a5",
+        "a4a6",
+        "a4b3",
+        "a4b4",
+        "a4b5",
+        "a4c2",
+        "a4c4",
+        "a4c6",
+        "a4d1",
+        "a4d4",
+        "a4d7",
+        "a4e4",
+        "a4e8",
+        "a4f4",
+        "a4g4",
+        "a4h4",
+        "a7a6",
+        "a7a8",
+        "a7b6",
+        "a7b7",
+        "a7b8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "8e114bf1c3695e5c9424c887674279c61470b74151eafbb35dd7cf586041a761",
+      "positions": [
+        "7Q/8/8/8/1R6/8/k6K/8 w - - 0 1",
+        "7Q/k7/8/8/1R6/8/7K/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h8a8",
+          "h8b2"
+        ],
+        [
+          "h8a1"
+        ]
+      ],
+      "legal_moves": [
+        "b4a4",
+        "b4b1",
+        "b4b2",
+        "b4b3",
+        "b4b5",
+        "b4b6",
+        "b4b7",
+        "b4b8",
+        "b4c4",
+        "b4d4",
+        "b4e4",
+        "b4f4",
+        "b4g4",
+        "b4h4",
+        "h2g1",
+        "h2g2",
+        "h2g3",
+        "h2h1",
+        "h2h3",
+        "h8a1",
+        "h8a8",
+        "h8b2",
+        "h8b8",
+        "h8c3",
+        "h8c8",
+        "h8d4",
+        "h8d8",
+        "h8e5",
+        "h8e8",
+        "h8f6",
+        "h8f8",
+        "h8g7",
+        "h8g8",
+        "h8h3",
+        "h8h4",
+        "h8h5",
+        "h8h6",
+        "h8h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "54390437c635150b52f1d7427c31078628e51444ea867c6d8cab04a16333170a",
+      "positions": [
+        "8/8/3Q4/8/8/8/1K3R2/4k3 w - - 0 1",
+        "8/8/3Q4/8/8/8/1K3R2/6k1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d6d2"
+        ],
+        [
+          "d6h2"
+        ]
+      ],
+      "legal_moves": [
+        "b2a1",
+        "b2a2",
+        "b2a3",
+        "b2b1",
+        "b2b3",
+        "b2c1",
+        "b2c2",
+        "b2c3",
+        "d6a3",
+        "d6a6",
+        "d6b4",
+        "d6b6",
+        "d6b8",
+        "d6c5",
+        "d6c6",
+        "d6c7",
+        "d6d1",
+        "d6d2",
+        "d6d3",
+        "d6d4",
+        "d6d5",
+        "d6d7",
+        "d6d8",
+        "d6e5",
+        "d6e6",
+        "d6e7",
+        "d6f4",
+        "d6f6",
+        "d6f8",
+        "d6g3",
+        "d6g6",
+        "d6h2",
+        "d6h6",
+        "f2c2",
+        "f2d2",
+        "f2e2",
+        "f2f1",
+        "f2f3",
+        "f2f4",
+        "f2f5",
+        "f2f6",
+        "f2f7",
+        "f2f8",
+        "f2g2",
+        "f2h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "84191e5b5948e4a19d694e1f66c6bc1f19c047fe71f9509f8aea0eb8d62ff4f9",
+      "positions": [
+        "2Q5/8/8/1R6/5K2/8/8/k7 w - - 0 1",
+        "2Q5/k7/8/1R6/5K2/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c8a8",
+          "c8a6"
+        ],
+        [
+          "c8b7"
+        ]
+      ],
+      "legal_moves": [
+        "b5a5",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c5",
+        "b5d5",
+        "b5e5",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "c8a6",
+        "c8a8",
+        "c8b7",
+        "c8b8",
+        "c8c1",
+        "c8c2",
+        "c8c3",
+        "c8c4",
+        "c8c5",
+        "c8c6",
+        "c8c7",
+        "c8d7",
+        "c8d8",
+        "c8e6",
+        "c8e8",
+        "c8f5",
+        "c8f8",
+        "c8g4",
+        "c8g8",
+        "c8h3",
+        "c8h8",
+        "f4e3",
+        "f4e4",
+        "f4e5",
+        "f4f3",
+        "f4f5",
+        "f4g3",
+        "f4g4",
+        "f4g5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "4f83f25bafe26aeb29292e75167f7d02b30af01568524c245d48c0ce71a9db31",
+      "positions": [
+        "8/1K6/8/8/8/6R1/2Q5/k7 w - - 0 1",
+        "8/1K6/8/8/8/6R1/2Q5/7k w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g3a3",
+          "g3g1"
+        ],
+        [
+          "c2h7",
+          "c2g2"
+        ]
+      ],
+      "legal_moves": [
+        "b7a6",
+        "b7a7",
+        "b7a8",
+        "b7b6",
+        "b7b8",
+        "b7c6",
+        "b7c7",
+        "b7c8",
+        "c2a2",
+        "c2a4",
+        "c2b1",
+        "c2b2",
+        "c2b3",
+        "c2c1",
+        "c2c3",
+        "c2c4",
+        "c2c5",
+        "c2c6",
+        "c2c7",
+        "c2c8",
+        "c2d1",
+        "c2d2",
+        "c2d3",
+        "c2e2",
+        "c2e4",
+        "c2f2",
+        "c2f5",
+        "c2g2",
+        "c2g6",
+        "c2h2",
+        "c2h7",
+        "g3a3",
+        "g3b3",
+        "g3c3",
+        "g3d3",
+        "g3e3",
+        "g3f3",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a83bb46e841eb6df7ca12e042b920970144553e39f632e8ba6fcc9556501a3b8",
+      "positions": [
+        "8/4Q3/8/8/k7/8/8/1RK5 w - - 0 1",
+        "8/4Q3/k7/8/8/8/8/1RK5 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e7a7",
+          "e7b4"
+        ],
+        [
+          "e7a3"
+        ]
+      ],
+      "legal_moves": [
+        "b1a1",
+        "b1b2",
+        "b1b3",
+        "b1b4",
+        "b1b5",
+        "b1b6",
+        "b1b7",
+        "b1b8",
+        "c1b2",
+        "c1c2",
+        "c1d1",
+        "c1d2",
+        "e7a3",
+        "e7a7",
+        "e7b4",
+        "e7b7",
+        "e7c5",
+        "e7c7",
+        "e7d6",
+        "e7d7",
+        "e7d8",
+        "e7e1",
+        "e7e2",
+        "e7e3",
+        "e7e4",
+        "e7e5",
+        "e7e6",
+        "e7e8",
+        "e7f6",
+        "e7f7",
+        "e7f8",
+        "e7g5",
+        "e7g7",
+        "e7h4",
+        "e7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "6c7ac38ffcd7c50f51cd6b24280d69ba35adfc99c6f07fdfd127d2702daf7827",
+      "positions": [
+        "8/2KR4/8/8/8/5Q2/8/4k3 w - - 0 1",
+        "6k1/2KR4/8/8/8/5Q2/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d7d1"
+        ],
+        [
+          "f3a8"
+        ]
+      ],
+      "legal_moves": [
+        "c7b6",
+        "c7b7",
+        "c7b8",
+        "c7c6",
+        "c7c8",
+        "c7d6",
+        "c7d8",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7",
+        "f3a3",
+        "f3a8",
+        "f3b3",
+        "f3b7",
+        "f3c3",
+        "f3c6",
+        "f3d1",
+        "f3d3",
+        "f3d5",
+        "f3e2",
+        "f3e3",
+        "f3e4",
+        "f3f1",
+        "f3f2",
+        "f3f4",
+        "f3f5",
+        "f3f6",
+        "f3f7",
+        "f3f8",
+        "f3g2",
+        "f3g3",
+        "f3g4",
+        "f3h1",
+        "f3h3",
+        "f3h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "1187835e4780f2699bf27eec11b3754ead88f8aad50d2e6fe8d7683344e8145e",
+      "positions": [
+        "8/8/1K6/1R6/8/3Q4/8/k7 w - - 0 1",
+        "8/8/1K6/1R6/8/3Q4/8/2k5 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d3a3",
+          "d3b1"
+        ],
+        [
+          "b5b1"
+        ]
+      ],
+      "legal_moves": [
+        "b5a5",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5c5",
+        "b5d5",
+        "b5e5",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "b6a5",
+        "b6a6",
+        "b6a7",
+        "b6b7",
+        "b6c5",
+        "b6c6",
+        "b6c7",
+        "d3a3",
+        "d3b1",
+        "d3b3",
+        "d3c2",
+        "d3c3",
+        "d3c4",
+        "d3d1",
+        "d3d2",
+        "d3d4",
+        "d3d5",
+        "d3d6",
+        "d3d7",
+        "d3d8",
+        "d3e2",
+        "d3e3",
+        "d3e4",
+        "d3f1",
+        "d3f3",
+        "d3f5",
+        "d3g3",
+        "d3g6",
+        "d3h3",
+        "d3h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "30d58a40f696547e9f5ab18e53cd82c5be76307e5211b6093abba03db18bfbb3",
+      "positions": [
+        "8/8/8/8/Q7/8/6R1/1k4K1 w - - 0 1",
+        "8/8/8/8/Q7/8/6R1/2k3K1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a4d1"
+        ],
+        [
+          "a4c2",
+          "a4a1"
+        ]
+      ],
+      "legal_moves": [
+        "a4a1",
+        "a4a2",
+        "a4a3",
+        "a4a5",
+        "a4a6",
+        "a4a7",
+        "a4a8",
+        "a4b3",
+        "a4b4",
+        "a4b5",
+        "a4c2",
+        "a4c4",
+        "a4c6",
+        "a4d1",
+        "a4d4",
+        "a4d7",
+        "a4e4",
+        "a4e8",
+        "a4f4",
+        "a4g4",
+        "a4h4",
+        "g1f1",
+        "g1f2",
+        "g1h1",
+        "g1h2",
+        "g2a2",
+        "g2b2",
+        "g2c2",
+        "g2d2",
+        "g2e2",
+        "g2f2",
+        "g2g3",
+        "g2g4",
+        "g2g5",
+        "g2g6",
+        "g2g7",
+        "g2g8",
+        "g2h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "6806f811390ee39f13ac4740bc1aba70baf03058827730170d67189e9163a550",
+      "positions": [
+        "2K1R3/8/8/8/8/6Q1/8/5k2 w - - 0 1",
+        "2K1R3/8/8/7k/8/6Q1/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e8e1"
+        ],
+        [
+          "e8h8"
+        ]
+      ],
+      "legal_moves": [
+        "c8b7",
+        "c8b8",
+        "c8c7",
+        "c8d7",
+        "c8d8",
+        "e8d8",
+        "e8e1",
+        "e8e2",
+        "e8e3",
+        "e8e4",
+        "e8e5",
+        "e8e6",
+        "e8e7",
+        "e8f8",
+        "e8g8",
+        "e8h8",
+        "g3a3",
+        "g3b3",
+        "g3b8",
+        "g3c3",
+        "g3c7",
+        "g3d3",
+        "g3d6",
+        "g3e1",
+        "g3e3",
+        "g3e5",
+        "g3f2",
+        "g3f3",
+        "g3f4",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h2",
+        "g3h3",
+        "g3h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a73bac6c87f9d8c7171822169576733b47aaabbf276683183d683dcda106cf17",
+      "positions": [
+        "8/1R6/8/2K5/8/6Q1/8/k7 w - - 0 1",
+        "8/1R6/8/2K5/8/6Q1/8/7k w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g3a3"
+        ],
+        [
+          "b7h7",
+          "b7b1"
+        ]
+      ],
+      "legal_moves": [
+        "b7a7",
+        "b7b1",
+        "b7b2",
+        "b7b3",
+        "b7b4",
+        "b7b5",
+        "b7b6",
+        "b7b8",
+        "b7c7",
+        "b7d7",
+        "b7e7",
+        "b7f7",
+        "b7g7",
+        "b7h7",
+        "c5b4",
+        "c5b5",
+        "c5b6",
+        "c5c4",
+        "c5c6",
+        "c5d4",
+        "c5d5",
+        "c5d6",
+        "g3a3",
+        "g3b3",
+        "g3b8",
+        "g3c3",
+        "g3c7",
+        "g3d3",
+        "g3d6",
+        "g3e1",
+        "g3e3",
+        "g3e5",
+        "g3f2",
+        "g3f3",
+        "g3f4",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h2",
+        "g3h3",
+        "g3h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "86bd073ffdecba74f0ae8cdfe7fb4306f65e77f69939c888e33cb447b4ecf03e",
+      "positions": [
+        "8/8/8/8/6R1/2Q5/4K2k/8 w - - 0 1",
+        "8/8/8/7k/6R1/2Q5/4K3/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c3h8"
+        ],
+        [
+          "c3h3"
+        ]
+      ],
+      "legal_moves": [
+        "c3a1",
+        "c3a3",
+        "c3a5",
+        "c3b2",
+        "c3b3",
+        "c3b4",
+        "c3c1",
+        "c3c2",
+        "c3c4",
+        "c3c5",
+        "c3c6",
+        "c3c7",
+        "c3c8",
+        "c3d2",
+        "c3d3",
+        "c3d4",
+        "c3e1",
+        "c3e3",
+        "c3e5",
+        "c3f3",
+        "c3f6",
+        "c3g3",
+        "c3g7",
+        "c3h3",
+        "c3h8",
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2e3",
+        "e2f1",
+        "e2f2",
+        "e2f3",
+        "g4a4",
+        "g4b4",
+        "g4c4",
+        "g4d4",
+        "g4e4",
+        "g4f4",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    }
+  ],
+  "validation": [
+    {
+      "family": "911daa32ccbfacc406702f3bedce536733c1a8c1407d812899eee68dcad4e134",
+      "positions": [
+        "3Q4/8/k7/8/3K4/1R6/8/8 w - - 0 1",
+        "3Q4/k7/8/8/3K4/1R6/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d8a8",
+          "d8b6"
+        ],
+        [
+          "d8a5"
+        ]
+      ],
+      "legal_moves": [
+        "b3a3",
+        "b3b1",
+        "b3b2",
+        "b3b4",
+        "b3b5",
+        "b3b6",
+        "b3b7",
+        "b3b8",
+        "b3c3",
+        "b3d3",
+        "b3e3",
+        "b3f3",
+        "b3g3",
+        "b3h3",
+        "d4c3",
+        "d4c4",
+        "d4c5",
+        "d4d3",
+        "d4d5",
+        "d4e3",
+        "d4e4",
+        "d4e5",
+        "d8a5",
+        "d8a8",
+        "d8b6",
+        "d8b8",
+        "d8c7",
+        "d8c8",
+        "d8d5",
+        "d8d6",
+        "d8d7",
+        "d8e7",
+        "d8e8",
+        "d8f6",
+        "d8f8",
+        "d8g5",
+        "d8g8",
+        "d8h4",
+        "d8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "37866db1a1db776e3a59b1b6bbdb51a19b8c1e458a932bd3dfbb9d4dde7f58e2",
+      "positions": [
+        "5K2/8/8/8/8/4Q3/R7/3k4 w - - 0 1",
+        "5K2/8/8/8/8/4Q3/R7/5k2 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e3d2",
+          "e3g1"
+        ],
+        [
+          "e3f2",
+          "e3c1"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2a4",
+        "a2a5",
+        "a2a6",
+        "a2a7",
+        "a2a8",
+        "a2b2",
+        "a2c2",
+        "a2d2",
+        "a2e2",
+        "a2f2",
+        "a2g2",
+        "a2h2",
+        "e3a3",
+        "e3a7",
+        "e3b3",
+        "e3b6",
+        "e3c1",
+        "e3c3",
+        "e3c5",
+        "e3d2",
+        "e3d3",
+        "e3d4",
+        "e3e1",
+        "e3e2",
+        "e3e4",
+        "e3e5",
+        "e3e6",
+        "e3e7",
+        "e3e8",
+        "e3f2",
+        "e3f3",
+        "e3f4",
+        "e3g1",
+        "e3g3",
+        "e3g5",
+        "e3h3",
+        "e3h6",
+        "f8e7",
+        "f8e8",
+        "f8f7",
+        "f8g7",
+        "f8g8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "136d5a99b597f02ee4887f6ebb26df766963f16f651dea52fd7249309f3797ab",
+      "positions": [
+        "8/5R2/8/8/7K/7Q/8/6k1 w - - 0 1",
+        "k7/5R2/8/8/7K/7Q/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f7f1"
+        ],
+        [
+          "h3c8"
+        ]
+      ],
+      "legal_moves": [
+        "f7a7",
+        "f7b7",
+        "f7c7",
+        "f7d7",
+        "f7e7",
+        "f7f1",
+        "f7f2",
+        "f7f3",
+        "f7f4",
+        "f7f5",
+        "f7f6",
+        "f7f8",
+        "f7g7",
+        "f7h7",
+        "h3a3",
+        "h3b3",
+        "h3c3",
+        "h3c8",
+        "h3d3",
+        "h3d7",
+        "h3e3",
+        "h3e6",
+        "h3f1",
+        "h3f3",
+        "h3f5",
+        "h3g2",
+        "h3g3",
+        "h3g4",
+        "h3h1",
+        "h3h2",
+        "h4g3",
+        "h4g4",
+        "h4g5",
+        "h4h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a438b64ffc43d4cfdb21a2c713ae4c4bad16b4c231cfea61626aac612d4e85fa",
+      "positions": [
+        "5k2/2R5/8/7Q/8/8/5K2/8 w - - 0 1",
+        "6k1/2R5/8/7Q/8/8/5K2/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h5h8",
+          "h5f7"
+        ],
+        [
+          "h5e8"
+        ]
+      ],
+      "legal_moves": [
+        "c7a7",
+        "c7b7",
+        "c7c1",
+        "c7c2",
+        "c7c3",
+        "c7c4",
+        "c7c5",
+        "c7c6",
+        "c7c8",
+        "c7d7",
+        "c7e7",
+        "c7f7",
+        "c7g7",
+        "c7h7",
+        "f2e1",
+        "f2e2",
+        "f2e3",
+        "f2f1",
+        "f2f3",
+        "f2g1",
+        "f2g2",
+        "f2g3",
+        "h5a5",
+        "h5b5",
+        "h5c5",
+        "h5d1",
+        "h5d5",
+        "h5e2",
+        "h5e5",
+        "h5e8",
+        "h5f3",
+        "h5f5",
+        "h5f7",
+        "h5g4",
+        "h5g5",
+        "h5g6",
+        "h5h1",
+        "h5h2",
+        "h5h3",
+        "h5h4",
+        "h5h6",
+        "h5h7",
+        "h5h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "1aab146d7cabe6d4f70073b1be29c9159c26eaa1e4ef15dcf109b0769bbd9b8c",
+      "positions": [
+        "8/4R3/k7/2Q5/8/8/8/K7 w - - 0 1",
+        "k7/4R3/8/2Q5/8/8/8/K7 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e7a7"
+        ],
+        [
+          "c5c8",
+          "c5a7"
+        ]
+      ],
+      "legal_moves": [
+        "a1a2",
+        "a1b1",
+        "a1b2",
+        "c5a3",
+        "c5a5",
+        "c5a7",
+        "c5b4",
+        "c5b5",
+        "c5b6",
+        "c5c1",
+        "c5c2",
+        "c5c3",
+        "c5c4",
+        "c5c6",
+        "c5c7",
+        "c5c8",
+        "c5d4",
+        "c5d5",
+        "c5d6",
+        "c5e3",
+        "c5e5",
+        "c5f2",
+        "c5f5",
+        "c5g1",
+        "c5g5",
+        "c5h5",
+        "e7a7",
+        "e7b7",
+        "e7c7",
+        "e7d7",
+        "e7e1",
+        "e7e2",
+        "e7e3",
+        "e7e4",
+        "e7e5",
+        "e7e6",
+        "e7e8",
+        "e7f7",
+        "e7g7",
+        "e7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "aa29f3181d0247b03b2da29d044d2eb670367ca1efe6f72047e002eba9e2e863",
+      "positions": [
+        "k7/3R4/8/8/5Q2/8/8/7K w - - 0 1",
+        "2k5/3R4/8/8/5Q2/8/8/7K w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f4f8"
+        ],
+        [
+          "f4c7"
+        ]
+      ],
+      "legal_moves": [
+        "d7a7",
+        "d7b7",
+        "d7c7",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7",
+        "f4a4",
+        "f4b4",
+        "f4b8",
+        "f4c1",
+        "f4c4",
+        "f4c7",
+        "f4d2",
+        "f4d4",
+        "f4d6",
+        "f4e3",
+        "f4e4",
+        "f4e5",
+        "f4f1",
+        "f4f2",
+        "f4f3",
+        "f4f5",
+        "f4f6",
+        "f4f7",
+        "f4f8",
+        "f4g3",
+        "f4g4",
+        "f4g5",
+        "f4h2",
+        "f4h4",
+        "f4h6",
+        "h1g1",
+        "h1g2",
+        "h1h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "6e5bd3a25e9e250d1bb2abbe582564cabf19dd4dbdeffa27a864feddc4d6bc29",
+      "positions": [
+        "8/2K5/8/8/8/6R1/5Q2/k7 w - - 0 1",
+        "8/2K5/8/8/7k/6R1/5Q2/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g3g1"
+        ],
+        [
+          "f2h2"
+        ]
+      ],
+      "legal_moves": [
+        "c7b6",
+        "c7b7",
+        "c7b8",
+        "c7c6",
+        "c7c8",
+        "c7d6",
+        "c7d7",
+        "c7d8",
+        "f2a2",
+        "f2a7",
+        "f2b2",
+        "f2b6",
+        "f2c2",
+        "f2c5",
+        "f2d2",
+        "f2d4",
+        "f2e1",
+        "f2e2",
+        "f2e3",
+        "f2f1",
+        "f2f3",
+        "f2f4",
+        "f2f5",
+        "f2f6",
+        "f2f7",
+        "f2f8",
+        "f2g1",
+        "f2g2",
+        "f2h2",
+        "g3a3",
+        "g3b3",
+        "g3c3",
+        "g3d3",
+        "g3e3",
+        "g3f3",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "d5d3e2526fc7119b75e383323c5a7c1d0dd4dc18f056e061d927cc1808675baf",
+      "positions": [
+        "8/8/8/8/6Q1/1R6/2K5/7k w - - 0 1",
+        "8/8/k7/8/6Q1/1R6/2K5/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b3h3"
+        ],
+        [
+          "g4a4"
+        ]
+      ],
+      "legal_moves": [
+        "b3a3",
+        "b3b1",
+        "b3b2",
+        "b3b4",
+        "b3b5",
+        "b3b6",
+        "b3b7",
+        "b3b8",
+        "b3c3",
+        "b3d3",
+        "b3e3",
+        "b3f3",
+        "b3g3",
+        "b3h3",
+        "c2b1",
+        "c2b2",
+        "c2c1",
+        "c2c3",
+        "c2d1",
+        "c2d2",
+        "c2d3",
+        "g4a4",
+        "g4b4",
+        "g4c4",
+        "g4c8",
+        "g4d1",
+        "g4d4",
+        "g4d7",
+        "g4e2",
+        "g4e4",
+        "g4e6",
+        "g4f3",
+        "g4f4",
+        "g4f5",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h3",
+        "g4h4",
+        "g4h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "8f655df1fc077af851b9fc3bfd8200d41fe53cffbd060518d947f7e74132c9a6",
+      "positions": [
+        "8/8/1K6/8/8/2Q5/1R6/k7 w - - 0 1",
+        "8/8/1K6/8/8/2Q5/1R6/3k4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c3a3",
+          "c3c1"
+        ],
+        [
+          "c3d2"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "b6a5",
+        "b6a6",
+        "b6a7",
+        "b6b5",
+        "b6b7",
+        "b6c5",
+        "b6c6",
+        "b6c7",
+        "c3a3",
+        "c3a5",
+        "c3b3",
+        "c3b4",
+        "c3c1",
+        "c3c2",
+        "c3c4",
+        "c3c5",
+        "c3c6",
+        "c3c7",
+        "c3c8",
+        "c3d2",
+        "c3d3",
+        "c3d4",
+        "c3e1",
+        "c3e3",
+        "c3e5",
+        "c3f3",
+        "c3f6",
+        "c3g3",
+        "c3g7",
+        "c3h3",
+        "c3h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a43f0e4fad8b8364d09adc42349f66366d213cc224bdecf890838cf9d6ec6335",
+      "positions": [
+        "8/8/8/1R6/8/8/K6Q/3k4 w - - 0 1",
+        "k7/8/8/1R6/8/8/K6Q/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b5b1"
+        ],
+        [
+          "h2b8"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2b1",
+        "a2b2",
+        "a2b3",
+        "b5a5",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c5",
+        "b5d5",
+        "b5e5",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "h2b2",
+        "h2b8",
+        "h2c2",
+        "h2c7",
+        "h2d2",
+        "h2d6",
+        "h2e2",
+        "h2e5",
+        "h2f2",
+        "h2f4",
+        "h2g1",
+        "h2g2",
+        "h2g3",
+        "h2h1",
+        "h2h3",
+        "h2h4",
+        "h2h5",
+        "h2h6",
+        "h2h7",
+        "h2h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a4d7aa9a688a96e99e859723086d5c6b5c06239f14961e6d941279e13ac7dd6f",
+      "positions": [
+        "8/8/8/6R1/8/8/7k/1K2Q3 w - - 0 1",
+        "8/8/8/6R1/8/7k/8/1K2Q3 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e1h4"
+        ],
+        [
+          "e1g3",
+          "e1h1"
+        ]
+      ],
+      "legal_moves": [
+        "b1a1",
+        "b1a2",
+        "b1b2",
+        "b1c1",
+        "b1c2",
+        "e1a5",
+        "e1b4",
+        "e1c1",
+        "e1c3",
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e1e3",
+        "e1e4",
+        "e1e5",
+        "e1e6",
+        "e1e7",
+        "e1e8",
+        "e1f1",
+        "e1f2",
+        "e1g1",
+        "e1g3",
+        "e1h1",
+        "e1h4",
+        "g5a5",
+        "g5b5",
+        "g5c5",
+        "g5d5",
+        "g5e5",
+        "g5f5",
+        "g5g1",
+        "g5g2",
+        "g5g3",
+        "g5g4",
+        "g5g6",
+        "g5g7",
+        "g5g8",
+        "g5h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "99db35d96271d429e7f5d3516e841b1ce785e6d91c8b5aafc64ab3a07f898c48",
+      "positions": [
+        "8/5Q2/2K5/8/8/8/2R5/k7 w - - 0 1",
+        "7k/5Q2/2K5/8/8/8/2R5/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f7a2",
+          "f7f1"
+        ],
+        [
+          "c2h2"
+        ]
+      ],
+      "legal_moves": [
+        "c2a2",
+        "c2b2",
+        "c2c1",
+        "c2c3",
+        "c2c4",
+        "c2c5",
+        "c2d2",
+        "c2e2",
+        "c2f2",
+        "c2g2",
+        "c2h2",
+        "c6b5",
+        "c6b6",
+        "c6b7",
+        "c6c5",
+        "c6c7",
+        "c6d5",
+        "c6d6",
+        "c6d7",
+        "f7a2",
+        "f7a7",
+        "f7b3",
+        "f7b7",
+        "f7c4",
+        "f7c7",
+        "f7d5",
+        "f7d7",
+        "f7e6",
+        "f7e7",
+        "f7e8",
+        "f7f1",
+        "f7f2",
+        "f7f3",
+        "f7f4",
+        "f7f5",
+        "f7f6",
+        "f7f8",
+        "f7g6",
+        "f7g7",
+        "f7g8",
+        "f7h5",
+        "f7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "e516f508900d7c0b973301bad1e848cc6087b04445821822a1ce769bd6936ecd",
+      "positions": [
+        "5K2/1Q6/8/8/8/8/1R6/3k4 w - - 0 1",
+        "5K2/1Q6/8/8/8/8/1R6/6k1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b7h1"
+        ],
+        [
+          "b7g2"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "b7a6",
+        "b7a7",
+        "b7a8",
+        "b7b3",
+        "b7b4",
+        "b7b5",
+        "b7b6",
+        "b7b8",
+        "b7c6",
+        "b7c7",
+        "b7c8",
+        "b7d5",
+        "b7d7",
+        "b7e4",
+        "b7e7",
+        "b7f3",
+        "b7f7",
+        "b7g2",
+        "b7g7",
+        "b7h1",
+        "b7h7",
+        "f8e7",
+        "f8e8",
+        "f8f7",
+        "f8g7",
+        "f8g8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "05d968033ea480c36ea915435999e7f8090a59dc1aa4347c60158286ffc71452",
+      "positions": [
+        "1K6/8/8/1Q6/8/8/R7/2k5 w - - 0 1",
+        "1K6/8/8/1Q6/8/8/R7/4k3 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b5f1"
+        ],
+        [
+          "b5e2",
+          "b5b1"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2a4",
+        "a2a5",
+        "a2a6",
+        "a2a7",
+        "a2a8",
+        "a2b2",
+        "a2c2",
+        "a2d2",
+        "a2e2",
+        "a2f2",
+        "a2g2",
+        "a2h2",
+        "b5a4",
+        "b5a5",
+        "b5a6",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5c4",
+        "b5c5",
+        "b5c6",
+        "b5d3",
+        "b5d5",
+        "b5d7",
+        "b5e2",
+        "b5e5",
+        "b5e8",
+        "b5f1",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "b8a7",
+        "b8a8",
+        "b8b7",
+        "b8c7",
+        "b8c8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "5f5f28781d54c6d233977668d93cb9a63d29bb8af9a5fa424b455af0cc55ae81",
+      "positions": [
+        "8/6Q1/1R6/1K6/8/8/8/7k w - - 0 1",
+        "k7/6Q1/1R6/1K6/8/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b6h6"
+        ],
+        [
+          "g7b7",
+          "g7a1"
+        ]
+      ],
+      "legal_moves": [
+        "b5a4",
+        "b5a5",
+        "b5a6",
+        "b5b4",
+        "b5c4",
+        "b5c5",
+        "b5c6",
+        "b6a6",
+        "b6b7",
+        "b6b8",
+        "b6c6",
+        "b6d6",
+        "b6e6",
+        "b6f6",
+        "b6g6",
+        "b6h6",
+        "g7a1",
+        "g7a7",
+        "g7b2",
+        "g7b7",
+        "g7c3",
+        "g7c7",
+        "g7d4",
+        "g7d7",
+        "g7e5",
+        "g7e7",
+        "g7f6",
+        "g7f7",
+        "g7f8",
+        "g7g1",
+        "g7g2",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h6",
+        "g7h7",
+        "g7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "ea13b70ebc6ec268e1107642a21b41026c90ba59be097fca66939f75b95c2ccd",
+      "positions": [
+        "3k4/R7/8/8/8/7Q/4K3/8 w - - 0 1",
+        "6k1/R7/8/8/8/7Q/4K3/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h3h8",
+          "h3d7"
+        ],
+        [
+          "h3c8"
+        ]
+      ],
+      "legal_moves": [
+        "a7a1",
+        "a7a2",
+        "a7a3",
+        "a7a4",
+        "a7a5",
+        "a7a6",
+        "a7a8",
+        "a7b7",
+        "a7c7",
+        "a7d7",
+        "a7e7",
+        "a7f7",
+        "a7g7",
+        "a7h7",
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2e3",
+        "e2f1",
+        "e2f2",
+        "e2f3",
+        "h3a3",
+        "h3b3",
+        "h3c3",
+        "h3c8",
+        "h3d3",
+        "h3d7",
+        "h3e3",
+        "h3e6",
+        "h3f1",
+        "h3f3",
+        "h3f5",
+        "h3g2",
+        "h3g3",
+        "h3g4",
+        "h3h1",
+        "h3h2",
+        "h3h4",
+        "h3h5",
+        "h3h6",
+        "h3h7",
+        "h3h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "4c8396b22fbe21a66a1807baf61900acbb5306a46d4d07fbc4b10284e38742e8",
+      "positions": [
+        "8/8/8/6K1/8/5Q2/4R3/k7 w - - 0 1",
+        "8/8/8/6K1/8/5Q2/4R3/6k1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f3h1",
+          "f3f1"
+        ],
+        [
+          "f3g2"
+        ]
+      ],
+      "legal_moves": [
+        "e2a2",
+        "e2b2",
+        "e2c2",
+        "e2d2",
+        "e2e1",
+        "e2e3",
+        "e2e4",
+        "e2e5",
+        "e2e6",
+        "e2e7",
+        "e2e8",
+        "e2f2",
+        "e2g2",
+        "e2h2",
+        "f3a3",
+        "f3a8",
+        "f3b3",
+        "f3b7",
+        "f3c3",
+        "f3c6",
+        "f3d3",
+        "f3d5",
+        "f3e3",
+        "f3e4",
+        "f3f1",
+        "f3f2",
+        "f3f4",
+        "f3f5",
+        "f3f6",
+        "f3f7",
+        "f3f8",
+        "f3g2",
+        "f3g3",
+        "f3g4",
+        "f3h1",
+        "f3h3",
+        "f3h5",
+        "g5f4",
+        "g5f5",
+        "g5f6",
+        "g5g4",
+        "g5g6",
+        "g5h4",
+        "g5h5",
+        "g5h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "e122a87951a441a9a644579286dbd0de1a5ced060c8668d0d0315c05ff3ff9bd",
+      "positions": [
+        "8/8/8/8/1K4Q1/8/1R6/4k3 w - - 0 1",
+        "8/8/8/8/1K4Q1/8/1R6/5k2 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g4e2",
+          "g4g1"
+        ],
+        [
+          "g4d1"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "b4a3",
+        "b4a4",
+        "b4a5",
+        "b4b3",
+        "b4b5",
+        "b4c3",
+        "b4c4",
+        "b4c5",
+        "g4c4",
+        "g4c8",
+        "g4d1",
+        "g4d4",
+        "g4d7",
+        "g4e2",
+        "g4e4",
+        "g4e6",
+        "g4f3",
+        "g4f4",
+        "g4f5",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h3",
+        "g4h4",
+        "g4h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "076ea31957a9cbdadbbbf3ba5d6d255f7d5f210fd1b3ea0d3b4020b498994cb7",
+      "positions": [
+        "8/6R1/8/8/7k/8/6Q1/3K4 w - - 0 1",
+        "8/6R1/7k/8/8/8/6Q1/3K4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g7h7",
+          "g2g4",
+          "g2h2",
+          "g2h1"
+        ],
+        [
+          "g2g6",
+          "g2g5"
+        ]
+      ],
+      "legal_moves": [
+        "d1c1",
+        "d1c2",
+        "d1d2",
+        "d1e1",
+        "d1e2",
+        "g2a2",
+        "g2a8",
+        "g2b2",
+        "g2b7",
+        "g2c2",
+        "g2c6",
+        "g2d2",
+        "g2d5",
+        "g2e2",
+        "g2e4",
+        "g2f1",
+        "g2f2",
+        "g2f3",
+        "g2g1",
+        "g2g3",
+        "g2g4",
+        "g2g5",
+        "g2g6",
+        "g2h1",
+        "g2h2",
+        "g2h3",
+        "g7a7",
+        "g7b7",
+        "g7c7",
+        "g7d7",
+        "g7e7",
+        "g7f7",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "7829c7a050fcf7f885bb3cef6e352cbb59a65900b8d643ce0f364247bcd3db1b",
+      "positions": [
+        "k7/3R4/8/8/8/8/K7/Q7 w - - 0 1",
+        "6k1/3R4/8/8/8/8/K7/Q7 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a1h8"
+        ],
+        [
+          "a1g7"
+        ]
+      ],
+      "legal_moves": [
+        "a1b1",
+        "a1b2",
+        "a1c1",
+        "a1c3",
+        "a1d1",
+        "a1d4",
+        "a1e1",
+        "a1e5",
+        "a1f1",
+        "a1f6",
+        "a1g1",
+        "a1g7",
+        "a1h1",
+        "a1h8",
+        "a2a3",
+        "a2b1",
+        "a2b2",
+        "a2b3",
+        "d7a7",
+        "d7b7",
+        "d7c7",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "acac7102aea93cd938b684fc0f9ef41375446457fd79670cf5571b1537463f31",
+      "positions": [
+        "8/8/8/8/8/6Q1/R7/2k4K w - - 0 1",
+        "8/8/8/7k/8/6Q1/R7/7K w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g3g1",
+          "g3e1"
+        ],
+        [
+          "a2h2"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2a4",
+        "a2a5",
+        "a2a6",
+        "a2a7",
+        "a2a8",
+        "a2b2",
+        "a2c2",
+        "a2d2",
+        "a2e2",
+        "a2f2",
+        "a2g2",
+        "a2h2",
+        "g3a3",
+        "g3b3",
+        "g3b8",
+        "g3c3",
+        "g3c7",
+        "g3d3",
+        "g3d6",
+        "g3e1",
+        "g3e3",
+        "g3e5",
+        "g3f2",
+        "g3f3",
+        "g3f4",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h2",
+        "g3h3",
+        "g3h4",
+        "h1g1",
+        "h1g2",
+        "h1h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "5d427c438180e6c11324b6630afed2162ac0b4b72cc0253c64a7048c8c16c9e2",
+      "positions": [
+        "1R6/3Q4/8/7K/8/k7/8/8 w - - 0 1",
+        "1R6/3Q4/k7/7K/8/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d7a7"
+        ],
+        [
+          "d7a4"
+        ]
+      ],
+      "legal_moves": [
+        "b8a8",
+        "b8b1",
+        "b8b2",
+        "b8b3",
+        "b8b4",
+        "b8b5",
+        "b8b6",
+        "b8b7",
+        "b8c8",
+        "b8d8",
+        "b8e8",
+        "b8f8",
+        "b8g8",
+        "b8h8",
+        "d7a4",
+        "d7a7",
+        "d7b5",
+        "d7b7",
+        "d7c6",
+        "d7c7",
+        "d7c8",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e6",
+        "d7e7",
+        "d7e8",
+        "d7f5",
+        "d7f7",
+        "d7g4",
+        "d7g7",
+        "d7h3",
+        "d7h7",
+        "h5g4",
+        "h5g5",
+        "h5g6",
+        "h5h4",
+        "h5h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a7cde13a7db37aa90ff09e38a5db449111801d82b0cecb99a57cc8b913a77989",
+      "positions": [
+        "8/8/8/1R6/8/5QK1/8/k7 w - - 0 1",
+        "8/8/8/1R6/k7/5QK1/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f3a8",
+          "f3a3"
+        ],
+        [
+          "f3b3"
+        ]
+      ],
+      "legal_moves": [
+        "b5a5",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c5",
+        "b5d5",
+        "b5e5",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "f3a3",
+        "f3a8",
+        "f3b3",
+        "f3b7",
+        "f3c3",
+        "f3c6",
+        "f3d1",
+        "f3d3",
+        "f3d5",
+        "f3e2",
+        "f3e3",
+        "f3e4",
+        "f3f1",
+        "f3f2",
+        "f3f4",
+        "f3f5",
+        "f3f6",
+        "f3f7",
+        "f3f8",
+        "f3g2",
+        "f3g4",
+        "f3h1",
+        "f3h5",
+        "g3f2",
+        "g3f4",
+        "g3g2",
+        "g3g4",
+        "g3h2",
+        "g3h3",
+        "g3h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "bf0cc664a25fcd6bf749a8f3b3471751c1fc643a000e2f8ade982b0b2f1b8c32",
+      "positions": [
+        "8/8/6Q1/8/8/4R3/4K3/7k w - - 0 1",
+        "5k2/8/6Q1/8/8/4R3/4K3/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e3h3"
+        ],
+        [
+          "e3e8"
+        ]
+      ],
+      "legal_moves": [
+        "e2d1",
+        "e2d2",
+        "e2d3",
+        "e2e1",
+        "e2f1",
+        "e2f2",
+        "e2f3",
+        "e3a3",
+        "e3b3",
+        "e3c3",
+        "e3d3",
+        "e3e4",
+        "e3e5",
+        "e3e6",
+        "e3e7",
+        "e3e8",
+        "e3f3",
+        "e3g3",
+        "e3h3",
+        "g6a6",
+        "g6b1",
+        "g6b6",
+        "g6c2",
+        "g6c6",
+        "g6d3",
+        "g6d6",
+        "g6e4",
+        "g6e6",
+        "g6e8",
+        "g6f5",
+        "g6f6",
+        "g6f7",
+        "g6g1",
+        "g6g2",
+        "g6g3",
+        "g6g4",
+        "g6g5",
+        "g6g7",
+        "g6g8",
+        "g6h5",
+        "g6h6",
+        "g6h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    }
+  ],
+  "test": [
+    {
+      "family": "b7a21ca0d1ec2e14b7ac4c5475d787c82ea8e14adbe861684bc2d12ca3fbd618",
+      "positions": [
+        "8/2R5/6K1/1Q6/8/8/8/k7 w - - 0 1",
+        "k7/2R5/6K1/1Q6/8/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c7a7"
+        ],
+        [
+          "b5e8",
+          "b5b7"
+        ]
+      ],
+      "legal_moves": [
+        "b5a4",
+        "b5a5",
+        "b5a6",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c4",
+        "b5c5",
+        "b5c6",
+        "b5d3",
+        "b5d5",
+        "b5d7",
+        "b5e2",
+        "b5e5",
+        "b5e8",
+        "b5f1",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "c7a7",
+        "c7b7",
+        "c7c1",
+        "c7c2",
+        "c7c3",
+        "c7c4",
+        "c7c5",
+        "c7c6",
+        "c7c8",
+        "c7d7",
+        "c7e7",
+        "c7f7",
+        "c7g7",
+        "c7h7",
+        "g6f5",
+        "g6f6",
+        "g6f7",
+        "g6g5",
+        "g6g7",
+        "g6h5",
+        "g6h6",
+        "g6h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "9fc59084b906759c47ab78f9317cc65eb1b7af24ddac1cc3bcdb0a556b2067a1",
+      "positions": [
+        "8/8/8/K7/8/3Q4/2R5/k7 w - - 0 1",
+        "8/8/8/K7/8/3Q4/2R5/4k3 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d3f1",
+          "d3d1"
+        ],
+        [
+          "d3e2"
+        ]
+      ],
+      "legal_moves": [
+        "a5a4",
+        "a5a6",
+        "a5b4",
+        "a5b5",
+        "a5b6",
+        "c2a2",
+        "c2b2",
+        "c2c1",
+        "c2c3",
+        "c2c4",
+        "c2c5",
+        "c2c6",
+        "c2c7",
+        "c2c8",
+        "c2d2",
+        "c2e2",
+        "c2f2",
+        "c2g2",
+        "c2h2",
+        "d3a3",
+        "d3a6",
+        "d3b3",
+        "d3b5",
+        "d3c3",
+        "d3c4",
+        "d3d1",
+        "d3d2",
+        "d3d4",
+        "d3d5",
+        "d3d6",
+        "d3d7",
+        "d3d8",
+        "d3e2",
+        "d3e3",
+        "d3e4",
+        "d3f1",
+        "d3f3",
+        "d3f5",
+        "d3g3",
+        "d3g6",
+        "d3h3",
+        "d3h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "5c96fd794ed705ae115eb6b606b06814882910c1474f9722a37268ff821227b1",
+      "positions": [
+        "3Q4/8/k7/8/1R6/8/8/1K6 w - - 0 1",
+        "3Q4/k7/8/8/1R6/8/8/1K6 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d8a8",
+          "d8b6"
+        ],
+        [
+          "d8a5"
+        ]
+      ],
+      "legal_moves": [
+        "b1a1",
+        "b1a2",
+        "b1b2",
+        "b1c1",
+        "b1c2",
+        "b4a4",
+        "b4b2",
+        "b4b3",
+        "b4b5",
+        "b4b6",
+        "b4b7",
+        "b4b8",
+        "b4c4",
+        "b4d4",
+        "b4e4",
+        "b4f4",
+        "b4g4",
+        "b4h4",
+        "d8a5",
+        "d8a8",
+        "d8b6",
+        "d8b8",
+        "d8c7",
+        "d8c8",
+        "d8d1",
+        "d8d2",
+        "d8d3",
+        "d8d4",
+        "d8d5",
+        "d8d6",
+        "d8d7",
+        "d8e7",
+        "d8e8",
+        "d8f6",
+        "d8f8",
+        "d8g5",
+        "d8g8",
+        "d8h4",
+        "d8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "c3057246b9e5c92df2e789ccd95870e5c6f9bf3388b641c590ff7e15a8bb39ff",
+      "positions": [
+        "2K5/8/8/4Q3/8/6R1/8/7k w - - 0 1",
+        "2K5/8/8/4Q3/7k/6R1/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e5h8",
+          "e5h5"
+        ],
+        [
+          "e5g5"
+        ]
+      ],
+      "legal_moves": [
+        "c8b7",
+        "c8b8",
+        "c8c7",
+        "c8d7",
+        "c8d8",
+        "e5a1",
+        "e5a5",
+        "e5b2",
+        "e5b5",
+        "e5b8",
+        "e5c3",
+        "e5c5",
+        "e5c7",
+        "e5d4",
+        "e5d5",
+        "e5d6",
+        "e5e1",
+        "e5e2",
+        "e5e3",
+        "e5e4",
+        "e5e6",
+        "e5e7",
+        "e5e8",
+        "e5f4",
+        "e5f5",
+        "e5f6",
+        "e5g5",
+        "e5g7",
+        "e5h5",
+        "e5h8",
+        "g3a3",
+        "g3b3",
+        "g3c3",
+        "g3d3",
+        "g3e3",
+        "g3f3",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3g7",
+        "g3g8",
+        "g3h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "48e5b8f64cf77adf4d303bcf5aecbac10a1f0e11c58080ceb214320d496c99de",
+      "positions": [
+        "7R/8/3K4/8/8/8/1Q6/3k4 w - - 0 1",
+        "7R/8/3K4/8/k7/8/1Q6/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h8h1"
+        ],
+        [
+          "h8a8"
+        ]
+      ],
+      "legal_moves": [
+        "b2a1",
+        "b2a2",
+        "b2a3",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c1",
+        "b2c2",
+        "b2c3",
+        "b2d2",
+        "b2d4",
+        "b2e2",
+        "b2e5",
+        "b2f2",
+        "b2f6",
+        "b2g2",
+        "b2g7",
+        "b2h2",
+        "d6c5",
+        "d6c6",
+        "d6c7",
+        "d6d5",
+        "d6d7",
+        "d6e5",
+        "d6e6",
+        "d6e7",
+        "h8a8",
+        "h8b8",
+        "h8c8",
+        "h8d8",
+        "h8e8",
+        "h8f8",
+        "h8g8",
+        "h8h1",
+        "h8h2",
+        "h8h3",
+        "h8h4",
+        "h8h5",
+        "h8h6",
+        "h8h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "e64234ee6f5a187ad17cd74c613d3ef8f4b08c38129908a8d614f9ff5766c396",
+      "positions": [
+        "8/8/8/8/5QR1/8/8/K6k w - - 0 1",
+        "8/8/8/8/5QR1/7k/8/K7 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f4h6"
+        ],
+        [
+          "f4g3"
+        ]
+      ],
+      "legal_moves": [
+        "a1a2",
+        "a1b1",
+        "a1b2",
+        "f4a4",
+        "f4b4",
+        "f4b8",
+        "f4c1",
+        "f4c4",
+        "f4c7",
+        "f4d2",
+        "f4d4",
+        "f4d6",
+        "f4e3",
+        "f4e4",
+        "f4e5",
+        "f4f1",
+        "f4f2",
+        "f4f3",
+        "f4f5",
+        "f4f6",
+        "f4f7",
+        "f4f8",
+        "f4g3",
+        "f4g5",
+        "f4h2",
+        "f4h6",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "c22294d287e0aab5ce8168d9607f89ffed620a6108f4e9db5be647e165d4f231",
+      "positions": [
+        "8/8/8/8/4K1Q1/8/7R/2k5 w - - 0 1",
+        "8/8/8/8/4K1Q1/8/7R/5k2 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g4g1"
+        ],
+        [
+          "g4d1"
+        ]
+      ],
+      "legal_moves": [
+        "e4d3",
+        "e4d4",
+        "e4d5",
+        "e4e3",
+        "e4e5",
+        "e4f3",
+        "e4f4",
+        "e4f5",
+        "g4c8",
+        "g4d1",
+        "g4d7",
+        "g4e2",
+        "g4e6",
+        "g4f3",
+        "g4f4",
+        "g4f5",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h3",
+        "g4h4",
+        "g4h5",
+        "h2a2",
+        "h2b2",
+        "h2c2",
+        "h2d2",
+        "h2e2",
+        "h2f2",
+        "h2g2",
+        "h2h1",
+        "h2h3",
+        "h2h4",
+        "h2h5",
+        "h2h6",
+        "h2h7",
+        "h2h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "66a804ba673f475d5a6dd8625c5467058008ef49c3d9829b0ae9e68cb40348b6",
+      "positions": [
+        "8/8/8/1R6/8/7K/k7/6Q1 w - - 0 1",
+        "8/8/k7/1R6/8/7K/8/6Q1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g1a7"
+        ],
+        [
+          "g1b6"
+        ]
+      ],
+      "legal_moves": [
+        "b5a5",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c5",
+        "b5d5",
+        "b5e5",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "g1a1",
+        "g1a7",
+        "g1b1",
+        "g1b6",
+        "g1c1",
+        "g1c5",
+        "g1d1",
+        "g1d4",
+        "g1e1",
+        "g1e3",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1g3",
+        "g1g4",
+        "g1g5",
+        "g1g6",
+        "g1g7",
+        "g1g8",
+        "g1h1",
+        "g1h2",
+        "h3g2",
+        "h3g3",
+        "h3g4",
+        "h3h2",
+        "h3h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "f8993e60a3acdc361760db5fc447a1b06ef5db3924655608f7f2b93376cabca8",
+      "positions": [
+        "8/8/8/6K1/8/8/3R2Q1/k7 w - - 0 1",
+        "8/8/8/6K1/8/8/3R2Q1/4k3 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g2h1",
+          "g2g1",
+          "g2f1",
+          "d2d1"
+        ],
+        [
+          "g2f2",
+          "g2e2"
+        ]
+      ],
+      "legal_moves": [
+        "d2a2",
+        "d2b2",
+        "d2c2",
+        "d2d1",
+        "d2d3",
+        "d2d4",
+        "d2d5",
+        "d2d6",
+        "d2d7",
+        "d2d8",
+        "d2e2",
+        "d2f2",
+        "g2a8",
+        "g2b7",
+        "g2c6",
+        "g2d5",
+        "g2e2",
+        "g2e4",
+        "g2f1",
+        "g2f2",
+        "g2f3",
+        "g2g1",
+        "g2g3",
+        "g2g4",
+        "g2h1",
+        "g2h2",
+        "g2h3",
+        "g5f4",
+        "g5f5",
+        "g5f6",
+        "g5g4",
+        "g5g6",
+        "g5h4",
+        "g5h5",
+        "g5h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "14f799003c34f305d948670a2577d521a6f80520c98654ad9ef7a7717bc96d65",
+      "positions": [
+        "5Q2/8/8/4K3/8/8/1R6/k7 w - - 0 1",
+        "5Q2/8/8/4K3/8/8/1R6/3k4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f8a3"
+        ],
+        [
+          "f8f1"
+        ]
+      ],
+      "legal_moves": [
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "e5d4",
+        "e5d5",
+        "e5d6",
+        "e5e4",
+        "e5e6",
+        "e5f4",
+        "e5f5",
+        "e5f6",
+        "f8a3",
+        "f8a8",
+        "f8b4",
+        "f8b8",
+        "f8c5",
+        "f8c8",
+        "f8d6",
+        "f8d8",
+        "f8e7",
+        "f8e8",
+        "f8f1",
+        "f8f2",
+        "f8f3",
+        "f8f4",
+        "f8f5",
+        "f8f6",
+        "f8f7",
+        "f8g7",
+        "f8g8",
+        "f8h6",
+        "f8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "33117e8e8da5691219748c95ce3180364bd9f438930076127d19b018e2c35c14",
+      "positions": [
+        "8/8/8/1R6/3Q4/k7/6K1/8 w - - 0 1",
+        "8/8/k7/1R6/3Q4/8/6K1/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d4a7",
+          "d4a1"
+        ],
+        [
+          "d4b6",
+          "d4a4"
+        ]
+      ],
+      "legal_moves": [
+        "b5a5",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c5",
+        "b5d5",
+        "b5e5",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "d4a1",
+        "d4a4",
+        "d4a7",
+        "d4b2",
+        "d4b4",
+        "d4b6",
+        "d4c3",
+        "d4c4",
+        "d4c5",
+        "d4d1",
+        "d4d2",
+        "d4d3",
+        "d4d5",
+        "d4d6",
+        "d4d7",
+        "d4d8",
+        "d4e3",
+        "d4e4",
+        "d4e5",
+        "d4f2",
+        "d4f4",
+        "d4f6",
+        "d4g1",
+        "d4g4",
+        "d4g7",
+        "d4h4",
+        "d4h8",
+        "g2f1",
+        "g2f2",
+        "g2f3",
+        "g2g1",
+        "g2g3",
+        "g2h1",
+        "g2h2",
+        "g2h3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "fbfedc87a53012c78c8824ce3dd065c8c970753f7e2424e76f11db5976dda9b6",
+      "positions": [
+        "8/8/8/8/4Q3/8/6R1/K2k4 w - - 0 1",
+        "8/8/8/8/4Q3/8/6R1/K4k2 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e4b1"
+        ],
+        [
+          "e4e2"
+        ]
+      ],
+      "legal_moves": [
+        "a1a2",
+        "a1b1",
+        "a1b2",
+        "e4a4",
+        "e4a8",
+        "e4b1",
+        "e4b4",
+        "e4b7",
+        "e4c2",
+        "e4c4",
+        "e4c6",
+        "e4d3",
+        "e4d4",
+        "e4d5",
+        "e4e1",
+        "e4e2",
+        "e4e3",
+        "e4e5",
+        "e4e6",
+        "e4e7",
+        "e4e8",
+        "e4f3",
+        "e4f4",
+        "e4f5",
+        "e4g4",
+        "e4g6",
+        "e4h4",
+        "e4h7",
+        "g2a2",
+        "g2b2",
+        "g2c2",
+        "g2d2",
+        "g2e2",
+        "g2f2",
+        "g2g1",
+        "g2g3",
+        "g2g4",
+        "g2g5",
+        "g2g6",
+        "g2g7",
+        "g2g8",
+        "g2h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "38c16a100506b5d99a355883c83110a35a8fb62010b6c01c63e8ac02f353f9dd",
+      "positions": [
+        "8/8/8/8/3K2R1/3Q4/7k/8 w - - 0 1",
+        "8/8/8/7k/3K2R1/3Q4/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d3h7"
+        ],
+        [
+          "d3g6",
+          "d3h3"
+        ]
+      ],
+      "legal_moves": [
+        "d3a3",
+        "d3a6",
+        "d3b1",
+        "d3b3",
+        "d3b5",
+        "d3c2",
+        "d3c3",
+        "d3c4",
+        "d3d1",
+        "d3d2",
+        "d3e2",
+        "d3e3",
+        "d3e4",
+        "d3f1",
+        "d3f3",
+        "d3f5",
+        "d3g3",
+        "d3g6",
+        "d3h3",
+        "d3h7",
+        "d4c3",
+        "d4c4",
+        "d4c5",
+        "d4d5",
+        "d4e3",
+        "d4e4",
+        "d4e5",
+        "g4e4",
+        "g4f4",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "112f735aa5283c7c9e8a955a28360db0182d2e2f69113eed5d9dea5a1b16a2ec",
+      "positions": [
+        "K7/8/2Q5/8/8/8/2R5/k7 w - - 0 1",
+        "K7/8/2Q5/8/8/8/2R5/6k1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c6h1"
+        ],
+        [
+          "c6g2"
+        ]
+      ],
+      "legal_moves": [
+        "a8a7",
+        "a8b7",
+        "a8b8",
+        "c2a2",
+        "c2b2",
+        "c2c1",
+        "c2c3",
+        "c2c4",
+        "c2c5",
+        "c2d2",
+        "c2e2",
+        "c2f2",
+        "c2g2",
+        "c2h2",
+        "c6a4",
+        "c6a6",
+        "c6b5",
+        "c6b6",
+        "c6b7",
+        "c6c3",
+        "c6c4",
+        "c6c5",
+        "c6c7",
+        "c6c8",
+        "c6d5",
+        "c6d6",
+        "c6d7",
+        "c6e4",
+        "c6e6",
+        "c6e8",
+        "c6f3",
+        "c6f6",
+        "c6g2",
+        "c6g6",
+        "c6h1",
+        "c6h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "3622a2f1cc37e5a6277f32071a02fb7d4f5454399667b1d2b02924675f118671",
+      "positions": [
+        "8/K7/8/8/8/3Q4/1R6/k7 w - - 0 1",
+        "8/K7/8/8/k7/3Q4/1R6/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d3a3",
+          "d3b1"
+        ],
+        [
+          "d3a6"
+        ]
+      ],
+      "legal_moves": [
+        "a7a6",
+        "a7a8",
+        "a7b6",
+        "a7b7",
+        "a7b8",
+        "b2a2",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c2",
+        "b2d2",
+        "b2e2",
+        "b2f2",
+        "b2g2",
+        "b2h2",
+        "d3a3",
+        "d3a6",
+        "d3b1",
+        "d3b3",
+        "d3b5",
+        "d3c2",
+        "d3c3",
+        "d3c4",
+        "d3d1",
+        "d3d2",
+        "d3d4",
+        "d3d5",
+        "d3d6",
+        "d3d7",
+        "d3d8",
+        "d3e2",
+        "d3e3",
+        "d3e4",
+        "d3f1",
+        "d3f3",
+        "d3f5",
+        "d3g3",
+        "d3g6",
+        "d3h3",
+        "d3h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "73143dda15aff31b88602dac684f59f338af9d2a0fc6ae37572d8b7678c5882e",
+      "positions": [
+        "6R1/8/8/8/k7/6K1/1Q6/8 w - - 0 1",
+        "6R1/8/7k/8/8/6K1/1Q6/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g8a8"
+        ],
+        [
+          "b2h8",
+          "b2h2"
+        ]
+      ],
+      "legal_moves": [
+        "b2a1",
+        "b2a2",
+        "b2a3",
+        "b2b1",
+        "b2b3",
+        "b2b4",
+        "b2b5",
+        "b2b6",
+        "b2b7",
+        "b2b8",
+        "b2c1",
+        "b2c2",
+        "b2c3",
+        "b2d2",
+        "b2d4",
+        "b2e2",
+        "b2e5",
+        "b2f2",
+        "b2f6",
+        "b2g2",
+        "b2g7",
+        "b2h2",
+        "b2h8",
+        "g3f2",
+        "g3f3",
+        "g3f4",
+        "g3g2",
+        "g3g4",
+        "g3h2",
+        "g3h3",
+        "g3h4",
+        "g8a8",
+        "g8b8",
+        "g8c8",
+        "g8d8",
+        "g8e8",
+        "g8f8",
+        "g8g4",
+        "g8g5",
+        "g8g6",
+        "g8g7",
+        "g8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "8b9b9fb76074cd44f4b2c4f6ade6a69e6a0d594930ba2c50aff33e8a0e44ba32",
+      "positions": [
+        "8/8/3K4/8/8/Q7/4R3/1k6 w - - 0 1",
+        "8/8/3K4/8/8/Q7/4R3/6k1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a3b2"
+        ],
+        [
+          "a3c1",
+          "a3a1"
+        ]
+      ],
+      "legal_moves": [
+        "a3a1",
+        "a3a2",
+        "a3a4",
+        "a3a5",
+        "a3a6",
+        "a3a7",
+        "a3a8",
+        "a3b2",
+        "a3b3",
+        "a3b4",
+        "a3c1",
+        "a3c3",
+        "a3c5",
+        "a3d3",
+        "a3e3",
+        "a3f3",
+        "a3g3",
+        "a3h3",
+        "d6c5",
+        "d6c6",
+        "d6c7",
+        "d6d5",
+        "d6d7",
+        "d6e5",
+        "d6e6",
+        "d6e7",
+        "e2a2",
+        "e2b2",
+        "e2c2",
+        "e2d2",
+        "e2e1",
+        "e2e3",
+        "e2e4",
+        "e2e5",
+        "e2e6",
+        "e2e7",
+        "e2e8",
+        "e2f2",
+        "e2g2",
+        "e2h2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "5bc764e5ce9532697da901b9bab93f6cf266a7c298d9f767db2cc83ae8118f8b",
+      "positions": [
+        "5K2/8/1R6/4Q3/8/8/k7/8 w - - 0 1",
+        "5K2/8/1R6/4Q3/k7/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e5a5",
+          "e5b2"
+        ],
+        [
+          "e5a1"
+        ]
+      ],
+      "legal_moves": [
+        "b6a6",
+        "b6b1",
+        "b6b2",
+        "b6b3",
+        "b6b4",
+        "b6b5",
+        "b6b7",
+        "b6b8",
+        "b6c6",
+        "b6d6",
+        "b6e6",
+        "b6f6",
+        "b6g6",
+        "b6h6",
+        "e5a1",
+        "e5a5",
+        "e5b2",
+        "e5b5",
+        "e5b8",
+        "e5c3",
+        "e5c5",
+        "e5c7",
+        "e5d4",
+        "e5d5",
+        "e5d6",
+        "e5e1",
+        "e5e2",
+        "e5e3",
+        "e5e4",
+        "e5e6",
+        "e5e7",
+        "e5e8",
+        "e5f4",
+        "e5f5",
+        "e5f6",
+        "e5g3",
+        "e5g5",
+        "e5g7",
+        "e5h2",
+        "e5h5",
+        "e5h8",
+        "f8e7",
+        "f8e8",
+        "f8f7",
+        "f8g7",
+        "f8g8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "28dc6902ad88b6d7718b80f6d8bc64d28906a638ac7c5aa474f6006fc957eea5",
+      "positions": [
+        "8/6Q1/8/2R5/8/8/8/K6k w - - 0 1",
+        "k7/6Q1/8/2R5/8/8/8/K7 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c5h5"
+        ],
+        [
+          "c5c8"
+        ]
+      ],
+      "legal_moves": [
+        "a1a2",
+        "a1b1",
+        "a1b2",
+        "c5a5",
+        "c5b5",
+        "c5c1",
+        "c5c2",
+        "c5c3",
+        "c5c4",
+        "c5c6",
+        "c5c7",
+        "c5c8",
+        "c5d5",
+        "c5e5",
+        "c5f5",
+        "c5g5",
+        "c5h5",
+        "g7a7",
+        "g7b2",
+        "g7b7",
+        "g7c3",
+        "g7c7",
+        "g7d4",
+        "g7d7",
+        "g7e5",
+        "g7e7",
+        "g7f6",
+        "g7f7",
+        "g7f8",
+        "g7g1",
+        "g7g2",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h6",
+        "g7h7",
+        "g7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a8d91b73cb3852998dd7b32709954265063bc5f5fc3a4816b8d284bfe92bcb24",
+      "positions": [
+        "8/8/8/5Q2/4K1R1/8/8/7k w - - 0 1",
+        "8/8/7k/5Q2/4K1R1/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f5h7",
+          "f5h5"
+        ],
+        [
+          "f5g6"
+        ]
+      ],
+      "legal_moves": [
+        "e4d3",
+        "e4d4",
+        "e4d5",
+        "e4e3",
+        "e4e5",
+        "e4f3",
+        "e4f4",
+        "f5a5",
+        "f5b5",
+        "f5c5",
+        "f5c8",
+        "f5d5",
+        "f5d7",
+        "f5e5",
+        "f5e6",
+        "f5f1",
+        "f5f2",
+        "f5f3",
+        "f5f4",
+        "f5f6",
+        "f5f7",
+        "f5f8",
+        "f5g5",
+        "f5g6",
+        "f5h5",
+        "f5h7",
+        "g4f4",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "7522b675a7f3ed75a693df8c9d7d350abbde76073e8226d621d1b90081a058dd",
+      "positions": [
+        "8/8/1R6/5K2/8/8/k7/3Q4 w - - 0 1",
+        "8/8/1R6/5K2/8/k7/8/3Q4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d1a4"
+        ],
+        [
+          "d1b3",
+          "d1a1"
+        ]
+      ],
+      "legal_moves": [
+        "b6a6",
+        "b6b1",
+        "b6b2",
+        "b6b3",
+        "b6b4",
+        "b6b5",
+        "b6b7",
+        "b6b8",
+        "b6c6",
+        "b6d6",
+        "b6e6",
+        "b6f6",
+        "b6g6",
+        "b6h6",
+        "d1a1",
+        "d1a4",
+        "d1b1",
+        "d1b3",
+        "d1c1",
+        "d1c2",
+        "d1d2",
+        "d1d3",
+        "d1d4",
+        "d1d5",
+        "d1d6",
+        "d1d7",
+        "d1d8",
+        "d1e1",
+        "d1e2",
+        "d1f1",
+        "d1f3",
+        "d1g1",
+        "d1g4",
+        "d1h1",
+        "d1h5",
+        "f5e4",
+        "f5e5",
+        "f5e6",
+        "f5f4",
+        "f5f6",
+        "f5g4",
+        "f5g5",
+        "f5g6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "daea6f58451c1f1083bf59d0c73575325fb4401b4009b7a88826d21262e9c5f0",
+      "positions": [
+        "8/6R1/8/8/4K3/6Q1/8/7k w - - 0 1",
+        "8/6R1/7k/8/4K3/6Q1/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g7h7",
+          "g3h4",
+          "g3h3",
+          "g3g2",
+          "g3g1"
+        ],
+        [
+          "g3g6",
+          "g3g5"
+        ]
+      ],
+      "legal_moves": [
+        "e4d3",
+        "e4d4",
+        "e4d5",
+        "e4e3",
+        "e4e5",
+        "e4f3",
+        "e4f4",
+        "e4f5",
+        "g3a3",
+        "g3b3",
+        "g3b8",
+        "g3c3",
+        "g3c7",
+        "g3d3",
+        "g3d6",
+        "g3e1",
+        "g3e3",
+        "g3e5",
+        "g3f2",
+        "g3f3",
+        "g3f4",
+        "g3g1",
+        "g3g2",
+        "g3g4",
+        "g3g5",
+        "g3g6",
+        "g3h2",
+        "g3h3",
+        "g3h4",
+        "g7a7",
+        "g7b7",
+        "g7c7",
+        "g7d7",
+        "g7e7",
+        "g7f7",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "f2915f006b02eae3cc2b53b1825bd48ccfc6991ee0e982d0d9f958247cc42a75",
+      "positions": [
+        "8/8/KR4Q1/8/8/8/8/k7 w - - 0 1",
+        "7k/8/KR4Q1/8/8/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g6b1"
+        ],
+        [
+          "b6b8"
+        ]
+      ],
+      "legal_moves": [
+        "a6a5",
+        "a6a7",
+        "a6b5",
+        "a6b7",
+        "b6b1",
+        "b6b2",
+        "b6b3",
+        "b6b4",
+        "b6b5",
+        "b6b7",
+        "b6b8",
+        "b6c6",
+        "b6d6",
+        "b6e6",
+        "b6f6",
+        "g6b1",
+        "g6c2",
+        "g6c6",
+        "g6d3",
+        "g6d6",
+        "g6e4",
+        "g6e6",
+        "g6e8",
+        "g6f5",
+        "g6f6",
+        "g6f7",
+        "g6g1",
+        "g6g2",
+        "g6g3",
+        "g6g4",
+        "g6g5",
+        "g6g7",
+        "g6g8",
+        "g6h5",
+        "g6h6",
+        "g6h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "3621db120d81fe80a060dbb46099d28c0895d0911067e2e6201ebca2166e5744",
+      "positions": [
+        "3K4/8/8/8/8/7k/8/Q5R1 w - - 0 1",
+        "3K4/7k/8/8/8/8/8/Q5R1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a1h8"
+        ],
+        [
+          "a1g7"
+        ]
+      ],
+      "legal_moves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "a1a7",
+        "a1a8",
+        "a1b1",
+        "a1b2",
+        "a1c1",
+        "a1c3",
+        "a1d1",
+        "a1d4",
+        "a1e1",
+        "a1e5",
+        "a1f1",
+        "a1f6",
+        "a1g7",
+        "a1h8",
+        "d8c7",
+        "d8c8",
+        "d8d7",
+        "d8e7",
+        "d8e8",
+        "g1b1",
+        "g1c1",
+        "g1d1",
+        "g1e1",
+        "g1f1",
+        "g1g2",
+        "g1g3",
+        "g1g4",
+        "g1g5",
+        "g1g6",
+        "g1g7",
+        "g1g8",
+        "g1h1"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "340b189705d746720efd6793925b2e9fa0599edbe2c785da8a50c281cdcf69a5",
+      "positions": [
+        "8/2R5/k7/2Q5/8/8/3K4/8 w - - 0 1",
+        "k7/2R5/8/2Q5/8/8/3K4/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c7a7"
+        ],
+        [
+          "c5f8",
+          "c5a7"
+        ]
+      ],
+      "legal_moves": [
+        "c5a3",
+        "c5a5",
+        "c5a7",
+        "c5b4",
+        "c5b5",
+        "c5b6",
+        "c5c1",
+        "c5c2",
+        "c5c3",
+        "c5c4",
+        "c5c6",
+        "c5d4",
+        "c5d5",
+        "c5d6",
+        "c5e3",
+        "c5e5",
+        "c5e7",
+        "c5f2",
+        "c5f5",
+        "c5f8",
+        "c5g1",
+        "c5g5",
+        "c5h5",
+        "c7a7",
+        "c7b7",
+        "c7c6",
+        "c7c8",
+        "c7d7",
+        "c7e7",
+        "c7f7",
+        "c7g7",
+        "c7h7",
+        "d2c1",
+        "d2c2",
+        "d2c3",
+        "d2d1",
+        "d2d3",
+        "d2e1",
+        "d2e2",
+        "d2e3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "40a02b378c969c2f30ffcdc429dfb1d35afa3c6a3010eee1674909431739135a",
+      "positions": [
+        "8/4Q3/6R1/7k/8/8/8/6K1 w - - 0 1",
+        "k7/4Q3/6R1/8/8/8/8/6K1 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e7h7",
+          "e7g5"
+        ],
+        [
+          "g6g8"
+        ]
+      ],
+      "legal_moves": [
+        "e7a3",
+        "e7a7",
+        "e7b4",
+        "e7b7",
+        "e7c5",
+        "e7c7",
+        "e7d6",
+        "e7d7",
+        "e7d8",
+        "e7e1",
+        "e7e2",
+        "e7e3",
+        "e7e4",
+        "e7e5",
+        "e7e6",
+        "e7e8",
+        "e7f6",
+        "e7f7",
+        "e7f8",
+        "e7g5",
+        "e7g7",
+        "e7h4",
+        "e7h7",
+        "g1f1",
+        "g1f2",
+        "g1g2",
+        "g1h1",
+        "g1h2",
+        "g6a6",
+        "g6b6",
+        "g6c6",
+        "g6d6",
+        "g6e6",
+        "g6f6",
+        "g6g2",
+        "g6g3",
+        "g6g4",
+        "g6g5",
+        "g6g7",
+        "g6g8",
+        "g6h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "1bd40541be8a79a85c1a957d42f42242bdbb4bd217afad65bdb5a19055ce2f88",
+      "positions": [
+        "8/5Q2/6K1/8/8/1R6/8/k7 w - - 0 1",
+        "k7/5Q2/6K1/8/8/1R6/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f7a7"
+        ],
+        [
+          "f7b7"
+        ]
+      ],
+      "legal_moves": [
+        "b3a3",
+        "b3b1",
+        "b3b2",
+        "b3b4",
+        "b3b5",
+        "b3b6",
+        "b3b7",
+        "b3b8",
+        "b3c3",
+        "b3d3",
+        "b3e3",
+        "b3f3",
+        "b3g3",
+        "b3h3",
+        "f7a7",
+        "f7b7",
+        "f7c4",
+        "f7c7",
+        "f7d5",
+        "f7d7",
+        "f7e6",
+        "f7e7",
+        "f7e8",
+        "f7f1",
+        "f7f2",
+        "f7f3",
+        "f7f4",
+        "f7f5",
+        "f7f6",
+        "f7f8",
+        "f7g7",
+        "f7g8",
+        "f7h7",
+        "g6f5",
+        "g6f6",
+        "g6g5",
+        "g6g7",
+        "g6h5",
+        "g6h6",
+        "g6h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "53600c3c94bc3a40fc1d4459b38860e7971eb993522a13adac9a6e4dd88f0714",
+      "positions": [
+        "2K5/8/8/6Q1/8/8/5R2/k7 w - - 0 1",
+        "2K5/7k/8/6Q1/8/8/5R2/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g5g1",
+          "g5c1"
+        ],
+        [
+          "f2h2"
+        ]
+      ],
+      "legal_moves": [
+        "c8b7",
+        "c8b8",
+        "c8c7",
+        "c8d7",
+        "c8d8",
+        "f2a2",
+        "f2b2",
+        "f2c2",
+        "f2d2",
+        "f2e2",
+        "f2f1",
+        "f2f3",
+        "f2f4",
+        "f2f5",
+        "f2f6",
+        "f2f7",
+        "f2f8",
+        "f2g2",
+        "f2h2",
+        "g5a5",
+        "g5b5",
+        "g5c1",
+        "g5c5",
+        "g5d2",
+        "g5d5",
+        "g5d8",
+        "g5e3",
+        "g5e5",
+        "g5e7",
+        "g5f4",
+        "g5f5",
+        "g5f6",
+        "g5g1",
+        "g5g2",
+        "g5g3",
+        "g5g4",
+        "g5g6",
+        "g5g7",
+        "g5g8",
+        "g5h4",
+        "g5h5",
+        "g5h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "39b4ebcfbd8290075168a3395490b457ecff5519a0dff9896118fb7315f83668",
+      "positions": [
+        "8/8/8/8/6R1/8/8/Q1K4k w - - 0 1",
+        "8/7k/8/8/6R1/8/8/Q1K5 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a1h8"
+        ],
+        [
+          "a1g7"
+        ]
+      ],
+      "legal_moves": [
+        "a1a2",
+        "a1a3",
+        "a1a4",
+        "a1a5",
+        "a1a6",
+        "a1a7",
+        "a1a8",
+        "a1b1",
+        "a1b2",
+        "a1c3",
+        "a1d4",
+        "a1e5",
+        "a1f6",
+        "a1g7",
+        "a1h8",
+        "c1b1",
+        "c1b2",
+        "c1c2",
+        "c1d1",
+        "c1d2",
+        "g4a4",
+        "g4b4",
+        "g4c4",
+        "g4d4",
+        "g4e4",
+        "g4f4",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "065b05af0d5ab5c539ad2978ca17a1f9223762aed1bd612c504c56e41f8cfade",
+      "positions": [
+        "1k6/3R4/2Q5/8/K7/8/8/8 w - - 0 1",
+        "4k3/3R4/2Q5/8/K7/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c6b7"
+        ],
+        [
+          "c6c8"
+        ]
+      ],
+      "legal_moves": [
+        "a4a3",
+        "a4a5",
+        "a4b3",
+        "a4b4",
+        "a4b5",
+        "c6a6",
+        "c6a8",
+        "c6b5",
+        "c6b6",
+        "c6b7",
+        "c6c1",
+        "c6c2",
+        "c6c3",
+        "c6c4",
+        "c6c5",
+        "c6c7",
+        "c6c8",
+        "c6d5",
+        "c6d6",
+        "c6e4",
+        "c6e6",
+        "c6f3",
+        "c6f6",
+        "c6g2",
+        "c6g6",
+        "c6h1",
+        "c6h6",
+        "d7a7",
+        "d7b7",
+        "d7c7",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "19ca73dc77cffc93c997e692e4879244948c3792ee77062f183df6fc5f827a09",
+      "positions": [
+        "8/8/8/6K1/6R1/4Q3/8/5k2 w - - 0 1",
+        "8/8/8/6K1/6R1/4Q3/8/7k w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g4g1"
+        ],
+        [
+          "e3h3",
+          "e3g1"
+        ]
+      ],
+      "legal_moves": [
+        "e3a3",
+        "e3a7",
+        "e3b3",
+        "e3b6",
+        "e3c1",
+        "e3c3",
+        "e3c5",
+        "e3d2",
+        "e3d3",
+        "e3d4",
+        "e3e1",
+        "e3e2",
+        "e3e4",
+        "e3e5",
+        "e3e6",
+        "e3e7",
+        "e3e8",
+        "e3f2",
+        "e3f3",
+        "e3f4",
+        "e3g1",
+        "e3g3",
+        "e3h3",
+        "g4a4",
+        "g4b4",
+        "g4c4",
+        "g4d4",
+        "g4e4",
+        "g4f4",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4h4",
+        "g5f4",
+        "g5f5",
+        "g5f6",
+        "g5g6",
+        "g5h4",
+        "g5h5",
+        "g5h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "ef2d05795d5d45ec891e0947b7c16ad884731794dd28a29fcf05bdc8f9bb9abf",
+      "positions": [
+        "8/1R6/8/1Q6/8/8/5K2/k7 w - - 0 1",
+        "2k5/1R6/8/1Q6/8/8/5K2/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "b7a7",
+          "b5a6",
+          "b5a5",
+          "b5a4",
+          "b5b2",
+          "b5b1"
+        ],
+        [
+          "b5d7"
+        ]
+      ],
+      "legal_moves": [
+        "b5a4",
+        "b5a5",
+        "b5a6",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5c4",
+        "b5c5",
+        "b5c6",
+        "b5d3",
+        "b5d5",
+        "b5d7",
+        "b5e2",
+        "b5e5",
+        "b5e8",
+        "b5f1",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "b7a7",
+        "b7b6",
+        "b7b8",
+        "b7c7",
+        "b7d7",
+        "b7e7",
+        "b7f7",
+        "b7g7",
+        "b7h7",
+        "f2e1",
+        "f2e2",
+        "f2e3",
+        "f2f1",
+        "f2f3",
+        "f2g1",
+        "f2g2",
+        "f2g3"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "f949b797d79609602726a174c30764aa1346d3ae04af6ce65e40ea195b3648b2",
+      "positions": [
+        "8/6R1/8/3K4/8/8/7k/5Q2 w - - 0 1",
+        "8/6R1/8/3K4/7k/8/8/5Q2 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f1g2"
+        ],
+        [
+          "f1h1"
+        ]
+      ],
+      "legal_moves": [
+        "d5c4",
+        "d5c5",
+        "d5c6",
+        "d5d4",
+        "d5d6",
+        "d5e4",
+        "d5e5",
+        "d5e6",
+        "f1a1",
+        "f1a6",
+        "f1b1",
+        "f1b5",
+        "f1c1",
+        "f1c4",
+        "f1d1",
+        "f1d3",
+        "f1e1",
+        "f1e2",
+        "f1f2",
+        "f1f3",
+        "f1f4",
+        "f1f5",
+        "f1f6",
+        "f1f7",
+        "f1f8",
+        "f1g1",
+        "f1g2",
+        "f1h1",
+        "f1h3",
+        "g7a7",
+        "g7b7",
+        "g7c7",
+        "g7d7",
+        "g7e7",
+        "g7f7",
+        "g7g1",
+        "g7g2",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "294631063ea1a6246d31a4c0d713625b5cf59411b7b8526206f77504839469a2",
+      "positions": [
+        "8/8/8/6R1/4Q3/7k/K7/8 w - - 0 1",
+        "8/8/7k/6R1/4Q3/8/K7/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e4h7",
+          "e4h1"
+        ],
+        [
+          "e4g6",
+          "e4h4"
+        ]
+      ],
+      "legal_moves": [
+        "a2a1",
+        "a2a3",
+        "a2b1",
+        "a2b2",
+        "a2b3",
+        "e4a4",
+        "e4a8",
+        "e4b1",
+        "e4b4",
+        "e4b7",
+        "e4c2",
+        "e4c4",
+        "e4c6",
+        "e4d3",
+        "e4d4",
+        "e4d5",
+        "e4e1",
+        "e4e2",
+        "e4e3",
+        "e4e5",
+        "e4e6",
+        "e4e7",
+        "e4e8",
+        "e4f3",
+        "e4f4",
+        "e4f5",
+        "e4g2",
+        "e4g4",
+        "e4g6",
+        "e4h1",
+        "e4h4",
+        "e4h7",
+        "g5a5",
+        "g5b5",
+        "g5c5",
+        "g5d5",
+        "g5e5",
+        "g5f5",
+        "g5g1",
+        "g5g2",
+        "g5g3",
+        "g5g4",
+        "g5g6",
+        "g5g7",
+        "g5g8",
+        "g5h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "774ee2a732eff981773f21ab8c112f74e3311ae1a2a849bdb26e937d1c608663",
+      "positions": [
+        "8/6Q1/8/5R2/5K2/8/8/7k w - - 0 1",
+        "k7/6Q1/8/5R2/5K2/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f5h5"
+        ],
+        [
+          "f5f8"
+        ]
+      ],
+      "legal_moves": [
+        "f4e3",
+        "f4e4",
+        "f4e5",
+        "f4f3",
+        "f4g3",
+        "f4g4",
+        "f4g5",
+        "f5a5",
+        "f5b5",
+        "f5c5",
+        "f5d5",
+        "f5e5",
+        "f5f6",
+        "f5f7",
+        "f5f8",
+        "f5g5",
+        "f5h5",
+        "g7a1",
+        "g7a7",
+        "g7b2",
+        "g7b7",
+        "g7c3",
+        "g7c7",
+        "g7d4",
+        "g7d7",
+        "g7e5",
+        "g7e7",
+        "g7f6",
+        "g7f7",
+        "g7f8",
+        "g7g1",
+        "g7g2",
+        "g7g3",
+        "g7g4",
+        "g7g5",
+        "g7g6",
+        "g7g8",
+        "g7h6",
+        "g7h7",
+        "g7h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "2d97bbefb4c9470eb62a53a03a6d380f1c4f241aa55e64d12860e9658df63ce3",
+      "positions": [
+        "k7/3R4/8/8/8/6K1/8/5Q2 w - - 0 1",
+        "4k3/3R4/8/8/8/6K1/8/5Q2 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f1f8"
+        ],
+        [
+          "f1f7"
+        ]
+      ],
+      "legal_moves": [
+        "d7a7",
+        "d7b7",
+        "d7c7",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7",
+        "f1a1",
+        "f1a6",
+        "f1b1",
+        "f1b5",
+        "f1c1",
+        "f1c4",
+        "f1d1",
+        "f1d3",
+        "f1e1",
+        "f1e2",
+        "f1f2",
+        "f1f3",
+        "f1f4",
+        "f1f5",
+        "f1f6",
+        "f1f7",
+        "f1f8",
+        "f1g1",
+        "f1g2",
+        "f1h1",
+        "f1h3",
+        "g3f2",
+        "g3f3",
+        "g3f4",
+        "g3g2",
+        "g3g4",
+        "g3h2",
+        "g3h3",
+        "g3h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "23c785418ec2247d311005302d62d75559fa95f7eff3abf85bfc9ca1de8b18e4",
+      "positions": [
+        "8/8/7K/8/8/2Q5/2R5/1k6 w - - 0 1",
+        "8/8/7K/8/8/2Q5/2R5/3k4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c3b2"
+        ],
+        [
+          "c3d2"
+        ]
+      ],
+      "legal_moves": [
+        "c2a2",
+        "c2b2",
+        "c2c1",
+        "c2d2",
+        "c2e2",
+        "c2f2",
+        "c2g2",
+        "c2h2",
+        "c3a1",
+        "c3a3",
+        "c3a5",
+        "c3b2",
+        "c3b3",
+        "c3b4",
+        "c3c4",
+        "c3c5",
+        "c3c6",
+        "c3c7",
+        "c3c8",
+        "c3d2",
+        "c3d3",
+        "c3d4",
+        "c3e1",
+        "c3e3",
+        "c3e5",
+        "c3f3",
+        "c3f6",
+        "c3g3",
+        "c3g7",
+        "c3h3",
+        "c3h8",
+        "h6g5",
+        "h6g6",
+        "h6g7",
+        "h6h5",
+        "h6h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "fd8be99fda6741c0c144cc3e3fda4563ccfcfb3695e2a24fcd5aceead2e4192c",
+      "positions": [
+        "8/8/2K1Q3/8/8/8/2R5/k7 w - - 0 1",
+        "8/8/2K1Q3/8/8/8/2R5/3k4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e6a2",
+          "e6e1"
+        ],
+        [
+          "e6e2"
+        ]
+      ],
+      "legal_moves": [
+        "c2a2",
+        "c2b2",
+        "c2c1",
+        "c2c3",
+        "c2c4",
+        "c2c5",
+        "c2d2",
+        "c2e2",
+        "c2f2",
+        "c2g2",
+        "c2h2",
+        "c6b5",
+        "c6b6",
+        "c6b7",
+        "c6c5",
+        "c6c7",
+        "c6d5",
+        "c6d6",
+        "c6d7",
+        "e6a2",
+        "e6b3",
+        "e6c4",
+        "e6c8",
+        "e6d5",
+        "e6d6",
+        "e6d7",
+        "e6e1",
+        "e6e2",
+        "e6e3",
+        "e6e4",
+        "e6e5",
+        "e6e7",
+        "e6e8",
+        "e6f5",
+        "e6f6",
+        "e6f7",
+        "e6g4",
+        "e6g6",
+        "e6g8",
+        "e6h3",
+        "e6h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "0de9b6fe4c7f618fb4adfe556ac96fc3c2ac1c55c726b7b7eaa0a4ad2347aada",
+      "positions": [
+        "1R6/8/4K3/4Q3/8/8/k7/8 w - - 0 1",
+        "1R6/8/4K3/4Q3/k7/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "e5a5",
+          "e5b2"
+        ],
+        [
+          "e5a1"
+        ]
+      ],
+      "legal_moves": [
+        "b8a8",
+        "b8b1",
+        "b8b2",
+        "b8b3",
+        "b8b4",
+        "b8b5",
+        "b8b6",
+        "b8b7",
+        "b8c8",
+        "b8d8",
+        "b8e8",
+        "b8f8",
+        "b8g8",
+        "b8h8",
+        "e5a1",
+        "e5a5",
+        "e5b2",
+        "e5b5",
+        "e5c3",
+        "e5c5",
+        "e5c7",
+        "e5d4",
+        "e5d5",
+        "e5d6",
+        "e5e1",
+        "e5e2",
+        "e5e3",
+        "e5e4",
+        "e5f4",
+        "e5f5",
+        "e5f6",
+        "e5g3",
+        "e5g5",
+        "e5g7",
+        "e5h2",
+        "e5h5",
+        "e5h8",
+        "e6d5",
+        "e6d6",
+        "e6d7",
+        "e6e7",
+        "e6f5",
+        "e6f6",
+        "e6f7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "90a068d587aa2474798073703c8d558f54ed263a387a2997d871df58ee2e29e4",
+      "positions": [
+        "8/8/8/1R6/3Q4/k7/8/4K3 w - - 0 1",
+        "8/8/k7/1R6/3Q4/8/8/4K3 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d4a7",
+          "d4a1"
+        ],
+        [
+          "d4b6",
+          "d4a4"
+        ]
+      ],
+      "legal_moves": [
+        "b5a5",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c5",
+        "b5d5",
+        "b5e5",
+        "b5f5",
+        "b5g5",
+        "b5h5",
+        "d4a1",
+        "d4a4",
+        "d4a7",
+        "d4b2",
+        "d4b4",
+        "d4b6",
+        "d4c3",
+        "d4c4",
+        "d4c5",
+        "d4d1",
+        "d4d2",
+        "d4d3",
+        "d4d5",
+        "d4d6",
+        "d4d7",
+        "d4d8",
+        "d4e3",
+        "d4e4",
+        "d4e5",
+        "d4f2",
+        "d4f4",
+        "d4f6",
+        "d4g1",
+        "d4g4",
+        "d4g7",
+        "d4h4",
+        "d4h8",
+        "e1d1",
+        "e1d2",
+        "e1e2",
+        "e1f1",
+        "e1f2"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "bdcf3290fe64e1268d114e76b0c8aee54bf63dbd759a11fae5c324593381d269",
+      "positions": [
+        "8/8/8/6R1/3K4/8/5Q2/k7 w - - 0 1",
+        "8/8/8/6R1/3K4/7k/5Q2/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g5g1"
+        ],
+        [
+          "f2g3"
+        ]
+      ],
+      "legal_moves": [
+        "d4c3",
+        "d4c4",
+        "d4c5",
+        "d4d3",
+        "d4d5",
+        "d4e3",
+        "d4e4",
+        "d4e5",
+        "f2a2",
+        "f2b2",
+        "f2c2",
+        "f2d2",
+        "f2e1",
+        "f2e2",
+        "f2e3",
+        "f2f1",
+        "f2f3",
+        "f2f4",
+        "f2f5",
+        "f2f6",
+        "f2f7",
+        "f2f8",
+        "f2g1",
+        "f2g2",
+        "f2g3",
+        "f2h2",
+        "f2h4",
+        "g5a5",
+        "g5b5",
+        "g5c5",
+        "g5d5",
+        "g5e5",
+        "g5f5",
+        "g5g1",
+        "g5g2",
+        "g5g3",
+        "g5g4",
+        "g5g6",
+        "g5g7",
+        "g5g8",
+        "g5h5"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "7d56c8dac6b0fbc2585f7c338b9e5bbb4dda217f605284e7eb0ee96eb7ec57d0",
+      "positions": [
+        "4K2Q/8/8/8/8/8/2R5/1k6 w - - 0 1",
+        "4K2Q/8/8/8/8/8/2R5/4k3 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "h8b2"
+        ],
+        [
+          "h8h1",
+          "h8a1"
+        ]
+      ],
+      "legal_moves": [
+        "c2a2",
+        "c2b2",
+        "c2c1",
+        "c2c3",
+        "c2c4",
+        "c2c5",
+        "c2c6",
+        "c2c7",
+        "c2c8",
+        "c2d2",
+        "c2e2",
+        "c2f2",
+        "c2g2",
+        "c2h2",
+        "e8d7",
+        "e8d8",
+        "e8e7",
+        "e8f7",
+        "e8f8",
+        "h8a1",
+        "h8b2",
+        "h8c3",
+        "h8d4",
+        "h8e5",
+        "h8f6",
+        "h8f8",
+        "h8g7",
+        "h8g8",
+        "h8h1",
+        "h8h2",
+        "h8h3",
+        "h8h4",
+        "h8h5",
+        "h8h6",
+        "h8h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "14ce4f0aa473e91fc92b1bd36f99a7df2d71747471ad526f4a725c2233690fe6",
+      "positions": [
+        "8/8/3K2Q1/8/8/8/6R1/2k5 w - - 0 1",
+        "8/8/3K2Q1/8/8/8/6R1/3k4 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "g6c2"
+        ],
+        [
+          "g6b1"
+        ]
+      ],
+      "legal_moves": [
+        "d6c5",
+        "d6c6",
+        "d6c7",
+        "d6d5",
+        "d6d7",
+        "d6e5",
+        "d6e6",
+        "d6e7",
+        "g2a2",
+        "g2b2",
+        "g2c2",
+        "g2d2",
+        "g2e2",
+        "g2f2",
+        "g2g1",
+        "g2g3",
+        "g2g4",
+        "g2g5",
+        "g2h2",
+        "g6b1",
+        "g6c2",
+        "g6d3",
+        "g6e4",
+        "g6e6",
+        "g6e8",
+        "g6f5",
+        "g6f6",
+        "g6f7",
+        "g6g3",
+        "g6g4",
+        "g6g5",
+        "g6g7",
+        "g6g8",
+        "g6h5",
+        "g6h6",
+        "g6h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "25c0aed2c078bb8665b0ea0c21417278a13c7f85dec77cf2ee37ad6d8029c950",
+      "positions": [
+        "8/5R2/8/1Q4K1/8/8/8/k7 w - - 0 1",
+        "k7/5R2/8/1Q4K1/8/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "f7a7"
+        ],
+        [
+          "b5e8",
+          "b5b7"
+        ]
+      ],
+      "legal_moves": [
+        "b5a4",
+        "b5a5",
+        "b5a6",
+        "b5b1",
+        "b5b2",
+        "b5b3",
+        "b5b4",
+        "b5b6",
+        "b5b7",
+        "b5b8",
+        "b5c4",
+        "b5c5",
+        "b5c6",
+        "b5d3",
+        "b5d5",
+        "b5d7",
+        "b5e2",
+        "b5e5",
+        "b5e8",
+        "b5f1",
+        "b5f5",
+        "f7a7",
+        "f7b7",
+        "f7c7",
+        "f7d7",
+        "f7e7",
+        "f7f1",
+        "f7f2",
+        "f7f3",
+        "f7f4",
+        "f7f5",
+        "f7f6",
+        "f7f8",
+        "f7g7",
+        "f7h7",
+        "g5f4",
+        "g5f5",
+        "g5f6",
+        "g5g4",
+        "g5g6",
+        "g5h4",
+        "g5h5",
+        "g5h6"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "38640381fa0dead48eb161da95aebd5da0c2e73e5278ea4bed0ff4ede7488f16",
+      "positions": [
+        "8/3R4/6Q1/8/8/8/8/K6k w - - 0 1",
+        "k7/3R4/6Q1/8/8/8/8/K7 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d7h7"
+        ],
+        [
+          "g6g8",
+          "g6e8"
+        ]
+      ],
+      "legal_moves": [
+        "a1a2",
+        "a1b1",
+        "a1b2",
+        "d7a7",
+        "d7b7",
+        "d7c7",
+        "d7d1",
+        "d7d2",
+        "d7d3",
+        "d7d4",
+        "d7d5",
+        "d7d6",
+        "d7d8",
+        "d7e7",
+        "d7f7",
+        "d7g7",
+        "d7h7",
+        "g6a6",
+        "g6b1",
+        "g6b6",
+        "g6c2",
+        "g6c6",
+        "g6d3",
+        "g6d6",
+        "g6e4",
+        "g6e6",
+        "g6e8",
+        "g6f5",
+        "g6f6",
+        "g6f7",
+        "g6g1",
+        "g6g2",
+        "g6g3",
+        "g6g4",
+        "g6g5",
+        "g6g7",
+        "g6g8",
+        "g6h5",
+        "g6h6",
+        "g6h7"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "ec591c6e131bc01e7e02fda23948189e6634a6711ff9d4451f8d5328e646d64c",
+      "positions": [
+        "8/Q7/8/4K3/6R1/8/8/7k w - - 0 1",
+        "2k5/Q7/8/4K3/6R1/8/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "a7h7",
+          "a7g1"
+        ],
+        [
+          "g4g8"
+        ]
+      ],
+      "legal_moves": [
+        "a7a1",
+        "a7a2",
+        "a7a3",
+        "a7a4",
+        "a7a5",
+        "a7a6",
+        "a7a8",
+        "a7b6",
+        "a7b7",
+        "a7b8",
+        "a7c5",
+        "a7c7",
+        "a7d4",
+        "a7d7",
+        "a7e3",
+        "a7e7",
+        "a7f2",
+        "a7f7",
+        "a7g1",
+        "a7g7",
+        "a7h7",
+        "e5d4",
+        "e5d5",
+        "e5d6",
+        "e5e4",
+        "e5e6",
+        "e5f4",
+        "e5f5",
+        "e5f6",
+        "g4a4",
+        "g4b4",
+        "g4c4",
+        "g4d4",
+        "g4e4",
+        "g4f4",
+        "g4g1",
+        "g4g2",
+        "g4g3",
+        "g4g5",
+        "g4g6",
+        "g4g7",
+        "g4g8",
+        "g4h4"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "a6b01242ae159cd6aa960a0a4a9bb9a8f86e47c5ff8d611654302a64145b4f9d",
+      "positions": [
+        "6R1/8/2Q5/8/8/3K4/7k/8 w - - 0 1",
+        "6R1/8/2Q5/7k/8/3K4/8/8 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "c6h6",
+          "c6g2"
+        ],
+        [
+          "c6h1"
+        ]
+      ],
+      "legal_moves": [
+        "c6a4",
+        "c6a6",
+        "c6a8",
+        "c6b5",
+        "c6b6",
+        "c6b7",
+        "c6c1",
+        "c6c2",
+        "c6c3",
+        "c6c4",
+        "c6c5",
+        "c6c7",
+        "c6c8",
+        "c6d5",
+        "c6d6",
+        "c6d7",
+        "c6e4",
+        "c6e6",
+        "c6e8",
+        "c6f3",
+        "c6f6",
+        "c6g2",
+        "c6g6",
+        "c6h1",
+        "c6h6",
+        "d3c2",
+        "d3c3",
+        "d3c4",
+        "d3d2",
+        "d3d4",
+        "d3e2",
+        "d3e3",
+        "d3e4",
+        "g8a8",
+        "g8b8",
+        "g8c8",
+        "g8d8",
+        "g8e8",
+        "g8f8",
+        "g8g1",
+        "g8g2",
+        "g8g3",
+        "g8g4",
+        "g8g5",
+        "g8g6",
+        "g8g7",
+        "g8h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    },
+    {
+      "family": "c5bba1a4e93c9bef65875461307146b4a81e0bbedad943ad9be1fa830cf04898",
+      "positions": [
+        "8/8/K7/8/3Q4/8/3R4/1k6 w - - 0 1",
+        "8/8/K7/8/3Q4/8/3R4/4k3 w - - 0 1"
+      ],
+      "answers": [
+        [
+          "d4b2",
+          "d4g1"
+        ],
+        [
+          "d4f2"
+        ]
+      ],
+      "legal_moves": [
+        "a6a5",
+        "a6a7",
+        "a6b5",
+        "a6b6",
+        "a6b7",
+        "d2a2",
+        "d2b2",
+        "d2c2",
+        "d2d1",
+        "d2d3",
+        "d2e2",
+        "d2f2",
+        "d2g2",
+        "d2h2",
+        "d4a1",
+        "d4a4",
+        "d4a7",
+        "d4b2",
+        "d4b4",
+        "d4b6",
+        "d4c3",
+        "d4c4",
+        "d4c5",
+        "d4d3",
+        "d4d5",
+        "d4d6",
+        "d4d7",
+        "d4d8",
+        "d4e3",
+        "d4e4",
+        "d4e5",
+        "d4f2",
+        "d4f4",
+        "d4f6",
+        "d4g1",
+        "d4g4",
+        "d4g7",
+        "d4h4",
+        "d4h8"
+      ],
+      "match": "exact-full-legal-UCI-set",
+      "tier": "mate1"
+    }
+  ],
+  "sha256": "497987cf7619b1e17806666df18d06eb706a1600e870b84428a6c8e1e6be59c6"
+}

@@ -1,0 +1,1859 @@
+{
+  "version": "extended-chess-v1",
+  "seed": 2907,
+  "mate2_attempts": 4373,
+  "unknown_searches": 0,
+  "matched_sha256": "497987cf7619b1e17806666df18d06eb706a1600e870b84428a6c8e1e6be59c6",
+  "train": [
+    {
+      "fen": "2k5/8/K7/6Q1/8/8/8/8 w - - 0 1",
+      "family": "11e782c327ee4d2c670222a033b4663340a5dd7e3b0ce04ea5c3a3654f25e8b5",
+      "tier": "mate2",
+      "answers": [
+        "g5e7"
+      ],
+      "proof_nodes": 781
+    },
+    {
+      "fen": "7k/Q4K2/8/8/8/8/8/8 w - - 0 1",
+      "family": "125ca77caad296585fc6f5088576d94af9fb3fc2c5a69330580309af48d790d2",
+      "tier": "mate2",
+      "answers": [
+        "f7g6",
+        "f7f6",
+        "a7b8",
+        "a7a8",
+        "a7e7",
+        "a7d7",
+        "a7c7",
+        "a7b7",
+        "a7c5",
+        "a7a5",
+        "a7d4",
+        "a7a4",
+        "a7e3",
+        "a7a3",
+        "a7f2",
+        "a7a2",
+        "a7g1",
+        "a7a1"
+      ],
+      "proof_nodes": 431
+    },
+    {
+      "fen": "4K2k/8/8/1Q6/8/8/8/8 w - - 0 1",
+      "family": "77854d80051df33e12ec3b9da54495f57fe0905598d9d59f8cca1076c5a98c3a",
+      "tier": "mate2",
+      "answers": [
+        "e8f8",
+        "e8f7"
+      ],
+      "proof_nodes": 737
+    },
+    {
+      "fen": "8/8/8/8/5Q2/7k/8/5K2 w - - 0 1",
+      "family": "5412ad66500858a6a424bb0fe96436874632cf30fb1acef7e9bc99a0743180a9",
+      "tier": "mate2",
+      "answers": [
+        "f4g5"
+      ],
+      "proof_nodes": 678
+    },
+    {
+      "fen": "8/8/8/8/8/8/1Q2K3/6k1 w - - 0 1",
+      "family": "ea1d705136a33e41024ef3848249b0f6a049d0e84e99b848a424c6fe9caf62c7",
+      "tier": "mate2",
+      "answers": [
+        "e2f3"
+      ],
+      "proof_nodes": 799
+    },
+    {
+      "fen": "4Q3/8/8/8/8/6K1/8/5k2 w - - 0 1",
+      "family": "7a4c95fe1c255e52af096fe73fadf405c93a08188a78a2effa65d3e72996d09f",
+      "tier": "mate2",
+      "answers": [
+        "e8e7",
+        "e8e6",
+        "e8e5",
+        "e8e4"
+      ],
+      "proof_nodes": 728
+    },
+    {
+      "fen": "6Q1/8/8/8/8/8/7k/4K3 w - - 0 1",
+      "family": "b73fc93f8e63f959fa02b3ca268336527c061b50b713369eb642829fbce7360a",
+      "tier": "mate2",
+      "answers": [
+        "e1f2"
+      ],
+      "proof_nodes": 687
+    },
+    {
+      "fen": "3k4/8/8/4K3/8/8/8/2Q5 w - - 0 1",
+      "family": "8507d90949ad40718f31ddd3e809abda67b198098b67e3287a6f00657a9be98e",
+      "tier": "mate2",
+      "answers": [
+        "e5e6"
+      ],
+      "proof_nodes": 841
+    },
+    {
+      "fen": "8/7k/5K2/1Q6/8/8/8/8 w - - 0 1",
+      "family": "56de191f73e6caeb52f5980984a6e7a517490e2fbd814fdbcac78cc92bca3712",
+      "tier": "mate2",
+      "answers": [
+        "b5e8",
+        "b5b8",
+        "b5d7",
+        "b5b7",
+        "b5g5"
+      ],
+      "proof_nodes": 846
+    },
+    {
+      "fen": "8/8/8/8/6K1/8/Q7/5k2 w - - 0 1",
+      "family": "442b63342eea1f0827aa2d83b590e41ca374659a36b0e73c9acb87ff3ddc055e",
+      "tier": "mate2",
+      "answers": [
+        "g4f3"
+      ],
+      "proof_nodes": 828
+    },
+    {
+      "fen": "8/8/5Q2/8/3K4/8/8/4k3 w - - 0 1",
+      "family": "3c9047c45bcf9d859073c0868d6daf0fc4d527e0b8b413ae72907e82e4fad5df",
+      "tier": "mate2",
+      "answers": [
+        "d4d3"
+      ],
+      "proof_nodes": 856
+    },
+    {
+      "fen": "4Q3/7k/8/6K1/8/8/8/8 w - - 0 1",
+      "family": "9a09adaa81214f52ed8de1f8a29d837cc01db73202e7f80ca5f2008eddee8f4c",
+      "tier": "mate2",
+      "answers": [
+        "g5f6"
+      ],
+      "proof_nodes": 710
+    },
+    {
+      "fen": "8/5Q2/k7/8/1K6/8/8/8 w - - 0 1",
+      "family": "dd83180f774bf44c5c4715bfde5868744d0cd711023ed6f66c5523446d3982b7",
+      "tier": "mate2",
+      "answers": [
+        "b4c5"
+      ],
+      "proof_nodes": 802
+    },
+    {
+      "fen": "3Q4/8/8/8/8/8/k7/3K4 w - - 0 1",
+      "family": "29057b6c48aa4964e1c1dbd629e7d990d918fd67c2d48a78b4ca8e608dec5138",
+      "tier": "mate2",
+      "answers": [
+        "d1c2"
+      ],
+      "proof_nodes": 710
+    },
+    {
+      "fen": "3k4/1Q6/8/3K4/8/8/8/8 w - - 0 1",
+      "family": "879dba1893dd95d5740affda9f8183a3251bd61f84e611bdc75d8195d6bcf683",
+      "tier": "mate2",
+      "answers": [
+        "d5e6",
+        "d5d6"
+      ],
+      "proof_nodes": 690
+    },
+    {
+      "fen": "8/3Q4/8/8/8/8/8/k2K4 w - - 0 1",
+      "family": "863008321031fedabc955f526c131fac3b6b90ab78a86656d6e4d719139eaf83",
+      "tier": "mate2",
+      "answers": [
+        "d1c2",
+        "d1c1"
+      ],
+      "proof_nodes": 743
+    },
+    {
+      "fen": "5k2/8/8/5K2/8/4Q3/8/8 w - - 0 1",
+      "family": "c67a9168175c1ea80afbdd76e909be51bbb89c087d55a92c33b5a65f5f4c6631",
+      "tier": "mate2",
+      "answers": [
+        "f5g6"
+      ],
+      "proof_nodes": 991
+    },
+    {
+      "fen": "1k6/3Q4/8/1K6/8/8/8/8 w - - 0 1",
+      "family": "c9660715d7946cfef2c9d13d0bd760a3d73a417d4a710c86ab8aa636a1e5b680",
+      "tier": "mate2",
+      "answers": [
+        "b5c6",
+        "b5b6",
+        "b5a6"
+      ],
+      "proof_nodes": 794
+    },
+    {
+      "fen": "1k6/8/K7/8/8/8/8/2Q5 w - - 0 1",
+      "family": "c7faddf6767bfebded1c4b448c9874f4fa0c77d5980e3d6f59319e2b80119e20",
+      "tier": "mate2",
+      "answers": [
+        "a6b6",
+        "c1c5",
+        "c1c4",
+        "c1c3",
+        "c1c2"
+      ],
+      "proof_nodes": 483
+    },
+    {
+      "fen": "8/8/8/8/8/3Q4/k2K4/8 w - - 0 1",
+      "family": "f8b1c6c3dd155dd8fd3aa838b7c0773a6a47b2e2825755de72aa980ce80fd40d",
+      "tier": "mate2",
+      "answers": [
+        "d2c2",
+        "d2c1"
+      ],
+      "proof_nodes": 822
+    },
+    {
+      "fen": "k7/3K4/5Q2/8/8/8/8/8 w - - 0 1",
+      "family": "bc333acb09facaa9811908d0374dbabaf4213a8c555cd9a100c63a27b0167a9a",
+      "tier": "mate2",
+      "answers": [
+        "d7c7"
+      ],
+      "proof_nodes": 957
+    },
+    {
+      "fen": "8/8/8/8/3Q2K1/8/8/4k3 w - - 0 1",
+      "family": "2fbc42d4ebcc9dba9dab219777c692dbae993f4ec40d2d537e77af5f5ddd5b57",
+      "tier": "mate2",
+      "answers": [
+        "g4f3"
+      ],
+      "proof_nodes": 983
+    },
+    {
+      "fen": "8/8/2Q5/8/8/K7/8/1k6 w - - 0 1",
+      "family": "bfa95a77ec73cc78ad0351ff278e3af993418c14992eca33eee4f0a64c31b01e",
+      "tier": "mate2",
+      "answers": [
+        "c6c8",
+        "c6c7",
+        "c6c5",
+        "c6c4",
+        "a3b3"
+      ],
+      "proof_nodes": 690
+    },
+    {
+      "fen": "8/8/6Q1/k7/3K4/8/8/8 w - - 0 1",
+      "family": "1b017e83430f958d8439ac9707f7ebe894ec219ce46cee2753226bb5095500b5",
+      "tier": "mate2",
+      "answers": [
+        "d4c4"
+      ],
+      "proof_nodes": 872
+    },
+    {
+      "fen": "8/8/8/6Q1/8/2K5/8/1k6 w - - 0 1",
+      "family": "c847399b70aa686ab1b3b6fab04b81d1c92a7948ead2a93768f67bfd791c2d79",
+      "tier": "mate2",
+      "answers": [
+        "g5b5",
+        "g5a5",
+        "g5g2",
+        "g5d2",
+        "c3b3"
+      ],
+      "proof_nodes": 953
+    },
+    {
+      "fen": "4K2k/2Q5/8/8/8/8/8/8 w - - 0 1",
+      "family": "3246d3288fb7464b7cfc9886c1ddcd8ebbd35f45c4ff8c96c69a011ba1754456",
+      "tier": "mate2",
+      "answers": [
+        "e8f7"
+      ],
+      "proof_nodes": 660
+    },
+    {
+      "fen": "k7/8/8/2K3Q1/8/8/8/8 w - - 0 1",
+      "family": "39c9535d086d2e2781070d3e3709ec9371d9e607582781cd5ebc82aba2ca8345",
+      "tier": "mate2",
+      "answers": [
+        "c5b6"
+      ],
+      "proof_nodes": 856
+    },
+    {
+      "fen": "8/7k/1Q3K2/8/8/8/8/8 w - - 0 1",
+      "family": "0c71fb617c0b806541579b25786242ce229cd7239a74a7719ca1fdaac92d0fc0",
+      "tier": "mate2",
+      "answers": [
+        "f6f7",
+        "b6d8",
+        "b6b8",
+        "b6c7",
+        "b6b7",
+        "b6g1"
+      ],
+      "proof_nodes": 745
+    },
+    {
+      "fen": "8/8/8/8/8/8/1Q4K1/3k4 w - - 0 1",
+      "family": "8adcbc331a1793fb7f85d138ed96433a73010b482ccfaa5f417a2f5a6eac1786",
+      "tier": "mate2",
+      "answers": [
+        "g2f3"
+      ],
+      "proof_nodes": 719
+    },
+    {
+      "fen": "5k2/8/7K/8/8/8/8/4Q3 w - - 0 1",
+      "family": "3b0b71130a0623c2034b466591802a8b1c63f17cb70fbc929ff60f02aea0f062",
+      "tier": "mate2",
+      "answers": [
+        "h6g6"
+      ],
+      "proof_nodes": 632
+    },
+    {
+      "fen": "8/3KQ3/k7/8/8/8/8/8 w - - 0 1",
+      "family": "6e8092ffacef31f9808e4b76e5a41160e5c1cccf8d253be0d027ee595c9535d2",
+      "tier": "mate2",
+      "answers": [
+        "d7c6"
+      ],
+      "proof_nodes": 753
+    },
+    {
+      "fen": "8/8/8/8/7k/5K2/8/Q7 w - - 0 1",
+      "family": "e7d0ea65d9d174f687f38e6785ebf4e5705d4160f3a574e183b32a4f0c5519ff",
+      "tier": "mate2",
+      "answers": [
+        "a1e5",
+        "a1a5"
+      ],
+      "proof_nodes": 755
+    },
+    {
+      "fen": "6k1/4Q3/8/4K3/8/8/8/8 w - - 0 1",
+      "family": "959c99aeef118fa87242ba20ed2e5f8617e6158cbedd70562728445af8c38729",
+      "tier": "mate2",
+      "answers": [
+        "e5f6"
+      ],
+      "proof_nodes": 715
+    },
+    {
+      "fen": "8/8/8/8/4K3/8/Q7/2k5 w - - 0 1",
+      "family": "092f2c3d7f5792e620dbff72c5e4c7c958a273f2eb714871ae24ba8041ac0daf",
+      "tier": "mate2",
+      "answers": [
+        "e4e3",
+        "e4d3"
+      ],
+      "proof_nodes": 757
+    },
+    {
+      "fen": "8/1Q6/8/8/K7/8/8/k7 w - - 0 1",
+      "family": "404c7d27738d10da0cd56c60aa5ff416b9b64a74a81ffc0f12a015ac561c5695",
+      "tier": "mate2",
+      "answers": [
+        "a4b3"
+      ],
+      "proof_nodes": 653
+    },
+    {
+      "fen": "8/8/7k/8/5K2/1Q6/8/8 w - - 0 1",
+      "family": "2c5910dcd6bbdd6ad092d85a52dd1190fdca02f6fd7f27eb3fc3e13774757803",
+      "tier": "mate2",
+      "answers": [
+        "b3g8"
+      ],
+      "proof_nodes": 897
+    },
+    {
+      "fen": "Q7/7k/8/5K2/8/8/8/8 w - - 0 1",
+      "family": "3314ea80bf026fc0667825c671d5831cb1d5451ff6237160ff7c0d647b232b34",
+      "tier": "mate2",
+      "answers": [
+        "f5f6"
+      ],
+      "proof_nodes": 741
+    },
+    {
+      "fen": "1Q6/8/8/8/8/4K3/8/5k2 w - - 0 1",
+      "family": "280a8de75b8ca3d351b03f33cb1c4bb70c13fa27de4333b388fb96242f9b610d",
+      "tier": "mate2",
+      "answers": [
+        "b8g8",
+        "b8h2"
+      ],
+      "proof_nodes": 757
+    },
+    {
+      "fen": "k7/8/8/2K5/2Q5/8/8/8 w - - 0 1",
+      "family": "530365d1cdb4cab036008e0d6e86adcd5e46d09e921ebb50d7d2fa83bfe7243c",
+      "tier": "mate2",
+      "answers": [
+        "c5b6"
+      ],
+      "proof_nodes": 855
+    },
+    {
+      "fen": "8/8/4Q3/8/3K4/8/8/3k4 w - - 0 1",
+      "family": "f1846f5de95ee3d89efa1e3ff1458e09d377b8de5459dcc3d194cd691ccf9f9c",
+      "tier": "mate2",
+      "answers": [
+        "d4c3"
+      ],
+      "proof_nodes": 945
+    },
+    {
+      "fen": "8/8/8/8/2Q4K/8/8/6k1 w - - 0 1",
+      "family": "dc8fedfc88e954f911cfa2e48c00d08f84fe2bfc32f113f4fa0f7ae4140bd0b8",
+      "tier": "mate2",
+      "answers": [
+        "h4g3"
+      ],
+      "proof_nodes": 835
+    },
+    {
+      "fen": "7k/4K3/8/3Q4/8/8/8/8 w - - 0 1",
+      "family": "b98048aac4ed38980205509a6e4c083c8fcfbee7d8a467556a928d9e9faebe7e",
+      "tier": "mate2",
+      "answers": [
+        "e7f8",
+        "e7f7"
+      ],
+      "proof_nodes": 1012
+    },
+    {
+      "fen": "6k1/4K3/8/8/8/7Q/8/8 w - - 0 1",
+      "family": "5f614f93e52386b1e6f0ef9a9a186547d951fc0140f17222a2222078d7754947",
+      "tier": "mate2",
+      "answers": [
+        "e7f6"
+      ],
+      "proof_nodes": 722
+    },
+    {
+      "fen": "8/8/8/8/3Q4/7k/8/6K1 w - - 0 1",
+      "family": "3956520c69e049fa78875d38b7629ae276439a01e1b9d761b044a22872a75acb",
+      "tier": "mate2",
+      "answers": [
+        "g1f2"
+      ],
+      "proof_nodes": 751
+    },
+    {
+      "fen": "1k6/8/K7/8/8/Q7/8/8 w - - 0 1",
+      "family": "6e30accd3dcb229af5c13001a38f727a0aa814de72d2bb5ae412371738970201",
+      "tier": "mate2",
+      "answers": [
+        "a3c5",
+        "a3c3",
+        "a3c1"
+      ],
+      "proof_nodes": 521
+    },
+    {
+      "fen": "k7/8/8/1QK5/8/8/8/8 w - - 0 1",
+      "family": "cfa39c96d64b505b6b2bffa3c1e6b2bd5ae4bb46f7733a65c9f3f983672050dc",
+      "tier": "mate2",
+      "answers": [
+        "c5c6",
+        "c5b6"
+      ],
+      "proof_nodes": 599
+    },
+    {
+      "fen": "k2K2Q1/8/8/8/8/8/8/8 w - - 0 1",
+      "family": "0b671b9b96803d5379b1cfaeeebe5c2b6809b3577d0b8183860bc0aa2e8fcb6f",
+      "tier": "mate2",
+      "answers": [
+        "d8c7"
+      ],
+      "proof_nodes": 586
+    },
+    {
+      "fen": "8/8/8/8/1Q6/4K3/8/5k2 w - - 0 1",
+      "family": "377295be6d83469881c7638217985abcdf6d445ebfdc9275dab137f22ecd876b",
+      "tier": "mate2",
+      "answers": [
+        "b4g4"
+      ],
+      "proof_nodes": 846
+    },
+    {
+      "fen": "8/1P6/8/3K2k1/8/8/8/8 w - - 0 1",
+      "family": "263d790e81c095753be643180402f91a40744031ebca81ecaac69c490ded3c76",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "1K6/8/8/8/8/2kP4/8/8 w - - 0 1",
+      "family": "eaa5ae8be874efbe3caba44c6052fc9f4cc72ee07a1c5be1d1ae0a03dbb73962",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/4kP2/8/8/7K/8/8 w - - 0 1",
+      "family": "c9d2be15d18a5671ff4b561c33746898d1a6c72c1e71a2c88349c04edb63318a",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/5k2/8/3P4/8/1K6 w - - 0 1",
+      "family": "17e786e98848f75bda7fd1fef3a002233a3e16600f79107febb297e894b318d4",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/K7/8/8/8/4R3/5k2/8 w - - 0 1",
+      "family": "257b70479b1e0dc67bf74f1e55e3249076e273e3e6ef28dadd78985538fd74d1",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/1k6/5R2/4K3/8/8/8 w - - 0 1",
+      "family": "8710feb9bb9382ca8682d66d85d90e7abfb234c4cc9cbae01aa2dcb987760a6e",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/5k2/8/8/8/K2R4 w - - 0 1",
+      "family": "87da7ce66d63a74249b5919e006da9f842920639471162abc8418ba914f45433",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/5R2/8/2K5/8/8/k7 w - - 0 1",
+      "family": "c5b12c8adc521ad90eeb3124cfe989e1d280cb1cb51d7f06675004f3836722e9",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/7P/8/8/K3k3/8 w - - 0 1",
+      "family": "04871a86a63028571a1c83ed5de1bda82238cf4b54102005fecf822a5c4e3e53",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "2K5/8/4R3/8/8/1k6/8/8 w - - 0 1",
+      "family": "fc47a8e32f018735190645ad654b8dad98c860547655dfac790c0500976287b6",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "2K5/8/8/8/5k2/5P2/8/8 w - - 0 1",
+      "family": "4b7e1d695aa0104ec65493deeb21ccdfeca14966f409aebc6cce7412964ff840",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/5k2/8/8/8/4K3/5P2/8 w - - 0 1",
+      "family": "9f38c56ec22427e149fc7c49b32dc0ac5c6ec0547858ea2021c4233be7b06273",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "3k2K1/1P6/8/8/8/8/8/8 w - - 0 1",
+      "family": "12f5b7e2018c94d829df47341abba48102404dd53bee4168668c5a62aa8e0e48",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/3Pk3/8/8/8/3K4/8/8 w - - 0 1",
+      "family": "99b68e6d3be62663bf428eaf1ec4269ab6a32b1555992bbb8d9cc8fbbfa561cb",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/6k1/8/8/8/8/4K3/4R3 w - - 0 1",
+      "family": "0730a74c79ca46c7a685f81419da26dde32ace7a90e1848e8a291d590f39f9d6",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "k7/3P4/8/8/8/K7/8/8 w - - 0 1",
+      "family": "397eb9ed618ba9ebbc09192acf6dccfa9939459d3649eca2f5e540c4b1738f07",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/1k6/8/7R/8/5K2/8/8 w - - 0 1",
+      "family": "4a4f0a10a1dd101d38112bbc017813e2a40ef0ba2534b88d245d7eb10fc112bb",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/7k/8/7K/8/8/8/5R2 w - - 0 1",
+      "family": "e4ef6e2a9c0b09a6444df4d00b9becc32ab47b56598b642add8ad3a4e68874c6",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "1k6/2R5/8/8/8/8/8/4K3 w - - 0 1",
+      "family": "aedd691239ca5730d8e268e4c9c427e18cc8ea81db74bca081a68fb1bfdf3d60",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/3KP3/8/8/8/4k3/8/8 w - - 0 1",
+      "family": "f4e8f1f6bd98ac17962cbcf3b62253501dcc94fff80452ae7904a7ca92bb1679",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/8/5k2/2R5/8/5K2 w - - 0 1",
+      "family": "5704d890e1ff5b3a6c2d5bc96eb8f7e2859d461f83d0123d4e4e3caf753da666",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/8/8/1R6/7k/1K6 w - - 0 1",
+      "family": "fa16a86e29ea1b9e259bdb6ca2e67bb63c9acb8dc005974cfd4040d7e06ca889",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/1K6/8/7k/8/4P3/8/8 w - - 0 1",
+      "family": "ae8035154ef38914ea677441e79a2e1f1df6433221ebd50eaa24f341dc1cfa4b",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/4K3/8/2P5/5k2/8/8 w - - 0 1",
+      "family": "cc95db516096142bca5c06e6b9c05c171447ebe7fc7108d410a12245d5ef295b",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "2R5/8/3k4/8/8/8/6K1/8 w - - 0 1",
+      "family": "2ca7808eb778c18f9d7706ec17b7375ab57777bd47e770cf3e3f4dda2938b196",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/1K6/7k/4R3/8/8/8 w - - 0 1",
+      "family": "815215126cdadd756f4ac56233c56a5f4ef413adbf0718c993400fdbf5ec14e3",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "1k6/1P6/8/8/8/8/8/1K6 w - - 0 1",
+      "family": "42ae89b061c49bc0bf2e9429cfd8b0fbeb52a0ffdbcac59af0b6e5d99098daf1",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "1R6/8/8/8/3k4/8/6K1/8 w - - 0 1",
+      "family": "7fcc68da855b04880bf61533280514af998d519712f16159e1b3d8847b9a3b76",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/8/7P/8/2K5/7k w - - 0 1",
+      "family": "aba77c758450c80b2803476052fc182906cfc6e981947c9645bf23e7980860a1",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/8/1R6/6K1/8/k7 w - - 0 1",
+      "family": "f969cd7bbec4bacb1ad98926aac4122af68c0f133d0b0c6d7803687856238f1c",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/3P4/k7/8/7K/8/8 w - - 0 1",
+      "family": "c3807e69e656c362f10b767096917585902366f3ab805ae1baa597108ea0cd2f",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/1K3k2/8/8/2R5/8/8 w - - 0 1",
+      "family": "d5e6207f0479249cfe62a8ed266758b1d51b8c0692bd12c38bcdc96925d950cc",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/1K4k1/1P6/8/8/8/8 w - - 0 1",
+      "family": "750616d1b6628020362dffac2e702343a078103c6d4ae1cd2503878bb825c824",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/2k5/8/8/4K3/8/7P/8 w - - 0 1",
+      "family": "d50c9098fed4bc425aab9b27b430f06a42e902430f6f6f02b6e4204175ebb1a9",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/K7/8/4R3/8/8/8/3k4 w - - 0 1",
+      "family": "751c81a366044f32c6f4c29bf9d9f3ad36251f789395f05e085e11be283d7d29",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "7R/8/8/k7/5K2/8/8/8 w - - 0 1",
+      "family": "878e19ea399e51a9c8ad9e2184db2ffae0a9daf274fe6f63173f530e86a610b5",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "5k2/8/8/4K3/8/8/7R/8 w - - 0 1",
+      "family": "71c5b03588e101d807fd202bf70f01422dd641683904cf5a1aa7ad2d0495faad",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/6K1/8/8/8/5R2/8/4k3 w - - 0 1",
+      "family": "5a397a9ce9b9e83157ca30b3bf39c23f114f91b0c02b466963a823c80ea3c2a6",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/8/3P4/6K1/k7/8 w - - 0 1",
+      "family": "60b72c681d4a62139656530606f72bacfc5c46cc4d8e1aeddb22524dfa14f8ae",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/5R2/8/K7/8/1k6/8/8 w - - 0 1",
+      "family": "c719168a093b768f75b1e27c5eeb91c929827821ce020ee5e0bfc7da7351bb47",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "7R/3k4/8/8/8/3K4/8/8 w - - 0 1",
+      "family": "53b50f3bf5d5504ee14b0295293af3a1a50998dac279a7894a09c283d277cb4b",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/8/7P/7k/8/6K1 w - - 0 1",
+      "family": "2b695bddbac0c227999b81e1f1aa86beaace39042052285c6e33120d9e8c6963",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/3P4/6k1/8/8/8/7K w - - 0 1",
+      "family": "952c1772cc57c60fcf4926af479d4860a582aef3615d2718514ade16fe24430a",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "K7/8/8/8/8/5R2/8/6k1 w - - 0 1",
+      "family": "8f771653e5af6db1918dccee2758e678cc58e3f3ad3fb65224bcf08424961b3a",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/7K/8/5R2/8/6k1/8/8 w - - 0 1",
+      "family": "42b64d0ef0b3fbe4de06e62e709a0191ff5f662838c671ff23424c3e94aff55f",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/3R4/8/8/8/8/1K2k3/8 w - - 0 1",
+      "family": "caba8c0f82963894ea4a5fe7bd488d0d62e7441657ada6deeceb98936590c7dd",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/R4K2/8/8/8/8/2k5/8 w - - 0 1",
+      "family": "24a3c7db39aa56afeef4dcad527e9d7342503471076959dec24f0f103c715a33",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "2k5/8/8/8/8/8/R7/1K6 w - - 0 1",
+      "family": "da1b176bc6cd87a40473a7ef9dbfa9642cb0d26d2092133e7e12960e55ce3e7a",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "rn2kb1r/p1qb1p1p/2pppnp1/1p6/2P1P2P/P1NP1N2/1P3PP1/R1BQKBR1 w Qkq - 6 11",
+      "family": "a675fbc99c0f6ca6db18b1e1ff1992a09c63356a4ac7b802a9f17a8aacebc690",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1nkr1b1r/pp1bpppp/1qpp1n2/8/3P1P2/1PP1P2P/PR4P1/1NBQKBNR w - - 1 13",
+      "family": "1c1131b3947b5e9c03daea1655d1eeb7cdd05e736e72f9731f235e4023e136fa",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1rb1kb1r/2pqp1pp/1pn2n2/pN1p1pNP/3P2P1/1QP5/PP2PP2/R1B1KB1R w KQk - 5 11",
+      "family": "495d6f40c95673a2c85cc9cfe7abc9cc5623b0dc6199b956d3d81dd0d8ee952e",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rn2kb1r/1B1ppnpp/p4p2/8/4P1N1/8/PPPP1PPq/RNBQKR2 w Qkq - 1 10",
+      "family": "55c160fb6486746ef78e16ae37251465c78d85d91517ff937c73cd0412797ffd",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1q1k2r/p1ppppbp/bpn4n/4N1p1/8/N3P2P/PPPP1PPR/R1BQKB2 w Qkq - 3 7",
+      "family": "1a7b2c079f0d398c562581a96557cc19e0ca106728657a6dbe0e3dec50616a7c",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnq2bnr/p4pp1/2p1k3/1p1ppbPp/2BPP3/N4PQ1/PPP4P/1RB1K1NR w K - 4 12",
+      "family": "b4af3be184eb701d71c8ed67ff912254193e06caeda71f9263108bf0cf7fea67",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r2qk1n1/pppnBp1r/4bbpp/1B1pp2P/4P3/1P3P1R/P1PPNKP1/RN4Q1 w q - 4 14",
+      "family": "88343912a19d4916cb2ce894c3e64139bc2bb54aa5f019de48c69300713e4153",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bq1b1r/2p3pp/3ppp1n/pk6/1P3P1Q/2PnPN1P/P2PK1P1/R1B4R w - - 0 14",
+      "family": "eb13347c4a6d5b06d546b1d14711f3c97eac126dc66b3438afd88ac4b28de1c3",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1nbqkb1r/1pn1pp1p/r1pp4/pB4p1/2N1P1P1/7P/PPPP1P1R/R1BQK1N1 w Qk - 4 9",
+      "family": "86ec9f63c091dd9046d85b478159b8f0fb95e3695a88a39ec80225a309bff36f",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb2k1r/p3np1p/4p1pb/2p1P3/qpp5/1P1P1NPP/P4PB1/RN1QKR2 w Q - 0 13",
+      "family": "df7273fcc65749b7f6f48775e6ffd36729ad410ca95bfa86c109fec80d606fe4",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bqkbnr/p2p3p/1pn1ppp1/2p5/7P/NP2P1P1/P1PP1P2/R1BQKBNR w KQkq - 2 8",
+      "family": "a546c5a8af74711cb024c8815f65b70586bd9d57e6a3ae4b500fc29631af3b92",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb1k2r/pp1p1pp1/3bpn1p/2q1P1P1/1Pp5/N4N2/P1PPKP1P/R1BQ1B1R w kq - 1 9",
+      "family": "40f5be457ec66669865e07a3a5de65786328e344d6f625a79b30550cf1648169",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r3kbnr/2pp2pp/b3p3/N1n2p2/Pp2P2q/3B3P/1PPP1PP1/RNBQ1K1R w kq - 5 12",
+      "family": "7fbdcc2d1aa74807dcd134c97223fec4ce4e6d3c89865a03beb580b6783408cd",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bq1b1r/pp2kpp1/3p1n1p/4p3/1np4P/P5PN/1BPPPP2/RN1QKB1R w KQ - 2 11",
+      "family": "5bc66250959708adb50c550e5bb5efaacb473209ef9e56095e288e2212414981",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rNbk1b1r/pp1p3p/4p2n/5pp1/6P1/q7/PPPPPP1P/R1BQKBNR w K - 0 9",
+      "family": "09859ad55886fd34a71209631cbc96087886602d713da560482064b424bb043d",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "2rk1b2/ppp1pppr/n2pbn2/7p/2PPN1q1/4BPP1/PP2P2P/R1Q1KBNR w KQ - 1 13",
+      "family": "0af736ea0e00f2aa253ffbc94b5de7ebb7222778c3e54f2fdfb07e8203198da9",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bqkbn1/p1pppp2/4r3/Pp5p/8/1PN3Pp/nRPPPP1P/2BQKB1R w Kq b6 0 13",
+      "family": "b986fd300eb67bbd6ec8eef31224f41c006fd549334b34abce00a2e503a0d51e",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbq1b1r/pp1ppkpp/2p2p1n/8/1P4P1/3P1P2/P1PNP2P/R1BQKBNR w KQ - 3 7",
+      "family": "a042f44dccd5639568f3d4e21ef608615afe0742d5934d17110bee738d497438",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "2q1kbnr/1rp3pp/n2pp3/pp2p3/3P2b1/N1P1P1P1/PPQ2P1P/R1B1KB1R w KQk - 0 11",
+      "family": "1e0deebae8b0876e30e117fda915bcbaf41979d664657a5f11dcd53e39e33b09",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbqk1nr/pp3pb1/6p1/3pp2p/P1B5/RP5P/2PP1PP1/1NBQK1NR w Kkq - 0 9",
+      "family": "1dee2cee7d25a7b62fbacbc84379c716195f676b7f321395125b26ea1c3fb523",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1kbnr/2pq2p1/P7/3p1p1p/1n1Pp3/2N1B1PP/1PPKPP1R/R1Q2BN1 w kq - 2 15",
+      "family": "a414bc076359975b364df38dab9dfe05ff57979934d7c489d6e8c463b61bcc28",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bq1knr/N4pp1/n1pp3p/4p3/8/bQP3PN/PP1PPP1P/R1B1KB1R w KQ - 2 8",
+      "family": "4932ce2d697d00baac71307b377cc7f9c5fb41fa84d6fa0bec608ab21a574591",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbqk1nr/1p1p2bp/p3p3/1Bp2pp1/4P2P/2P2N2/PP1P1PP1/RNBQK2R w KQkq - 0 7",
+      "family": "76936a8e69c36022bcf56a5563d3d05c6133ee603fad95f61456de407a54f124",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1nbq2n1/r1p1pkbr/ppQp1ppp/8/P3PP2/RP1P4/2P3PP/1NB1KBNR w K - 0 14",
+      "family": "11aa8638f5be27d4f841ddf402be02547ff60f22f620e90e90076c3d1d213501",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bqkbnr/ppp1pp2/7p/3p2p1/2BP4/1P2P2P/P1n1KPPR/RNB2QN1 w - - 4 9",
+      "family": "444c5528c71d96bd5b698c96f8f34a175fde57a26ac03c3bdf11f25e82f71488",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1rbq1bnr/pp1pp1p1/n4pk1/2p4p/P1B1P2P/2N5/1PPP1PPR/R1BQK1N1 w Q - 0 10",
+      "family": "040e9e79e274abdb33f5fc8a988e06d8ac22faad422fd28a9abeae559c2392e0",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r2qkb1r/1pp1p1pp/5p1n/p4b2/6P1/N1P2P2/RP1PP2P/2B1KBNR w Kkq - 1 10",
+      "family": "992e0866a42bbf1bf0940a9873156da2f7138ae0c6d8de58d73e69cc352f2d50",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbq1knr/3p1p2/pp6/4p1Pp/1bp3P1/1P1P3N/P1PBP2P/R2QKB1R w KQ - 0 12",
+      "family": "d02723286b6236a781cfbf8bde7416a5676941b589a1e6e37d0f5e1c2353ddd1",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bq1bnr/1pppk2p/4p3/p1n2p2/N4P1p/2P2NP1/PP1PP3/R1BQKB1R w KQ - 1 10",
+      "family": "2e008cf8dadfad117665317861519fec4cb98d8d473cec1eca26a0520b56fbd0",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rn1qk2r/p2pp1bp/b4B1n/2p5/Pp2Ppp1/1P1P4/2P1KPPP/RNQ2BNR w kq - 2 13",
+      "family": "b3b70f17e06e40445c2883805522947fa2b2b612c3de524e6eeff37589f6a833",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbk3r/ppqpb1p1/4Pp1n/2p4p/8/P4NPB/1PPPP2P/RNBQ1K1R w - - 3 9",
+      "family": "b040a33cc0a47993a489e00d40ceee9f1b5e0825219bda736a2294388dd0de8f",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb2b2/pp1k1ppr/3p3n/1Pp1p1qp/Q1PPP2P/P7/3BKPP1/RN3BNR w - - 1 14",
+      "family": "ba694eb0ff2f53db9097bfd49c06423b21715c5aa4b067ec78d9cf9602db33c4",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb1kbnr/p4p2/1p5p/1qppp1p1/5P2/P3P3/1PPP1NPP/RNBQKB1R w KQkq - 0 10",
+      "family": "80751d41f02ca81dd37882037e3ccbf0d71487b3ff8d48647dfe41b8369f76f8",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb2bnr/1pkp3p/p3p2q/2p2p2/8/N2P2PN/PPP1PP1P/R3KB1R w K - 2 11",
+      "family": "eb50cf6a263d6966c27a2c5da8bdb38c18d25a575ab80f5e4f075d2b36a1459a",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1kbr1/1p1nq3/2p1pppn/p2p3P/3P4/P1N4N/1PP1PPBP/R1BQK2R w KQq - 0 11",
+      "family": "73dc17ffb90b3cb82353ba19f3b158e9095d37988c9e16a905d9bfa3e886553d",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1k3/ppq3rp/1n4pn/1N1ppp2/1PpPPPP1/b1P5/P3K2P/1RB1QBNR w q - 3 14",
+      "family": "f526503478e94d6180f748aad7c2e4e0be2e567037430ff6bc05d2a8d5698db8",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb1kbnr/p3p2p/3p4/2p2pp1/1pP2P1P/3P2PN/PPKQP1q1/RNB2B1R w kq - 0 12",
+      "family": "71dd2d3ca34c2a9480b94a3a11070e41ecec85220cca65c865b65ba24736a20e",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1k1nr/1p1n4/3pp2b/p2P1ppp/3P1Q2/1P3N1P/P3PPP1/R1B1KB1R w KQk - 5 14",
+      "family": "777d791565549f05db3516ac82a67ed70173d47b50c3bb520e7792c0a1e254cc",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rn1k1bn1/p1pqp1pr/1p6/3p3p/4PP2/1P4pP/P2Pb2R/RNBQK1NB w Q - 1 15",
+      "family": "f87f84a9ac8cec04bd1a2ee346b0c7e5d918a656f576fb0e8ca3447a48d008dd",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbqk1nr/1p1p1p2/2p1p3/p5pp/4PQP1/b2P1N2/PPP2P1P/1RB1KBNR w Kk - 0 9",
+      "family": "6fc1f502b23a655cc81d4c9522af110274f602ebcffecb9d5bf9996e1b7b021e",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1kb1r/pp1ppppp/2n5/P1p5/3PP3/5PP1/1PP2nP1/RNBQKBNR w KQkq - 1 7",
+      "family": "bee3fd943d31ee8b0f1ec00812ad78007ca8ae97c8a550927badacb99777f892",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bqkbnr/pp1pp3/2p2pp1/2n5/3PP2B/5P1N/PPPNQ1PP/R3KB1R w KQkq - 1 9",
+      "family": "7ad672ace72a6824247f5f9d8056e6bab7e25a9bdcda350623f6934cedffd17d",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bq1knr/npppp2p/p4p1b/6p1/3P2P1/7P/PPPBPP2/RN1QKBNR w KQ - 3 8",
+      "family": "694d7cda40c2f5d134770744b90e9fdbdb7bfafa9bddbc9532d9ce4801bde168",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb1k1nr/pppp3p/6p1/4pp1q/3P4/b1P3PP/PP1BPP2/RN1QKBNR w KQkq - 1 7",
+      "family": "087b9cbf1d4ab4f349b0e3c279767633ee8f8fc7ae674ca9ebc3acbfc7aed392",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rn2kbnr/ppp1qpp1/3pb2B/4p3/P6P/2NP1P2/1PP1P1P1/R2QKBNR w KQkq - 1 7",
+      "family": "84f4f8772aefdb595294c4bc8c1270ba098a975c3ff2e11b6ff3bdc2061edc8f",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1k2r/pppn3p/2qbp1p1/4Qp2/PnPp4/N2PP3/1B2BPPP/R3K1NR w KQkq - 0 14",
+      "family": "d25cf3ddabd488aba343d2d158daf93859f988caaf96d6fa0c572786aafeaa8b",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1rbqk2r/p1pp1ppN/1pn5/4p3/Pb1n2P1/8/1PPPP1BP/RNBQK2R w k - 1 11",
+      "family": "088ec2e10a1de5e2b1a55bed76c5d8b751dbebd078418bf0d29f5f58df6c022c",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1nbqk2r/1pppp1bp/1r3p1n/p5p1/PP4P1/2PN1P2/3PP2P/RNBQKB1R w KQk - 0 10",
+      "family": "40b5a9b4f2ab00e8bedb4f3c560a8932de0f12a5d1b102bce3f0c834f2392dd1",
+      "tier": "complex",
+      "answers": null
+    }
+  ],
+  "validation": [
+    {
+      "fen": "2Q5/5K2/7k/8/8/8/8/8 w - - 0 1",
+      "family": "b0de5d25c99295dcf094016ac0d5c6cafe54de14c8a288a5091c9755c820987f",
+      "tier": "mate2",
+      "answers": [
+        "c8c5",
+        "c8g4"
+      ],
+      "proof_nodes": 947
+    },
+    {
+      "fen": "8/4K2k/8/8/8/8/3Q4/8 w - - 0 1",
+      "family": "e19a5e4cb765176be511784c5a8cc0728e63b77d93f734006e510a8e3856af58",
+      "tier": "mate2",
+      "answers": [
+        "e7f7"
+      ],
+      "proof_nodes": 956
+    },
+    {
+      "fen": "3k4/6Q1/5K2/8/8/8/8/8 w - - 0 1",
+      "family": "a6b5164a36b48ab3165ae39a0236ccf84d575ba42066fdd3c2c41e030b75611c",
+      "tier": "mate2",
+      "answers": [
+        "g7b7"
+      ],
+      "proof_nodes": 598
+    },
+    {
+      "fen": "2k5/8/8/4K3/8/8/8/1Q6 w - - 0 1",
+      "family": "6c4c71bc88c3de8eda7bf96d3a6c3c21332fd6d18565bfbe199deb1aa3f198fe",
+      "tier": "mate2",
+      "answers": [
+        "e5d6"
+      ],
+      "proof_nodes": 846
+    },
+    {
+      "fen": "8/6Q1/8/8/8/1K6/8/2k5 w - - 0 1",
+      "family": "60e0533c0614766a6a14ad9c65bd33bf73b0e5fe8bf2e1e144ce7bb7fd2505c8",
+      "tier": "mate2",
+      "answers": [
+        "g7d7",
+        "g7d4"
+      ],
+      "proof_nodes": 861
+    },
+    {
+      "fen": "8/8/8/5K1k/1Q6/8/8/8 w - - 0 1",
+      "family": "a384c1f3bfd6359e1a77d75d657a8cb94e16d651bc2edaeabb85668c3a3080da",
+      "tier": "mate2",
+      "answers": [
+        "f5f6",
+        "b4b8",
+        "b4d6",
+        "b4g4",
+        "b4d4",
+        "b4d2",
+        "b4b2"
+      ],
+      "proof_nodes": 713
+    },
+    {
+      "fen": "8/8/8/8/8/5K2/5Q2/3k4 w - - 0 1",
+      "family": "07eb519ba9937684c6b726f926456ddef715de680caa1c4ab203a6a0724388bd",
+      "tier": "mate2",
+      "answers": [
+        "f2b2"
+      ],
+      "proof_nodes": 684
+    },
+    {
+      "fen": "8/8/8/6Q1/4K3/8/8/7k w - - 0 1",
+      "family": "7baccfffeaf05f9b8dcadaa9ea057a723b5cc3b53726d5f7aadada33170da3ec",
+      "tier": "mate2",
+      "answers": [
+        "e4f3"
+      ],
+      "proof_nodes": 847
+    },
+    {
+      "fen": "8/8/8/8/Q7/4K3/8/2k5 w - - 0 1",
+      "family": "36ab3b65fc85c2015374ccea0c61004f18f8b14ef3ccdbf8160724f07f1d8178",
+      "tier": "mate2",
+      "answers": [
+        "a4a2"
+      ],
+      "proof_nodes": 760
+    },
+    {
+      "fen": "8/2Q5/8/8/K7/8/8/1k6 w - - 0 1",
+      "family": "95a1eb04c35174967a6a0bd076126d7b412c2f3714e3af65ef132b0970327752",
+      "tier": "mate2",
+      "answers": [
+        "a4b3",
+        "a4a3"
+      ],
+      "proof_nodes": 763
+    },
+    {
+      "fen": "k7/3K4/8/8/8/8/8/5Q2 w - - 0 1",
+      "family": "45e7b5534ebf0f8ad7cc1ac6f29fba6f3d06d6622eb14a61b30dc301efd4a6fe",
+      "tier": "mate2",
+      "answers": [
+        "d7c7"
+      ],
+      "proof_nodes": 860
+    },
+    {
+      "fen": "8/8/8/8/Q7/7k/4K3/8 w - - 0 1",
+      "family": "1d6eee8638e2b18da038baf50444955d798e1780495945c92d73a5e23d50c70c",
+      "tier": "mate2",
+      "answers": [
+        "e2f2"
+      ],
+      "proof_nodes": 803
+    },
+    {
+      "fen": "7K/8/8/8/5P2/8/6k1/8 w - - 0 1",
+      "family": "b4a6ff8959fcb9d44199ddab111802290675f56dbc49cee425fbd7827a4325fc",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/6K1/4P3/8/8/8/7k/8 w - - 0 1",
+      "family": "ac1a68fc33fd2999b2892d65e7a242ccb342521afc1530e09b94f6ab2fc9e10d",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/8/8/3P2K1/8/5k2 w - - 0 1",
+      "family": "b3ca7bc06e6ed04c268770b8afba4d52e74a482b846e4a9862971eff589ea97f",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/2R5/8/3k3K/8/8 w - - 0 1",
+      "family": "f74462808f8a15bbe8e4b16247345d784734b2f21a5a1331990a2d256b51b2dc",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/K2k4/R7/8/8/8/8 w - - 0 1",
+      "family": "e931bff6d46f24ede7eb309717ad0ebc181e928fd114eb9990ec97344589caf8",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/3K4/2P3k1/8/8/8/8 w - - 0 1",
+      "family": "55b7675f38990448fa59d9ddee6944fd18ae029ecc07dcc399bc8bb990ff2130",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/k1K5/8/8/2R5/8/8 w - - 0 1",
+      "family": "fa401134f293211118d6b906b309935bf936cef0570f765ae93faf9b13bc31c8",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/3P4/8/1k6/3K4/8/8/8 w - - 0 1",
+      "family": "df04b212efc74482b1c836b754dec45f0bffca4c1c7371fff1e3bedbf4a910e1",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/k7/8/8/P7/8/6K1 w - - 0 1",
+      "family": "9e8581978c51108428757ee62021f4dd5ef58861a25e58188775e56289e970ce",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "4R3/6k1/3K4/8/8/8/8/8 w - - 0 1",
+      "family": "e8ea990aa9d8d0ba147054148283c0fdb0d456acce8d06474066cda54b0296f6",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/3P1K2/1k6/8/8/8/8/8 w - - 0 1",
+      "family": "681db2cb5cccde7a9a9dc17dd9f4a71508746322df9a19d99263528ef409d50b",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "4R3/8/8/8/3k4/8/8/7K w - - 0 1",
+      "family": "b1518c26750bd8444a16e63fe8a9aa2defdfc763e1d6fc7ffc8cf37f54e36f73",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "rn3bnr/p3q3/Np1pkppp/1Q2p3/5P2/4P2P/PPPP2P1/R1B1KBNR w KQ - 0 10",
+      "family": "3ac695a6e566151006d608922c3a9d03adff980f3684dabb6640ab4e1526641b",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1rbqkb1r/pp1ppppp/2p5/8/1n6/1PP2PPP/P2nB3/RNBQK1NR w KQk - 0 8",
+      "family": "af290164dbcf6afde1792486a9e974060c1539a1657a3995199f565c1d7248de",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r2q1bnr/2pbp1kp/p1np4/1p3pp1/1PPP4/5P1N/P3P1PP/RNBQKBR1 w Q - 1 9",
+      "family": "1f7924aae6a2aa7fc6fcb3a1e25bbacc5db9cb1d2e9fc6dbe8937ba4a46ab688",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "2bqkbr1/2ppppp1/r1n2n1p/pp1N4/1P5P/8/P1PPPPP1/R1BQKBNR w KQ - 1 7",
+      "family": "503b1f7c9d07443496c0484e519d12c3453b12306b6ac225654abeba41b0d3e1",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1nb1kbnr/rp1ppppp/4q3/1Bp5/p3PP2/6P1/PPPP3P/RNBQK1NR w KQk - 1 8",
+      "family": "868868bc23344c8723b7a2309c48245f3abeb2ee26fb23f1c497ec6af505f3e4",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bq1b1r/pp2pkp1/2p5/3nnp1p/2p1PP1P/3P2PR/PP3NB1/RNBQK3 w Q - 5 13",
+      "family": "52f8230fa1750725da05286b6a5d0fddcc936f827758160bd7e60f0a309468d6",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb1kbnr/3p2pp/4pq2/1pp2p1P/p3PP2/P4K2/1PPP2P1/RNBQ1BNR w kq - 1 10",
+      "family": "814f498a8f9b48cedd975e554078cb628b84379889843ccda041f8a7afaeee32",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1k2r/1p1n1ppB/npp2q1p/4p3/2p3P1/b3PP1P/1P1PK3/RNB3NR w kq - 0 15",
+      "family": "a91b1d9ce85ef43d09f3b941a2ef2d043af4257b8bf03ef3a89ce11e204cb246",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r2q1bnr/ppp1pkp1/n2p4/1Q3p1p/bP3PPP/B1P5/P2PP3/RN2KBNR w KQ - 3 13",
+      "family": "9e85d61fe092d2a13a20a004a9344ecccb7aa2d3c3639affa4ea47f490dcc726",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb1kbnr/1pqp3p/2p1ppp1/p7/PQ6/RP2PP1N/1BPPB1PP/1N2K2R w K - 9 12",
+      "family": "7e50c4e9161bcdfeeb53587ffba8a65ccbf447aadaf02d81cfffd89aa97dff88",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1nbqkb1r/r5pp/pp1pp3/2pN1p2/1PPN4/P2Pn3/1Q3PPP/R1B1KB1R w KQk - 2 12",
+      "family": "86963cdc4ef04b888f3809f9a3ffcf2f3b4a016c1dfd43647eb54547131b25e9",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb1kbn1/6pr/2pqp3/1p1p3p/1pPP1P2/4P1P1/P6P/RNBQ1BKR w q - 0 13",
+      "family": "82a828d1f468a249f1c3ba591346d20cbc8cb6fe7cfa6136a6d8ce36e672408a",
+      "tier": "complex",
+      "answers": null
+    }
+  ],
+  "test": [
+    {
+      "fen": "5k2/8/4K3/8/8/3Q4/8/8 w - - 0 1",
+      "family": "da2e5b789472c13ba5747a9fbf86fe05ee3cbe586409b57dacb657e8f11b5f0a",
+      "tier": "mate2",
+      "answers": [
+        "d3h7",
+        "d3g3"
+      ],
+      "proof_nodes": 881
+    },
+    {
+      "fen": "8/8/7k/3Q4/5K2/8/8/8 w - - 0 1",
+      "family": "f20e6032f4a829ff1aa1ce4805fae1635dc29443ae7cee275cbfbecc53c51017",
+      "tier": "mate2",
+      "answers": [
+        "d5g8"
+      ],
+      "proof_nodes": 1052
+    },
+    {
+      "fen": "3k4/7Q/8/4K3/8/8/8/8 w - - 0 1",
+      "family": "715a67425267fbab00c48d5e91db86440be475f1518896b5a3bc4b580408184d",
+      "tier": "mate2",
+      "answers": [
+        "e5d6"
+      ],
+      "proof_nodes": 832
+    },
+    {
+      "fen": "8/3K4/k7/3Q4/8/8/8/8 w - - 0 1",
+      "family": "c1fa55a7ba4b51cfdd1fc34374c11137ad4945f6341ab134a69d3210a540fae0",
+      "tier": "mate2",
+      "answers": [
+        "d7c7"
+      ],
+      "proof_nodes": 989
+    },
+    {
+      "fen": "8/3Q4/8/8/1K6/8/8/k7 w - - 0 1",
+      "family": "b6e610b5a097fde770d76d80953789e9196dfc7cbd6081e2ed973fae4e24cab9",
+      "tier": "mate2",
+      "answers": [
+        "b4b3",
+        "b4a3"
+      ],
+      "proof_nodes": 903
+    },
+    {
+      "fen": "8/8/8/3K4/k7/3Q4/8/8 w - - 0 1",
+      "family": "e557c3022647ed6dac910af4d3ef6ee7b5e6c55195733ca6c6f1c59d24169ad5",
+      "tier": "mate2",
+      "answers": [
+        "d5c5"
+      ],
+      "proof_nodes": 842
+    },
+    {
+      "fen": "7k/8/8/5K2/Q7/8/8/8 w - - 0 1",
+      "family": "2b5ddb850286397e465dbc19a20acf7622ed3edbd05c99b2fa7cab72f0be18c8",
+      "tier": "mate2",
+      "answers": [
+        "f5g6"
+      ],
+      "proof_nodes": 868
+    },
+    {
+      "fen": "7k/8/4K3/8/8/Q7/8/8 w - - 0 1",
+      "family": "bf4c3c0ee37b31670238297930160ba676a732cf614cea6759e03f22428a68b4",
+      "tier": "mate2",
+      "answers": [
+        "e6f7"
+      ],
+      "proof_nodes": 865
+    },
+    {
+      "fen": "8/8/k7/2K4Q/8/8/8/8 w - - 0 1",
+      "family": "3bc9acac25d588b8122cfb3ccb21dc58990d4a01fb98baee21a3200435f978fc",
+      "tier": "mate2",
+      "answers": [
+        "h5h7",
+        "h5f7"
+      ],
+      "proof_nodes": 682
+    },
+    {
+      "fen": "8/1Q6/8/8/8/8/4K3/2k5 w - - 0 1",
+      "family": "7a5b14f784a0dd669a643428afbebdf7e078cff3f38e442bcc9374626304acaa",
+      "tier": "mate2",
+      "answers": [
+        "e2d3"
+      ],
+      "proof_nodes": 771
+    },
+    {
+      "fen": "8/8/8/2Q5/8/8/8/k2K4 w - - 0 1",
+      "family": "7c705270aa55efb40e0b826fa2f5f921c818bdd32c12e599d52a7d33fbe38704",
+      "tier": "mate2",
+      "answers": [
+        "d1c2"
+      ],
+      "proof_nodes": 816
+    },
+    {
+      "fen": "8/8/8/Q7/8/7k/8/5K2 w - - 0 1",
+      "family": "11f46eda24a82caccafab34e9bbdde8f493b5401c2eb349b031563b5f66a8049",
+      "tier": "mate2",
+      "answers": [
+        "a5g5"
+      ],
+      "proof_nodes": 711
+    },
+    {
+      "fen": "8/8/8/8/4K3/8/2Q5/5k2 w - - 0 1",
+      "family": "10a6210511d04f5d7cf1d7aa26813468cb6adb91edac36da3a91f6790196c265",
+      "tier": "mate2",
+      "answers": [
+        "e4f3"
+      ],
+      "proof_nodes": 765
+    },
+    {
+      "fen": "8/8/8/5Q2/8/8/k7/2K5 w - - 0 1",
+      "family": "717ef00f64a8d71580884fa8232d456b468a47f7e69c964a1f3f7164e3460adb",
+      "tier": "mate2",
+      "answers": [
+        "f5h3",
+        "f5f3",
+        "f5d3",
+        "c1c2"
+      ],
+      "proof_nodes": 740
+    },
+    {
+      "fen": "8/8/8/6Q1/8/7k/8/4K3 w - - 0 1",
+      "family": "d5cbab83d6f80c071bf08f1d01965d1e099f96350dfc14f8bc9538659cecce77",
+      "tier": "mate2",
+      "answers": [
+        "e1f2",
+        "e1f1"
+      ],
+      "proof_nodes": 710
+    },
+    {
+      "fen": "3k4/8/8/3K4/Q7/8/8/8 w - - 0 1",
+      "family": "91bf75f3458f39d824caac6ee2f67571a61035a44b2ff2574be46e5b29971808",
+      "tier": "mate2",
+      "answers": [
+        "d5d6"
+      ],
+      "proof_nodes": 782
+    },
+    {
+      "fen": "8/8/8/1Q6/8/k7/8/1K6 w - - 0 1",
+      "family": "c10b070af360d539fba0b756bab99ee85c5d6cda6838c7b71db84f0442db179b",
+      "tier": "mate2",
+      "answers": [
+        "b1c2",
+        "b1c1"
+      ],
+      "proof_nodes": 568
+    },
+    {
+      "fen": "7k/8/8/6K1/8/8/8/6Q1 w - - 0 1",
+      "family": "5cd16bfc7917ecea745b11062871de2351b4573429932328fe059aa9c5e3f78d",
+      "tier": "mate2",
+      "answers": [
+        "g5f6"
+      ],
+      "proof_nodes": 709
+    },
+    {
+      "fen": "6k1/8/5K2/8/8/8/8/4Q3 w - - 0 1",
+      "family": "9bdfb6b3df3406e867a4435203b484fd3857fa37d3f6de4b36b6f96779602ca4",
+      "tier": "mate2",
+      "answers": [
+        "e1e7",
+        "e1h4",
+        "e1g3",
+        "e1h1"
+      ],
+      "proof_nodes": 765
+    },
+    {
+      "fen": "7k/8/8/7K/8/5Q2/8/8 w - - 0 1",
+      "family": "b44957baf350623aeea1a081bb3a773dfe8067d2f9684a83429747cabdb45f67",
+      "tier": "mate2",
+      "answers": [
+        "h5g6"
+      ],
+      "proof_nodes": 809
+    },
+    {
+      "fen": "k7/8/3K4/8/6Q1/8/8/8 w - - 0 1",
+      "family": "8f259da3a5b16969114262f16091f32b0f9b7b8fd44ce2362056b01fba6b8dad",
+      "tier": "mate2",
+      "answers": [
+        "d6c7"
+      ],
+      "proof_nodes": 953
+    },
+    {
+      "fen": "k7/8/2K5/8/8/3Q4/8/8 w - - 0 1",
+      "family": "2cd79640cdacfa7a21e4cc389c43c674f28351d8ef5f0f9f0c023bbf40663041",
+      "tier": "mate2",
+      "answers": [
+        "c6c7",
+        "c6b6",
+        "d3h7",
+        "d3d7",
+        "d3a6",
+        "d3b5",
+        "d3b3",
+        "d3b1"
+      ],
+      "proof_nodes": 836
+    },
+    {
+      "fen": "6k1/8/8/4K3/8/8/7Q/8 w - - 0 1",
+      "family": "bfbde15bc035236ec4f07a85d52923cea81541f12f804223644709abda6106e9",
+      "tier": "mate2",
+      "answers": [
+        "e5f6"
+      ],
+      "proof_nodes": 714
+    },
+    {
+      "fen": "8/8/4Q3/8/8/4K3/8/7k w - - 0 1",
+      "family": "58378572ea56701a7f9e106e0de8a5c4eb94966d03171e77590b97a5e48b37d0",
+      "tier": "mate2",
+      "answers": [
+        "e3f2"
+      ],
+      "proof_nodes": 943
+    },
+    {
+      "fen": "3K4/8/8/3k4/8/8/P7/8 w - - 0 1",
+      "family": "87c84b88383bd9afc39b4943fd4e652d2ed737fcf6cdc87b3604256104b258e1",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/1k6/8/7P/8/6K1/8/8 w - - 0 1",
+      "family": "0a30163db7cebfd2494fe7bbaac7344869f7ae123db15cd6b646b094256096a5",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/7K/8/8/3k4/4R3/8/8 w - - 0 1",
+      "family": "903fdcb02e0fe6f528bcbf4b904f242f39b67351ab2680169285894e255b84c5",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/7k/8/6R1/8/8/5K2/8 w - - 0 1",
+      "family": "3049e97ba94fde74c8370a7f415229f197d65e07a0fac6eaee19fdcc317fe458",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "K7/8/8/8/6P1/8/7k/8 w - - 0 1",
+      "family": "0766c1167070ec74231febd4019dc501936581a3e4f421ddd73927dcc7695f60",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/3K4/8/1k6/8/8/4R3/8 w - - 0 1",
+      "family": "2e92b5b2d2f584fd03e6d53bddaf80384923f92022a491cb673c0045cb8c393b",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "7K/8/8/8/8/P6k/8/8 w - - 0 1",
+      "family": "51f17f209b34a10e5b66e8e9338a801a7874c6882b826bce77d6bc74b23ab1d1",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/K7/8/k5P1/8/8 w - - 0 1",
+      "family": "b9a3967a82c462061acca3c8be0f12459278e2e177ce19f74218b9c0adc16a4b",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "k7/3R2K1/8/8/8/8/8/8 w - - 0 1",
+      "family": "84b3815a7e5de192752571d9c0c26a0ba840924527fb961bfaaf20225325dcfd",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/3k4/8/7K/8/R7 w - - 0 1",
+      "family": "cdf59ca4feeaf2d56173ba61edb288577b10202b7984c37535a939f08223e9f6",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/k7/4KR2/8/8/8/8/8 w - - 0 1",
+      "family": "1159847b4704df8207eeb9561adae41e23fe00b1ef74efdbcf4004815f33508c",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/2k5/R7/8/5K2/8/8/8 w - - 0 1",
+      "family": "0c8621386e883e9ba9d7c40c3a6bfb8d6821f690965d4535e457019a4b782a0b",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/7k/8/R4K2/8/8/8 w - - 0 1",
+      "family": "edd1c7dd729b2ddb4427cb1140e691d6606ce06bd946d0b7b48ea68b0e1d8d2f",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "2k5/1R5K/8/8/8/8/8/8 w - - 0 1",
+      "family": "e5607c10e1c80dd2f407f69e0c9b7e153cc9b7ce12519e6b08a3eec169438cc9",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/2k1K3/8/8/8/8/6R1/8 w - - 0 1",
+      "family": "9687345b203bb253fb4b45002916166b430fc3debccdaed2ef8ead073ecf4a19",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/2P5/8/8/8/1k6/6K1/8 w - - 0 1",
+      "family": "40b4284f0cffc442a7fa7e1e23b7f48982283ec8877fa63e1f47f7b3f8a3cd16",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/5K2/8/k7/8/7P/8/8 w - - 0 1",
+      "family": "60ec9e57510382ce74680b05c8ea1be2baf86fae8a0409f048ab6aeae28e241b",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/5R2/8/6K1/3k4/8/8/8 w - - 0 1",
+      "family": "31d5b484de503a2c6544f11b6b69fcbe6ec09c65cd69c4f43a24f43384fef672",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/7k/8/2K5/1P6/8 w - - 0 1",
+      "family": "2f921a172bed0125b912476438fe610004a90623812e5722ae9a1eedfaf255b3",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "5K2/8/8/7k/6R1/8/8/8 w - - 0 1",
+      "family": "3957ef5c43bbd6170a16f103781b71ce030b53653d448db9ac33fe6fd3a20965",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/8/8/8/2R2K2/1k6 w - - 0 1",
+      "family": "1a6aacecd601b388b1ab24cc3919ba364b1d030e2ed35e5bf1ded4062574c7b0",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/8/5k1K/6R1/8/8 w - - 0 1",
+      "family": "2f40df3ef029316e076c0bf3e112e52eec9a5eed9789ca037568eeb546899e9e",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "8/8/8/2k5/8/K3P3/8/8 w - - 0 1",
+      "family": "46cd0d6c9330c099aff9ba971aeafb7399a548a927d4df92ea57f22e1ca4bc22",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "K7/8/8/8/8/5k2/8/2R5 w - - 0 1",
+      "family": "6c5b3779e7790353326f666bf6d67c83c82f16f33983cf22c59741c0c4adec3f",
+      "tier": "endgame",
+      "answers": null
+    },
+    {
+      "fen": "r1bq1k1r/pp1pp2p/n1p2n1b/1N3pp1/5P1P/5N2/PPPPP1PR/1RBQKB2 w - - 4 9",
+      "family": "570a31fb367e472524b61b28910c0849f1b36e019458e299f829ff7159fbfd64",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1kb1r/pp1p1pp1/n3pB2/7p/PP1p3N/4P1q1/2PQ1PPP/RN2KBR1 w Qkq - 3 12",
+      "family": "2b810e2ab1aab8228276b5839d4a30d99aec0755890e9f38510076098dc384ce",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bq1k1r/2ppppb1/ppn4p/6pn/N2P3P/5NP1/PPPKPP2/R1BQ1BR1 w - - 4 10",
+      "family": "e3ff2957b5ff6ecfb49442fdc52e87022cb0d7f36548eba59ca52607709cb019",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1nbqk2r/r1b1Np2/pp1Qpn1p/6p1/4P3/1p1P4/P2N1PPP/1RB1KB1R w Kk - 0 15",
+      "family": "c494bdc986ef3384314bd1b2cbfb2d4470ab0f34ff2be4cef68ae5bb202c8263",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbq1r2/2ppk1p1/p3pn2/1p3p1p/PP1bP2P/5P2/1RPPK1P1/1NBQ1BNR w - - 3 11",
+      "family": "cebe3f0660a8f4caff05d51f3ce74ab6ca2772a994f3f6befd00ef7ef3343bdf",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1qb1r/1pppkp1p/p1n1p1pn/8/P4P2/2PP2PP/1P2P3/RNBQKBNR w KQ - 1 7",
+      "family": "b24d9dbc0c0b5149241ca2836e96be2b6158b037589a65f15f5b917505d35fdc",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r5nr/pbppkppp/2n1p3/1P6/2BqN3/4P3/P1P1NPPb/R1BQK2R w KQ - 0 11",
+      "family": "7c69f5c2feb46063d76eef0eddbbe6d54eb3c16169198660205c51d3721cad6f",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1nbqk2r/1rpp2p1/4pp2/1pb2n1p/p2P2P1/P3PP1P/1NP4R/R1BQKBN1 w Qk - 0 13",
+      "family": "57c3c481b1bc93a836284bce56bd6efe7ac774ffed7de769a336f6a36da71d5d",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1kb1r/1p4pp/2p2n2/p1nppp2/P3PNP1/7q/NPPP1P1P/1RBQK2R w Kkq - 0 14",
+      "family": "c778bd5408734c69365df0739f5c8d88aa9c24be0f42e240c4395fd1af654505",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r3kbnr/p1pqp1pp/bp1p4/4np2/2P1P3/2NQ1P2/PP1PK1PP/R1B2BNR w kq - 2 8",
+      "family": "c31a9c1b94f84b0923453b0c11868d718c6305990046111203d8152179e07a51",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r2qkb1r/pp2pnpQ/2np1p2/P1p5/4bN2/8/1PPP1PPP/RNB1KB1R w KQkq - 0 9",
+      "family": "42427484a1980dfa8f01fe31a9396f8e49dbb030672c8baf2ddf44477187c421",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1b1kb1r/pppnpppp/7n/8/q1p1P1P1/P3Q3/1P1P1P1P/RNB1KBNR w KQkq - 5 7",
+      "family": "454d0c82eadf59ba9556889466edab0526737afa65ec9f749e45444b3e97c0c8",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbqkb1r/5p1p/8/2ppp1p1/1pp1PPn1/8/P1PPK1RP/RNBQ2N1 w kq - 0 14",
+      "family": "6c0749d7220a12ae03859994c183069785670875f526de913982682daab06d88",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bqkb1r/p1pp2p1/1pn1pp1p/5nN1/1PP5/2N5/P2PPPPP/R1BQKB1R w KQkq - 3 7",
+      "family": "da3ac8086f7943352ebe44eda072dff587687bddab10f8f6f35411506f76f95a",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbk4/p1pp1prp/p3p2b/1N3n2/PQ2P1p1/2PPq2P/1P3PP1/R1B1K1NR w KQ - 9 15",
+      "family": "714f8e4f597008c7fae7ff45c7c01d1077a181b045d865ccfa4fa53c32fbcb1c",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "2bqk3/r1pp1p1r/1pn3pn/p1Q1p2p/2P1P3/bP3P2/PB1P2PP/R3KBNR w KQ - 0 10",
+      "family": "f12ca975de01f1ad4d5db39288b144aab7b43babf3c41ccd752f17f07d0d1241",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rn1k1bn1/pp1b1Q2/2p1pq2/3P3r/5P1p/N7/PP1PP1PP/R1BK1BNR w - - 1 11",
+      "family": "aa357dc45c3a04db7f79321a4e712d459fc04a0a26fa65d771f7b0a9003bf95f",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbqkb1r/pp1pp1pp/5p2/2p1P2n/3P4/6PN/PPP1KP1P/RNBQ1B1R w kq - 0 7",
+      "family": "894b5444cf2fa1d179c11c657a7711d9aa5f3a2fe328687e1cafc24df1d74813",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnb1kb2/p3pp1r/q2p2pn/1pp3Pp/P4P1P/1P6/R1PPPK2/1NB1QBNR w q - 1 11",
+      "family": "24b426e645a86f7e13fd753d3aef538120fdcd1612b05d04722146e0d933fcf7",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnbqkbnr/p2pp1p1/5p1p/1pp5/3P3P/N3PP2/PPP3PR/1RBQKBN1 w kq - 0 8",
+      "family": "7f8290d812f382dce023efabbe34b6788349ef1371fd16cd83b60e46f4489bb5",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rq3bnr/pbpnpk1p/5p2/1p1p2p1/2BP1PPP/P3P2R/RPP5/1NBQK1N1 w - - 2 10",
+      "family": "4048a7e720e4b915c364faf018981c086349be839f9efe20629070c25dfb8fd1",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "r1bq1k1r/pppn2pp/3bpp1n/3p2Q1/P7/2P3PP/1P1PPP2/RNB1KBNR w KQ - 5 10",
+      "family": "a93041a5d3b6af644642d1b14d6b20ca064cf9b2440f085632055c5dc68cf520",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "1rbqk1nr/p1pp1pQp/8/1pb1p3/1P6/3P2PN/P1P2P1P/RNB1KB1R w KQk - 0 8",
+      "family": "dbbff6a53684522f961abb528d78bcdb20620f954b8fdea7c0ab1ef63f9430f4",
+      "tier": "complex",
+      "answers": null
+    },
+    {
+      "fen": "rnqk1bnr/1bppp2p/p4p2/2N5/1p3Pp1/P1P3P1/1P1PP2P/RNBQKBR1 w Q - 0 10",
+      "family": "7b171fe0bce0ab7b039144d8493104aef1aac1a082b4df95b1304850b501ca61",
+      "tier": "complex",
+      "answers": null
+    }
+  ],
+  "sha256": "6694f1b96feff6f603699c709738507f1adb3ae3436f5cb604a11d2d001b2d2f"
+}

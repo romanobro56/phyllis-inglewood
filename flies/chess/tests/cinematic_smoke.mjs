@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+const root=new URL('../',import.meta.url);
+const ctx=vm.createContext({console,Map,Set,Math,Error,Promise});
+const source=new vm.SourceTextModule(fs.readFileSync(new URL('arena_state.js',root),'utf8'),{context:ctx});await source.link(()=>{});await source.evaluate();
+const module=new vm.SourceTextModule(fs.readFileSync(new URL('director.js',root),'utf8'),{context:ctx});await module.link(()=>source);await module.evaluate();
+const {placement,boardFen,movePlan,EventGate}=source.namespace,{Director,STATES}=module.namespace;
+const before='rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',after='rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1';
+const e={match_id:'one',sequence:1,before,fen:after,uci:'e2e4',side:'white'};
+assert.equal(boardFen(placement(before)),before.split(' ')[0]);assert.equal(movePlan(e).source,'e2');
+assert.throws(()=>movePlan({...e,side:'black'}));assert.throws(()=>movePlan({...e,fen:before}));
+const gate=new EventGate();gate.reset('one',1);const g=gate.begin(e);assert.throws(()=>gate.begin(e));gate.complete(e,g);assert.throws(()=>gate.begin(e));gate.reset('two',2);assert.throws(()=>gate.complete(e,g));
+let pos=[0,0,5],yaw=0,attached=false,finished=false;const calls=[];
+const arena={flyPosition:()=>pos,flyYaw:()=>yaw,setFly:(side,p,y)=>{pos=p;yaw=y;},pieceHeight:()=>.75,assertBoard:fen=>calls.push(fen),highlight:()=>{},attach:()=>{attached=true;calls.push('attach');},grip:()=>{},release:()=>{assert(attached);attached=false;calls.push('release');},pulse:()=>{},home:()=>[0,0,5],rest:()=>{},check:()=>{},detachAll:()=>{attached=false;}};
+const d=new Director(arena);const promise=d.play(e).then(()=>finished=true);await assert.rejects(d.play(e),/overlap/);
+let states=new Set();for(let i=0;i<900&&!finished;i++){states.add(d.state);d.update(.025);await Promise.resolve();}
+await promise;assert(finished);assert(!attached);assert.equal(d.state,'TURN_COMPLETE');assert(calls.indexOf('attach')<calls.indexOf('release'));
+for(const s of ['APPROACHING','PICKUP','CARRYING','PLACING','RELEASING','RETURNING'])assert(states.has(s),s);
+let progress=0;const wait=d.wait(1,t=>progress=t);d.paused=true;d.update(.05);assert.equal(progress,0);d.paused=false;for(let i=0;i<21;i++)d.update(.05);await wait;assert.equal(progress,1);
+const cancelled=d.play(e);d.cancel();await assert.rejects(cancelled,/cancelled/);assert.equal(d.busy,false);
+for(const fixture of JSON.parse(fs.readFileSync(new URL('tests/cinematic_fixtures.json',root),'utf8')))movePlan(fixture.event);
+console.log('Cinematic JavaScript: FEN reconstruction, gate ordering, stale callbacks, lifecycle, pause and cancellation PASS');

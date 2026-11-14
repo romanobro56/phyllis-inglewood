@@ -1,0 +1,128 @@
+{
+  "version": "mechanism-evaluation-v1",
+  "frozen": true,
+  "frozen_utc": "2026-11-14T06:30:48.445944+00:00",
+  "training_corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+  "training_seeds": [
+    11,
+    23,
+    37
+  ],
+  "focal_learner": 0,
+  "conditions": [
+    "loo",
+    "ema",
+    "stage",
+    "zero"
+  ],
+  "total_updates": 48,
+  "matched_updates": 32,
+  "easy_updates": 8,
+  "games_per_update": 128,
+  "group_size": 8,
+  "lr": 0.003,
+  "entropy": 0.0005,
+  "gamma": 1.0,
+  "caps": {
+    "matched": 2,
+    "suffix": 2,
+    "mate2": 4
+  },
+  "reward": "terminal outcome only; integer-v2 helper; zero control zeros rewards and baselines",
+  "test_pairs": 128,
+  "test_mate2_positions": 48,
+  "test_game_repeats": 8,
+  "test_matched_seed": 4703,
+  "test_mate2_seed": 5711,
+  "evaluation_checkpoints": [
+    0,
+    16,
+    32,
+    48
+  ],
+  "primary_model": "loo48",
+  "primary_contrasts": [
+    "loo48 matched adaptation > 0",
+    "loo48 adaptation minus parent > 0",
+    "loo48 mate2 win probability minus parent > 0",
+    "loo48 adaptation minus ema48 > 0"
+  ],
+  "uncertainty": "98.75% nominal two-way seed/family bootstrap for four primary contrasts; 5000 draws; others descriptive; no Elo",
+  "scaling_gates": {
+    "adaptation_minimum": 0.02,
+    "all_seed_adaptation_positive": true,
+    "primary_adaptation_lower_above_zero": true,
+    "adaptation_gain_lower_above_zero": true,
+    "mate2_win_gain_lower_above_zero": true,
+    "meaningful_full_games_required": true
+  },
+  "pilot": {
+    "parent": {
+      "adaptation": 0.011493809532708404,
+      "correct_mass": 0.08798366662692218
+    },
+    "ema8": {
+      "adaptation": 0.021568304224306032,
+      "correct_mass": 0.10943436531100954
+    },
+    "ema16": {
+      "adaptation": 0.01887825194241661,
+      "correct_mass": 0.10057510024049399
+    },
+    "loo8": {
+      "adaptation": 0.022198133035982743,
+      "correct_mass": 0.11506712423813327
+    },
+    "loo16": {
+      "adaptation": 0.019408268639352917,
+      "correct_mass": 0.10637308354335558
+    },
+    "zero8": {
+      "adaptation": 0.01767798281657677,
+      "correct_mass": 0.11352379827953707
+    },
+    "zero16": {
+      "adaptation": 0.006001449958097443,
+      "correct_mass": 0.08030989233091586
+    },
+    "loo16_minus_ema16_validation_adaptation": {
+      "mean": 0.0005300166969363014,
+      "interval": [
+        -0.0017998545535003409,
+        0.002769099527282224
+      ],
+      "confidence": 0.95,
+      "training_seeds": 1,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    }
+  },
+  "pilot_decision": "No hyperparameter/encoding or best-checkpoint selection. Keep both EMA and LOO and add matched entropy-only and independently stage-trained controls. One seed pilot is exploratory.",
+  "suffix_coverage": {
+    "train": 38,
+    "validation": 1,
+    "limitation": "Only one distinct validation suffix; suffix validation cannot support generalization claims. Fresh mate2 roots are the progression test."
+  },
+  "initial_checkpoint_sha256": {
+    "11": [
+      "c26eeb2774b041c583b26b22f42bb8d4eb1d4fba9c6c195bd3ea66bcf8589126",
+      "91cdaca346b6f66c5734670feba6bc9a7613feaedd543094c39fefeaf7d0022d"
+    ],
+    "23": [
+      "23226e54abccafb3303d4849eaf231d449a897a7690beb5cb15ed88f1208edd1",
+      "ea8f62a4beaf05debed3b9afcd833ef91c7ae5ef8732e4dd85331ece4f7365ee"
+    ],
+    "37": [
+      "c09fd3eaaab3185eba08bcba1dfb52260dc123b5051eb920087d7f3f067c608f",
+      "974cd164d5520bb54ee0aa51e971382b5693f6c41a838bdd442e886c7f2dd698"
+    ]
+  },
+  "source_sha256": {
+    "mechanism_train.py": "ff6e2c76c2e4900b0b012355fb61a09d60645ef0fb566e37f9810d0fbb9ad0db",
+    "mechanism_data.py": "9032aa6c70b60afc30518845dcfff3240153f276e08fae6251e615ee927b9910",
+    "mechanism_eval.py": "9de3ac2338bc98a58525b39315156fef8368534d06f0011fd1aab05dc1873988",
+    "reward_validation.py": "a17aa8685c9d5d7b0bcff6a3c033c4d2b0d5c4f4b18bbcdbcec17fceeadc8c46",
+    "train_selfplay.py": "d38345ccbdb6e2f667f3f60bdab7733be0dd70e5793ab487d447671a4325dd5d",
+    "chess_env.py": "f973a7d9a717fc0638c67c767d32da89b5e7dcbea55042ca23c229c7f2c5f5a0"
+  }
+}

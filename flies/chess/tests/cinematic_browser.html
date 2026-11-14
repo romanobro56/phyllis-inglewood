@@ -1,0 +1,99 @@
+<!doctype html><meta charset="utf-8"><title>Chess Fly · WebGL verification</title><style>body{margin:0;background:#101610;color:#e2d3ab;font:12px system-ui}iframe{border:0;width:100vw;height:88vh}pre{padding:12px;margin:0;white-space:pre-wrap;max-height:10vh;overflow:auto}</style><iframe id="app" src="/"></iframe><pre id="report">Real WebGL integration tests running. These are labeled tests, not a public live match.</pre><script type="module">
+const frame=document.getElementById('app'),report=document.getElementById('report');
+const checks=[],failures=[],states=new Set();let app,win,doc;
+const delay=ms=>new Promise(r=>setTimeout(r,ms));
+async function until(fn,description,ms=45000){const end=performance.now()+ms;while(performance.now()<end){if(fn())return;await delay(25);}throw Error('Timeout: '+description);}
+function check(value,name){if(!value)throw Error(name);checks.push(name);report.textContent=checks.join('\n');}
+async function api(path,body={}){const s=app.state;const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({match_id:s.match_id,token:s.token,epoch:s.epoch,...body})});return {ok:r.ok,value:await r.json()};}
+async function flyClick(side){
+ const body=app.arena.flies[side].body.children[0],p=body.position.clone();body.getWorldPosition(p);p.project(app.arena.camera);
+ const canvas=app.arena.renderer.domElement,r=canvas.getBoundingClientRect(),x=r.left+(p.x+1)*r.width/2,y=r.top+(1-p.y)*r.height/2;
+ canvas.dispatchEvent(new win.PointerEvent('pointerdown',{clientX:x,clientY:y,pointerId:1,bubbles:true}));
+ canvas.dispatchEvent(new win.PointerEvent('pointerup',{clientX:x,clientY:y,pointerId:1,bubbles:true}));
+ await until(()=>app.inspector.side===side,'ray-picked '+side);
+ await app.inspector.serial;
+}
+let sampled;
+try{
+ await until(()=>frame.contentWindow.chessArena&&!frame.contentDocument.getElementById('loading'),'arena initialization');win=frame.contentWindow;doc=frame.contentDocument;app=win.chessArena;
+ sampled=setInterval(()=>{states.add(app.director.state);},10);
+ check(!!app.arena.renderer.getContext(),'Real WebGL context');
+ doc.getElementById('max-plies').value=4;doc.getElementById('speed').value='4';doc.getElementById('speed').dispatchEvent(new win.Event('change'));
+ // Test real trusted trained checkpoint loading in both independently allocated models.
+ const paths=[...doc.getElementById('white-checkpoint').options].map(o=>o.value);
+ for(const [i,side] of ['white','black'].entries()){
+  const path=paths.find(p=>p===`artifacts/mechanism/loo-11/checkpoint_0048_${i}.pt`);
+  if(!path)throw Error('Expected existing trained tiny checkpoint missing');doc.getElementById(`${side}-checkpoint`).value=path;
+ }
+ await app.newMatch();await until(()=>app.state.phase==='animating','first live inference');
+ check(app.state.inference_counts.white===4&&app.state.inference_counts.black===0,'Black has zero inference before first animation ACK');
+ await until(()=>app.director.state==='CARRYING','physical carrying');await app.pause(true,true);
+ const pos=app.arena.flyPosition('white'),sequence=app.state.sequence;await delay(350);
+ check(pos.every((x,i)=>Math.abs(x-app.arena.flyPosition('white')[i])<1e-8)&&app.state.sequence===sequence,'Pause freezes carried piece and ACK sequence');
+ await app.pause(false,true);await until(()=>app.state.phase==='finished','four-ply live match');
+ check(app.state.sequence===4&&app.state.inference_counts.white===8&&app.state.inference_counts.black===8,'Four genuine trained two-brain turns acknowledged');
+ check(app.state.players.white.label==='TRAINED'&&app.state.players.black.label==='TRAINED','Actual trained checkpoints loaded');
+ app.arena.assertBoard(app.state.fen);check(true,'Rendered final board exactly matches authoritative FEN');
+ check(app.state.outcome.result==='*'&&app.state.outcome.truncated,'Ply cap is unfinished, not a draw');
+ const events=app.state.events;
+ for(let i=2;i<=4;i++){
+  const ack=events.find(e=>e.kind==='animation_acknowledged'&&e.sequence===i-1),start=events.find(e=>e.kind==='inference_started'&&e.sequence===i);
+  check(ack&&start&&ack.event_id<start.event_id,`Turn ${i} inference follows previous animation ACK`);
+ }
+ const bad=await api('/api/ack',{sequence:4,rendered_fen:app.state.fen,rendered_placement:app.state.fen.split(' ')[0]});check(!bad.ok,'Duplicate ACK rejected by actual server');
+ await app.pause(true,true);await flyClick('white');
+ const white=(await api('/api/telemetry',{side:'white'})).value;
+ check(doc.getElementById('m-title').textContent.startsWith('WHITE')&&app.inspector.matrix.fly==='white','Ray-click White opens original shared Matrix');
+ check(white.side==='white'&&white.activity.n===5000&&white.activity.steps===8,'White provenance and measured rate dimensions');
+ app.inspector.matrix.close();await flyClick('black');const black=(await api('/api/telemetry',{side:'black'})).value;
+ check(doc.getElementById('m-title').textContent.startsWith('BLACK')&&app.inspector.matrix.fly==='black','Ray-click Black switches original shared Matrix');
+ check(black.side==='black'&&black.decision_id!==white.decision_id&&black.timestamp!==white.timestamp,'Black activity comes from its own inference');
+ for(const side of ['white','black','white','black'])await app.inspector.open(side,app.state);
+ check(app.inspector.matrix.renderer.info.memory.geometries<=9,'Repeated brain switching keeps shared Matrix geometry bounded');
+ app.inspector.matrix.close();
+ const record=await fetch(app.state.recording).then(r=>r.json());await app.loadReplay(record);
+ const counts={...app.state.inference_counts};await app.pause(false);await until(()=>doc.getElementById('replay-ply').value==='4','recorded physical replay');
+ check(app.mode==='replay'&&doc.getElementById('mode').textContent==='RECORDED REPLAY','Replay is explicitly separate');
+ check(JSON.stringify(counts)===JSON.stringify((await fetch('/api/state').then(r=>r.json())).inference_counts),'Replay performs zero neural inference');
+ const fixtures=await fetch('/tests/cinematic_fixtures.json').then(r=>r.json());
+ app.director.speed=20;
+ for(const f of fixtures){app.director.cancel();app.director.paused=false;app.arena.reset(f.event.before);app.arena.active=f.event.side;await app.director.play(f.event);app.arena.assertBoard(f.event.fen);check(true,'WebGL special move: '+f.name);}
+ // Resource counts remain stable after many board resets, because pieces share geometries/materials.
+ app.arena.renderer.info.reset();const resources=app.arena.renderer.info.memory.geometries;
+ for(let i=0;i<30;i++)app.arena.reset(record.initial_fen);await delay(100);
+ check(app.arena.renderer.info.memory.geometries<=resources+1,'Repeated board resets do not accumulate GPU geometry');
+ for(const quality of ['low','high','medium']){app.arena.setQuality(quality);await delay(120);check(true,'WebGL render quality '+quality);}
+ for(const camera of ['board','follow','showcase','cinematic']){app.arena.cameraMode=camera;await delay(100);check(true,'Camera mode '+camera);}
+ doc.getElementById('max-plies').value=160;await app.newMatch();app.director.speed=20;
+ await until(()=>app.state.phase==='finished','standard-position live game ending',120000);
+ check(!app.state.outcome.truncated&&app.state.outcome.result!=='*','Complete standard-position live game has an official chess ending');
+ const complete=await fetch(app.state.recording).then(r=>r.json());
+ check(complete.moves.every(e=>e.animation_acknowledged&&e.inference_completed<=e.animation_acknowledged),'Complete recording preserves every animation acknowledgment timestamp');
+ // Restart and recovery while an authoritative move waits for a physical animation.
+ doc.getElementById('white-checkpoint').value='';doc.getElementById('black-checkpoint').value='';doc.getElementById('max-plies').value=2;
+ await app.newMatch();await until(()=>app.state.phase==='animating','untrained live match');await app.pause(true,true);
+ const old=app.state;await app.recover();check(app.state.paused&&app.state.epoch>old.epoch,'Connection claim rotates epoch and safely pauses');
+ const stale=await fetch('/api/ack',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({match_id:old.match_id,token:old.token,epoch:old.epoch,sequence:1,rendered_fen:old.pending.fen,rendered_placement:old.pending.fen.split(' ')[0]})});check(stale.status===409,'Stale connection animation callback rejected');
+ await app.pause(false,true);await until(()=>app.state.phase==='finished','untrained recovered game');check(app.state.sequence===2,'Recovery reanimates pending move then finishes genuine untrained game');
+ const external=(await api('/api/claim',{match_id:app.state.match_id})).value;
+ await until(()=>doc.getElementById('pause').textContent==='Take control','superseded tab state');await delay(600);
+ const owner=await fetch('/api/state').then(r=>r.json());check(owner.epoch===external.epoch,'Superseded tab does not automatically fight for control');
+ doc.getElementById('pause').click();await until(()=>app.state.epoch>external.epoch,'deliberate takeover');check(true,'Take control deliberately reclaims the connection');
+ const current=app.state.match_id;await app.newMatch();check(app.state.match_id!==current,'Restart creates unique match identity');await until(()=>app.state.phase!=='loading','restart load');await app.pause(true,true);
+ // The shared Matrix also supports bounded incoming updates while the director
+ // completes animations off-screen. No fabricated activity is introduced.
+ doc.getElementById('max-plies').value=4;await app.newMatch();await until(()=>app.state.phase==='animating','live inspector setup');
+ await app.inspect('white');const initialSequence=app.state.sequence;
+ app.inspector.live=true;await app.inspector.onLive(true);
+ await until(()=>app.state.sequence>initialSequence,'inference while inspecting');
+ check(app.inspector.matrix.fly==='white','Shared Matrix remains source-correct during live updates');
+ await app.pause(true,true);app.inspector.matrix.close();
+ const loss=app.arena.renderer.getContext().getExtension('WEBGL_lose_context');
+ if(loss){loss.loseContext();await delay(250);loss.restoreContext();await until(()=>app.state.epoch>0,'WebGL restoration recovery');check(app.state.paused,'WebGL loss pauses play; restoration claims a new epoch');}
+ check(['APPROACHING','PICKUP','CARRYING','PLACING','RELEASING','RETURNING','TURN_COMPLETE'].every(s=>states.has(s)),'All physical animation lifecycle states observed');
+ // A deliberate context-loss notification is the only expected console error.
+ const unexpected=app.errors.filter(e=>!e.includes('WebGL context lost. Play is paused'));
+ check(unexpected.length===0,'No unexpected browser console errors or rejected promises');
+}catch(e){failures.push(String(e.message)+'\n'+String(e.stack||e));report.textContent+='\nFAIL: '+e.message+'\n'+e.stack;}
+finally{clearInterval(sampled);const result={timestamp:new Date().toISOString(),userAgent:navigator.userAgent,checks,failures,animation_states:[...states],browser_errors:app?.errors||[],measured_fps:doc?.getElementById('performance').textContent,renderer:app?{webgl:true,calls:app.arena.renderer.info.render.calls,memory:app.arena.renderer.info.memory}:null};await fetch('/api/browser-report',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(result)});report.textContent=(failures.length?'FAIL':'PASS')+' · '+checks.length+' checks\n'+JSON.stringify(result,null,2);document.title='Chess Fly WebGL · '+(failures.length?'FAIL':'PASS');}
+</script>
