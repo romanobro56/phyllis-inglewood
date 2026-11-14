@@ -1,0 +1,10 @@
+{
+  "skills": ["flight", "navigation", "resource scouting", "obstacle avoidance", "surface inspections", "threat detection", "indoor/outdoor operations"],
+  "facts": {
+    "name": "Elton Inglewood",
+    "email": "eltoninglewood@gmail.com",
+    "experience": "Independent Airspace Operator; Food and Organic Matter Scout",
+    "education": "Complete Metamorphosis Program",
+    "operating_environment": "Indoor / Outdoor"
+  }
+}

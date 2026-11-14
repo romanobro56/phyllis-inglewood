@@ -1,0 +1,44 @@
+{
+  "random": {
+    "focus_changed": 504,
+    "input_mode_changed": 652,
+    "field_incorrect": 1116,
+    "field_correct": 246,
+    "validation_rejected": 664,
+    "invalid_action": 1610,
+    "repeated_entry": 296,
+    "page_advanced": 12,
+    "application_completed": 2
+  },
+  "untrained": {
+    "validation_rejected": 458,
+    "input_mode_changed": 880,
+    "invalid_action": 1574,
+    "field_incorrect": 1130,
+    "field_correct": 302,
+    "repeated_entry": 342,
+    "focus_changed": 414,
+    "page_advanced": 20
+  },
+  "trained": {
+    "focus_changed": 2281,
+    "input_mode_changed": 938,
+    "field_correct": 134,
+    "field_incorrect": 623,
+    "invalid_action": 843,
+    "validation_rejected": 169,
+    "repeated_entry": 121,
+    "page_advanced": 6,
+    "application_completed": 1
+  },
+  "lesioned": {
+    "focus_changed": 627,
+    "input_mode_changed": 626,
+    "field_incorrect": 1087,
+    "field_correct": 262,
+    "validation_rejected": 646,
+    "invalid_action": 1576,
+    "repeated_entry": 280,
+    "page_advanced": 16
+  }
+}
