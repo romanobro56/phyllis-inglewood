@@ -24,9 +24,11 @@ class SimulatedWorkdayEnvironment(FlyTask):
     mode = 'reward'
     max_steps = 768
     train = {'gamma': .997, 'entropy': .04, 'lr': .0005, 'episodes': 16, 'chunk': 64}
-    REWARD_VERSION = 2          # 1: wrong entry -1, correction +1 (runs/jobs/workday_full)
+    # Reward versions: 1 (runs/jobs/workday_full): wrong entry -1, first correct +1 once, correction +1.
+    # 2 (runs/jobs/workday_v2_p1): wrong entry -.25, first correct +1 once, correction +.2.
+    # 3: field reward = change in the number of correct known fields (potential-based), wrong entry -.25.
+    REWARD_VERSION = 3
     WRONG_ENTRY = -.25
-    CORRECTION_BONUS = .2
 
     def __init__(self, profile=None, state=None, vault=None, split='train', level=9, jobs=None, trace=False):
         self.profile = copy.deepcopy(profile if profile is not None else json.loads((ROOT / 'verified_profile.json').read_text()))
@@ -458,13 +460,8 @@ class SimulatedWorkdayEnvironment(FlyTask):
             # A wrong entry is a cheap, recoverable attempt (-0.25), not an invalid action (-1):
             # at -1, trying a value was worth less than idling in the editor, so policies stopped
             # entering values at all (workday_full traces: correct entries fell 3.3 -> 2.5/episode).
-            reward = self.WRONG_ENTRY
-            if correct:
-                reward = self._once('field:'+field['id'], 1.)
-                if previous and previous != field['value']:
-                    # Correction bonus is paid once and stays below the wrong-entry cost, so
-                    # wrong-then-right (-.25 + 1 + .2 - 2 x .02) never outscores immediate correctness.
-                    reward += self._once('correction:'+field['id'], self.CORRECTION_BONUS)
+            # Field correctness itself is rewarded in step() as the change in correct fields.
+            reward = 0. if correct else self.WRONG_ENTRY
             return {'event': 'field_correct' if correct else 'field_incorrect', 'reward': reward, 'successful': correct}
         return {'event': 'invalid_action', 'reward': -1., 'successful': False}
 
@@ -474,7 +471,13 @@ class SimulatedWorkdayEnvironment(FlyTask):
         public = self.public_view()
         available = self.available_actions()
         selected = available[int(action)] if isinstance(action, (int, np.integer)) and 0 <= action < len(available) else None
+        progress = self._correct_fields()
         result = self.execute(selected) if selected else {'event': 'invalid_action', 'reward': -1., 'successful': False}
+        # Potential-based field reward: +1 when a known field becomes correct, -1 when a correct value is
+        # overwritten, cleared or removed. Cycles that return to the same form state net zero, so they
+        # cannot be farmed (run workday_v2_p1 kept overwriting its correct value: 5.7 correct entries per
+        # one-field form, final field accuracy falling 39% -> 28%).
+        result['reward'] += self._correct_fields() - progress
         self.t += 1
         self.total_actions += 1
         # Repeated operations cannot farm intermediate rewards.
@@ -495,6 +498,9 @@ class SimulatedWorkdayEnvironment(FlyTask):
             self.traces.append({'observation': encode(public).tolist(), 'public_observation': public,
                                 'action_index': int(action), 'selected_action': selected.public() if selected else None, **info})
         return self.obs(), reward, self.done, info
+
+    def _correct_fields(self):
+        return sum(self._validator.correct(f) for f in self.all_fields() if self._validator.expected.get(f['id']) is not None)
 
     def caption(self, action):
         return self.last_caption

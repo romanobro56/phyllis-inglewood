@@ -139,9 +139,13 @@ class WorkdayTests(unittest.TestCase):
         wrong=next(v for v in env.profile['personal'].values() if v and v!=env._validator.expected[field['id']])
         immediate,_=run([None]);recovered,_=run([wrong,None]);farm,_=run([wrong,None,wrong,None])
         self.assertTrue(-1<recovered[0]<0)                       # recoverable attempt, cheaper than an invalid action
-        self.assertGreater(recovered[1],immediate[0])            # recovery is rewarded ...
+        self.assertGreater(recovered[1],.9)                      # recovery earns the field back ...
         self.assertLess(sum(recovered),sum(immediate))           # ... but never beats getting it right first
-        self.assertLess(sum(farm[2:]),0)                         # repeating the cycle earns nothing more
+        self.assertLess(farm[2],-1)                              # overwriting a correct value loses it
+        self.assertLess(sum(farm[2:]),0)                         # repeating the cycle earns nothing
+        _,env=run([None]);driver=FixtureDriver(env);field=env.current_fields()[0]
+        cleared=driver.kind('clear',target=field['id'])[1];again=driver.kind('enter',value=env._validator.expected[field['id']])[1]
+        self.assertLess(cleared,-1);self.assertLess(cleared+again,0)    # clear/re-enter cycles cannot farm either
 
     def test_successful_review_is_visible_and_disappears_after_an_edit(self):
         env=SimulatedWorkdayEnvironment(level=1);env.reset(np.random.default_rng(10));driver=FixtureDriver(env)
@@ -217,13 +221,15 @@ class WorkdayTests(unittest.TestCase):
         env,_=known_full_fixture(level=6);env._move(env.scenario['stages'].index('experience'))
         driver=FixtureDriver(env);driver.button('add_entry')
         field=next(f for f in env.current_fields() if env._validator.expected[f['id']] is not None and f['kind'] not in ('date',))
+        start=env.cumulative_reward
         driver.enter(field,env._validator.expected[field['id']])
         self.assertTrue(field['value'])
-        self.assertIn('field:'+field['id'],env.paid)
-        env.reviewed=True;driver.button('remove_entry')
+        env.reviewed=True;removed=driver.button('remove_entry')[1]
         self.assertEqual(field['value'],'');self.assertFalse(env.reviewed)
-        self.assertIn('field:'+field['id'],env.paid)
+        self.assertLess(removed,-1)                                  # removing a correct value gives its reward back
         driver.button('add_entry');self.assertEqual(field['value'],'')
+        driver.enter(field,env._validator.expected[field['id']])
+        self.assertLess(env.cumulative_reward-start,1)               # enter/remove/re-add/re-enter < entering once
 
     def test_incomplete_submission_and_incorrect_optional_information_rejected(self):
         env,_=known_full_fixture();env._move(env.scenario['stages'].index('review'));env.reviewed=True
