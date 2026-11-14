@@ -37,6 +37,17 @@ class WorkdayBrowserTests(unittest.TestCase):
         self.assertFalse(self.page.evaluate('Object.keys(window.publicMeta).includes("expected")'))
         self.assertEqual(env.completed,0)
 
+    def test_review_on_a_field_with_an_answer_keeps_dom_and_simulator_in_step(self):
+        # Regression: the mirror used to clear the DOM for every field-level review, while the simulator
+        # keeps the value unless the information is really unavailable (aborted live demo runs).
+        env=SimulatedWorkdayEnvironment(level=1,trace=True);env.reset(np.random.default_rng(3))
+        self.mirror.open(env);driver=FixtureDriver(env,self.mirror)
+        field=env.current_fields()[0];value=env._validator.expected[field['id']]
+        driver.kind('focus',target=field['id']);driver.kind('enter',value=value)
+        info=driver.kind('review',target=field['id'])[3]
+        self.assertEqual(info['event'],'manual_review_unnecessary')
+        self.assertEqual(self.page.locator('#'+field['id']).input_value(),value);self.mirror.check(env)
+
     def test_browser_auth_and_upload_controls_use_selected_values(self):
         env,_=known_full_fixture(level=5);env.max_steps=3000
         self.mirror.open(env);driver=FixtureDriver(env,self.mirror)

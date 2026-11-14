@@ -35,6 +35,9 @@ def main():
     parser.add_argument('--delay',type=float,default=.3)
     parser.add_argument('--status',action='store_true')
     parser.add_argument('--verbose',action='store_true')
+    parser.add_argument('--fresh-forms',action='store_true',help='Demo mode: every chunk is a NEW form (a timeout ends that job); '
+                        'forms and action draws come from --seed and the chunk number, so different policies see identical forms')
+    parser.add_argument('--seed',type=int,default=41)
     args=parser.parse_args()
     if args.episodes<1 or not 1<=args.level<=10 or args.delay<0:
         parser.error('positive episodes, level 1..10 and nonnegative delay required')
@@ -65,7 +68,8 @@ def main():
     elif args.policy!='random':
         brain=load_model(args.checkpoint,JobsFly,device);checkpoint=str(checkpoint_path(args.checkpoint))
     parameter_hash=digest(brain) if brain is not None else None
-    rng=np.random.default_rng(41)
+    rng=np.random.default_rng(args.seed)
+    scoreboard=[]
     with ExitStack() as stack:
         log=stack.enter_context(gzip.open(args.state_dir/'actions.jsonl.gz','at',encoding='utf-8'))
         mirror=None
@@ -75,7 +79,8 @@ def main():
             driver=stack.enter_context(sync_playwright())
             browser=driver.chromium.launch(headless=not args.headed)
             stack.callback(browser.close)
-            mirror=BrowserMirror(browser.new_page())
+            # Station runs get a taller page so the form, all 8 action choices and the 3D fly fit on screen.
+            mirror=BrowserMirror(browser.new_page(viewport={'width':1440,'height':1000}) if args.station else browser.new_page())
             if args.station:
                 from flies.jobs.station_server import StationServer
                 station=stack.enter_context(StationServer())
@@ -84,7 +89,11 @@ def main():
         if queue['schema']!=SCHEMA:
             raise ValueError('incompatible pending simulation queue')
         print(f'LOCAL SIMULATION ONLY · policy={args.policy} · checkpoint={checkpoint}',flush=True)
-        for _ in range(args.episodes):
+        for chunk in range(args.episodes):
+            if args.fresh_forms:
+                # Never resume a stuck form; paired seeds keep forms identical across policies.
+                queue['pending']=None
+                rng=np.random.default_rng([args.seed,chunk])
             pending=queue.get('pending')
             job=pending['job'] if pending else next((j for j in jobs if job_id(j) not in queue['terminal']),None)
             if job is None:
@@ -115,7 +124,7 @@ def main():
                     raise RuntimeError('Browser execution failed; pending state saved. Error type: '+type(error).__name__) from None
                 log.write(json.dumps(event)+'\n');log.flush()
                 queue['pending']={'job':job,'environment':env.snapshot(),'rng':rng.bit_generator.state}
-                if done and env.status!='timed_out':
+                if done and (env.status!='timed_out' or args.fresh_forms):
                     queue['terminal'][job_id(job)]={'url':job['url'],'status':env.status,'metrics':env.metrics(),'policy':args.policy,'checkpoint':checkpoint}
                     queue['pending']=None
                 world.save(world_path)
@@ -123,7 +132,12 @@ def main():
                 if args.delay:time.sleep(args.delay)
                 if done:
                     print(json.dumps({'url':job['url'],'status':env.status,**env.metrics()}),flush=True)
+                    scoreboard.append(env.metrics())
                     break
+        if args.fresh_forms and scoreboard:
+            print(f"SCOREBOARD policy={args.policy} seed={args.seed}: completed {sum(m['completed'] for m in scoreboard)}/{len(scoreboard)} "
+                  f"applications, mean field accuracy {np.mean([m['field_accuracy'] for m in scoreboard]):.0%}, "
+                  f"mean actions {np.mean([m['actions'] for m in scoreboard]):.0f}",flush=True)
         if mirror and args.headed:
             print('Run finished. Browser remains open until you close it or press Ctrl+C.',flush=True)
             try:

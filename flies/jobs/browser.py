@@ -17,7 +17,7 @@ button{cursor:pointer;border:1px solid #2668a0;border-radius:5px;background:#edf
 button:hover{background:#cce7ff}.error{background:#fff0ec;color:#8b2516;padding:8px}.badge{background:#fff3be;color:#5b4100;padding:5px;border-radius:4px}
 small{color:#536779}.grid #fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.cards .field{border:1px solid #bac8d5;padding:12px;margin:8px}
 #palette button{display:block;width:100%;text-align:left}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:260px;overflow:auto;font-size:12px}
-[aria-current=true]{outline:3px solid #e4ae31}iframe{width:100%;height:340px;border:0}.summary{font-size:13px;border-bottom:1px solid #eee;padding:5px}
+[aria-current=true]{outline:3px solid #e4ae31}iframe{width:100%;height:340px;border:0}#station{position:sticky;bottom:0;background:#111c29;border-radius:8px}.summary{font-size:13px;border-bottom:1px solid #eee;padding:5px}
 '''
 
 
@@ -95,6 +95,14 @@ class BrowserMirror:
                 if (e['kind'] == 'password' or e.get('protected')) and e['value']:
                     try:self.page.locator('#'+e['id']).fill(env._password(e['id']))
                     except Exception:raise RuntimeError('Protected credential restoration failed') from None
+        for e in view['elements']:
+            # Mirror the simulator's outcome of "information unavailable": the field is shown empty.
+            if e.get('unavailable') and not e['value'] and e['kind'] not in ('button', 'file'):
+                control = self.page.locator('#'+e['id'])
+                if control.count():
+                    if control.get_attribute('data-kind')=='radio':control.evaluate('(n)=>n.querySelectorAll("input").forEach(i=>i.checked=false)')
+                    elif control.evaluate('(e)=>e.tagName')=='SELECT':control.select_option(value='')
+                    else:control.fill('')
         public = copy.deepcopy(view)
         self.page.evaluate('''v => {
           window.publicMeta=v;
@@ -165,11 +173,10 @@ class BrowserMirror:
                     except Exception:raise RuntimeError('Protected credential entry failed') from None
                 else:control.fill(value)
         elif action.kind == 'review' and action.target:
-            control=self.page.locator('#'+action.target)
-            if control.count():
-                if control.get_attribute('data-kind')=='radio':control.evaluate('(n)=>n.querySelectorAll("input").forEach(i=>i.checked=false)')
-                elif control.evaluate('(e)=>e.tagName')=='SELECT':control.select_option(value='')
-                else:control.fill('')
+            # Whether the field is really unavailable is the simulator's decision (it clears only fields
+            # without verified information). Clearing here unconditionally made the DOM diverge whenever
+            # review was requested on a field that has an answer; sync() mirrors the actual outcome.
+            pass
         elif action.kind == 'upload':
             self.page.locator('#'+action.target).set_input_files(env.documents[action.ref]['path'])
         elif action.kind == 'search':
