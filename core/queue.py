@@ -8,10 +8,21 @@ Teammates normally use scripts/remote.py from their laptop, which calls these:
     python -m core.queue logs gym            # newest job for that fly (or a job id)
     python -m core.queue cancel <job id>
     python -m core.queue worker              # the loop that runs jobs (started once)
+
+A fly with its own training loop can run that instead of core.train (module must live in its folder):
+
+    python -m core.queue submit jobs --minutes 5 --module flies.jobs.learning --args="--size full --device cuda"
+
+(Use the --args=... form: argparse rejects a separate value that starts with "--", e.g. --args "--resume".)
+
+The worker then runs `python -u -m <module> <args>` and hard-stops it at the same 2x budget. Jobs without
+--module behave exactly as before.
 """
 import argparse
 import json
 import os
+import re
+import shlex
 import signal
 import subprocess
 import sys
@@ -39,16 +50,39 @@ def _move(job, src, dst):
     (JOBS / src / f"{job['id']}.json").unlink(missing_ok=True)
 
 
-def submit(fly, size, minutes, by):
+CAPS = JOBS / "worker.caps"          # what the live worker supports (older workers don't write it)
+
+
+def _check_module(fly, module):
+    """A custom entry point must be a module inside the fly's own folder, e.g. flies.jobs.learning."""
+    if not re.fullmatch(rf"flies\.{re.escape(fly)}(\.[A-Za-z_][A-Za-z0-9_]*)+", module):
+        raise SystemExit(f"--module must be a module inside flies/{fly}/, e.g. flies.{fly}.learning")
+    path = ROOT / Path(*module.split("."))
+    if not (path.with_suffix(".py").exists() or (path / "__main__.py").exists()):
+        raise SystemExit(f"{module} not found on the GPU machine (upload it with remote.py submit)")
+    pid = _worker_pid()
+    caps = json.loads(CAPS.read_text()) if CAPS.exists() else {}
+    if not pid or caps.get("pid") != pid or not caps.get("custom_module"):
+        raise SystemExit("the running worker predates custom training modules; ask the GPU owner to restart it "
+                         "(remote.py worker-stop && remote.py worker-start) while nothing is running")
+
+
+def submit(fly, size, minutes, by, module=None, args=""):
     _dirs()
     if not (ROOT / "flies" / fly / "task.py").exists():
         raise SystemExit(f"flies/{fly}/task.py not found on the GPU machine (upload it with remote.py submit)")
+    if module:
+        _check_module(fly, module)
+    elif args:
+        raise SystemExit("--args only applies together with --module")
     for j in _jobs("pending"):
         if j["fly"] == fly:
             _move(j, "pending", "cancelled")
             print(f"replaced your earlier pending job {j['id']}")
     job = dict(id=time.strftime("%H%M%S") + "-" + fly + "-" + uuid.uuid4().hex[:4], fly=fly, size=size,
                minutes=minutes, by=by, submitted=time.time())
+    if module:
+        job.update(module=module, args=shlex.split(args))
     (JOBS / "pending" / f"{job['id']}.json").write_text(json.dumps(job, indent=2))
     ahead = len(_jobs("pending")) - 1 + len(_jobs("running"))
     print(f"queued {job['id']} ({ahead} job(s) ahead of it)")
@@ -68,7 +102,9 @@ def status():
         state = "DONE   " if j.get("returncode") == 0 else "FAILED "
         res = ROOT / "runs" / j["fly"] / "result.json"
         extra = ""
-        if state.startswith("DONE") and res.exists():
+        if j.get("module"):
+            extra = f"custom: {j['module']} (see remote.py logs {j['id']})"
+        elif state.startswith("DONE") and res.exists():
             r = json.loads(res.read_text())
             extra = f"trained {r['score_trained']:.2f} / random {r['score_random']:.2f} / lesioned {r['score_lesioned']:.2f}"
         print(f"{state}  {j['id']:28s} by {j['by']:10s} {extra}")
@@ -119,6 +155,7 @@ def worker():
     if _worker_pid():
         raise SystemExit("a worker is already running")
     (JOBS / "worker.pid").write_text(str(os.getpid()))
+    CAPS.write_text(json.dumps(dict(pid=os.getpid(), custom_module=True)))
     for j in _jobs("running"):          # left over from a crash/restart: retry them
         _move(j, "running", "pending")
     print("worker started; waiting for jobs", flush=True)
@@ -129,8 +166,11 @@ def worker():
             continue
         job = pending[0]
         log_path = JOBS / "logs" / f"{job['id']}.log"
-        cmd = [sys.executable, "-u", "-m", "core.train", job["fly"], "--size", job["size"],
-               "--minutes", str(job["minutes"])]
+        if job.get("module"):
+            cmd = [sys.executable, "-u", "-m", job["module"]] + list(job.get("args", []))
+        else:
+            cmd = [sys.executable, "-u", "-m", "core.train", job["fly"], "--size", job["size"],
+                   "--minutes", str(job["minutes"])]
         with open(log_path, "w") as log:
             log.write(f"$ {' '.join(cmd)}\n"); log.flush()
             proc = subprocess.Popen(cmd, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
@@ -141,7 +181,13 @@ def worker():
             try:
                 rc = proc.wait(timeout=job["minutes"] * 120 + 300)
             except subprocess.TimeoutExpired:
-                proc.kill(); rc = -9
+                proc.terminate()            # let trainers that catch SIGTERM save first
+                try:
+                    proc.wait(timeout=120)
+                except subprocess.TimeoutExpired:
+                    proc.kill()
+                    proc.wait()
+                rc = -9
                 log.write("\nKILLED: ran far past its time budget\n")
         job.update(ended=time.time(), returncode=rc)
         _move(job, "running", "done" if rc == 0 else "failed")
@@ -153,13 +199,15 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("submit"); s.add_argument("fly"); s.add_argument("--size", default="full")
     s.add_argument("--minutes", type=float, default=15); s.add_argument("--by", default="someone")
+    s.add_argument("--module", help="run this module from the fly's folder instead of core.train")
+    s.add_argument("--args", default="", help="arguments for --module, as one quoted string")
     sub.add_parser("status")
     l = sub.add_parser("logs"); l.add_argument("key"); l.add_argument("-f", "--follow", action="store_true")
     c = sub.add_parser("cancel"); c.add_argument("job_id")
     sub.add_parser("worker")
     a = ap.parse_args()
     if a.cmd == "submit":
-        submit(a.fly, a.size, a.minutes, a.by)
+        submit(a.fly, a.size, a.minutes, a.by, a.module, a.args)
     elif a.cmd == "status":
         status()
     elif a.cmd == "logs":

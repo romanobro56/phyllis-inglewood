@@ -47,13 +47,13 @@ The GPU is a Runpod RTX 4090 that Roman runs. Access is per person, by SSH key.
    Never the file without `.pub`.
 3. Once Roman confirms the key is added:
    ```bash
-   python scripts/remote.py setup 103.196.86.68 28818 --name <your-name>
+   python scripts/remote.py setup 103.196.86.68 36812 --name <your-name>
    ```
    Add `--key <path>` if the key isn't `~/.ssh/id_ed25519`. Success prints `connected to ...` and the GPU name.
    A password prompt means the key isn't on the pod yet. `Connection refused` usually means the pod was
    restarted and its address changed: ask Roman for the new IP and port and run `setup` again.
 
-Address as of Nov 14, 2026, 02:20 UTC: **IP 103.196.86.68, port 28818**.
+Address as of Nov 14, 2026 (verified live): **IP 103.196.86.68, port 36812**.
 
 ## 3. Build a fly
 
