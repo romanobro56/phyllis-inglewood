@@ -1,0 +1,13 @@
+# big or generated data: everyone runs scripts/download_data.py + python -m core.graph
+data/*
+!data/README.md
+# training outputs: pulled from the GPU with scripts/remote.py pull
+runs/
+jobs/
+jobs_worker.log
+# per-person remote settings
+.remote.json
+__pycache__/
+*.pyc
+.venv/
+.DS_Store

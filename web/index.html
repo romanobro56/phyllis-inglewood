@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fly Brain World</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="importmap">
+{ "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0d1117; font-family: system-ui, sans-serif; color: #e6edf3; }
+  #world { position: fixed; inset: 0; }
+  .label { padding: 3px 8px; border-radius: 6px; background: rgba(13,17,23,.8); font-size: 13px; white-space: nowrap;
+           border: 1px solid #30363d; transition: opacity .3s; pointer-events: none; }
+  .label b { color: #7ee787; }
+  .label.untrained b { color: #f0b72f; }
+  .label .cap { display: block; color: #c9d1d9; font-size: 12px; }
+  .label.lesioned { border-color: #f85149; }
+  #hud { position: fixed; left: 16px; top: 14px; max-width: 420px; font-size: 13px; color: #8b949e; line-height: 1.5; }
+  #hud h1 { font-size: 18px; color: #e6edf3; margin: 0 0 4px; }
+  #status { position: fixed; right: 16px; top: 14px; font-size: 12px; color: #8b949e; }
+
+  /* the matrix */
+  #matrix { position: fixed; inset: 0; display: none; background: #000; z-index: 10; }
+  #matrix.open { display: block; }
+  #rain, #brain { position: absolute; inset: 0; width: 100%; height: 100%; }
+  #rain { opacity: .35; }
+  #panel { position: absolute; left: 20px; top: 18px; width: 320px; font-family: ui-monospace, monospace; color: #3cff7a;
+           text-shadow: 0 0 6px #0f0; font-size: 13px; }
+  #panel h2 { margin: 0 0 6px; font-size: 18px; }
+  #panel .muted { color: #1f9e4a; }
+  .bar { margin: 6px 0; }
+  .bar .track { height: 12px; background: #062b12; border: 1px solid #1f9e4a; }
+  .bar .fill { height: 100%; background: #3cff7a; box-shadow: 0 0 8px #3cff7a; transition: width .3s; }
+  .bar.chosen .name::after { content: "  <- chosen"; color: #fff; }
+  #panel button { margin-top: 10px; background: #000; color: #3cff7a; border: 1px solid #3cff7a; padding: 6px 10px;
+                  font-family: inherit; cursor: pointer; }
+  #panel button.on { background: #3a0000; color: #ff6b6b; border-color: #ff6b6b; }
+  #tip { position: absolute; padding: 4px 8px; background: rgba(0,20,0,.9); border: 1px solid #3cff7a; color: #3cff7a;
+         font: 12px ui-monospace, monospace; pointer-events: none; display: none; }
+  #legend { position: absolute; right: 20px; bottom: 18px; font: 12px ui-monospace, monospace; color: #1f9e4a; text-align: right; }
+</style>
+</head>
+<body>
+<div id="world"></div>
+<div id="hud">
+  <h1>Fly Brain World</h1>
+  Every fly runs on a copy of the real fruit-fly connectome (FlyWire, 134k neurons).
+  Each action you see was chosen by that fly's descending neurons a moment ago.<br>
+  <b>Click a fly</b> to enter its brain. Drag to look around, scroll to zoom.
+</div>
+<div id="status">connecting...</div>
+
+<div id="matrix">
+  <canvas id="rain"></canvas>
+  <div id="brain"></div>
+  <div id="panel">
+    <h2 id="m-title"></h2>
+    <div class="muted" id="m-sub"></div>
+    <div id="m-caption" style="margin:10px 0;color:#fff"></div>
+    <div id="m-bars"></div>
+    <button id="m-lesion">Lesion connectome: OFF</button>
+    <button id="m-close">Exit brain [Esc]</button>
+    <div class="muted" style="margin-top:10px">Hover a neuron for its FlyWire ID. Click it to open it in Codex.</div>
+  </div>
+  <div id="legend"></div>
+  <div id="tip"></div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

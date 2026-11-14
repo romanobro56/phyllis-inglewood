@@ -1,0 +1,13 @@
+# Runs the smoke test for every fly on each push / pull request (synthetic graph, CPU, no download).
+name: check flies
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install numpy pandas pyarrow websockets
+      - run: python -m core.graph --size synthetic
+      - run: python -m core.check --all --size synthetic
