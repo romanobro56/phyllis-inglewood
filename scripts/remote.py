@@ -83,7 +83,8 @@ def tar_bytes(paths):
 
 
 def upload(paths):
-    run("tar xzf -", stdin=tar_bytes(paths))
+    # --no-same-owner: as root, tar would chown files to the laptop's uid, which /workspace (MooseFS) refuses
+    run("tar xzf - --no-same-owner", stdin=tar_bytes(paths))
 
 
 def remote_py(args):
