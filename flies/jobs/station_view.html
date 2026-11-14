@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8"><title>Elton execution station</title>
+<script type="importmap">{"imports":{"three":"/flies/jobs/vendor/three.module.js"}}</script>
+<style>body{margin:0;background:#111c29;color:#e5f0fc;font:12px system-ui}#hud{position:absolute;top:8px;left:10px;right:8px;white-space:pre-wrap;pointer-events:none}canvas{display:block}</style>
+<div id="hud">Loading local execution station…</div>
+<script type="module">
+import * as THREE from 'three';
+import {Fly} from '/web/lib/fly.js';
+import template from '/flies/jobs/station.js';
+const hud=document.querySelector('#hud');
+try {
+ const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setSize(innerWidth,innerHeight);document.body.append(renderer.domElement);
+ const scene=new THREE.Scene();scene.background=new THREE.Color('#111c29');
+ const camera=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,100);camera.position.set(4,5,7);camera.lookAt(0,0,0);
+ scene.add(new THREE.HemisphereLight(0xffffff,0x253044,2));
+ const sun=new THREE.DirectionalLight(0xffffff,2);sun.position.set(3,8,3);scene.add(sun);
+ const group=new THREE.Group();scene.add(group);const fly=new Fly();group.add(fly.root);
+ const station=Object.create(template);station.build({THREE,group,fly});
+ function render(){renderer.render(scene,camera);requestAnimationFrame(render)}render();
+ addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+ let chain=Promise.resolve();
+ addEventListener('message',e=>{
+   if(e.source!==parent || e.data?.type!=='execution') return;
+   const v=e.data.event;
+   chain=chain.then(async()=>{
+    hud.textContent=`LOCAL SIMULATION · ${v.policy}\n${v.checkpoint}\n${v.event} · reward ${Number(v.reward).toFixed(2)} · total ${Number(v.cumulative_reward).toFixed(2)}`;
+    await station.play(`workday_slot_${v.action_index}`,v.event,{fly,event:v});
+    parent.postMessage({type:'station_ack',sequence:v.sequence},'*');
+   }).catch(error=>{hud.textContent='Station animation error: '+error.message;parent.postMessage({type:'station_ack',sequence:v.sequence},'*')});
+ });
+ hud.textContent='LOCAL SIMULATION · waiting for the real policy execution stream';
+ parent.postMessage({type:'station_ready'},'*');
+} catch(error) {
+ hud.textContent='3D station unavailable: '+error.message;
+ parent.postMessage({type:'station_failed'},'*');
+}
+</script>

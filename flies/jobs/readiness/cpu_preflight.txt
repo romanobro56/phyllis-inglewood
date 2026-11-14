@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "purpose": "hardware and core API preflight, not proficiency training",
+  "preset": "tiny",
+  "neurons": 5000,
+  "graph_hash": "cc2e5ce35f",
+  "synthetic": false,
+  "device": "cpu",
+  "batch_size": 4,
+  "peak_cuda_memory_bytes": null
+}

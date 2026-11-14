@@ -1,0 +1,25 @@
+{
+  "head_commit": "a8fa7057f272edabdc1647e96f78789517bbf4f5",
+  "files": {
+    "core/brain.py": {
+      "normalized_sha256": "e7ba855648ba73a0796a7f852ca935ea070f4a1bd761d977d75bc7580535be62",
+      "matches_HEAD_ignoring_newlines": true
+    },
+    "core/train.py": {
+      "normalized_sha256": "eb55ffe6d4231d626f755d8643de89c0833598ad3b1c4e2f945326730e7d5fee",
+      "matches_HEAD_ignoring_newlines": true
+    },
+    "core/task.py": {
+      "normalized_sha256": "6d363e48a735ddbb033c0efc1687f740bb34db01c4e90fede15b595ef5754459",
+      "matches_HEAD_ignoring_newlines": true
+    },
+    "core/registry.py": {
+      "normalized_sha256": "b606b60ae98733f3971edf6daf9b4ea65abbf5bd4d80fb4c6f3a23d1de344969",
+      "matches_HEAD_ignoring_newlines": true
+    },
+    "core/graph.py": {
+      "normalized_sha256": "1676cb31ff133940385aa72c5948dba75c6e918c764884bcce0f8989a6eaf424",
+      "matches_HEAD_ignoring_newlines": true
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "purpose": "Suggested first full-connectome GPU run; not a claim of measured VRAM fit or learned proficiency",
+  "size": "full",
+  "device": "cuda",
+  "seed": 2026,
+  "episodes_per_update": 16,
+  "gradient_chunk": 32,
+  "learning_rate": 0.0005,
+  "gamma": 0.997,
+  "entropy": 0.04,
+  "checkpoint_every_updates": 10,
+  "validation_every_updates": 10,
+  "validation_episodes": 32,
+  "initial_time_budget_minutes": 15,
+  "updates_limit": 100,
+  "fresh_training_argv": [
+    "-m", "flies.jobs.learning", "--size", "full", "--device", "cuda",
+    "--out", "flies/jobs/artifacts/workday_full", "--episodes", "16",
+    "--chunk", "32", "--lr", "0.0005", "--gamma", "0.997", "--entropy", "0.04",
+    "--checkpoint-every", "10", "--eval-every", "10", "--eval-episodes", "32",
+    "--updates", "100", "--minutes", "15", "--seed", "2026"
+  ],
+  "notes": [
+    "Run full-size CUDA preflight first.",
+    "The --minutes budget is checked between updates and excludes initial baseline work; validation/checkpointing can extend wall time.",
+    "Use a private persistent Linux ELTON_SECRET_DIR and retain it with account-state backups.",
+    "Start a new experiment rather than loading a tiny checkpoint into the full graph."
+  ]
+}

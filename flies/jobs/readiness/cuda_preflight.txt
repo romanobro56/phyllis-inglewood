@@ -1,0 +1,4 @@
+usage: Check graph/device, public sensors, neural forward/backward and memory. Not training evidence.
+       [-h] [--size {tiny,small,central,full}] [--device DEVICE]
+       [--batch-size BATCH_SIZE]
+Check graph/device, public sensors, neural forward/backward and memory. Not training evidence.: error: CUDA unavailable; install CUDA-enabled PyTorch on the 4090 host

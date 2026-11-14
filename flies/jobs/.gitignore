@@ -2,3 +2,12 @@
 *.sqlite3
 *.sqlite3-*
 __pycache__/
+# Models, credentials, and execution records are local experiment state.
+/artifacts/
+/local_state/
+**/simulation_vault.json
+**/simulation_state.json
+*.pt
+*.jsonl.gz
+*.swp
+/vendor/three.module.js

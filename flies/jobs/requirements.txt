@@ -1,0 +1,3 @@
+# Install repository requirements first; these extras support local inspection/reporting.
+playwright>=1.40,<2
+matplotlib>=3.8,<4

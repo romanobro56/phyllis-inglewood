@@ -1,0 +1,9 @@
+[jobs]
+  interface ok (1537 random steps, 569 us/step)
+  random baseline: avg return -132.844
+  brain ok: 5,000 neurons, mean firing rate 0.142
+  lesion test ok: intact brain reacts to input (spread 0.0172), lesioned brain doesn't (0.0e+00)
+  quick train ok (2 updates)
+  PASS
+
+jobs:PASS

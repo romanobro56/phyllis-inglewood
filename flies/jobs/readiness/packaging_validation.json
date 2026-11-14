@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "source_files": 53,
+  "archive_bytes": 490193,
+  "sha256": "ab9384c1063a738e20b2ab0a29b082bd330468c710f981669ac7fa70d74d8e70",
+  "manifest_checksums_verified": true,
+  "excludes_experiment_state_and_credentials": true
+}

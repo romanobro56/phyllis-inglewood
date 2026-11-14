@@ -5,6 +5,8 @@ One-time, everyone:
 
 Everyone, all night:
     python scripts/remote.py submit gym [--size full] [--minutes 15]   # uploads flies/gym, queues training
+    python scripts/remote.py submit jobs --minutes 5 --module flies.jobs.learning --args="--size full ..."
+                                                     # a fly's own training loop instead of core.train
     python scripts/remote.py status                                      # queue + recent results
     python scripts/remote.py logs gym [-f]                               # training output
     python scripts/remote.py pull [gym inbox ...]                        # download runs/<fly>/ (all if none)
@@ -32,7 +34,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CONF = ROOT / ".remote.json"
 REMOTE_DIR = "/workspace/flyhack"     # /workspace survives pod restarts on RunPod
 CORE_PARTS = ["core", "server", "scripts", "web", "docs", "requirements.txt", "README.md"]
-SKIP = {".git", "runs", "jobs", "__pycache__", ".remote.json", "raw"}
+SKIP = {".git", "__pycache__", ".remote.json", "raw", "simulation_vault.json"}   # skipped at any depth
+SKIP_TOP = {"runs", "jobs"}   # the pod's own queue/results dirs; only at the top so flies/jobs still uploads
 
 
 def conf():
@@ -62,18 +65,26 @@ def run(remote, stdin=None, capture=False, tty=False, check=True):
     return p
 
 
+def _keep(ti):
+    parts = Path(ti.name).parts
+    if Path(ti.name).name in SKIP or (len(parts) == 1 and parts[0] in SKIP_TOP):
+        return None
+    return ti
+
+
 def tar_bytes(paths):
     buf = io.BytesIO()
     with tarfile.open(fileobj=buf, mode="w:gz") as t:
         for p in paths:
             src = ROOT / p
             if src.exists():
-                t.add(src, arcname=p, filter=lambda ti, p=p: None if ti.name != p and Path(ti.name).name in SKIP else ti)   # never skip the folder asked for (flies/jobs)
+                t.add(src, arcname=p, filter=_keep)
     return buf.getvalue()
 
 
 def upload(paths):
-    run("tar xzf - --no-same-owner", stdin=tar_bytes(paths))   # volume refuses chown to the laptop uid
+    # --no-same-owner: as root, tar would chown files to the laptop's uid, which /workspace (MooseFS) refuses
+    run("tar xzf - --no-same-owner", stdin=tar_bytes(paths))
 
 
 def remote_py(args):
@@ -88,6 +99,8 @@ def main():
     s.add_argument("--name", default=getpass.getuser(), help="your name in the queue")
     sb = sub.add_parser("submit"); sb.add_argument("fly"); sb.add_argument("--size", default="full")
     sb.add_argument("--minutes", type=float, default=15)
+    sb.add_argument("--module", help="fly-local training module to run instead of core.train, e.g. flies.jobs.learning")
+    sb.add_argument("--args", default="", help='arguments for --module as one string, e.g. --args="--size full"')
     sub.add_parser("status")
     lg = sub.add_parser("logs"); lg.add_argument("key"); lg.add_argument("-f", "--follow", action="store_true")
     cn = sub.add_parser("cancel"); cn.add_argument("job_id")
@@ -110,8 +123,9 @@ def main():
         if not (ROOT / "flies" / a.fly / "task.py").exists():
             raise SystemExit(f"flies/{a.fly}/task.py not found")
         upload([f"flies/{a.fly}"])
+        extra = ([f"--module={a.module}", f"--args={a.args}"] if a.module else [])
         run(remote_py(["submit", a.fly, "--size", a.size, "--minutes", str(a.minutes),
-                       "--by", conf().get("name", "someone")]))
+                       "--by", conf().get("name", "someone")] + extra))
     elif a.cmd == "status":
         run(remote_py(["status"]))
     elif a.cmd == "logs":

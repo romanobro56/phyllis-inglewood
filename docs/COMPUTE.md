@@ -91,6 +91,15 @@ python scripts/remote.py pull gym                   # download runs/gym/ to your
 python scripts/remote.py cancel <job id>            # take a pending job out of the queue
 ```
 
+A fly with its own training loop (resume, curriculum, checkpoints) can run that instead of `core.train`.
+The module must live in the fly's folder, and the worker still hard-stops it at 2x `--minutes`
+(SIGTERM first, so it can save). Write outputs under `runs/<fly>/<name>/` so `pull` brings them back:
+
+```bash
+python scripts/remote.py submit jobs --minutes 5 --module flies.jobs.learning \
+    --args="--size full --device cuda --out runs/jobs/workday_full --updates 20 --minutes 5"
+```
+
 How it works:
 - `submit` uploads only **your fly's folder**. Your fly trains with your latest local edits, even before they're merged.
 - If you submit the same fly again while it's still waiting, the new job replaces the old one. No double-booking.
