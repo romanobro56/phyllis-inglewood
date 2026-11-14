@@ -1,0 +1,33 @@
+{
+  "untrained_hash": "e977ce59ed048b2514d7f8ec6a07191ad498f4bdc1543414bc4915c52cdc62a3",
+  "trained_hash": "664934d42020d319c4a375982344573fe2bdcee4606e1d9e1fa41080533e7dc8",
+  "graph_hash": "cc2e5ce35f",
+  "neurons": 5000,
+  "synthetic": false,
+  "fixed_buffers_unchanged": {
+    "edge_index": true,
+    "t_perm": true,
+    "t_index": true,
+    "sign": true,
+    "input_idx": true,
+    "groups": true
+  },
+  "parameter_changes": {
+    "log_w": {
+      "changed": 110046,
+      "l2_difference": 1.9787845611572266
+    },
+    "bias": {
+      "changed": 3929,
+      "l2_difference": 0.5010422468185425
+    },
+    "leak_logit": {
+      "changed": 3929,
+      "l2_difference": 0.4452179968357086
+    },
+    "w_in": {
+      "changed": 61217,
+      "l2_difference": 1.9984880685806274
+    }
+  }
+}

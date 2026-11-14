@@ -1,0 +1,356 @@
+{
+  "mode": "local_DOM_non_submitting",
+  "policies": {
+    "random": {
+      "reward": -32.64125,
+      "completed": 0.0,
+      "field_accuracy": 0.20833333333333334,
+      "actions": 40.0,
+      "error_rate": 0.734375,
+      "episodes": 8,
+      "forms_hash": "44184df4dfb473ce8ec5d0253355e442ce5b0ae41db9fd0d768674f5d35229ac",
+      "policy": "random",
+      "checkpoint": "flies/jobs/artifacts/audit_v6/untrained.pt",
+      "parameter_hash": "e977ce59ed048b2514d7f8ec6a07191ad498f4bdc1543414bc4915c52cdc62a3",
+      "per_episode": [
+        {
+          "reward": -33.730000000000004,
+          "completed": 0,
+          "field_accuracy": 0.2,
+          "actions": 40,
+          "error_rate": 0.75
+        },
+        {
+          "reward": -27.48,
+          "completed": 0,
+          "field_accuracy": 0.4,
+          "actions": 40,
+          "error_rate": 0.7
+        },
+        {
+          "reward": -28.110000000000007,
+          "completed": 0,
+          "field_accuracy": 0.2,
+          "actions": 40,
+          "error_rate": 0.7
+        },
+        {
+          "reward": -32.449999999999996,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.725
+        },
+        {
+          "reward": -32.8,
+          "completed": 0,
+          "field_accuracy": 0.3333333333333333,
+          "actions": 40,
+          "error_rate": 0.75
+        },
+        {
+          "reward": -34.900000000000006,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.725
+        },
+        {
+          "reward": -36.400000000000006,
+          "completed": 0,
+          "field_accuracy": 0.3333333333333333,
+          "actions": 40,
+          "error_rate": 0.775
+        },
+        {
+          "reward": -35.260000000000005,
+          "completed": 0,
+          "field_accuracy": 0.2,
+          "actions": 40,
+          "error_rate": 0.75
+        }
+      ]
+    },
+    "untrained": {
+      "reward": -37.79625,
+      "completed": 0.0,
+      "field_accuracy": 0.10833333333333334,
+      "actions": 40.0,
+      "error_rate": 0.765625,
+      "episodes": 8,
+      "forms_hash": "44184df4dfb473ce8ec5d0253355e442ce5b0ae41db9fd0d768674f5d35229ac",
+      "policy": "untrained",
+      "checkpoint": "flies/jobs/artifacts/audit_v6/untrained.pt",
+      "parameter_hash": "e977ce59ed048b2514d7f8ec6a07191ad498f4bdc1543414bc4915c52cdc62a3",
+      "per_episode": [
+        {
+          "reward": -38.349999999999994,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.825
+        },
+        {
+          "reward": -35.050000000000004,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.75
+        },
+        {
+          "reward": -36.7,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.8
+        },
+        {
+          "reward": -35.949999999999996,
+          "completed": 0,
+          "field_accuracy": 0.3333333333333333,
+          "actions": 40,
+          "error_rate": 0.775
+        },
+        {
+          "reward": -41.249999999999986,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.75
+        },
+        {
+          "reward": -31.830000000000005,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.725
+        },
+        {
+          "reward": -44.28,
+          "completed": 0,
+          "field_accuracy": 0.3333333333333333,
+          "actions": 40,
+          "error_rate": 0.725
+        },
+        {
+          "reward": -38.959999999999994,
+          "completed": 0,
+          "field_accuracy": 0.2,
+          "actions": 40,
+          "error_rate": 0.775
+        }
+      ]
+    },
+    "trained": {
+      "reward": -26.77875000000001,
+      "completed": 0.0,
+      "field_accuracy": 0.1708333333333333,
+      "actions": 40.0,
+      "error_rate": 0.425,
+      "episodes": 8,
+      "forms_hash": "44184df4dfb473ce8ec5d0253355e442ce5b0ae41db9fd0d768674f5d35229ac",
+      "policy": "trained",
+      "checkpoint": "flies/jobs/artifacts/audit_v6/latest.pt",
+      "parameter_hash": "664934d42020d319c4a375982344573fe2bdcee4606e1d9e1fa41080533e7dc8",
+      "per_episode": [
+        {
+          "reward": -23.700000000000006,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.5
+        },
+        {
+          "reward": -30.70000000000001,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.325
+        },
+        {
+          "reward": -22.30000000000001,
+          "completed": 0,
+          "field_accuracy": 0.2,
+          "actions": 40,
+          "error_rate": 0.4
+        },
+        {
+          "reward": -26.600000000000012,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.4
+        },
+        {
+          "reward": -24.60000000000001,
+          "completed": 0,
+          "field_accuracy": 0.3333333333333333,
+          "actions": 40,
+          "error_rate": 0.35
+        },
+        {
+          "reward": -23.10000000000001,
+          "completed": 0,
+          "field_accuracy": 0.5,
+          "actions": 40,
+          "error_rate": 0.4
+        },
+        {
+          "reward": -31.480000000000004,
+          "completed": 0,
+          "field_accuracy": 0.3333333333333333,
+          "actions": 40,
+          "error_rate": 0.65
+        },
+        {
+          "reward": -31.75000000000001,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.375
+        }
+      ]
+    },
+    "lesioned": {
+      "reward": -30.558750000000003,
+      "completed": 0.0,
+      "field_accuracy": 0.20833333333333334,
+      "actions": 40.0,
+      "error_rate": 0.696875,
+      "episodes": 8,
+      "forms_hash": "44184df4dfb473ce8ec5d0253355e442ce5b0ae41db9fd0d768674f5d35229ac",
+      "policy": "lesioned",
+      "checkpoint": "flies/jobs/artifacts/audit_v6/latest.pt",
+      "parameter_hash": "664934d42020d319c4a375982344573fe2bdcee4606e1d9e1fa41080533e7dc8",
+      "per_episode": [
+        {
+          "reward": -30.330000000000005,
+          "completed": 0,
+          "field_accuracy": 0.2,
+          "actions": 40,
+          "error_rate": 0.725
+        },
+        {
+          "reward": -26.830000000000002,
+          "completed": 0,
+          "field_accuracy": 0.4,
+          "actions": 40,
+          "error_rate": 0.65
+        },
+        {
+          "reward": -27.390000000000008,
+          "completed": 0,
+          "field_accuracy": 0.2,
+          "actions": 40,
+          "error_rate": 0.675
+        },
+        {
+          "reward": -29.380000000000003,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.65
+        },
+        {
+          "reward": -28.000000000000004,
+          "completed": 0,
+          "field_accuracy": 0.3333333333333333,
+          "actions": 40,
+          "error_rate": 0.7
+        },
+        {
+          "reward": -32.93000000000001,
+          "completed": 0,
+          "field_accuracy": 0.0,
+          "actions": 40,
+          "error_rate": 0.7
+        },
+        {
+          "reward": -36.400000000000006,
+          "completed": 0,
+          "field_accuracy": 0.3333333333333333,
+          "actions": 40,
+          "error_rate": 0.775
+        },
+        {
+          "reward": -33.21000000000001,
+          "completed": 0,
+          "field_accuracy": 0.2,
+          "actions": 40,
+          "error_rate": 0.7
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "random": {
+      "completed": {
+        "difference": 0.0,
+        "paired_95_percent_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "field_accuracy": {
+        "difference": -0.03750000000000001,
+        "paired_95_percent_interval": [
+          -0.2,
+          0.1375
+        ]
+      },
+      "reward": {
+        "difference": 5.862499999999994,
+        "paired_95_percent_interval": [
+          2.459624999999994,
+          8.672687499999995
+        ]
+      }
+    },
+    "untrained": {
+      "completed": {
+        "difference": 0.0,
+        "paired_95_percent_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "field_accuracy": {
+        "difference": 0.0625,
+        "paired_95_percent_interval": [
+          -0.10833333333333334,
+          0.24177083333333277
+        ]
+      },
+      "reward": {
+        "difference": 11.01749999999999,
+        "paired_95_percent_interval": [
+          8.155999999999992,
+          13.676468749999987
+        ]
+      }
+    },
+    "lesioned": {
+      "completed": {
+        "difference": 0.0,
+        "paired_95_percent_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "field_accuracy": {
+        "difference": -0.03750000000000001,
+        "paired_95_percent_interval": [
+          -0.2,
+          0.1375
+        ]
+      },
+      "reward": {
+        "difference": 3.7799999999999963,
+        "paired_95_percent_interval": [
+          0.8423124999999931,
+          6.3249999999999975
+        ]
+      }
+    }
+  }
+}

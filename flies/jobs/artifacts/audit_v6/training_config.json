@@ -1,0 +1,16 @@
+{
+  "curriculum_stage_updates": 10,
+  "settings": {
+    "updates": 300,
+    "episodes": 16,
+    "lr": 0.001,
+    "entropy": 0.1,
+    "gamma": 0.9,
+    "chunk": 128,
+    "epochs": 8,
+    "teacher_episodes": 200,
+    "teacher_epsilon": 0.15,
+    "eval_episodes": 32
+  },
+  "seed": 2026
+}

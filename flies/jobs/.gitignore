@@ -1,0 +1,4 @@
+# Local practice state contains resume facts and should not be committed.
+*.sqlite3
+*.sqlite3-*
+__pycache__/
