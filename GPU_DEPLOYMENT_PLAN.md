@@ -1,6 +1,11 @@
 # Deploying custom-module queue support to the shared Runpod GPU
 
-**Status: ready to deploy, not deployed.** Code: commit `ff36020` on `job-apps` (not merged to `main`).
+**Status: DEPLOYED 2026-11-14 ~21:20 UTC (steps 1–7).** Backup: `/workspace/flyhack-backups/20261114T211855Z`.
+New worker pid 2565 (`worker.caps` verified). Full CUDA preflight job `212026-jobs-8b57`: PASS, 134,181 neurons,
+graph `85c53631ff`, batch 32, peak 1,010,720,256 B. During step 3, the upload's `tar` failed to chown files on
+MooseFS (exit 2, contents correct); fixed in `3fb8a07` (`--no-same-owner`). Laptops need that commit to `submit`.
+
+Code: commit `ff36020` on `job-apps` (not merged to `main`).
 Pod: `103.196.86.68:36812`, `/workspace/flyhack`. Every step below is run from the laptop repo root.
 Steps 1–5 are owner actions (Roman authorized them); steps 6 onward are normal `submit`/`pull` use.
 
