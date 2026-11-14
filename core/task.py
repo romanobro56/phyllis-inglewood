@@ -29,6 +29,12 @@ class FlyTask:
         """World only (tasks with a menu): make `item` what the fly faces next; return the new observation."""
         raise NotImplementedError
 
+    # Optional, world only:
+    #   view() -> small JSON-able dict of what the fly is choosing between right now (sent to station.play
+    #             as ctx.view, taken just before the step), e.g. the bard's tray of words.
+    #   world_checkpoint = "path/in/runs/<fly>/brain.pt"   which checkpoint the world runs (default brain.pt)
+    #   world_args = {...}                                  constructor arguments for the world's copy
+
     def teacher(self) -> int:
         """Teacher mode only: the action an expert would take in the current state."""
         raise NotImplementedError

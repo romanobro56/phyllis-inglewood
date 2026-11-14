@@ -62,6 +62,17 @@ class BardFly(FlyTask):
     max_steps = 40
     free_run = False      # True: write freely (world/demo). False: walk real Shakespeare (training)
     train = {"teacher_episodes": 1500, "teacher_epsilon": 0.0, "epochs": 12}
+    world_args = {"free_run": True, "words": 60}   # the 3D world: write freely, a 60-word page at a time
+
+    def __init__(self, free_run=None, words=None):
+        if free_run is not None:
+            self.free_run = free_run
+        if words is not None:
+            self.max_steps = words
+
+    def view(self):
+        """For the world's typewriter: the 8 words on the tray and the page so far."""
+        return {"tray": [VOCAB[int(i)] for i in self.tray], "page": pretty(self.text) if self.free_run else ""}
 
     def reset(self, rng):
         self.rng = rng

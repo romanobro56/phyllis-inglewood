@@ -34,7 +34,8 @@ class Fly:
     def __init__(self, name, device, untrained_size):
         self.name = name
         self.cls = load_task(name)
-        ck = run_dir(name) / "brain.pt"
+        # a fly may name the checkpoint the world should run (relative to runs/<fly>/), e.g. its best one
+        ck = run_dir(name) / getattr(self.cls, "world_checkpoint", "brain.pt")
         self.result = {}
         try:
             self.brain = load_brain(ck, self.cls, device) if ck.exists() else None
@@ -42,7 +43,7 @@ class Fly:
             print(f"[{name}] {e} - using an untrained brain")
             self.brain = None
         self.trained = self.brain is not None
-        if self.trained and (run_dir(name) / "result.json").exists():
+        if self.trained and ck == run_dir(name) / "brain.pt" and (run_dir(name) / "result.json").exists():
             self.result = json.loads((run_dir(name) / "result.json").read_text())
         if not self.trained:
             self.brain = FlyBrain(untrained_size, self.cls.obs_dim, len(self.cls.actions), name).to(device)
@@ -69,7 +70,7 @@ class Session:
         self.idle = set()      # menu flies whose animation finished and are waiting to be fed
         self.pending = {}      # menu fly -> item picked while it was still busy (latest wins)
         for n, f in flies.items():
-            self.env[n] = f.cls()
+            self.env[n] = f.cls(**getattr(f.cls, "world_args", {}))   # e.g. the level a fly was trained on
             self.obs[n] = np.asarray(self.env[n].reset(self.rng), np.float32)
             self.lesion[n] = False
 
@@ -85,6 +86,7 @@ class Session:
                                    lesion=self.lesion[name], record=record)
         probs = torch.softmax(logits[0], -1).cpu().numpy()
         a = int(probs.argmax()) if f.cls.greedy else int(self.rng.choice(k, p=probs / probs.sum()))
+        shown = env.view() if hasattr(env, "view") else None   # optional: what the fly was choosing between
         obs, reward, done, _ = env.step(a, self.rng)
         caption = env.caption(a)
         self.obs[name] = np.asarray(obs, np.float32)
@@ -94,6 +96,8 @@ class Session:
                    probs={n: float(p) for n, p in zip(f.cls.actions, probs)},
                    reward=float(reward), episode_done=bool(done), caption=caption,
                    lesioned=self.lesion[name], mean_rate=info["mean_rate"])
+        if shown is not None:
+            msg["view"] = shown
         if record:
             r = info["rates"][:, 0, :].cpu().numpy()                 # (STEPS, N)
             q = np.clip(np.sqrt(np.clip(r, 0, None) / 2.0) * 255, 0, 255).astype(np.uint8)

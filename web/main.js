@@ -150,7 +150,7 @@ async function onDecision(m) {
   wall.onDecision(m);
   if (panel.fly === m.fly) showDecision(m);
   if (menu.fly === m.fly) menuTasted(m);
-  const ctx = { THREE, group: f.group, fly: f.fly };
+  const ctx = { THREE, group: f.group, fly: f.fly, view: m.view };   // view: optional task.view() before the step
   try {
     // a station may allow itself longer (e.g. the gym's rests), but never stalls its fly forever
     await Promise.race([f.station.play(m.action, m.caption, ctx), wait(Math.max(PLAY_TIMEOUT, f.station.playTimeout || 0))]);
