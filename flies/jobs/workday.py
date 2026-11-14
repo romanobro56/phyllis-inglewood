@@ -24,6 +24,9 @@ class SimulatedWorkdayEnvironment(FlyTask):
     mode = 'reward'
     max_steps = 768
     train = {'gamma': .997, 'entropy': .04, 'lr': .0005, 'episodes': 16, 'chunk': 64}
+    REWARD_VERSION = 2          # 1: wrong entry -1, correction +1 (runs/jobs/workday_full)
+    WRONG_ENTRY = -.25
+    CORRECTION_BONUS = .2
 
     def __init__(self, profile=None, state=None, vault=None, split='train', level=9, jobs=None, trace=False):
         self.profile = copy.deepcopy(profile if profile is not None else json.loads((ROOT / 'verified_profile.json').read_text()))
@@ -56,7 +59,7 @@ class SimulatedWorkdayEnvironment(FlyTask):
         self.account_created = self.logged_in = self.uploaded = 0
         self.added = {'experience': 0, 'education': 0}
         self.extra_entries = {'experience': 0, 'education': 0}
-        self.reviewed = False
+        self.reviewed = self.review_ok = False
         self.auth_view = self.scenario['auth_start']
         self.authenticated = False
         self.email = self.profile['personal']['email']
@@ -208,11 +211,18 @@ class SimulatedWorkdayEnvironment(FlyTask):
                 'tenant': self.tenant, 'job_url': self.job['url'], 'stage': self.stage,
                 'steps': list(self.scenario['stages']), 'page': self.index,
                 'elements': self.elements(), 'focus': self.focus, 'mode': self.mode,
-                'palette': self.palette, 'messages': list(self.messages), 'actions': actions,
+                'palette': self.palette, 'messages': self._messages(), 'actions': actions,
                 'profile': profile, 'profile_provenance': {'simulation_only_fields': self.profile.get('simulation_only_fields',[]),
                      'field_sources': self.profile.get('field_sources',{})}, 'section_entry_count': {k:self.added[k]+self.extra_entries[k] for k in self.added}, 'documents': [{'ref': k, 'label': d['label']} for k, d in self.documents.items()],
                 'layout': self.scenario['layout'], 'status': self.status,
                 'summary': copy.deepcopy(self.all_fields()) if self.stage == 'review' else []}
+
+    def _messages(self):
+        # A passed review is visible on the page, like a failed one. Without this the view before and
+        # after a successful review was identical, so Submit (+20 reviewed / -10 unreviewed) was a blind
+        # gamble for a memoryless policy. Derived from state, so any later edit removes it.
+        ready = self.stage == 'review' and self.reviewed and getattr(self, 'review_ok', False)
+        return list(self.messages) + (['Review complete: ready to submit.'] if ready else [])
 
     def obs(self):
         return encode(self.public_view())
@@ -332,8 +342,10 @@ class SimulatedWorkdayEnvironment(FlyTask):
         if button == 'review':
             self.reviewed = True
             errors = self._validation(whole=True)
+            self.review_ok = not errors
             if errors:
                 return self._feedback(errors)
+            self.messages = []          # the confirmation replaces stale error banners (see public_view)
             return {'event': 'review_passed', 'reward': self._once('review', 1.), 'successful': True}
         if button == 'submit':
             if self.state.submitted(self.tenant, self.email, self.job_identity):
@@ -443,13 +455,16 @@ class SimulatedWorkdayEnvironment(FlyTask):
             if self.stage == 'auth':
                 return {'event': 'auth_value_entered', 'reward': -.05 if previous != field['value'] else -1., 'successful': True}
             correct = self._validator.correct(field)
-            reward = -1.
+            # A wrong entry is a cheap, recoverable attempt (-0.25), not an invalid action (-1):
+            # at -1, trying a value was worth less than idling in the editor, so policies stopped
+            # entering values at all (workday_full traces: correct entries fell 3.3 -> 2.5/episode).
+            reward = self.WRONG_ENTRY
             if correct:
                 reward = self._once('field:'+field['id'], 1.)
                 if previous and previous != field['value']:
-                    # Correction gets +1 extra once; wrong-then-right cannot outscore
-                    # immediate correctness after its -1 incorrect-entry cost.
-                    reward += self._once('correction:'+field['id'], 1.)
+                    # Correction bonus is paid once and stays below the wrong-entry cost, so
+                    # wrong-then-right (-.25 + 1 + .2 - 2 x .02) never outscores immediate correctness.
+                    reward += self._once('correction:'+field['id'], self.CORRECTION_BONUS)
             return {'event': 'field_correct' if correct else 'field_incorrect', 'reward': reward, 'successful': correct}
         return {'event': 'invalid_action', 'reward': -1., 'successful': False}
 
@@ -507,7 +522,7 @@ class SimulatedWorkdayEnvironment(FlyTask):
         keys = ('max_steps', 'scenario', 'job', 'tenant', 'job_identity', 'index', 't', 'total_actions', 'done', 'completed', 'task_success',
                 'status', 'focus', 'mode', 'catalog', 'palette', 'messages', 'repeats', 'valuerefs', 'cumulative_reward',
                 'errors', 'validation_failures', 'entry_attempts', 'account_created', 'logged_in', 'uploaded', 'added',
-                'extra_entries', 'initial_account_exists', 'upload_name', 'reviewed', 'auth_view', 'authenticated', 'email', 'auth_fields', 'last_caption')
+                'extra_entries', 'initial_account_exists', 'upload_name', 'reviewed', 'review_ok', 'auth_view', 'authenticated', 'email', 'auth_fields', 'last_caption')
         result = {k: copy.deepcopy(getattr(self, k)) for k in keys}
         result.update(schema=SCHEMA, level=self.level, split=self.split, paid=list(self.paid), search_text=getattr(self, 'search_text', ''))
         return result

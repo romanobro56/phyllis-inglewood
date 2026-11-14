@@ -126,6 +126,39 @@ class WorkdayTests(unittest.TestCase):
         first=env.step(i,driver.rng);second=other.step(i,driver.rng)
         self.assertNotEqual(first[1],second[1]);np.testing.assert_array_equal(first[0],second[0])
 
+    def test_wrong_entry_is_cheap_but_correction_cycles_cannot_beat_immediate_correctness(self):
+        def run(values):
+            env=SimulatedWorkdayEnvironment(level=1);env.reset(np.random.default_rng(10))
+            driver=FixtureDriver(env);field=env.current_fields()[0];driver.kind('focus',target=field['id'])
+            rewards=[]
+            for value in values:
+                value=env._validator.expected[field['id']] if value is None else value
+                rewards.append(driver.kind('enter',value=value)[1])
+            return rewards,env
+        env=run([None])[1];field=env.current_fields()[0]
+        wrong=next(v for v in env.profile['personal'].values() if v and v!=env._validator.expected[field['id']])
+        immediate,_=run([None]);recovered,_=run([wrong,None]);farm,_=run([wrong,None,wrong,None])
+        self.assertTrue(-1<recovered[0]<0)                       # recoverable attempt, cheaper than an invalid action
+        self.assertGreater(recovered[1],immediate[0])            # recovery is rewarded ...
+        self.assertLess(sum(recovered),sum(immediate))           # ... but never beats getting it right first
+        self.assertLess(sum(farm[2:]),0)                         # repeating the cycle earns nothing more
+
+    def test_successful_review_is_visible_and_disappears_after_an_edit(self):
+        env=SimulatedWorkdayEnvironment(level=1);env.reset(np.random.default_rng(10));driver=FixtureDriver(env)
+        field=env.current_fields()[0];driver.enter(field,env._validator.expected[field['id']]);driver.button('next')
+        before=env.obs().copy();self.assertEqual(env.public_view()['messages'],[])
+        self.assertEqual(driver.button('review')[3]['event'],'review_passed')
+        self.assertIn('Review complete: ready to submit.',env.public_view()['messages'])
+        self.assertFalse(np.array_equal(before,env.obs()))       # a memoryless policy can tell it is safe to submit
+        driver.button('edit_0');field=env.current_fields()[0]
+        driver.enter(field,env._validator.expected[field['id']]);driver.button('next')   # any edit makes the review stale
+        self.assertEqual(env.stage,'review');self.assertFalse(env.reviewed)
+        self.assertNotIn('Review complete: ready to submit.',env.public_view()['messages'])
+        self.assertEqual(driver.button('submit')[3]['event'],'submission_rejected')
+        env2=SimulatedWorkdayEnvironment(level=1);env2.reset(np.random.default_rng(10));driver2=FixtureDriver(env2)
+        driver2.button('next');self.assertEqual(env2.stage,'personal')    # failed validation keeps the page
+        self.assertNotIn('Review complete: ready to submit.',env2.public_view()['messages'])
+
     def test_unnecessary_review_is_rejected_without_ending_exploration(self):
         env=SimulatedWorkdayEnvironment(level=1);env.reset(np.random.default_rng(1))
         _,reward,done,info=FixtureDriver(env).kind('review')

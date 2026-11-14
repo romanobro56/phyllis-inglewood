@@ -200,10 +200,12 @@ unchanged. Training uses shared `core.train.rollout` and gradient batches with
 reward-only REINFORCE. There are no demonstrations, teachers, learned output
 heads or action-repair fallbacks.
 
-Rewards are approximately: first correct field +1; first correction +1 extra;
-registration +5; login +3; first correct upload +3; validated page +1; independently
-validated and reviewed submission +20. Each action costs .02; wrong actions -1,
-failed submit -10, unnecessary review -1 and timeout -5. Repeating the same action
+Rewards (version 2) are approximately: first correct field +1; first correction
++.2 extra; registration +5; login +3; first correct upload +3; validated page +1;
+independently validated and reviewed submission +20. Each action costs .02; a wrong
+field value -.25; other wrong/invalid actions -1, failed submit -10, unnecessary
+review -1 and timeout -5. (Version 1, used by `runs/jobs/workday_full`, charged -1
+for a wrong field value and paid +1 for a correction.) Repeating the same action
 in the same public state adds a bounded escalating penalty. Intermediate rewards
 are paid once per field/stage/event; correction cycles cannot repeatedly farm them.
 Safe manual review is a separate low-reward outcome. There is currently no
