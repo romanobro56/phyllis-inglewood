@@ -2,4 +2,4 @@ torch>=2.3
 numpy
 pandas
 pyarrow
-websockets>=12
+websockets>=13

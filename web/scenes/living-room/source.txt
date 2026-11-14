@@ -1,0 +1,10 @@
+Obsession (2026, dir. Curry Barker, Focus Features) - living room of Bear's (grandma's) house, where the ending plays out (Ian is shot, Sarah's body on the altar, Bear dies in Nikki's arms).
+No true wide/establishing frame of this room was findable online (TMDB, press kits, ShotDeck article, news sites checked); these are the widest available. Floor is barely visible.
+
+still.jpg       2000x1270  Focus Features press still (EXIF copyright Focus Features): Nikki (Inde Navarrette) in a white T-shirt standing mid-room; doorway to hall on the left, pleated table lamp, curtained window, small lamp on round side table, white fireplace mantel with photos on the right, armchair corners bottom-left/right. Dark, warm. Most of the room of any image found. PEOPLE: yes, 1 (centre, large - covers ~1/3 of the frame).
+                https://www.nme.com/wp-content/uploads/2026/05/Obsession_Horror.jpg
+still-alt1.jpg  3234x1819  Same set-up as still.jpg, slightly tighter 16:9 crop, higher resolution. PEOPLE: yes, 1.
+                https://image.tmdb.org/t/p/original/j8brS9jQanEE03DfALGIMNwILAR.jpg  (TMDB backdrop, https://www.themoviedb.org/movie/1339713-obsession/images/backdrops)
+still-alt2.jpg  2530x1423  The actual final scene: blood-covered Nikki in front of the white fireplace mantel, candles and lamp on the left, CRT TV on the right. Very dark. PEOPLE: yes, 1 (medium close-up, covers most of the frame).
+                https://image.tmdb.org/t/p/original/pZrgh4UlbY4rAim9GvL9l8UgXyH.jpg
+clean-local.jpg  Local people removal from still.jpg (2000x1270): YOLO11x-seg person mask extended to frame bottom + head top, dilated 25 px (mask.png); Big-LaMa (half-res) fill, then SDXL-inpainting-0.1 (diffusers, MPS, strength 0.75 over the LaMa fill, 30 steps) to turn it into sheer curtains continuing to the floor plus an invented wooden chair by the side table; LaMa touch-up on the bottom 16 rows.

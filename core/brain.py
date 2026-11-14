@@ -100,11 +100,11 @@ class FlyBrain(nn.Module):
         post = torch.as_tensor(g["post"], dtype=torch.long)
         order = torch.argsort(post * self.n + pre)          # coalesced order for sparse mm
         post, pre = post[order], pre[order]
-        self.register_buffer("edge_index", torch.stack([post, pre]))
+        self.register_buffer("edge_index", torch.stack([post, pre]), persistent=False)
         t_perm = torch.argsort(pre * self.n + post)          # same edges, transposed and coalesced
-        self.register_buffer("t_perm", t_perm)
-        self.register_buffer("t_index", torch.stack([pre[t_perm], post[t_perm]]))
-        self.register_buffer("sign", torch.as_tensor(g["sign"], dtype=torch.float32)[order])
+        self.register_buffer("t_perm", t_perm, persistent=False)
+        self.register_buffer("t_index", torch.stack([pre[t_perm], post[t_perm]]), persistent=False)
+        self.register_buffer("sign", torch.as_tensor(g["sign"], dtype=torch.float32)[order], persistent=False)
         count = torch.as_tensor(g["count"], dtype=torch.float32)[order]
 
         # initial strength ~ log(1 + synapses), scaled so the average neuron receives ~1 unit of input
@@ -115,7 +115,7 @@ class FlyBrain(nn.Module):
         self.bias = nn.Parameter(torch.zeros(self.n))
         self.leak_logit = nn.Parameter(torch.zeros(self.n))  # sigmoid(0) = 0.5
 
-        self.register_buffer("input_idx", torch.as_tensor(g["input_idx"], dtype=torch.long))
+        self.register_buffer("input_idx", torch.as_tensor(g["input_idx"], dtype=torch.long), persistent=False)
         self.w_in = nn.Parameter(torch.randn(obs_dim, len(g["input_idx"])) / np.sqrt(obs_dim))
 
         groups = action_groups(fly_name, n_actions, g["output_idx"])
@@ -180,5 +180,6 @@ def load_brain(path, task_cls, device="cpu"):
     brain = FlyBrain(ck["preset"], ck["obs_dim"], len(ck["actions"]), ck["fly"]).to(device)
     if brain.graph_hash != ck["graph_hash"]:
         raise ValueError(f"{path}: trained on a different data/{ck['preset']}.npz; retrain or copy that file")
-    brain.load_state_dict(ck["state_dict"])
+    own = brain.state_dict()
+    brain.load_state_dict({k: v for k, v in ck["state_dict"].items() if k in own})  # older files also stored the wiring
     return brain

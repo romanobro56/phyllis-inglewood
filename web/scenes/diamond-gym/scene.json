@@ -1,0 +1,7 @@
+{
+  "camera": { "position": [0, 0, 0], "target": [0, -0.25, -3], "fov": 55 },
+  "light": { "direction": [0.1, 1, 0.2], "intensity": 1.6, "ambient": 0.7 },
+  "flies": {
+    "gym": { "position": [0, -0.66, -2.2], "yaw": 0.5, "scale": 1.2 }
+  }
+}

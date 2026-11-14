@@ -1,19 +1,27 @@
-// The world: one station per fly, laid out on a grid. Talks to server/serve.py over a websocket.
+// One live scene: every fly's station on the ground, a brain panel that drops in when you visit a fly,
+// and the pods above it all. Talks to server/serve.py over a websocket.
+//   < >   overview -> each fly -> overview (on the pods: each live subject)
+//   ^ v   up to the pods / back down to the world
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
 import { Fly, tween, wait, box } from "./lib/fly.js";
-import { Matrix } from "./matrix.js";
+import { BrainActivity, brainMaterial, brainShared, loadPreset, pointSize, ACTION_COLORS, hex } from "./brain.js";
+import { PodWall, WALL_CENTER } from "./pods.js";
 
-const WS_URL = `ws://${location.hostname || "localhost"}:8765`;
-const SPACING = 6;
+const WS_URL = `${location.protocol === "https:" ? "wss" : "ws"}://${location.host}/ws`; // same port as the page
+const SPACING = 5.2;       // gap between neighbouring stations along the half circle (20 flies -> radius ~31)
 const PLAY_TIMEOUT = 4000; // a stuck station never stalls its fly for longer than this
+const BG = 0xecbbab;       // Claude orange #d97757, five 10% tints lighter (50% toward white)
+const FOG = { ground: [32, 140], wall: [16, 115] };
+const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
-// --- scene ---------------------------------------------------------------
+// --- renderer, world --------------------------------------------------------
 const el = document.getElementById("world");
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.shadowMap.enabled = true;
+renderer.autoClear = false;
 el.appendChild(renderer.domElement);
 const labels = new CSS2DRenderer();
 labels.domElement.style.position = "absolute";
@@ -22,44 +30,64 @@ labels.domElement.style.pointerEvents = "none";
 el.appendChild(labels.domElement);
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x0d1117);
-scene.fog = new THREE.Fog(0x0d1117, 25, 60);
-const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 200);
+scene.background = new THREE.Color(BG);
+scene.fog = new THREE.Fog(BG, ...FOG.ground);
+const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 800);
 camera.position.set(0, 12, 18);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
-controls.maxPolarAngle = Math.PI * 0.48;
 
-scene.add(new THREE.HemisphereLight(0xbcd7ff, 0x1a1a10, 0.9));
-const sun = new THREE.DirectionalLight(0xffffff, 1.6);
-sun.position.set(10, 20, 8);
+scene.add(new THREE.HemisphereLight(0xfff3ee, 0x9a5a48, 1.5));
+const sun = new THREE.DirectionalLight(0xfff2ea, 2.2);
+sun.position.set(14, 30, 12);
 sun.castShadow = true;
 sun.shadow.mapSize.set(2048, 2048);
-Object.assign(sun.shadow.camera, { left: -30, right: 30, top: 30, bottom: -30 });
+Object.assign(sun.shadow.camera, { left: -38, right: 38, top: 38, bottom: -38, far: 120 });
 scene.add(sun);
-const ground = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), new THREE.MeshStandardMaterial({ color: 0x1b222c }));
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(600, 600), new THREE.MeshStandardMaterial({ color: 0xf6d2c4, roughness: 1 }));
 ground.rotation.x = -Math.PI / 2;
 ground.receiveShadow = true;
 scene.add(ground);
-scene.add(new THREE.GridHelper(200, 100, 0x263040, 0x1e2632));
+const grid = new THREE.GridHelper(200, 100, 0xd97757, 0xe0a593);
+grid.material.transparent = true;
+grid.material.opacity = 0.35;
+grid.position.y = 0.002;
+scene.add(grid);
+
+const wall = new PodWall(scene);
+
+// --- the brain panel (its own little scene, drawn into the top band) ----------
+const panelEl = document.getElementById("panel");
+const brainEl = document.getElementById("p-brain");
+const tip = document.getElementById("tip");
+const brainScene = new THREE.Scene();
+const brainCam = new THREE.PerspectiveCamera(30, 2, 0.01, 50);
+brainCam.position.set(0, 0.25, 2.55);
+brainCam.lookAt(0, 0, 0);
+const brainHolder = new THREE.Group();
+brainScene.add(brainHolder);
+const panelScale = { value: 400 };
+const THEMES = {
+  light: { band: 0xf4d6cb, base: 0x8a5446, hot: 0xb0250f, input: 0x0b7285, baseAlpha: 0.13, additive: false },
+  dark: { band: 0x120406, base: 0x6a1424, hot: 0xfff0f2, input: 0x39d0d0, baseAlpha: 0.3, additive: true },
+};
+let panel = { fly: null, points: null, theme: "light", yaw: 0, drag: null };
 
 function resize() {
   renderer.setSize(innerWidth, innerHeight);
   labels.setSize(innerWidth, innerHeight);
   camera.aspect = innerWidth / innerHeight;
   camera.updateProjectionMatrix();
+  const ph = Math.round(Math.min(360, Math.max(230, innerHeight * 0.34)));
+  document.documentElement.style.setProperty("--ph", ph + "px");
 }
 addEventListener("resize", resize);
 resize();
 
 // --- flies ---------------------------------------------------------------
-const flies = {}; // name -> {info, station, fly, group, label, brainIcon, busy}
+const flies = {}; // name -> {info, station, fly, group, label, labelObj, brainIcon, brain, title, lesioned}
+let order = [];
 let ws;
-const matrix = new Matrix({
-  onClose: () => send({ type: "inspect", fly: null }),
-  onLesion: (name, on) => send({ type: "lesion", fly: name, on }),
-});
-
 function send(m) { if (ws && ws.readyState === 1) ws.send(JSON.stringify(m)); }
 
 const fallbackStation = {
@@ -76,9 +104,10 @@ async function addFly(info, i, total) {
     console.warn(`flies/${info.name}/station.js failed to load, using a placeholder`, e);
     station = Object.create(fallbackStation);
   }
-  const cols = Math.ceil(Math.sqrt(total));
   const group = new THREE.Group();
-  group.position.set((i % cols - (cols - 1) / 2) * SPACING, 0, (Math.floor(i / cols) - (Math.ceil(total / cols) - 1) / 2) * SPACING);
+  const { pos, yaw } = arcSlot(i, total);
+  group.position.copy(pos);
+  group.rotation.y = yaw;                          // each station faces the middle of the half circle
   scene.add(group);
   const fly = new Fly();
   group.add(fly.root);
@@ -87,22 +116,28 @@ async function addFly(info, i, total) {
   } catch (e) {
     console.error(`${info.name}: station build() crashed`, e);
   }
+  const title = station.title || info.name;
 
   // floating label + glowing brain icon above the fly
   const div = document.createElement("div");
   div.className = "label" + (info.trained ? "" : " untrained");
-  div.innerHTML = `<b>${station.title || info.name}</b>${info.trained ? "" : " (untrained)"}<span class="cap">...</span>`;
-  const label = new CSS2DObject(div);
-  label.position.set(0, 1.0, 0);
-  fly.root.add(label);
+  div.innerHTML = `<b>${title}</b>${info.trained ? "" : " (untrained)"}<span class="cap">${info.menu ? "hungry \u00b7 waiting to be fed" : "..."}</span>`;
+  const labelObj = new CSS2DObject(div);
+  labelObj.position.set(0, 1.4, 0);
+  fly.root.add(labelObj);
   const brainIcon = new THREE.Mesh(new THREE.SphereGeometry(0.09, 16, 12),
-    new THREE.MeshBasicMaterial({ color: 0x3cff7a, transparent: true, opacity: 0.5 }));
-  brainIcon.position.set(0, 0.75, 0);
-  brainIcon.userData.fly = fly;
+    new THREE.MeshBasicMaterial({ color: 0xd97757, transparent: true, opacity: 0.5 }));
+  brainIcon.position.set(0, 1.16, 0);
   fly.root.add(brainIcon);
 
-  flies[info.name] = { info, station, fly, group, label: div, brainIcon };
-  fly.root.traverse((o) => (o.userData.flyName = info.name));
+  let brain = null;
+  try {
+    brain = new BrainActivity(info, await loadPreset(info.preset));
+  } catch (e) {
+    console.warn(`${info.name}: no brain point data for preset ${info.preset} (run python -m core.graph --size ${info.preset})`, e);
+  }
+  flies[info.name] = { info, station, fly, group, label: div, labelObj, brainIcon, brain, title, lesioned: false };
+  group.traverse((o) => (o.userData.flyName = info.name));
 }
 
 async function onDecision(m) {
@@ -111,10 +146,14 @@ async function onDecision(m) {
   f.label.querySelector(".cap").textContent = m.caption;
   f.label.classList.toggle("lesioned", m.lesioned);
   tween(500, (t) => { f.brainIcon.material.opacity = 1 - 0.6 * t; f.brainIcon.scale.setScalar(1.6 - 0.6 * t); });
-  if (matrix.fly === m.fly) matrix.show(m);
+  f.brain?.push(m.activity);
+  wall.onDecision(m);
+  if (panel.fly === m.fly) showDecision(m);
+  if (menu.fly === m.fly) menuTasted(m);
   const ctx = { THREE, group: f.group, fly: f.fly };
   try {
-    await Promise.race([f.station.play(m.action, m.caption, ctx), wait(PLAY_TIMEOUT)]);
+    // a station may allow itself longer (e.g. the gym's rests), but never stalls its fly forever
+    await Promise.race([f.station.play(m.action, m.caption, ctx), wait(Math.max(PLAY_TIMEOUT, f.station.playTimeout || 0))]);
   } catch (e) {
     console.error(`${m.fly}: station play() crashed`, e);
     await wait(500);
@@ -122,54 +161,396 @@ async function onDecision(m) {
   send({ type: "ready", fly: m.fly });
 }
 
-// click a fly to enter its brain
-const ray = new THREE.Raycaster();
-renderer.domElement.addEventListener("click", (e) => {
-  const p = new THREE.Vector2((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
-  ray.setFromCamera(p, camera);
-  const hit = ray.intersectObjects(scene.children, true).find((h) => h.object.userData.flyName);
-  if (!hit) return;
-  const name = hit.object.userData.flyName;
-  const f = flies[name];
-  const target = new THREE.Vector3();
-  f.fly.root.getWorldPosition(target);
-  const from = camera.position.clone();
-  const fromT = controls.target.clone();
-  tween(700, (t) => {
-    controls.target.lerpVectors(fromT, target, t);
-    camera.position.lerpVectors(from, target.clone().add(new THREE.Vector3(0, 0.6, 1.2)), t);
-  }).then(() => {
-    send({ type: "inspect", fly: name });
-    matrix.open(f.info, f.station.title || name);
-    camera.position.copy(from); controls.target.copy(fromT);
+// --- views ----------------------------------------------------------------
+// mode: "overview" | "fly" | "wall";  idx: which fly (fly mode) or which live pod (wall, -1 = whole tower)
+const view = { mode: "overview", idx: -1, ground: { mode: "overview", idx: -1 } };
+let camMoving = false;
+let camToken = 0;
+
+// Stations sit on a half circle opening towards the camera (+z), left to right.
+function arcRadius(n) { return Math.max(5, ((Math.max(n, 2) - 1) * SPACING) / Math.PI); }
+function arcSlot(i, n) {
+  const R = arcRadius(n);
+  const a = n === 1 ? Math.PI / 2 : Math.PI - (i / (n - 1)) * Math.PI;          // pi (left) .. 0 (right)
+  const pos = new THREE.Vector3(Math.cos(a) * R, 0, -Math.sin(a) * R + R * 0.35);
+  const centre = new THREE.Vector3(0, 0, R * 0.35);
+  return { pos, yaw: Math.atan2(centre.x - pos.x, centre.z - pos.z) };
+}
+function overviewPose() {
+  // far enough back that the whole half circle (plus a station's width at each end) fits across the screen
+  const R = arcRadius(order.length);
+  const halfFov = Math.atan(Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * Math.min(camera.aspect, 2));
+  const d = Math.max(9, (R + 3.6) / Math.tan(halfFov));
+  const target = new THREE.Vector3(0, 0.3, -R * 0.2);
+  const tilt = THREE.MathUtils.degToRad(38);
+  return { pos: target.clone().add(new THREE.Vector3(0, d * Math.sin(tilt), d * Math.cos(tilt))), target };
+}
+// in front of the station, in its own frame (stations are built to be seen from their +z side)
+function flyPose(name) {
+  const g = flies[name].group;
+  g.updateMatrixWorld();
+  return { pos: g.localToWorld(new THREE.Vector3(0, 2.5, 4.6)), target: g.localToWorld(new THREE.Vector3(0, 0.55, 0)) };
+}
+
+async function moveCamera({ pos, target }, ms = 1100) {
+  const tok = ++camToken;
+  const p0 = camera.position.clone(), t0 = controls.target.clone();
+  // big vertical trips go up (or down) first, so you feel the climb
+  const climb = Math.abs(pos.y - p0.y) > 20;
+  const ctrl = pos.y > p0.y ? new THREE.Vector3(p0.x, pos.y, p0.z) : new THREE.Vector3(pos.x, p0.y, pos.z);
+  camMoving = true;
+  await tween(ms, (t) => {
+    if (tok !== camToken) return;
+    const e = ease(t);
+    if (climb) {
+      const a = (1 - e) * (1 - e), b = 2 * (1 - e) * e, c = e * e;
+      camera.position.set(a * p0.x + b * ctrl.x + c * pos.x, a * p0.y + b * ctrl.y + c * pos.y, a * p0.z + b * ctrl.z + c * pos.z);
+    } else camera.position.lerpVectors(p0, pos, e);
+    controls.target.lerpVectors(t0, target, e);
   });
+  if (tok === camToken) camMoving = false;
+}
+
+function setControlLimits() {
+  const wallMode = view.mode === "wall";
+  controls.maxPolarAngle = wallMode ? Math.PI * 0.85 : Math.PI * 0.47;
+  controls.minDistance = wallMode ? 2 : 1.5;
+  controls.maxDistance = wallMode ? 45 : 70;
+}
+
+function go(mode, idx = -1) {
+  if (!order.length && mode !== "overview") return;
+  const wasWall = view.mode === "wall";
+  view.mode = mode;
+  view.idx = idx;
+  if (mode !== "wall") view.ground = { mode, idx };
+  document.body.className = mode;
+  setControlLimits();
+
+  const name = idx >= 0 ? order[idx] : null;
+  let pose, ms = 1100;
+  if (mode === "overview") pose = overviewPose();
+  else if (mode === "fly") pose = flyPose(name);
+  else pose = idx >= 0 ? wall.podPose(name) : wall.overviewPose();
+  if (wasWall !== (mode === "wall")) ms = 2600;
+  moveCamera(pose, ms);
+
+  tweenFog(mode === "wall" ? FOG.wall : FOG.ground, ms);
+  for (const f of Object.values(flies)) f.labelObj.visible = mode !== "wall";
+  wall.setLabelsVisible(mode === "wall", mode === "wall" ? name : null);
+  setPanel(name, mode === "wall" ? "dark" : "light");
+  send({ type: "inspect", flies: mode === "wall" ? order : name ? [name] : [] });
+  updateNavLabel();
+}
+
+let fogToken = 0;
+function tweenFog([near, far], ms) {
+  const tok = ++fogToken, n0 = scene.fog.near, f0 = scene.fog.far;
+  tween(ms, (t) => {
+    if (tok !== fogToken) return;
+    scene.fog.near = n0 + (near - n0) * ease(t);
+    scene.fog.far = f0 + (far - f0) * ease(t);
+  });
+}
+
+function step(dir) {
+  const n = order.length;
+  if (!n) return;
+  // positions -1..n-1, wrapping: -1 is the overview (or the whole tower)
+  const next = ((view.idx + 1 + dir + n + 1) % (n + 1)) - 1;
+  if (view.mode === "wall") go("wall", next);
+  else go(next < 0 ? "overview" : "fly", next);
+}
+function upDown(dir) {
+  if (dir > 0 && view.mode !== "wall") go("wall", -1);
+  else if (dir < 0 && view.mode === "wall") go(view.ground.mode, view.ground.idx);
+}
+
+function updateNavLabel() {
+  const n = order.length, i = view.idx;
+  const lab = document.getElementById("nav-label");
+  if (view.mode === "overview") lab.textContent = `all flies · ${n}`;
+  else if (view.mode === "fly") lab.textContent = `${flies[order[i]].title} · ${i + 1}/${n}`;
+  else lab.textContent = i < 0 ? "the pods" : `subject ${String(i + 1).padStart(4, "0")} · ${i + 1}/${n}`;
+}
+
+document.getElementById("prev").onclick = () => step(-1);
+document.getElementById("next").onclick = () => step(1);
+document.getElementById("up").onclick = () => upDown(view.mode === "wall" ? -1 : 1);
+addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") step(-1);
+  else if (e.key === "ArrowRight") step(1);
+  else if (e.key === "ArrowUp") upDown(1);
+  else if (e.key === "ArrowDown") upDown(-1);
+  else if (e.key === "Enter" && menu.fly) feed();
+  else if (e.key === "Escape") {
+    if (view.mode === "wall") view.idx >= 0 ? go("wall", -1) : upDown(-1);
+    else go("overview");
+  } else return;
+  e.preventDefault();
 });
+
+// click a station (or a pod) to visit it; a drag is not a click
+let downAt = null;
+renderer.domElement.addEventListener("pointerdown", (e) => (downAt = [e.clientX, e.clientY]));
+renderer.domElement.addEventListener("click", (e) => {
+  if (!downAt || Math.hypot(e.clientX - downAt[0], e.clientY - downAt[1]) > 5) return;
+  const ray = new THREE.Raycaster();
+  ray.setFromCamera(new THREE.Vector2((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1), camera);
+  const roots = view.mode === "wall" ? wall.live.map((l) => l.pod) : Object.values(flies).map((f) => f.group);
+  const hit = ray.intersectObjects(roots, true).find((h) => h.object.userData.flyName && !h.object.isPoints);
+  if (!hit) return;
+  const i = order.indexOf(hit.object.userData.flyName);
+  if (i >= 0) go(view.mode === "wall" ? "wall" : "fly", i);
+});
+
+// --- the panel ------------------------------------------------------------
+function setPanel(name, theme) {
+  const f = name && flies[name];
+  if (panel.fly && panel.fly !== name) {                 // leaving a fly: reconnect its brain
+    const old = flies[panel.fly];
+    if (old?.lesioned) { old.lesioned = false; send({ type: "lesion", fly: panel.fly, on: false }); }
+  }
+  panelEl.classList.toggle("open", !!f);
+  tip.style.display = "none";
+  setMenu(f?.info.menu ? name : null);
+  if (!f) { panel.fly = null; return; }
+  const changed = panel.fly !== name || panel.theme !== theme;
+  panel.fly = name;
+  panel.theme = theme;
+  if (changed) {
+    brainHolder.clear();
+    panel.points = null;
+    if (f.brain) {
+      const th = THEMES[theme];
+      panel.points = new THREE.Points(f.brain.geometry, brainMaterial({
+        base: th.base, hot: th.hot, input: th.input, baseAlpha: th.baseAlpha, additive: th.additive,
+        size: pointSize(f.brain.n) * 1.1, scale: panelScale }));
+      brainHolder.add(panel.points);
+    }
+    const info = f.info;
+    document.getElementById("p-kicker").textContent = theme === "dark" ? "live brain · in vitro" : "live brain";
+    document.getElementById("p-title").textContent = f.title;
+    document.getElementById("p-sub").textContent =
+      `${info.trained ? "trained" : "UNTRAINED"} · ${info.preset} brain · ${(f.brain?.n ?? 0).toLocaleString()} neurons` +
+      (info.synthetic ? " · SYNTHETIC (not a fly)" : "") + (f.brain ? "" : " · no point data");
+    document.getElementById("p-caption").textContent = info.menu ? "hungry. Pick a dish below and feed it." : "waiting for the next decision...";
+    document.getElementById("p-bars").innerHTML = info.actions.map((a, k) => `
+      <div class="bar" data-a="${a}"><div class="row"><span class="name" style="color:${hex(ACTION_COLORS[k % 8])}">${a}</span>
+      <span class="pct">-</span></div><div class="track"><div class="fill" style="width:0;background:${hex(ACTION_COLORS[k % 8])}"></div></div></div>`).join("");
+    document.getElementById("p-legend").innerHTML =
+      `<span style="color:${hex(THEMES[theme].input)}">&#9679;</span> sensory input neurons &nbsp; ` +
+      `<span style="color:${hex(THEMES[theme].hot)}">&#9679;</span> firing now<br>coloured dots: each action's descending neurons`;
+    updateLesionButton();
+  }
+}
+
+function showDecision(m) {
+  document.getElementById("p-caption").textContent = `“${m.caption}”`;
+  for (const el of document.querySelectorAll("#p-bars .bar")) {
+    const p = m.probs[el.dataset.a] ?? 0;
+    el.classList.toggle("chosen", el.dataset.a === m.action);
+    el.querySelector(".pct").textContent = `${(p * 100).toFixed(0)}%`;
+    el.querySelector(".fill").style.width = `${p * 100}%`;
+  }
+}
+
+function updateLesionButton() {
+  const f = flies[panel.fly];
+  const b = document.getElementById("p-lesion");
+  const on = !!f?.lesioned;
+  b.textContent = `Lesion connectome: ${on ? "ON (brain disconnected)" : "off"}`;
+  b.classList.toggle("on", on);
+}
+document.getElementById("p-lesion").onclick = () => {
+  const f = flies[panel.fly];
+  if (!f) return;
+  f.lesioned = !f.lesioned;
+  send({ type: "lesion", fly: panel.fly, on: f.lesioned });
+  updateLesionButton();
+};
+
+// hover a neuron for its FlyWire ID, click to open it in Codex, drag to turn the brain
+const brainRay = new THREE.Raycaster();
+brainRay.params.Points.threshold = 0.012;
+let hovered = null;
+brainEl.addEventListener("pointerdown", (e) => { panel.drag = { x: e.clientX, yaw: panel.yaw, moved: false }; brainEl.setPointerCapture(e.pointerId); });
+brainEl.addEventListener("pointerup", (e) => {
+  const d = panel.drag;
+  panel.drag = null;
+  const f = flies[panel.fly];
+  if (d && !d.moved && hovered != null && f?.brain && !f.brain.meta.synthetic)
+    window.open(`https://codex.flywire.ai/app/cell_details?root_id=${f.brain.meta.root_id[hovered]}`, "_blank");
+});
+brainEl.addEventListener("pointerleave", () => { tip.style.display = "none"; hovered = null; });
+brainEl.addEventListener("pointermove", (e) => {
+  if (panel.drag) {
+    panel.yaw = panel.drag.yaw + (e.clientX - panel.drag.x) * 0.01;
+    if (Math.abs(e.clientX - panel.drag.x) > 3) panel.drag.moved = true;
+    return;
+  }
+  const f = flies[panel.fly];
+  if (!panel.points || !f?.brain) return;
+  const r = brainEl.getBoundingClientRect();
+  brainRay.setFromCamera(new THREE.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1), brainCam);
+  const hit = brainRay.intersectObject(panel.points)[0];
+  hovered = hit ? hit.index : null;
+  if (!hit) { tip.style.display = "none"; return; }
+  const meta = f.brain.meta, i = hit.index;
+  tip.style.display = "block";
+  tip.style.left = e.clientX + 12 + "px";
+  tip.style.top = e.clientY + 12 + "px";
+  tip.textContent = `${meta.cell_type[i] || "unnamed"} · ${meta.classes[meta.class_index[i]]} · ` +
+    `${meta.synthetic ? "synthetic #" : "FlyWire "}${meta.root_id[i]}`;
+});
+
+// --- the menu: scroll through the dishes, pick one, feed it -----------------------
+// Only for flies whose task has a menu (the critic). The server makes them wait until something is picked.
+const menuEl = document.getElementById("menu");
+const stripEl = document.getElementById("menu-strip");
+const feedBtn = document.getElementById("menu-feed");
+const menu = { fly: null, sel: {}, tasting: new Set() };   // sel: fly -> picked item
+
+function setMenu(name) {
+  menuEl.classList.toggle("open", !!name);
+  if (name === menu.fly) return;
+  menu.fly = name;
+  if (!name) return;
+  const items = flies[name].info.menu;
+  menu.sel[name] ??= items[0].name;
+  let group = null, html = "";
+  for (const it of items) {
+    if (it.group !== group) { group = it.group; html += `<span class="grp">${group}</span>`; }
+    html += `<button class="dish ${it.group}" data-item="${it.name}" title="${it.name}"><span class="e">${it.emoji}</span><span class="n">${it.name}</span></button>`;
+  }
+  stripEl.innerHTML = html;
+  pickDish(menu.sel[name], true);
+}
+
+function pickDish(item, scroll = false) {
+  const f = flies[menu.fly];
+  if (!f) return;
+  menu.sel[menu.fly] = item;
+  const it = f.info.menu.find((x) => x.name === item);
+  for (const b of stripEl.querySelectorAll(".dish")) b.classList.toggle("sel", b.dataset.item === item);
+  if (scroll) stripEl.querySelector(".dish.sel")?.scrollIntoView({ inline: "center", block: "nearest" });
+  const busy = menu.tasting.has(menu.fly);
+  feedBtn.disabled = busy;
+  feedBtn.innerHTML = busy ? `<span class="e">\u{1F445}</span>tasting\u2026`
+    : `<span class="e">${it.emoji}</span>Feed<small>${it.name}</small>`;
+}
+
+function feed() {
+  const name = menu.fly, item = menu.sel[name];
+  if (!name || menu.tasting.has(name)) return;
+  menu.tasting.add(name);
+  flies[name].label.querySelector(".cap").textContent = `being served ${item}...`;
+  send({ type: "choose", fly: name, item });
+  pickDish(item);
+}
+
+function menuTasted(m) {
+  menu.tasting.delete(m.fly);
+  if (menu.fly === m.fly) pickDish(menu.sel[m.fly]);
+}
+
+stripEl.addEventListener("click", (e) => {
+  const b = e.target.closest(".dish");
+  if (!b) return;
+  if (b.dataset.item === menu.sel[menu.fly]) feed();          // click the picked dish again to feed it
+  else pickDish(b.dataset.item);
+});
+stripEl.addEventListener("dblclick", (e) => { if (e.target.closest(".dish")) feed(); });
+// a mouse wheel scrolls the strip sideways
+stripEl.addEventListener("wheel", (e) => {
+  if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { stripEl.scrollLeft += e.deltaY; e.preventDefault(); }
+}, { passive: false });
+feedBtn.onclick = feed;
+
+// --- the pods' readout ----------------------------------------------------
+function updateWallHud() {
+  const live = order.filter((n) => flies[n]?.brain);
+  const neurons = live.reduce((s, n) => s + flies[n].brain.n, 0);
+  const dormant = wall.slots.length - live.length;
+  document.getElementById("wallhud").innerHTML =
+    `<div class="rec"><i></i>UPLINK ACTIVE · TOWER 01 · SECTOR 7G</div>` +
+    `LIVE SUBJECTS ........ ${live.length}<br>` +
+    `NEURONS SIMULATED .... ${neurons.toLocaleString()}<br>` +
+    `DORMANT COPIES ....... ${dormant} (awaiting a world)<br>` +
+    `SUBJECTS AWARE ....... 0 (verified)<br>` +
+    `CONSENT FORMS ........ 0 on file<br>` +
+    `ETHICS REVIEW ........ pending (day 4,113)`;
+}
 
 // --- connection ----------------------------------------------------------
 function connect() {
   const status = document.getElementById("status");
   ws = new WebSocket(WS_URL);
   ws.onopen = () => { status.textContent = "connected to brain server"; send({ type: "hello" }); };
-  ws.onclose = () => { status.textContent = "brain server offline - retrying..."; setTimeout(connect, 2000); };
+  ws.onclose = () => { status.textContent = "brain server offline · retrying..."; setTimeout(connect, 2000); };
   ws.onmessage = async (ev) => {
     const m = JSON.parse(ev.data);
     if (m.type === "init") {
+      setPanel(null);
+      menu.tasting.clear();
       for (const f of Object.values(flies)) scene.remove(f.group);
       for (const k of Object.keys(flies)) delete flies[k];
       await Promise.all(m.flies.map((info, i) => addFly(info, i, m.flies.length)));
+      order = m.flies.map((f) => f.name);
+      wall.setLive(order.filter((n) => flies[n].brain).map((n) => ({ name: n, ...flies[n] })));
+      updateWallHud();
       const untrained = m.flies.filter((f) => !f.trained).length;
-      status.textContent = `${m.flies.length} flies live` + (untrained ? ` (${untrained} untrained)` : "");
+      status.textContent = `${m.flies.length} flies live` + (untrained ? ` · ${untrained} untrained` : "");
+      if (view.mode === "wall") go("wall", Math.min(view.idx, order.length - 1));
+      else go(view.mode === "fly" && view.idx < order.length ? "fly" : "overview", view.idx < order.length ? view.idx : -1);
       for (const info of m.flies) send({ type: "ready", fly: info.name });
     } else if (m.type === "decision") {
       onDecision(m);
     }
   };
 }
+camera.position.copy(overviewPose().pos);
+updateNavLabel();
 connect();
 
 // --- loop ----------------------------------------------------------------
+const clock = new THREE.Clock();
 renderer.setAnimationLoop(() => {
-  controls.update();
+  const dt = Math.min(0.1, clock.getDelta()), t = clock.elapsedTime, now = performance.now();
+  brainShared.uTime.value = t;
+  for (const f of Object.values(flies)) f.brain?.update(now, dt);
+  wall.update(t, dt, camera);
+  if (camMoving) camera.lookAt(controls.target);
+  else controls.update();
+
+  const W = innerWidth, H = innerHeight, dpr = renderer.getPixelRatio();
+  const band = Math.max(0, Math.min(H, panelEl.getBoundingClientRect().bottom));
+  // keep what you're looking at centred in the space under the panel
+  camera.setViewOffset(W, H, 0, -band / 2, W, H);
+  brainShared.uWorldScale.value = (H * dpr) / (2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)));
+
+  renderer.setScissorTest(false);
+  renderer.setViewport(0, 0, W, H);
+  renderer.setClearColor(BG, 1);
+  renderer.clear();
   renderer.render(scene, camera);
+
+  if (band > 1) {
+    renderer.setScissorTest(true);
+    renderer.setScissor(0, H - band, W, band);
+    renderer.setClearColor(THEMES[panel.theme].band, 1);
+    renderer.clear();
+    if (panel.points) {
+      const r = brainEl.getBoundingClientRect();
+      renderer.setViewport(r.left, H - r.bottom, r.width, r.height);
+      brainCam.aspect = r.width / Math.max(1, r.height);
+      brainCam.updateProjectionMatrix();
+      panelScale.value = (r.height * dpr) / (2 * Math.tan(THREE.MathUtils.degToRad(brainCam.fov / 2)));
+      if (!panel.drag) panel.yaw += dt * 0.12;
+      brainHolder.rotation.y = panel.yaw;
+      renderer.render(brainScene, brainCam);
+    }
+    renderer.setScissorTest(false);
+  }
   labels.render(scene, camera);
 });

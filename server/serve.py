@@ -4,6 +4,7 @@
     python -m server.serve --only gym inbox
     python -m server.serve --host 0.0.0.0  # let other laptops on the network watch
 
+Page and live brain data share one port (the websocket lives at /ws).
 Each fly uses runs/<fly>/brain.pt if it exists; otherwise an UNTRAINED brain
 (clearly labelled) on --untrained-size so the world still works before training.
 A decision only happens when the browser says the previous animation finished,
@@ -12,15 +13,16 @@ so what you see is always the fly's live choice.
 import argparse
 import asyncio
 import base64
-import functools
-import http.server
 import json
-import threading
+import mimetypes
+from http import HTTPStatus
 from pathlib import Path
 
 import numpy as np
 import torch
-import websockets
+from websockets.asyncio.server import serve
+from websockets.datastructures import Headers
+from websockets.http11 import Response
 
 from core.brain import FlyBrain, load_brain, pick_device
 from core.registry import fly_names, load_task, run_dir
@@ -52,7 +54,7 @@ class Fly:
     def info(self):
         return dict(name=self.name, actions=list(self.cls.actions), preset=self.brain.preset,
                     trained=self.trained, synthetic=self.brain.synthetic, mode=self.cls.mode,
-                    groups=self.brain.groups.tolist(),
+                    groups=self.brain.groups.tolist(), menu=getattr(self.cls, "menu", None),
                     scores={k: self.result.get(k) for k in ("score_trained", "score_random", "score_lesioned")})
 
 
@@ -63,7 +65,9 @@ class Session:
         self.flies = flies
         self.rng = np.random.default_rng()
         self.env, self.obs, self.lesion = {}, {}, {}
-        self.inspect = None
+        self.inspect = set()   # flies whose full neuron activity the browser is showing
+        self.idle = set()      # menu flies whose animation finished and are waiting to be fed
+        self.pending = {}      # menu fly -> item picked while it was still busy (latest wins)
         for n, f in flies.items():
             self.env[n] = f.cls()
             self.obs[n] = np.asarray(self.env[n].reset(self.rng), np.float32)
@@ -74,7 +78,7 @@ class Session:
         k = len(f.cls.actions)
         m = env.mask()
         m = np.ones(k, bool) if m is None else np.asarray(m, bool)
-        record = self.inspect == name
+        record = name in self.inspect
         with torch.no_grad():
             logits, info = f.brain(torch.as_tensor(self.obs[name][None], device=f.device),
                                    torch.as_tensor(m[None], device=f.device),
@@ -106,26 +110,64 @@ async def handler(ws, flies):
         if t == "hello":
             await ws.send(json.dumps(dict(type="init", flies=[f.info() for f in flies.values()])))
         elif t == "ready" and m.get("fly") in flies:
-            await ws.send(json.dumps(s.decide(m["fly"])))
-        elif t == "inspect":
-            s.inspect = m.get("fly")
+            n = m["fly"]
+            if not flies[n].cls.menu:                          # normal flies decide again right away
+                await ws.send(json.dumps(s.decide(n)))
+            elif n in s.pending:                               # menu flies only act when fed
+                s.obs[n] = np.asarray(s.env[n].choose(s.pending.pop(n)), np.float32)
+                await ws.send(json.dumps(s.decide(n)))
+            else:
+                s.idle.add(n)
+        elif t == "choose" and m.get("fly") in flies and flies[m["fly"]].cls.menu:
+            n, item = m["fly"], m.get("item")
+            if item not in {x["name"] for x in flies[n].cls.menu}:
+                continue
+            if n in s.idle:
+                s.idle.discard(n)
+                s.obs[n] = np.asarray(s.env[n].choose(item), np.float32)
+                await ws.send(json.dumps(s.decide(n)))
+            else:
+                s.pending[n] = item
+        elif t == "inspect":                                   # {"fly": name|null} or {"flies": [names]}
+            v = m.get("flies", m.get("fly"))
+            s.inspect = set(v) if isinstance(v, list) else ({v} if v else set())
         elif t == "lesion" and m.get("fly") in flies:
             s.lesion[m["fly"]] = bool(m.get("on"))
 
 
-def serve_static(host, port):
-    h = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(ROOT))
-    h.log_message = lambda *a, **k: None
-    http.server.ThreadingHTTPServer((host, port), h).serve_forever()
+STATIC_ROOTS = ("web", "flies", "data")   # never serve runs/, jobs/, .remote.json, ...
+
+
+def static_files(connection, request):
+    """Serve the page and its files on the same port as the websocket (/ws), so one port is enough
+    (needed behind Runpod's HTTP proxy)."""
+    path = request.path.split("?", 1)[0]
+    if path == "/ws":
+        return None                                   # continue with the websocket handshake
+    if path in ("/", "", "/web"):
+        return Response(HTTPStatus.FOUND.value, "Found", Headers([("Location", "/web/"), ("Content-Length", "0")]), b"")
+    if path.endswith("/"):
+        path += "index.html"
+    target = (ROOT / path.lstrip("/")).resolve()
+    ok = target.is_file() and any(target.is_relative_to(ROOT / r) for r in STATIC_ROOTS)
+    if not ok:
+        return connection.respond(HTTPStatus.NOT_FOUND, "not found\n")
+    body = target.read_bytes()
+    ctype = mimetypes.guess_type(target.name)[0] or "application/octet-stream"
+    if target.suffix == ".js":
+        ctype = "text/javascript"
+    headers = Headers([("Content-Type", ctype), ("Content-Length", str(len(body))),
+                       ("Cache-Control", "no-cache")])
+    return Response(HTTPStatus.OK.value, "OK", headers, body)
 
 
 async def main_async(a):
     device = pick_device(a.device)
     flies = {n: Fly(n, device, a.untrained_size) for n in (a.only or fly_names())}
-    threading.Thread(target=serve_static, args=(a.host, a.port), daemon=True).start()
-    async with websockets.serve(lambda ws: handler(ws, flies), a.host, a.ws_port, max_size=None):
+    async with serve(lambda ws: handler(ws, flies), a.host, a.port, max_size=None,
+                     process_request=static_files):
         shown = "localhost" if a.host in ("127.0.0.1", "0.0.0.0") else a.host
-        print(f"\nOpen http://{shown}:{a.port}/web/   (websocket on port {a.ws_port})")
+        print(f"\nOpen http://{shown}:{a.port}/web/", flush=True)
         await asyncio.Future()
 
 
@@ -134,7 +176,6 @@ def main():
     ap.add_argument("--only", nargs="*")
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8000)
-    ap.add_argument("--ws-port", type=int, default=8765)
     ap.add_argument("--device", default="cpu")
     ap.add_argument("--untrained-size", default="tiny")
     asyncio.run(main_async(ap.parse_args()))

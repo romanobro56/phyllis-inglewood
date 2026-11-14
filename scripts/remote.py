@@ -73,7 +73,7 @@ def tar_bytes(paths):
 
 
 def upload(paths):
-    run("tar xzf -", stdin=tar_bytes(paths))
+    run("tar xzf - --no-same-owner", stdin=tar_bytes(paths))   # volume refuses chown to the laptop uid
 
 
 def remote_py(args):

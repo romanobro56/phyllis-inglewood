@@ -2,13 +2,13 @@
 
 Each fly is a copy of the real *Drosophila* connectome (FlyWire v783: 134,181 neurons,
 2.7M connections), trained overnight for one task and shown live in a three.js world.
-Click a fly to enter its brain and watch the decision form.
+Use the < > buttons (or click a fly) to visit each fly and watch its live brain at the top; ^ shows the pods.
 
 **Why "the fly decided" is true here**
 - Input enters only through real sensory neurons.
 - Each action is read from a fixed group of 16 real descending neurons. There is no learned output layer.
 - Training changes connection *strengths* only. The wiring and the excitatory/inhibitory signs are the fly's.
-- Lesion test: zero the connectome and the fly stops reacting to its world (`core.check` proves it, and the matrix view has a toggle).
+- Lesion test: zero the connectome and the fly stops reacting to its world (`core.check` proves it, and the brain panel has a toggle).
 
 ## Rules for working together
 
@@ -79,7 +79,7 @@ core/train_all.py  trains every fly, keeps going past failures
 core/queue.py      job queue on the shared GPU
 scripts/remote.py  submit / status / logs / pull from your laptop
 server/serve.py    runs all brains live + serves the web world
-web/               three.js world (main.js), matrix view (matrix.js), fly model (lib/fly.js)
+web/               three.js world + views/nav (main.js), live brain point clouds (brain.js), the pod tower (pods.js), fly model (lib/fly.js)
 flies/<name>/      ONE FOLDER PER FLY: task.py, station.js, demos.npz
 docs/COMPUTE.md    setting up and sharing the GPU
 ```

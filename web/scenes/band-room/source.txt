@@ -1,0 +1,11 @@
+Whiplash (2014, dir. Damien Chazelle) - Shaffer Conservatory studio band rehearsal room (the room where Fletcher throws the chair/cymbal at Andrew).
+
+still.jpg       1920x1080  Film frame: Fletcher (J.K. Simmons) conducting on the left, drum kit + Andrew behind it, grand piano, saxophone row in the right foreground; wood-panelled walls and wooden floor visible. PEOPLE: yes, ~8 (Fletcher, Andrew, pianist, sax section).
+                https://image.tmdb.org/t/p/original/7lLbmGfVT2cKqUOKu8ODXWk2XfZ.jpg  (TMDB backdrop, https://www.themoviedb.org/movie/244786-whiplash/images/backdrops)
+still-alt1.jpg  1280x532   Widest frame of the room (2.39:1): conductor's music stand and stool on the left, the whole band seated in rows, drums, ceiling lights, clock. Only 1280 wide. PEOPLE: yes, ~20.
+                https://film-grab.com/wp-content/uploads/photo-gallery/10%20(1320).jpg  (gallery: https://film-grab.com/2015/05/22/whiplash/)
+still-alt2.jpg  3600x2025  Press still, sharp: Fletcher standing beside the drum kit, Andrew drumming, grand piano and panelled wall behind. Tighter than still.jpg. PEOPLE: yes, 2-3.
+                https://image.tmdb.org/t/p/original/nv1lnF9vhkWXqOz2IzVUseJZAtC.jpg
+still-alt3.jpg  3600x2025  Press still, reverse angle: Fletcher conducting from the front, two players and music stands ("WHIPLASH" charts) in the foreground. PEOPLE: yes, 3.
+                https://image.tmdb.org/t/p/original/xWgflM3YbtqrZQ6EqBFg0IRD5Tt.jpg
+clean-local.jpg  Local people removal from still.jpg (1920x1080): YOLO11x-seg person masks (dilated 20 px) + hand-drawn polygon over the whole sax section/held horns/Andrew's legs (mask.png); conductor filled with Big-LaMa (half-res); right side (x>=640) filled with SDXL-inpainting-0.1 (diffusers, MPS, 30 steps, prompt 'empty band rehearsal room...'), which invented empty chairs/stands/hi-hat; duplicate wall sconce removed with a LaMa touch-up. Right foreground (empty chairs, dark object bottom-right) is invented.

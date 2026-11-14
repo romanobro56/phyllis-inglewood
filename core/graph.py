@@ -47,6 +47,12 @@ def load_raw():
     return con, ann
 
 
+def _top(series, k):
+    """Indices of the k largest values; ties broken by neuron ID so every machine picks the same set."""
+    order = np.lexsort((series.index.values, -series.values))
+    return series.index.values[order[:k]]
+
+
 def select_neurons(con, ann, size):
     ids = np.union1d(con.Presynaptic_ID.unique(), con.Postsynaptic_ID.unique())
     cls = np.asarray(ann.super_class.reindex(ids).fillna("unknown").tolist(), dtype=str)
@@ -59,9 +65,9 @@ def select_neurons(con, ann, size):
         must_out = ids[cls == OUTPUT_CLASS]
         inputs = ids[np.isin(cls, INPUT_CLASSES)]
         # keep the most connected input neurons so the observation can actually propagate
-        top_inputs = deg.reindex(inputs).sort_values(ascending=False).index[: N_INPUTS // 2]
+        top_inputs = _top(deg.reindex(inputs), N_INPUTS // 2)
         forced = np.union1d(must_out, top_inputs)
-        rest = deg.drop(forced).sort_values(ascending=False).index[: max(0, KEEP[size] - len(forced))]
+        rest = _top(deg.drop(forced), max(0, KEEP[size] - len(forced)))
         ids = np.sort(np.union1d(forced, rest))
     return ids
 
@@ -88,7 +94,7 @@ def build(size):
 
     outdeg = np.bincount(pre, weights=count, minlength=len(ids))
     cand = np.where(np.isin(super_class, INPUT_CLASSES))[0]
-    input_idx = np.sort(cand[np.argsort(-outdeg[cand])][:N_INPUTS])
+    input_idx = np.sort(cand[np.lexsort((cand, -outdeg[cand]))][:N_INPUTS])
     output_idx = np.where(super_class == OUTPUT_CLASS)[0]
     return dict(root_id=ids.astype(np.int64), pre=pre, post=post, count=count, sign=sign,
                 super_class=super_class, cell_type=cell_type, pos=pos,
@@ -118,7 +124,9 @@ def build_synthetic(n=3000, n_in=300, n_out=200, avg_deg=40, seed=0):
 
 def save(size, g):
     DATA.mkdir(exist_ok=True)
-    h = hashlib.sha1(np.concatenate([g["pre"], g["post"]]).tobytes()).hexdigest()[:10]
+    # identifies the wiring AND which neurons are inputs/outputs, so a brain never loads onto a mismatched graph
+    h = hashlib.sha1(np.concatenate([g["pre"], g["post"], g["input_idx"], g["output_idx"]])
+                     .astype(np.int64).tobytes()).hexdigest()[:10]
     np.savez_compressed(DATA / f"{size}.npz", n=len(g["root_id"]), graph_hash=h, **g)
 
     # browser files: positions centred and scaled to about [-1, 1], y up

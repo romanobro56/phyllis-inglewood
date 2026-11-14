@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fly-world",
+      "runtimeExecutable": ".venv/bin/python",
+      "runtimeArgs": [
+        "-m",
+        "server.serve"
+      ],
+      "port": 8000
+    },
+    {
+      "name": "reels-world",
+      "runtimeExecutable": ".venv/bin/python",
+      "runtimeArgs": [
+        "-m",
+        "server.serve",
+        "--only",
+        "reels",
+        "--port",
+        "8020"
+      ],
+      "port": 8020
+    }
+  ]
+}

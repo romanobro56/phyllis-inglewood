@@ -10,6 +10,8 @@ class FlyTask:
     max_steps: int = 100        # decisions per episode
     greedy: bool = False        # demo: always take the top choice instead of sampling
     train: dict = {}            # optional overrides, e.g. {"lr": 3e-4, "episodes": 64}
+    menu: list = None           # optional, world only: [{"name", "emoji", "group"}]. If set, the fly waits
+                                # for someone in the world to pick an item, then choose(item) sets it up
 
     def reset(self, rng: np.random.Generator) -> np.ndarray:
         """Start a new episode, return the first observation (float32, shape (obs_dim,))."""
@@ -22,6 +24,10 @@ class FlyTask:
     def mask(self):
         """Optional: list of bools, False = action not allowed right now. None = all allowed."""
         return None
+
+    def choose(self, item: str):
+        """World only (tasks with a menu): make `item` what the fly faces next; return the new observation."""
+        raise NotImplementedError
 
     def teacher(self) -> int:
         """Teacher mode only: the action an expert would take in the current state."""

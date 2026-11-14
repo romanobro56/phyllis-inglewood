@@ -3,7 +3,7 @@ data/*
 !data/README.md
 # training outputs: pulled from the GPU with scripts/remote.py pull
 runs/
-jobs/
+/jobs/
 jobs_worker.log
 # per-person remote settings
 .remote.json
@@ -11,3 +11,8 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
+# secrets
+.env
+
+# test splats
+web/scenes/_test/

@@ -1,0 +1,73 @@
+{
+  "world": {
+    "world_id": "03470d94-00ec-40c8-b214-377a76d24549",
+    "display_name": "",
+    "tags": null,
+    "assets": {
+      "mesh": {
+        "collider_mesh_url": "https://cdn.marble.worldlabs.ai/03470d94-00ec-40c8-b214-377a76d24549/34e3cdea.glb",
+        "hq_mesh_url": null,
+        "full_res_mesh_url": null
+      },
+      "imagery": {
+        "pano_url": "https://cdn.marble.worldlabs.ai/03470d94-00ec-40c8-b214-377a76d24549/42e3999c-ad9c-42ec-9372-a798d0edd28c_panos/rgb_0.png"
+      },
+      "splats": {
+        "spz_urls": {
+          "500k": "https://cdn.marble.worldlabs.ai/03470d94-00ec-40c8-b214-377a76d24549/49ff6354-30a1-4a22-b07a-845bd2e2912e_ceramic_500k.spz",
+          "100k": "https://cdn.marble.worldlabs.ai/03470d94-00ec-40c8-b214-377a76d24549/8338a271-9eb3-41a4-a72f-00e48c17b63a_dust_100k.spz",
+          "150k": "https://cdn.marble.worldlabs.ai/03470d94-00ec-40c8-b214-377a76d24549/240ba51a-5833-449e-90fc-d567b8d254ed_ceramic_150k.spz",
+          "full_res": "https://cdn.marble.worldlabs.ai/03470d94-00ec-40c8-b214-377a76d24549/37dbfa4b-553b-4cf9-b6b7-342d36b6ea5b_ceramic.spz"
+        },
+        "semantics_metadata": {
+          "metric_scale_factor": 2.0026283,
+          "ground_plane_offset": 1.3141699
+        }
+      },
+      "thumbnail_url": "https://cdn.marble.worldlabs.ai/03470d94-00ec-40c8-b214-377a76d24549/81eac7cb-63e8-408c-91e6-12e3be4728da_sand_mpi/thumbnail.webp",
+      "caption": "The scene is a cozy and inviting living room, captured with a realistic style that emphasizes warm, inviting tones and a comfortable atmosphere. The room exudes a classic, slightly vintage aesthetic, inviting relaxation and quiet contemplation. A large, patterned sofa occupies the space to the left, adorned with textured throws and decorative pillows. Adjacent to the sofa is a side table crafted from light wood, upon which rests a ceramic lamp with a pleated, cream-colored shade, casting a soft glow. Framed photographs are arranged neatly on this table, hinting at personal histories and cherished memories. To the right, a dark wooden armchair with upholstered cushioning sits beside a round, lighter wood side table. This table holds a glass tumbler, a sugar bowl, and a flickering candle in a small glass holder, suggesting a tranquil evening setting. Beyond this seating area, a decorative fireplace mantel, painted white, features an array of decorative items, including framed pictures and intricate pottery. The fireplace itself is adorned with a woven screen, adding texture and a sense of hearth. Dark, heavy curtains frame the windows, through which a soft, diffused light filters, creating gentle shadows on the polished wooden floor. A wicker room divider, comprising three panels, stands centrally, subtly separating distinct areas within the room while allowing light to pass through its intricate weave. The 360 scene is faultless."
+    },
+    "created_at": null,
+    "updated_at": null,
+    "permission": {
+      "public": false,
+      "allowed_readers": [],
+      "allowed_writers": [],
+      "allow_id_access": false
+    },
+    "world_prompt": null,
+    "world_marble_url": "https://marble.worldlabs.ai/world/03470d94-00ec-40c8-b214-377a76d24549",
+    "model": null
+  },
+  "operation": {
+    "operation_id": "01140959-5359-4b43-94aa-b230412a1142",
+    "created_at": "2026-11-14T16:16:44Z",
+    "updated_at": "2026-11-14T16:21:46Z",
+    "expires_at": "2026-11-14T19:16:44Z",
+    "done": true,
+    "error": null,
+    "metadata": {
+      "progress": {
+        "status": "SUCCEEDED",
+        "description": "World generation completed successfully"
+      },
+      "world_id": "03470d94-00ec-40c8-b214-377a76d24549",
+      "operation_type": "world_generation",
+      "public_model_name": "marble-1.1"
+    },
+    "response": null,
+    "cost": {
+      "total_credits": 1580,
+      "line_items": [
+        {
+          "name": "Pano generation (image, non-pano)",
+          "credits": 80
+        },
+        {
+          "name": "World generation",
+          "credits": 1500
+        }
+      ]
+    }
+  }
+}
