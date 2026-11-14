@@ -21,6 +21,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 OWNER="${SUDO_USER:-}"
 
 die() { echo "error: $*" >&2; exit 1; }
+cd /   # commands run as a teammate can't read your (private) home, so never start them from inside it
 [ "$(id -u)" -eq 0 ] || die "run with sudo: sudo bash scripts/team_mac.sh $*"
 [ -n "$OWNER" ] && [ "$OWNER" != root ] || die "run it from your own account with sudo, not as root"
 
@@ -102,7 +103,9 @@ cmd_add() {
 
   # Their own clone (public repo, no credentials needed to clone).
   if [ ! -d "$home/flyhack/.git" ]; then
-    sudo -u "$u" -H git clone -q "$REPO_URL" "$home/flyhack" && echo "cloned repo to $home/flyhack"
+    sudo -u "$u" -H git clone -q "$REPO_URL" "$home/flyhack" || die "git clone failed for $u"
+    sudo -u "$u" -H git -C "$home/flyhack" checkout -q integrate-flies 2>/dev/null || true   # until main has it
+    echo "cloned repo to $home/flyhack"
   fi
 
   echo "done: $u can now run  ssh $u@$(scutil --get LocalHostName).local"
