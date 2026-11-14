@@ -1,0 +1,2232 @@
+{
+  "matched": {
+    "untrained": {
+      "correct_mass": {
+        "mean": 0.026872854723186554,
+        "interval": [
+          0.022808863909367313,
+          0.030938730920356143
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": -0.00013042867802712818,
+        "interval": [
+          -0.0006132853919473687,
+          0.0003288128514512182
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "total_variation": {
+        "mean": 0.036076005485243146,
+        "interval": [
+          0.029773526031792882,
+          0.043379765548498025
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "both_argmax_correct": {
+        "mean": 0.0,
+        "interval": null,
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000,
+        "note": "No successes observed; zero-width bootstrap is not an uncertainty bound"
+      },
+      "per_seed_adaptation": [
+        -0.00035202413252565044,
+        5.837291045747593e-05,
+        -9.763481201321014e-05
+      ]
+    },
+    "pretrained": {
+      "correct_mass": {
+        "mean": 0.08906979600993906,
+        "interval": [
+          0.048987958903618754,
+          0.13675084568024382
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 8.535659948683404e-05,
+        "interval": [
+          -0.011177898569570525,
+          0.010065983216197921
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "total_variation": {
+        "mean": 0.05793526742957554,
+        "interval": [
+          0.033775271326905956,
+          0.09550846655431251
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "both_argmax_correct": {
+        "mean": 0.0,
+        "interval": null,
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000,
+        "note": "No successes observed; zero-width bootstrap is not an uncertainty bound"
+      },
+      "per_seed_adaptation": [
+        0.002006499736585151,
+        -0.002379723735056655,
+        0.0006292937969320073
+      ]
+    },
+    "matched40": {
+      "correct_mass": {
+        "mean": 0.11130352875779446,
+        "interval": [
+          0.058976014949775224,
+          0.16367323840032433
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.008081722446750463,
+        "interval": [
+          -0.006433027765245566,
+          0.029008270217339333
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "total_variation": {
+        "mean": 0.07113586630363106,
+        "interval": [
+          0.02976041459958849,
+          0.12526592543203408
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "both_argmax_correct": {
+        "mean": 0.006944444444444444,
+        "interval": [
+          0.0,
+          0.05555555555555555
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        0.0179165149318783,
+        -0.0035925659574491883,
+        0.009921218365822274
+      ]
+    },
+    "matched56": {
+      "correct_mass": {
+        "mean": 0.11831909286521212,
+        "interval": [
+          0.06790417608295868,
+          0.17358890953539563
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.008811538485437437,
+        "interval": [
+          -0.005811463027226781,
+          0.02564620270903548
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "total_variation": {
+        "mean": 0.08445731585197713,
+        "interval": [
+          0.0553776638001831,
+          0.11847770770909587
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "both_argmax_correct": {
+        "mean": 0.006944444444444444,
+        "interval": [
+          0.0,
+          0.05555555555555555
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        0.01059514222659507,
+        0.0007181828968908883,
+        0.015121290332826352
+      ]
+    },
+    "restricted40": {
+      "correct_mass": {
+        "mean": 0.0738488564098489,
+        "interval": [
+          0.046349702237389066,
+          0.10745391298253885
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "total_variation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "both_argmax_correct": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "restricted56": {
+      "correct_mass": {
+        "mean": 0.0740538236587365,
+        "interval": [
+          0.04659002400598083,
+          0.1095956533196883
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "total_variation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "both_argmax_correct": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "random_legal": {
+      "correct_mass": {
+        "mean": 0.035813585858937964,
+        "interval": [
+          0.031230012471629796,
+          0.041911172695489225
+        ],
+        "confidence": 0.9875,
+        "position_families": 48,
+        "bootstrap_draws": 5000,
+        "note": "Analytic uniform-legal policy, uncertainty only across position families"
+      },
+      "adaptation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "note": "Matched-tree algebraic null"
+      }
+    }
+  },
+  "matched_changes": {
+    "matched_training": {
+      "mean": 0.007996365847263626,
+      "interval": [
+        -0.0055493893209893,
+        0.024554356945140073
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "extended_training": {
+      "mean": 0.0007298160386869754,
+      "interval": [
+        -0.010586552684515449,
+        0.010400951910982744
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "all_training": {
+      "mean": 0.008726181885950602,
+      "interval": [
+        -0.0034099907002647003,
+        0.021117252295051007
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    }
+  },
+  "matched_correct_mass_changes": {
+    "matched_training": {
+      "mean": 0.022233732747855412,
+      "interval": [
+        -0.0076487775870762295,
+        0.04561730758108991
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "extended_training": {
+      "mean": 0.007015564107417646,
+      "interval": [
+        -0.010455308654855446,
+        0.027494060342417134
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "all_training": {
+      "mean": 0.02924929685527306,
+      "interval": [
+        0.00893151933942011,
+        0.050403893550110185
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    }
+  },
+  "independently_trained_restriction_contrast": {
+    "correct_mass": {
+      "mean": 0.044265269206475624,
+      "interval": [
+        0.01133107272340309,
+        0.0760408989512419
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "adaptation": {
+      "mean": 0.008811538485437437,
+      "interval": [
+        -0.005811463027226781,
+        0.02564620270903548
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    }
+  },
+  "final_decomposition": {
+    "intact": {
+      "correct_mass": {
+        "mean": 0.11831909286521212,
+        "interval": [
+          0.06790417608295868,
+          0.17358890953539563
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.008811538485437437,
+        "interval": [
+          -0.005811463027226781,
+          0.02564620270903548
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      }
+    },
+    "stage_partial": {
+      "correct_mass": {
+        "mean": 0.07334160471586815,
+        "interval": [
+          0.04590111741035797,
+          0.10614326062427434
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      }
+    },
+    "own_coordinates": {
+      "correct_mass": {
+        "mean": 0.0894626202470456,
+        "interval": [
+          0.04923882465812319,
+          0.13568739403789828
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      }
+    },
+    "coordinates_only": {
+      "correct_mass": {
+        "mean": 0.10986578393636999,
+        "interval": [
+          0.060561731530405866,
+          0.16396331994423435
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.004815140434658085,
+        "interval": [
+          -0.009022786314131325,
+          0.019732483243026108
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      }
+    },
+    "packed_only": {
+      "correct_mass": {
+        "mean": 0.09307516449222646,
+        "interval": [
+          0.05512303280784976,
+          0.13635400778134812
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.003180300377445233,
+        "interval": [
+          -0.0033663750723660524,
+          0.011332310698802287
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      }
+    },
+    "stage_only": {
+      "correct_mass": {
+        "mean": 0.06357306122222367,
+        "interval": [
+          0.04215979964700345,
+          0.08907230635286634
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      }
+    },
+    "lesioned": {
+      "correct_mass": {
+        "mean": 0.04802440341256937,
+        "interval": [
+          0.03517138720152641,
+          0.06279130063190567
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      }
+    },
+    "paired_swap": {
+      "correct_mass": {
+        "mean": 0.10950755437977468,
+        "interval": [
+          0.06260168299097328,
+          0.16371839115578524
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": -0.008811538485437437,
+        "interval": [
+          -0.02564620270903535,
+          0.005811463027226783
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      }
+    }
+  },
+  "control_contrasts": {
+    "paired_swap": {
+      "mean": 0.008811538485437436,
+      "interval": [
+        -0.005811463027226782,
+        0.025646202709035476
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "stage_only": {
+      "mean": 0.05474603164298843,
+      "interval": [
+        0.021899790969900326,
+        0.08807809022513356
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "own_coordinates": {
+      "mean": 0.02885647261816649,
+      "interval": [
+        0.0074759794357738135,
+        0.05374261572315906
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "lesioned": {
+      "mean": 0.07029468945264274,
+      "interval": [
+        0.02849349534710511,
+        0.11483125859386793
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    }
+  },
+  "mate2_tactical": {
+    "trained": {
+      "mean": 0.08740245267446461,
+      "interval": [
+        0.027344988510521747,
+        0.1767753117647944
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    },
+    "matched40": {
+      "mean": 0.07780620208191784,
+      "interval": [
+        0.024598645088174612,
+        0.15582860545051244
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    },
+    "parent_pretrained": {
+      "mean": 0.08533148725885804,
+      "interval": [
+        0.0248970807381075,
+        0.17634620701355858
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    },
+    "untrained": {
+      "mean": 0.1071196472164025,
+      "interval": [
+        0.06887312665644695,
+        0.15892675437453987
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    },
+    "restricted_trained": {
+      "mean": 0.08016451032235473,
+      "interval": [
+        0.03352639485002352,
+        0.14308476212405957
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    },
+    "lesioned": {
+      "mean": 0.09333074474985836,
+      "interval": [
+        0.05414200578835067,
+        0.14533353159280804
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    },
+    "random": {
+      "mean": 0.06091063864188687,
+      "interval": [
+        0.040277175780186684,
+        0.09130339032746514
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    }
+  },
+  "mate2_changes": {
+    "after_matched": {
+      "mean": -0.0075252851769402095,
+      "interval": [
+        -0.05848906442939611,
+        0.03856711066695276
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    },
+    "after_extended": {
+      "mean": 0.009596250592546787,
+      "interval": [
+        -0.03484969294002577,
+        0.06573284089916978
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    }
+  },
+  "outcomes": {
+    "mate2": {
+      "trained": {
+        "wins": 14,
+        "losses": 0,
+        "draws": 100,
+        "truncated": 174,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.04861111111111111,
+          "interval": [
+            0.006944444444444444,
+            0.1111111111111111
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": -0.040625,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "UNFINISHED": 174,
+          "THREEFOLD_REPETITION": 37,
+          "INSUFFICIENT_MATERIAL": 52,
+          "CHECKMATE": 14,
+          "STALEMATE": 11
+        }
+      },
+      "matched40": {
+        "wins": 18,
+        "losses": 0,
+        "draws": 105,
+        "truncated": 165,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0625,
+          "interval": [
+            0.014735243055555562,
+            0.13541666666666666
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": -0.0453125,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "UNFINISHED": 165,
+          "CHECKMATE": 18,
+          "THREEFOLD_REPETITION": 35,
+          "INSUFFICIENT_MATERIAL": 58,
+          "STALEMATE": 12
+        }
+      },
+      "parent_pretrained": {
+        "wins": 16,
+        "losses": 0,
+        "draws": 108,
+        "truncated": 164,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.05555555555555555,
+          "interval": [
+            0.006944444444444444,
+            0.1423611111111111
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": -0.04375000000000001,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "UNFINISHED": 164,
+          "THREEFOLD_REPETITION": 41,
+          "INSUFFICIENT_MATERIAL": 56,
+          "CHECKMATE": 16,
+          "STALEMATE": 11
+        }
+      },
+      "untrained": {
+        "wins": 4,
+        "losses": 0,
+        "draws": 47,
+        "truncated": 237,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.013888888888888888,
+          "interval": [
+            0.0,
+            0.052083333333333336
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": -0.025000000000000005,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "UNFINISHED": 237,
+          "INSUFFICIENT_MATERIAL": 32,
+          "CHECKMATE": 4,
+          "STALEMATE": 11,
+          "THREEFOLD_REPETITION": 4
+        }
+      },
+      "random": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 51,
+        "truncated": 237,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.029687500000000002,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "UNFINISHED": 237,
+          "STALEMATE": 13,
+          "INSUFFICIENT_MATERIAL": 38
+        }
+      },
+      "lesioned": {
+        "wins": 8,
+        "losses": 0,
+        "draws": 68,
+        "truncated": 212,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.027777777777777776,
+          "interval": [
+            0.0,
+            0.06944444444444445
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": -0.027343750000000003,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "UNFINISHED": 212,
+          "INSUFFICIENT_MATERIAL": 35,
+          "THREEFOLD_REPETITION": 15,
+          "STALEMATE": 18,
+          "CHECKMATE": 8
+        }
+      },
+      "restricted_trained": {
+        "wins": 10,
+        "losses": 0,
+        "draws": 77,
+        "truncated": 201,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.034722222222222224,
+          "interval": [
+            0.0,
+            0.08333333333333333
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": -0.03125,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "UNFINISHED": 201,
+          "INSUFFICIENT_MATERIAL": 40,
+          "CHECKMATE": 10,
+          "THREEFOLD_REPETITION": 24,
+          "STALEMATE": 13
+        }
+      }
+    },
+    "endgame": {
+      "trained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 262,
+        "truncated": 26,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": 0.00768229166666667,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "THREEFOLD_REPETITION": 191,
+          "UNFINISHED": 26,
+          "INSUFFICIENT_MATERIAL": 71
+        }
+      },
+      "matched40": {
+        "wins": 2,
+        "losses": 0,
+        "draws": 262,
+        "truncated": 24,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.006944444444444444,
+          "interval": [
+            0.0,
+            0.03125
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": 0.0077560763888888905,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "THREEFOLD_REPETITION": 186,
+          "UNFINISHED": 24,
+          "INSUFFICIENT_MATERIAL": 76,
+          "CHECKMATE": 2
+        }
+      },
+      "parent_pretrained": {
+        "wins": 2,
+        "losses": 0,
+        "draws": 264,
+        "truncated": 22,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.006944444444444444,
+          "interval": [
+            0.0,
+            0.03125
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": 0.008858506944444447,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "THREEFOLD_REPETITION": 196,
+          "INSUFFICIENT_MATERIAL": 68,
+          "UNFINISHED": 22,
+          "CHECKMATE": 2
+        }
+      },
+      "untrained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 176,
+        "truncated": 112,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.006979166666666668,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "INSUFFICIENT_MATERIAL": 152,
+          "UNFINISHED": 112,
+          "THREEFOLD_REPETITION": 23,
+          "STALEMATE": 1
+        }
+      },
+      "random": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 150,
+        "truncated": 138,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.026814236111111108,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "INSUFFICIENT_MATERIAL": 129,
+          "UNFINISHED": 138,
+          "THREEFOLD_REPETITION": 20,
+          "STALEMATE": 1
+        }
+      },
+      "lesioned": {
+        "wins": 2,
+        "losses": 0,
+        "draws": 179,
+        "truncated": 107,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.006944444444444444,
+          "interval": [
+            0.0,
+            0.03125
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": 0.006996527777777779,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "UNFINISHED": 107,
+          "INSUFFICIENT_MATERIAL": 118,
+          "THREEFOLD_REPETITION": 61,
+          "CHECKMATE": 2
+        }
+      },
+      "restricted_trained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 234,
+        "truncated": 54,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": 0.006744791666666669,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "THREEFOLD_REPETITION": 152,
+          "INSUFFICIENT_MATERIAL": 82,
+          "UNFINISHED": 54
+        }
+      }
+    },
+    "complex": {
+      "trained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 1,
+        "truncated": 287,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.023754340277777824,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "UNFINISHED": 287,
+          "THREEFOLD_REPETITION": 1
+        }
+      },
+      "matched40": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 1,
+        "truncated": 287,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.03509548611111116,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "UNFINISHED": 287,
+          "THREEFOLD_REPETITION": 1
+        }
+      },
+      "parent_pretrained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 2,
+        "truncated": 286,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.04154079861111116,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "UNFINISHED": 286,
+          "THREEFOLD_REPETITION": 2
+        }
+      },
+      "untrained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "truncated": 288,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.019657118055555572,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "UNFINISHED": 288
+        }
+      },
+      "random": {
+        "wins": 6,
+        "losses": 1,
+        "draws": 0,
+        "truncated": 281,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.020833333333333332,
+          "interval": [
+            0.0,
+            0.08333333333333333
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": -0.024765624999999996,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "UNFINISHED": 281,
+          "CHECKMATE": 7
+        }
+      },
+      "lesioned": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "truncated": 288,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.02546006944444446,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "UNFINISHED": 288
+        }
+      },
+      "restricted_trained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 2,
+        "truncated": 286,
+        "games": 288,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 24,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.039379340277777806,
+        "auxiliary_used_in_training": true,
+        "terminations": {
+          "UNFINISHED": 286,
+          "THREEFOLD_REPETITION": 2
+        }
+      }
+    },
+    "long_endgames": {
+      "trained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 72,
+        "truncated": 0,
+        "games": 72,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 12,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": 0.01626736111111111,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "THREEFOLD_REPETITION": 54,
+          "INSUFFICIENT_MATERIAL": 18
+        }
+      },
+      "matched40": {
+        "wins": 1,
+        "losses": 0,
+        "draws": 71,
+        "truncated": 0,
+        "games": 72,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.013888888888888888,
+          "interval": [
+            0.0,
+            0.1111111111111111
+          ],
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 12,
+          "bootstrap_draws": 5000
+        },
+        "mean_auxiliary_return": 0.013472222222222226,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "THREEFOLD_REPETITION": 52,
+          "INSUFFICIENT_MATERIAL": 19,
+          "CHECKMATE": 1
+        }
+      },
+      "parent_pretrained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 72,
+        "truncated": 0,
+        "games": 72,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 12,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": 0.006597222222222224,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "THREEFOLD_REPETITION": 51,
+          "INSUFFICIENT_MATERIAL": 21
+        }
+      },
+      "untrained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 72,
+        "truncated": 0,
+        "games": 72,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 12,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.02052083333333334,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "INSUFFICIENT_MATERIAL": 49,
+          "THREEFOLD_REPETITION": 15,
+          "FIFTY_MOVES": 7,
+          "STALEMATE": 1
+        }
+      },
+      "random": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 72,
+        "truncated": 0,
+        "games": 72,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 12,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.03743055555555556,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "INSUFFICIENT_MATERIAL": 51,
+          "FIFTY_MOVES": 18,
+          "THREEFOLD_REPETITION": 3
+        }
+      },
+      "lesioned": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 72,
+        "truncated": 0,
+        "games": 72,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 12,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": -0.007187500000000002,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "THREEFOLD_REPETITION": 21,
+          "INSUFFICIENT_MATERIAL": 42,
+          "FIFTY_MOVES": 9
+        }
+      },
+      "restricted_trained": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 72,
+        "truncated": 0,
+        "games": 72,
+        "illegal_attempts": 0,
+        "win_within_cap": {
+          "mean": 0.0,
+          "interval": null,
+          "confidence": 0.9875,
+          "training_seeds": 3,
+          "position_families": 12,
+          "bootstrap_draws": 5000,
+          "note": "Boundary/degenerate bootstrap: no uncertainty claim about unobserved outcomes. See per-run conservative position bounds."
+        },
+        "mean_auxiliary_return": 0.014878472222222225,
+        "auxiliary_used_in_training": false,
+        "terminations": {
+          "THREEFOLD_REPETITION": 51,
+          "INSUFFICIENT_MATERIAL": 20,
+          "FIFTY_MOVES": 1
+        }
+      }
+    }
+  },
+  "opening_start": {
+    "wins": 0,
+    "losses": 3,
+    "draws": 3,
+    "truncated": 18,
+    "games": 24,
+    "illegal_attempts": 0
+  },
+  "gates": {
+    "board_adaptation": false,
+    "improves_over_parent": false,
+    "heldout_mate2_improvement": false,
+    "playing_strength_evaluation_ready": false,
+    "recommendation": "Do not scale to the shared GPU until counterfactual adaptation and multi-ply outcome gates pass."
+  },
+  "matched_sha256": "497987cf7619b1e17806666df18d06eb706a1600e870b84428a6c8e1e6be59c6",
+  "extended_sha256": "6694f1b96feff6f603699c709738507f1adb3ae3436f5cb604a11d2d001b2d2f",
+  "uncertainty": "Nominal 98.75% two-way bootstrap by three seeds and held-out family; zero-event/single-opening uncertainty is not treated as exact.",
+  "study": {
+    "graph": "cc2e5ce35f",
+    "neurons": 5000,
+    "synthetic": false,
+    "device": "cpu",
+    "training_seeds": [
+      11,
+      23,
+      37
+    ],
+    "focal_learner": 0,
+    "training_games": 18432,
+    "sampled_evaluation_games": 6576,
+    "reward_version_measured": "float-v1",
+    "reward_version_default_now": "integer-v2",
+    "integer_reward_full_learning_trial_run": false
+  },
+  "dataset_quality": {
+    "known_pretraining_overlap": 0,
+    "split_overlap": 0,
+    "matched_pairs": {
+      "train": 96,
+      "validation": 24,
+      "test": 48
+    },
+    "extended_positions": {
+      "train": 144,
+      "validation": 36,
+      "test": 72
+    },
+    "matched_sha256": "497987cf7619b1e17806666df18d06eb706a1600e870b84428a6c8e1e6be59c6",
+    "extended_sha256": "6694f1b96feff6f603699c709738507f1adb3ae3436f5cb604a11d2d001b2d2f"
+  },
+  "architecture_and_training_diagnostics": [
+    {
+      "group": "intact",
+      "seed": 11,
+      "fixed_architecture_equal": [
+        true,
+        true
+      ],
+      "phases": {
+        "matched": {
+          "updates": 40,
+          "games": 2560,
+          "nonzero_reward_episodes": 260,
+          "mean_gradient_norms": {
+            "log_w": 0.013627922852174379,
+            "bias": 0.08964097716379911,
+            "w_in": 0.05348417409113608,
+            "leak_logit": 0.003878383598203072
+          }
+        },
+        "extended": {
+          "updates": 16,
+          "games": 512,
+          "nonzero_reward_episodes": 339,
+          "mean_gradient_norms": {
+            "log_w": 0.023618624822120182,
+            "bias": 0.15094509467598982,
+            "w_in": 0.0961816317285411,
+            "leak_logit": 0.006418905702958
+          }
+        }
+      }
+    },
+    {
+      "group": "intact",
+      "seed": 23,
+      "fixed_architecture_equal": [
+        true,
+        true
+      ],
+      "phases": {
+        "matched": {
+          "updates": 40,
+          "games": 2560,
+          "nonzero_reward_episodes": 309,
+          "mean_gradient_norms": {
+            "log_w": 0.010847530778846703,
+            "bias": 0.08078591279918328,
+            "w_in": 0.04624268440529704,
+            "leak_logit": 0.003445755277061835
+          }
+        },
+        "extended": {
+          "updates": 16,
+          "games": 512,
+          "nonzero_reward_episodes": 326,
+          "mean_gradient_norms": {
+            "log_w": 0.02333042681857478,
+            "bias": 0.15194349270313978,
+            "w_in": 0.09810051106614992,
+            "leak_logit": 0.006903900721226819
+          }
+        }
+      }
+    },
+    {
+      "group": "intact",
+      "seed": 37,
+      "fixed_architecture_equal": [
+        true,
+        true
+      ],
+      "phases": {
+        "matched": {
+          "updates": 40,
+          "games": 2560,
+          "nonzero_reward_episodes": 323,
+          "mean_gradient_norms": {
+            "log_w": 0.011712362291291356,
+            "bias": 0.08023480480769649,
+            "w_in": 0.04367830537958071,
+            "leak_logit": 0.003396321376931155
+          }
+        },
+        "extended": {
+          "updates": 16,
+          "games": 512,
+          "nonzero_reward_episodes": 316,
+          "mean_gradient_norms": {
+            "log_w": 0.019375260642846115,
+            "bias": 0.11447997880168259,
+            "w_in": 0.07153781139641069,
+            "leak_logit": 0.005900002808630234
+          }
+        }
+      }
+    },
+    {
+      "group": "stage",
+      "seed": 11,
+      "fixed_architecture_equal": [
+        true,
+        true
+      ],
+      "phases": {
+        "matched": {
+          "updates": 40,
+          "games": 2560,
+          "nonzero_reward_episodes": 190,
+          "mean_gradient_norms": {
+            "log_w": 0.0038297625334962502,
+            "bias": 0.10412627187324688,
+            "w_in": 0.021300072985468432,
+            "leak_logit": 0.0017373129516272457
+          }
+        },
+        "extended": {
+          "updates": 16,
+          "games": 512,
+          "nonzero_reward_episodes": 321,
+          "mean_gradient_norms": {
+            "log_w": 0.006448155687394319,
+            "bias": 0.1556837316020392,
+            "w_in": 0.03345020132837817,
+            "leak_logit": 0.0029752901773463236
+          }
+        }
+      }
+    },
+    {
+      "group": "stage",
+      "seed": 23,
+      "fixed_architecture_equal": [
+        true,
+        true
+      ],
+      "phases": {
+        "matched": {
+          "updates": 40,
+          "games": 2560,
+          "nonzero_reward_episodes": 210,
+          "mean_gradient_norms": {
+            "log_w": 0.004205053650548507,
+            "bias": 0.11260194091009908,
+            "w_in": 0.02195948148655589,
+            "leak_logit": 0.0020441984494027564
+          }
+        },
+        "extended": {
+          "updates": 16,
+          "games": 512,
+          "nonzero_reward_episodes": 314,
+          "mean_gradient_norms": {
+            "log_w": 0.0054285163860186,
+            "bias": 0.12877635250333697,
+            "w_in": 0.02767067917739041,
+            "leak_logit": 0.0025617592391427024
+          }
+        }
+      }
+    },
+    {
+      "group": "stage",
+      "seed": 37,
+      "fixed_architecture_equal": [
+        true,
+        true
+      ],
+      "phases": {
+        "matched": {
+          "updates": 40,
+          "games": 2560,
+          "nonzero_reward_episodes": 198,
+          "mean_gradient_norms": {
+            "log_w": 0.003673131208324776,
+            "bias": 0.09277403593296185,
+            "w_in": 0.01949941886632587,
+            "leak_logit": 0.0017747651475019666
+          }
+        },
+        "extended": {
+          "updates": 16,
+          "games": 512,
+          "nonzero_reward_episodes": 335,
+          "mean_gradient_norms": {
+            "log_w": 0.007261558694153791,
+            "bias": 0.16799298720434308,
+            "w_in": 0.035127581213600934,
+            "leak_logit": 0.0038109767683636164
+          }
+        }
+      }
+    }
+  ],
+  "reward_only_gradient_diagnostics_integer_v2": {
+    "reports": {
+      "mate2": {
+        "metrics": {
+          "loss": 0.0,
+          "grad_norm": 0.0,
+          "moves": 135,
+          "reward": 0.0,
+          "mean_return": 0.0,
+          "episodes": 24,
+          "nonzero_reward_episodes": 0,
+          "gradient_norms": {
+            "log_w": 0.0,
+            "bias": 0.0,
+            "leak_logit": 0.0,
+            "w_in": 0.0
+          },
+          "parameter_deltas": {
+            "log_w": 0.0,
+            "bias": 0.0,
+            "leak_logit": 0.0,
+            "w_in": 0.0
+          },
+          "forced_stages": 165,
+          "stages": 540
+        },
+        "nonzero_move_rewards": 0,
+        "parameters_unchanged": true,
+        "opponent_unchanged": true
+      },
+      "endgame": {
+        "metrics": {
+          "loss": 0.133224618815575,
+          "grad_norm": 0.11589154601097107,
+          "moves": 211,
+          "reward": 0.08447916666666666,
+          "mean_return": 0.013177358435066613,
+          "episodes": 24,
+          "nonzero_reward_episodes": 14,
+          "gradient_norms": {
+            "log_w": 0.012669009156525135,
+            "bias": 0.10281805694103241,
+            "leak_logit": 0.003872622037306428,
+            "w_in": 0.05180538073182106
+          },
+          "parameter_deltas": {
+            "log_w": 0.0,
+            "bias": 0.0,
+            "leak_logit": 0.0,
+            "w_in": 0.0
+          },
+          "forced_stages": 327,
+          "stages": 850
+        },
+        "nonzero_move_rewards": 23,
+        "parameters_unchanged": true,
+        "opponent_unchanged": true
+      },
+      "complex": {
+        "metrics": {
+          "loss": -0.04795116977766156,
+          "grad_norm": 0.05745256319642067,
+          "moves": 192,
+          "reward": -0.01875,
+          "mean_return": -0.006174247564694442,
+          "episodes": 24,
+          "nonzero_reward_episodes": 24,
+          "gradient_norms": {
+            "log_w": 0.007678117137402296,
+            "bias": 0.043859317898750305,
+            "leak_logit": 0.0019836528226733208,
+            "w_in": 0.03625284880399704
+          },
+          "parameter_deltas": {
+            "log_w": 0.0,
+            "bias": 0.0,
+            "leak_logit": 0.0,
+            "w_in": 0.0
+          },
+          "forced_stages": 330,
+          "stages": 768
+        },
+        "nonzero_move_rewards": 125,
+        "parameters_unchanged": true,
+        "opponent_unchanged": true
+      }
+    },
+    "checkpoint": "flies/chess/artifacts/research/intact-11/checkpoint_0056_0.pt",
+    "note": "Entropy disabled, SGD lr=0; real observed rewards, no parameter updates"
+  },
+  "benchmarks": {
+    "first": {
+      "device": "cpu",
+      "synthetic": false,
+      "neurons": 5000,
+      "threads": 1,
+      "measurements": [
+        {
+          "batch": 1,
+          "forward_seconds_median": 0.0294552079999999,
+          "forward_backward_adam_seconds_median": 0.08427866699999953,
+          "peak_process_bytes": 152616960
+        },
+        {
+          "batch": 8,
+          "forward_seconds_median": 0.05013574999999992,
+          "forward_backward_adam_seconds_median": 0.2026733329999999,
+          "peak_process_bytes": 152616960
+        },
+        {
+          "batch": 32,
+          "forward_seconds_median": 0.03468658300000005,
+          "forward_backward_adam_seconds_median": 0.19139024999999954,
+          "peak_process_bytes": 152616960
+        }
+      ],
+      "initial_process_peak_bytes": 152616960,
+      "final_process_peak_bytes": 152616960,
+      "graphs": {
+        "tiny": {
+          "n": 5000,
+          "edges": 147905,
+          "inputs": 1024,
+          "graph_hash": "cc2e5ce35f",
+          "projections": {
+            "1": {
+              "parameters": 223441,
+              "fixed_buffer_bytes": 6517036,
+              "model_bytes": 7410800,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 27754984,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            },
+            "8": {
+              "parameters": 223441,
+              "fixed_buffer_bytes": 6517036,
+              "model_bytes": 7410800,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 28874984,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            },
+            "32": {
+              "parameters": 223441,
+              "fixed_buffer_bytes": 6517036,
+              "model_bytes": 7410800,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 32714984,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            }
+          }
+        },
+        "full": {
+          "n": 134181,
+          "edges": 2700513,
+          "inputs": 2048,
+          "graph_hash": "9ae1232b36",
+          "projections": {
+            "1": {
+              "parameters": 3099947,
+              "fixed_buffer_bytes": 118839980,
+              "model_bytes": 131239768,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 472411824,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            },
+            "8": {
+              "parameters": 3099947,
+              "fixed_buffer_bytes": 118839980,
+              "model_bytes": 131239768,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 502468368,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            },
+            "32": {
+              "parameters": 3099947,
+              "fixed_buffer_bytes": 118839980,
+              "model_bytes": 131239768,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 605519376,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            }
+          }
+        }
+      },
+      "note": "Full graph was read for metadata only, never instantiated or trained. No CUDA performance measurement."
+    },
+    "fresh_process": {
+      "device": "cpu",
+      "synthetic": false,
+      "neurons": 5000,
+      "threads": 1,
+      "measurements": [
+        {
+          "batch": 1,
+          "forward_seconds_median": 0.024944500000000147,
+          "forward_backward_adam_seconds_median": 0.06165683399999988,
+          "peak_process_bytes": 194363392
+        },
+        {
+          "batch": 8,
+          "forward_seconds_median": 0.03252645900000006,
+          "forward_backward_adam_seconds_median": 0.11753625000000012,
+          "peak_process_bytes": 194363392
+        },
+        {
+          "batch": 32,
+          "forward_seconds_median": 0.036656834000000416,
+          "forward_backward_adam_seconds_median": 0.2104029169999997,
+          "peak_process_bytes": 194363392
+        }
+      ],
+      "initial_process_peak_bytes": 145096704,
+      "final_process_peak_bytes": 194363392,
+      "graphs": {
+        "tiny": {
+          "n": 5000,
+          "edges": 147905,
+          "inputs": 1024,
+          "graph_hash": "cc2e5ce35f",
+          "projections": {
+            "1": {
+              "parameters": 223441,
+              "fixed_buffer_bytes": 6517036,
+              "model_bytes": 7410800,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 27754984,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            },
+            "8": {
+              "parameters": 223441,
+              "fixed_buffer_bytes": 6517036,
+              "model_bytes": 7410800,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 28874984,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            },
+            "32": {
+              "parameters": 223441,
+              "fixed_buffer_bytes": 6517036,
+              "model_bytes": 7410800,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 32714984,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            }
+          }
+        },
+        "full": {
+          "n": 134181,
+          "edges": 2700513,
+          "inputs": 2048,
+          "graph_hash": "9ae1232b36",
+          "projections": {
+            "1": {
+              "parameters": 3099947,
+              "fixed_buffer_bytes": 118839980,
+              "model_bytes": 131239768,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 472411824,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            },
+            "8": {
+              "parameters": 3099947,
+              "fixed_buffer_bytes": 118839980,
+              "model_bytes": 131239768,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 502468368,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            },
+            "32": {
+              "parameters": 3099947,
+              "fixed_buffer_bytes": 118839980,
+              "model_bytes": 131239768,
+              "two_adam_plus_frozen_and_rate_history_lower_bound_bytes": 605519376,
+              "note": "Lower bound excludes backend scratch, other autograd intermediates, allocator overhead and host snapshot pool"
+            }
+          }
+        }
+      },
+      "note": "Full graph was read for metadata only, never instantiated or trained. No CUDA performance measurement."
+    }
+  },
+  "training_runs": {
+    "intact-11": {
+      "config_as_recorded_at_run": {
+        "algorithm": "matched-plus-progress-v1",
+        "seed": 11,
+        "games": 64,
+        "encoding": "chess-packed-v2-spatial",
+        "size": "tiny",
+        "device": "cpu",
+        "matched": "497987cf7619b1e17806666df18d06eb706a1600e870b84428a6c8e1e6be59c6",
+        "extended": "6694f1b96feff6f603699c709738507f1adb3ae3436f5cb604a11d2d001b2d2f",
+        "source_hashes": [
+          "3ad3469bcdec8d48362b39aedbcabdab7f62019b7eacb581bc14d8f90aac1bba",
+          "13517ba29a9987b8655a14ac866981ed919ed9ae382182364ca4581f72f0210f"
+        ],
+        "matched_updates": 40,
+        "extended_updates": 16,
+        "gamma": 0.98,
+        "auxiliary_clip": 0.25
+      },
+      "updates_completed": 56,
+      "checkpoints": {
+        "checkpoint_0000_0.pt": "3ad3469bcdec8d48362b39aedbcabdab7f62019b7eacb581bc14d8f90aac1bba",
+        "checkpoint_0000_1.pt": "13517ba29a9987b8655a14ac866981ed919ed9ae382182364ca4581f72f0210f",
+        "checkpoint_0020_0.pt": "ced354d8c2a0053fe3a11c762df4f7eb7dd87e1c70c39a186aaae004cf429cf4",
+        "checkpoint_0020_1.pt": "78a5886fd582c798fb9e00efb316feb4d044c1fe23325bf20b8daaedb8b8b65c",
+        "checkpoint_0040_0.pt": "e3cc0605c0ddca56176648dfee7cb1ae1ec6c823929fb125bb9cac58b50135f4",
+        "checkpoint_0040_1.pt": "04f077208550583557102739a07c44befc9044c5ba5a49022d7872d7d03e7204",
+        "checkpoint_0048_0.pt": "c197b43c0ff07f8deb1c18d2357cea8ef830bb678dfc3a5d53b1efcd9bd866c6",
+        "checkpoint_0048_1.pt": "ecb8c23d7153357b7d50405f7bfde679e4b5d4425ebde25c613fa7b3530ae4ee",
+        "checkpoint_0056_0.pt": "c26eeb2774b041c583b26b22f42bb8d4eb1d4fba9c6c195bd3ea66bcf8589126",
+        "checkpoint_0056_1.pt": "91cdaca346b6f66c5734670feba6bc9a7613feaedd543094c39fefeaf7d0022d"
+      }
+    },
+    "intact-23": {
+      "config_as_recorded_at_run": {
+        "algorithm": "matched-plus-progress-v1",
+        "seed": 23,
+        "games": 64,
+        "encoding": "chess-packed-v2-spatial",
+        "size": "tiny",
+        "device": "cpu",
+        "matched": "497987cf7619b1e17806666df18d06eb706a1600e870b84428a6c8e1e6be59c6",
+        "extended": "6694f1b96feff6f603699c709738507f1adb3ae3436f5cb604a11d2d001b2d2f",
+        "source_hashes": [
+          "93a89485c313234a69d27615e43cdffcfcecb9436309ac5bf21c46d9c719c31f",
+          "d30404c958385ffae611214f8562bfd0b7e57b66c6beba649b46197c7c52797c"
+        ],
+        "matched_updates": 40,
+        "extended_updates": 16,
+        "gamma": 0.98,
+        "auxiliary_clip": 0.25
+      },
+      "updates_completed": 56,
+      "checkpoints": {
+        "checkpoint_0000_0.pt": "93a89485c313234a69d27615e43cdffcfcecb9436309ac5bf21c46d9c719c31f",
+        "checkpoint_0000_1.pt": "d30404c958385ffae611214f8562bfd0b7e57b66c6beba649b46197c7c52797c",
+        "checkpoint_0020_0.pt": "30e9bb6802fd3feebf54b5e520fb7aee77aba7662ced0e37067138a8b81b0209",
+        "checkpoint_0020_1.pt": "6434c40df4fca4ae9e3e98ab61106527f9c8a754ab8633d7c4e34cb0e312eabe",
+        "checkpoint_0040_0.pt": "e26602c0bae049219823814aa5a9a4a9d1b9d52419cc0ce066d47f8622e596c8",
+        "checkpoint_0040_1.pt": "e7b2607492bd688bce3e912cc2b64da51b5a5aecccf4694c176cc24f52e3a39b",
+        "checkpoint_0048_0.pt": "c864d9c72c7cd7de54b233259139b74f09523864670173084c5c3672b048f6a6",
+        "checkpoint_0048_1.pt": "6aad580c2024f793b3046731a5df151e46ebc1ad2385bceab04154c6f456f770",
+        "checkpoint_0056_0.pt": "23226e54abccafb3303d4849eaf231d449a897a7690beb5cb15ed88f1208edd1",
+        "checkpoint_0056_1.pt": "ea8f62a4beaf05debed3b9afcd833ef91c7ae5ef8732e4dd85331ece4f7365ee"
+      }
+    },
+    "intact-37": {
+      "config_as_recorded_at_run": {
+        "algorithm": "matched-plus-progress-v1",
+        "seed": 37,
+        "games": 64,
+        "encoding": "chess-packed-v2-spatial",
+        "size": "tiny",
+        "device": "cpu",
+        "matched": "497987cf7619b1e17806666df18d06eb706a1600e870b84428a6c8e1e6be59c6",
+        "extended": "6694f1b96feff6f603699c709738507f1adb3ae3436f5cb604a11d2d001b2d2f",
+        "source_hashes": [
+          "2233f304b0cf5348e12e1a4cba0a294a4a21be0f365806d4109c1adcf4e900c0",
+          "3684ed506486ffc5b228f0ca632cfb1d24698d1757a0476ed1734dcab22b7d59"
+        ],
+        "matched_updates": 40,
+        "extended_updates": 16,
+        "gamma": 0.98,
+        "auxiliary_clip": 0.25
+      },
+      "updates_completed": 56,
+      "checkpoints": {
+        "checkpoint_0000_0.pt": "2233f304b0cf5348e12e1a4cba0a294a4a21be0f365806d4109c1adcf4e900c0",
+        "checkpoint_0000_1.pt": "3684ed506486ffc5b228f0ca632cfb1d24698d1757a0476ed1734dcab22b7d59",
+        "checkpoint_0020_0.pt": "4d970640c02db537815fe7cb2c79a6f80733d26bdfc53f03199e84f9358f8906",
+        "checkpoint_0020_1.pt": "75332e9f1c1dc2dc01bc8fff57dec5c6c1cf0cf9b58114382f8bf0747f7e810d",
+        "checkpoint_0040_0.pt": "32e092a1509cd7933769508d5f56359b53f5e3427a108baabe2cc972f1d2e5f1",
+        "checkpoint_0040_1.pt": "3576f6d62226322f8be79a65b4025f58ea6af0b3501f32cabe44f789fd916f1e",
+        "checkpoint_0048_0.pt": "d02194a6b20cabf87dadc5890c6d10d90029613e0a502c10621e2b73aa9b3db4",
+        "checkpoint_0048_1.pt": "8224cb41acc3637d63b29bf52a4981e5efc4bf76eab904a81a35f5b957bc54fa",
+        "checkpoint_0056_0.pt": "c09fd3eaaab3185eba08bcba1dfb52260dc123b5051eb920087d7f3f067c608f",
+        "checkpoint_0056_1.pt": "974cd164d5520bb54ee0aa51e971382b5693f6c41a838bdd442e886c7f2dd698"
+      }
+    },
+    "stage-11": {
+      "config_as_recorded_at_run": {
+        "algorithm": "matched-plus-progress-v1",
+        "seed": 11,
+        "games": 64,
+        "encoding": "chess-stage-only-control-v1",
+        "size": "tiny",
+        "device": "cpu",
+        "matched": "497987cf7619b1e17806666df18d06eb706a1600e870b84428a6c8e1e6be59c6",
+        "extended": "6694f1b96feff6f603699c709738507f1adb3ae3436f5cb604a11d2d001b2d2f",
+        "source_hashes": [
+          "3ad3469bcdec8d48362b39aedbcabdab7f62019b7eacb581bc14d8f90aac1bba",
+          "13517ba29a9987b8655a14ac866981ed919ed9ae382182364ca4581f72f0210f"
+        ],
+        "matched_updates": 40,
+        "extended_updates": 16,
+        "gamma": 0.98,
+        "auxiliary_clip": 0.25
+      },
+      "updates_completed": 56,
+      "checkpoints": {
+        "checkpoint_0000_0.pt": "cf88f711177c8d384bfee3b78af26659904918d890579dc70c677d8ccfed3f5e",
+        "checkpoint_0000_1.pt": "14c56198ad83c3d7a8ab414e4c466e5f9b66fa84925c2afb293674e2865ba774",
+        "checkpoint_0020_0.pt": "d1f975764cdf9680c20b084827ee4e7628ca6424128199a9e9cdccc6dcc9290e",
+        "checkpoint_0020_1.pt": "6849a521faabbc88420f9cc2f7b20daf406c0267247bb788534a7fd3856d1f1b",
+        "checkpoint_0040_0.pt": "fd3eef41092baf6db5c061556b62cbe604e430be73c17c5a31796e8cbcad1dd5",
+        "checkpoint_0040_1.pt": "264b54f298a65ab2156bbf5af682ea06643088fd78cd98cf8e5e4a9621701748",
+        "checkpoint_0048_0.pt": "bf0cb02b6df49bab74f6f690e04656dd15299006b8ec078093746fc263bcffa5",
+        "checkpoint_0048_1.pt": "e5e868853fe8efb861ff85eab43bdc11be5556282da7d9061593be5789433de2",
+        "checkpoint_0056_0.pt": "88fffb34830a22b49c27494ad09230aaba5bfd82e7f96fa3fb46f164e5268ce3",
+        "checkpoint_0056_1.pt": "c21efb5e8e67cd5a9e5148e977e09222bc5aedbbcf2f875992a4d00b09011203"
+      }
+    },
+    "stage-23": {
+      "config_as_recorded_at_run": {
+        "algorithm": "matched-plus-progress-v1",
+        "seed": 23,
+        "games": 64,
+        "encoding": "chess-stage-only-control-v1",
+        "size": "tiny",
+        "device": "cpu",
+        "matched": "497987cf7619b1e17806666df18d06eb706a1600e870b84428a6c8e1e6be59c6",
+        "extended": "6694f1b96feff6f603699c709738507f1adb3ae3436f5cb604a11d2d001b2d2f",
+        "source_hashes": [
+          "93a89485c313234a69d27615e43cdffcfcecb9436309ac5bf21c46d9c719c31f",
+          "d30404c958385ffae611214f8562bfd0b7e57b66c6beba649b46197c7c52797c"
+        ],
+        "matched_updates": 40,
+        "extended_updates": 16,
+        "gamma": 0.98,
+        "auxiliary_clip": 0.25
+      },
+      "updates_completed": 56,
+      "checkpoints": {
+        "checkpoint_0000_0.pt": "7ab075536faa9ec57d22a83c18431fd25a7bf136da2ba9520401c56148a785fa",
+        "checkpoint_0000_1.pt": "c4d6b5a48b7efa3f8e4586593932ce95875481d11017e57704a618834696c6b1",
+        "checkpoint_0020_0.pt": "edc72327ecdf5603a3bb68c7fa41f6bb95b9534ac2df677f71c5cfc659532580",
+        "checkpoint_0020_1.pt": "52f529561b5203709b469685cd2085199e5548c6ba3742d0b76a7089bb01e428",
+        "checkpoint_0040_0.pt": "e2880181213d7a96b9f01d8c7e094f7bf7c57a8f2a4ddbb8b67e7c0e3f414ecb",
+        "checkpoint_0040_1.pt": "53b406112965c944db72c1056ead5be1e45a4c90bddec2ca280ae0ebf3379ecb",
+        "checkpoint_0048_0.pt": "6b4048ec16a5e5c2c44f60923bec6b277d191306ea1b894a97cc00de4d3b4443",
+        "checkpoint_0048_1.pt": "a6ea5933e23c56e9b67da1b7c09abf5eb2ca91cad591c127090e3559cddc0e1e",
+        "checkpoint_0056_0.pt": "3614f919bf7f3abed8f553230bc16d1164411a0f7871df1ec47b286c8eed998d",
+        "checkpoint_0056_1.pt": "eb3a383955b94ae5a2155fe3cca335ffb4d66ff72c0b770840c263be2d8a0504"
+      }
+    },
+    "stage-37": {
+      "config_as_recorded_at_run": {
+        "algorithm": "matched-plus-progress-v1",
+        "seed": 37,
+        "games": 64,
+        "encoding": "chess-stage-only-control-v1",
+        "size": "tiny",
+        "device": "cpu",
+        "matched": "497987cf7619b1e17806666df18d06eb706a1600e870b84428a6c8e1e6be59c6",
+        "extended": "6694f1b96feff6f603699c709738507f1adb3ae3436f5cb604a11d2d001b2d2f",
+        "source_hashes": [
+          "2233f304b0cf5348e12e1a4cba0a294a4a21be0f365806d4109c1adcf4e900c0",
+          "3684ed506486ffc5b228f0ca632cfb1d24698d1757a0476ed1734dcab22b7d59"
+        ],
+        "matched_updates": 40,
+        "extended_updates": 16,
+        "gamma": 0.98,
+        "auxiliary_clip": 0.25
+      },
+      "updates_completed": 56,
+      "checkpoints": {
+        "checkpoint_0000_0.pt": "1835a55be826bded379152ab9417c1ab9e785472940fd42b5a03d75cc6c5d5a0",
+        "checkpoint_0000_1.pt": "fe828112723b8c7d3593718e1592ff1210b888b5724ea78fd06e51ba1e1664c4",
+        "checkpoint_0020_0.pt": "8064f91010ba3ee923d7c1732dc9cae2b211084ad75d2a147b1dece57d78daad",
+        "checkpoint_0020_1.pt": "ece5c579dc704ee985363d2c74dcd5f8a03e0163d2dc9e945ffdc86cac1e59e5",
+        "checkpoint_0040_0.pt": "df9815fb84e3500ddfd71a88e242e7441b17cb7076cf697bddbe490dfd418bd3",
+        "checkpoint_0040_1.pt": "207accfc1930bf22a98b2d3c451bab2a92935e30eb8257cf2a27b0d4cea31d39",
+        "checkpoint_0048_0.pt": "6c3da100d3fe8ba2cd45d263f62649499631f781026798971b2f374c22c29d2e",
+        "checkpoint_0048_1.pt": "cacedb0ce42bd9cb2801ea9c63e76b64ea28aa8828f31a87380eb18e06145ee7",
+        "checkpoint_0056_0.pt": "6de564c4a95d2bd0e294f4eaef5472c101c4d4dd336aaa29b684162abd92c490",
+        "checkpoint_0056_1.pt": "2d95cbc80cbef06dea26e2a7caf442688798779353f9d8fcc6694e0ea1900725"
+      }
+    }
+  },
+  "verification": {
+    "python_tests": 46,
+    "python_test_seconds": 15.458,
+    "skipped": 0,
+    "actual_graph_integration": true,
+    "core_check": "PASS",
+    "javascript_logic": "PASS",
+    "browser_webgl_render": "NOT RUN",
+    "gpu_jobs": 0,
+    "remote_commands": 0,
+    "archived_reanalysis": "Exact equality to all aggregate original-artifact results"
+  },
+  "evidence_sha256": "d013b2c03a82e533b84e6c02ab598e1755c6c69a82becabfe24a4caef776d9ee",
+  "source_sha256": {
+    "batched.py": "10b04d17f1b9e6c0a30022738544f5614666dc1f8ad96d2b93b7562ea68bc9fa",
+    "benchmark.py": "0f7670149b7754163b711ad65b599b3a1c3f818e4c60acefcfcb62f386282472",
+    "chess_env.py": "f973a7d9a717fc0638c67c767d32da89b5e7dcbea55042ca23c229c7f2c5f5a0",
+    "curriculum.py": "5af3fa01456771d04cf6e06255f4a8544171310d8a45afc67aac63c987ecd603",
+    "evaluate.py": "1d96b972267927392e6203296022e2506d00b7b6b44942dace124eef9b7e9285",
+    "extended_curriculum.py": "b300f4e07728a247bd7113dacbe12ed5dffebae5847c4b6ff707bfa8f369264a",
+    "generalization.py": "05f4694500559fa19288ab7008e68d5e7dfe0d462e235d41b4f9ce6fd5ccd407",
+    "gradient_diagnostics.py": "6ed92891ec5d5a8a8d5742fd33408c0d00f209b9d81d2eb26a3a62b356507457",
+    "learning.py": "53d294146eb3f52060ff4f00f669990c6c61459bd0f2daf27a2c85b7f7bd7656",
+    "matched_eval.py": "98d69a7dcb6610bea0099830f731abfd8fbdff1bc70d8fcd187b6058305bd31c",
+    "measure_curve.py": "907088423f3c17f47fd98bd79221633ac1ddc9bc57c14d287c17013f52d01740",
+    "research_positions.py": "771f8f85427d9d1375c9679ee81934a5de5c06a0c7f2c79a42430ad0a38f51c7",
+    "research_report.py": "2ff8de05ad7fa4c9f3494bf173dcb929766e5404e7219ede320683d12288ee81",
+    "research_train.py": "bd75abe35e9f5125cae9855b4b91bf7c9a779395ecef02c0c5f448ce8caeb1aa",
+    "selfplay.py": "e3761830a25726bb47de067d8a5f7e53543dddd7d607966c17f83fa5190145c2",
+    "storage.py": "f4aa467eeda2a52be9877e7ce7079ddab85aeb05d6bd53531d8492c62d54c5a4",
+    "study_report.py": "60c95dcc363c4e4c05a017fd20b5c479022978f363296a959cd0ab7e4189012d",
+    "task.py": "8f35744431df68fe0568892614ce7099bd5e3f7adb01c0ec97b651e092fee58f",
+    "tests/support.py": "3e85667f9db0c20c4addc7e81a7375ba0fa6744902a812a6dea96a244168d951",
+    "tests/test_encoding.py": "8fcfcec0bd4986ac99e6ec779d1c4381cb29dde5e850214eca9105a709467433",
+    "tests/test_env.py": "cf0fdee8c72c6ae2f6bf38eb532d2c31d6437083a993bbbbbffffd938247cafc",
+    "tests/test_evaluation.py": "1769815cd0f98f107556d095c497fbf81248369c4c179598628fc35d93a9ebf9",
+    "tests/test_learning.py": "6887123b92b9572b52283bea12372aeea6d7d3b8209611e0f7680364bd1af870",
+    "tests/test_research.py": "4c003d542713e30a0dca55c525d21c995f92ed0d06118453ed2b81b40dec1bc3",
+    "tests/test_selfplay.py": "047370882d936c364c68cfb94debc1e01d93817de45f7c218a29e87fc46e61ce",
+    "tests/verify_live.py": "844a68a427d4e2870f224702168e5f491c54001636187ee275d0d304ecd2bb92",
+    "train_selfplay.py": "d38345ccbdb6e2f667f3f60bdab7733be0dd70e5793ab487d447671a4325dd5d"
+  }
+}

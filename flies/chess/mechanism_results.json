@@ -1,0 +1,2279 @@
+{
+  "protocol_sha256": "85a8de1fe20902872fbe956674199f6b8187b98f2ec7903a60df88f54bf93b01",
+  "test_sha256": "86efc312cc7f47733082535627f976f2e9f08df996136197fb7cd79df9086979",
+  "matched": {
+    "parent": {
+      "correct_mass": {
+        "mean": 0.08455042606152235,
+        "interval": [
+          0.06173218365832042,
+          0.10972934516459194
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.013467298610357467,
+        "interval": [
+          0.004455795351077988,
+          0.023366637846587036
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        0.011665694528544567,
+        0.010674852009002169,
+        0.018061349293525666
+      ]
+    },
+    "untrained": {
+      "correct_mass": {
+        "mean": 0.02496200961767363,
+        "interval": [
+          0.022050616266630674,
+          0.027968702939694508
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": -0.00043685448076013594,
+        "interval": [
+          -0.0009811972460594686,
+          0.00011399234285461005
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        -0.0006485710795955512,
+        1.6295650518669706e-05,
+        -0.0006782880132035264
+      ]
+    },
+    "loo16": {
+      "correct_mass": {
+        "mean": 0.08659154753110394,
+        "interval": [
+          0.06060278060524491,
+          0.11457581545159799
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.015072798226665381,
+        "interval": [
+          0.00500734459675988,
+          0.030351309547501284
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        0.022084806328231465,
+        0.010675332887150765,
+        0.012458255464613913
+      ]
+    },
+    "loo32": {
+      "correct_mass": {
+        "mean": 0.09671076560841833,
+        "interval": [
+          0.06901685415027617,
+          0.12718729557346226
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.02020875831088469,
+        "interval": [
+          0.008043525758572574,
+          0.03416315461121008
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        0.020820599544225556,
+        0.01675737801567772,
+        0.023048297372750794
+      ]
+    },
+    "loo48": {
+      "correct_mass": {
+        "mean": 0.0998792205977957,
+        "interval": [
+          0.07265455347026355,
+          0.13153376267294298
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.02063206690187858,
+        "interval": [
+          0.007158050687418767,
+          0.036217616100673346
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        0.01967053345680321,
+        0.018851407227818993,
+        0.02337426002101354
+      ]
+    },
+    "ema48": {
+      "correct_mass": {
+        "mean": 0.10145503289206363,
+        "interval": [
+          0.0746848199959137,
+          0.13292170932369063
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.021576400202090246,
+        "interval": [
+          0.008027245871889407,
+          0.03764790241110417
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        0.022736863066870734,
+        0.019147463941255976,
+        0.022844873598144015
+      ]
+    },
+    "restricted48": {
+      "correct_mass": {
+        "mean": 0.061142781889531934,
+        "interval": [
+          0.04608566578009863,
+          0.07916149393820238
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000,
+        "algebraic_null": true
+      },
+      "per_seed_adaptation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "entropy48": {
+      "correct_mass": {
+        "mean": 0.025253735542308794,
+        "interval": [
+          0.022418949689928264,
+          0.02819940459289123
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.001217056928054457,
+        "interval": [
+          0.0006468583433828328,
+          0.0019209180278614965
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "per_seed_adaptation": [
+        0.0009873277085299045,
+        0.0012505805965060037,
+        0.0014132624791274627
+      ]
+    },
+    "lesioned": {
+      "correct_mass": {
+        "mean": 0.04092160432582038,
+        "interval": [
+          0.03459224853266119,
+          0.047984181576308835
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000,
+        "algebraic_null": true
+      },
+      "per_seed_adaptation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "random_legal": {
+      "correct_mass": {
+        "mean": 0.03515316513960642,
+        "interval": [
+          0.03154415036245471,
+          0.0392042065381896
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "adaptation": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000,
+        "algebraic_null": true
+      },
+      "per_seed_adaptation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "primary_contrasts": {
+    "adaptation": {
+      "mean": 0.02063206690187858,
+      "interval": [
+        0.007158050687418767,
+        0.036217616100673346
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 128,
+      "bootstrap_draws": 5000
+    },
+    "adaptation_gain": {
+      "mean": 0.007164768291521114,
+      "interval": [
+        -0.0023994137932434887,
+        0.017612499874228704
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 128,
+      "bootstrap_draws": 5000
+    },
+    "mate2_win_gain": {
+      "mean": -0.005208333333333333,
+      "interval": [
+        -0.018229166666666668,
+        0.004340277777777778
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "mechanism_gain": {
+      "mean": -0.0009443333002116643,
+      "interval": [
+        -0.004484201384136579,
+        0.0022612492409268075
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 128,
+      "bootstrap_draws": 5000
+    }
+  },
+  "adaptation_changes": {
+    "loo16_parent": {
+      "mean": 0.0016054996163079142,
+      "interval": [
+        -0.009570066972349004,
+        0.014554387019384883
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 128,
+      "bootstrap_draws": 5000
+    },
+    "loo32_parent": {
+      "mean": 0.006741459700527224,
+      "interval": [
+        -1.9634715407823665e-05,
+        0.015670388454408657
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 128,
+      "bootstrap_draws": 5000
+    },
+    "loo48_parent": {
+      "mean": 0.007164768291521114,
+      "interval": [
+        -0.0023994137932434887,
+        0.017612499874228704
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 128,
+      "bootstrap_draws": 5000
+    },
+    "loo48_loo32": {
+      "mean": 0.0004233085909938901,
+      "interval": [
+        -0.005267562089186887,
+        0.006119677461991313
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 128,
+      "bootstrap_draws": 5000
+    },
+    "loo48_ema48": {
+      "mean": -0.0009443333002116643,
+      "interval": [
+        -0.004484201384136579,
+        0.0022612492409268075
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 128,
+      "bootstrap_draws": 5000
+    },
+    "loo48_entropy48": {
+      "mean": 0.019415009973824126,
+      "interval": [
+        0.006230112691943056,
+        0.03458785888649326
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 128,
+      "bootstrap_draws": 5000
+    }
+  },
+  "mate2_root_mass": {
+    "parent": {
+      "mean": 0.057656087431031455,
+      "interval": [
+        0.020246039167136565,
+        0.10684045067302038
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "untrained": {
+      "mean": 0.116507942792709,
+      "interval": [
+        0.08964527764132901,
+        0.14974137155135986
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "loo16": {
+      "mean": 0.05436679965727578,
+      "interval": [
+        0.018752262677428185,
+        0.10878119451130229
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "loo32": {
+      "mean": 0.04228695418668881,
+      "interval": [
+        0.014033264281129859,
+        0.08102131088417935
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "loo48": {
+      "mean": 0.041918454252015146,
+      "interval": [
+        0.012061568276942882,
+        0.08852198775403189
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "ema48": {
+      "mean": 0.04113011422282038,
+      "interval": [
+        0.011938988166028177,
+        0.08704276339273528
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "restricted48": {
+      "mean": 0.06114009227932671,
+      "interval": [
+        0.026378463950801567,
+        0.1089014603454442
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "entropy48": {
+      "mean": 0.10462767214755211,
+      "interval": [
+        0.08155956014655602,
+        0.132993865767379
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "lesioned": {
+      "mean": 0.07398460764015266,
+      "interval": [
+        0.045264080303375774,
+        0.10795238985006395
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    },
+    "random_legal": {
+      "mean": 0.055204372881735055,
+      "interval": [
+        0.03904308354394011,
+        0.08311857535521328
+      ],
+      "confidence": 0.9875,
+      "training_seeds": 3,
+      "position_families": 48,
+      "bootstrap_draws": 5000
+    }
+  },
+  "mate2_mixed_phase_root_mass_change": {
+    "mean": -0.00036849993467366913,
+    "interval": [
+      -0.011211411812185877,
+      0.017547875168076436
+    ],
+    "confidence": 0.9875,
+    "training_seeds": 3,
+    "position_families": 48,
+    "bootstrap_draws": 5000
+  },
+  "actual_mate2_outcomes": {
+    "parent": {
+      "wins": 10,
+      "losses": 0,
+      "draws": 93,
+      "truncated": 1049,
+      "games": 1152,
+      "illegal_attempts": 0,
+      "win_probability": {
+        "mean": 0.008680555555555556,
+        "interval": [
+          0.0,
+          0.020833333333333332
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "terminations": {
+        "UNFINISHED": 1049,
+        "STALEMATE": 13,
+        "INSUFFICIENT_MATERIAL": 80,
+        "CHECKMATE": 10
+      }
+    },
+    "untrained": {
+      "wins": 3,
+      "losses": 0,
+      "draws": 68,
+      "truncated": 1081,
+      "games": 1152,
+      "illegal_attempts": 0,
+      "win_probability": {
+        "mean": 0.0026041666666666665,
+        "interval": [
+          0.0,
+          0.010416666666666666
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "terminations": {
+        "UNFINISHED": 1081,
+        "INSUFFICIENT_MATERIAL": 43,
+        "STALEMATE": 25,
+        "CHECKMATE": 3
+      }
+    },
+    "loo16": {
+      "wins": 8,
+      "losses": 0,
+      "draws": 100,
+      "truncated": 1044,
+      "games": 1152,
+      "illegal_attempts": 0,
+      "win_probability": {
+        "mean": 0.006944444444444444,
+        "interval": [
+          0.0,
+          0.01801757812500032
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "terminations": {
+        "UNFINISHED": 1044,
+        "CHECKMATE": 8,
+        "INSUFFICIENT_MATERIAL": 88,
+        "STALEMATE": 12
+      }
+    },
+    "loo32": {
+      "wins": 8,
+      "losses": 0,
+      "draws": 103,
+      "truncated": 1041,
+      "games": 1152,
+      "illegal_attempts": 0,
+      "win_probability": {
+        "mean": 0.006944444444444444,
+        "interval": [
+          0.0,
+          0.017361111111111112
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "terminations": {
+        "UNFINISHED": 1041,
+        "CHECKMATE": 8,
+        "INSUFFICIENT_MATERIAL": 93,
+        "STALEMATE": 10
+      }
+    },
+    "loo48": {
+      "wins": 4,
+      "losses": 0,
+      "draws": 95,
+      "truncated": 1053,
+      "games": 1152,
+      "illegal_attempts": 0,
+      "win_probability": {
+        "mean": 0.003472222222222222,
+        "interval": [
+          0.0,
+          0.011284722222222222
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "terminations": {
+        "UNFINISHED": 1053,
+        "INSUFFICIENT_MATERIAL": 88,
+        "STALEMATE": 7,
+        "CHECKMATE": 4
+      }
+    },
+    "ema48": {
+      "wins": 9,
+      "losses": 0,
+      "draws": 99,
+      "truncated": 1044,
+      "games": 1152,
+      "illegal_attempts": 0,
+      "win_probability": {
+        "mean": 0.0078125,
+        "interval": [
+          0.0,
+          0.020833333333333332
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "terminations": {
+        "UNFINISHED": 1044,
+        "CHECKMATE": 9,
+        "INSUFFICIENT_MATERIAL": 92,
+        "STALEMATE": 7
+      }
+    },
+    "restricted48": {
+      "wins": 9,
+      "losses": 0,
+      "draws": 87,
+      "truncated": 1056,
+      "games": 1152,
+      "illegal_attempts": 0,
+      "win_probability": {
+        "mean": 0.0078125,
+        "interval": [
+          0.0,
+          0.018229166666666668
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "terminations": {
+        "UNFINISHED": 1056,
+        "INSUFFICIENT_MATERIAL": 67,
+        "STALEMATE": 20,
+        "CHECKMATE": 9
+      }
+    },
+    "entropy48": {
+      "wins": 5,
+      "losses": 0,
+      "draws": 69,
+      "truncated": 1078,
+      "games": 1152,
+      "illegal_attempts": 0,
+      "win_probability": {
+        "mean": 0.004340277777777778,
+        "interval": [
+          0.0,
+          0.013888888888888888
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "terminations": {
+        "UNFINISHED": 1078,
+        "INSUFFICIENT_MATERIAL": 48,
+        "STALEMATE": 21,
+        "CHECKMATE": 5
+      }
+    },
+    "lesioned": {
+      "wins": 5,
+      "losses": 0,
+      "draws": 93,
+      "truncated": 1054,
+      "games": 1152,
+      "illegal_attempts": 0,
+      "win_probability": {
+        "mean": 0.004340277777777778,
+        "interval": [
+          0.0,
+          0.015625
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "terminations": {
+        "UNFINISHED": 1054,
+        "STALEMATE": 34,
+        "INSUFFICIENT_MATERIAL": 59,
+        "CHECKMATE": 5
+      }
+    },
+    "random_legal": {
+      "wins": 6,
+      "losses": 0,
+      "draws": 94,
+      "truncated": 1052,
+      "games": 1152,
+      "illegal_attempts": 0,
+      "win_probability": {
+        "mean": 0.005208333333333333,
+        "interval": [
+          0.0,
+          0.015625
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 48,
+        "bootstrap_draws": 5000
+      },
+      "terminations": {
+        "UNFINISHED": 1052,
+        "STALEMATE": 33,
+        "INSUFFICIENT_MATERIAL": 61,
+        "CHECKMATE": 6
+      }
+    }
+  },
+  "sampled_evaluation_games": 11520,
+  "new_training_visit_overlap_by_seed": {
+    "matched": [
+      0,
+      0,
+      0
+    ],
+    "mate2": [
+      7,
+      9,
+      8
+    ]
+  },
+  "new_training_unvisited_subset": {
+    "matched": {
+      "families": 128,
+      "total": 128,
+      "loo48_adaptation": {
+        "mean": 0.02063206690187858,
+        "interval": [
+          0.007158050687418767,
+          0.036217616100673346
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      },
+      "gain_over_parent": {
+        "mean": 0.007164768291521112,
+        "interval": [
+          -0.0023994137932434887,
+          0.017612499874228704
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 5000
+      }
+    },
+    "mate2": {
+      "families": 36,
+      "total": 48,
+      "win_gain_over_parent": {
+        "mean": -0.004629629629629629,
+        "interval": [
+          -0.020551215277777774,
+          0.004629629629629629
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 36,
+        "bootstrap_draws": 5000
+      }
+    }
+  },
+  "gates": {
+    "board_adaptation": true,
+    "adaptation_learning": false,
+    "mate2_progression": false,
+    "loo_superiority": false,
+    "meaningful_full_games": false,
+    "scale_justified": false
+  },
+  "training": {
+    "loo-11": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "loo",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "c26eeb2774b041c583b26b22f42bb8d4eb1d4fba9c6c195bd3ea66bcf8589126",
+          "91cdaca346b6f66c5734670feba6bc9a7613feaedd543094c39fefeaf7d0022d"
+        ],
+        "seed": 11,
+        "encoding": "chess-packed-v2-spatial",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 585,
+              "losses": 0,
+              "draws": 584,
+              "truncated": 2927,
+              "plies": 7023,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 28092,
+          "informative_groups": 180.0,
+          "mean_gradient_norms": {
+            "log_w": 0.016136193535203347,
+            "bias": 0.10479753703111783,
+            "leak_logit": 0.004196547771243786,
+            "w_in": 0.06167941397870891
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "mate2": {
+              "games": 512,
+              "wins": 17,
+              "losses": 0,
+              "draws": 62,
+              "truncated": 433,
+              "plies": 1967,
+              "illegal_attempts": 0
+            },
+            "matched": {
+              "games": 1024,
+              "wins": 201,
+              "losses": 0,
+              "draws": 126,
+              "truncated": 697,
+              "plies": 1721,
+              "illegal_attempts": 0
+            },
+            "suffix": {
+              "games": 512,
+              "wins": 56,
+              "losses": 0,
+              "draws": 46,
+              "truncated": 410,
+              "plies": 968,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 18624,
+          "informative_groups": 71.0,
+          "mean_gradient_norms": {
+            "log_w": 0.01387774136128428,
+            "bias": 0.08173938898107735,
+            "leak_logit": 0.0038244631233510518,
+            "w_in": 0.049824733891000506
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 135.326203208
+    },
+    "ema-11": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "ema",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "c26eeb2774b041c583b26b22f42bb8d4eb1d4fba9c6c195bd3ea66bcf8589126",
+          "91cdaca346b6f66c5734670feba6bc9a7613feaedd543094c39fefeaf7d0022d"
+        ],
+        "seed": 11,
+        "encoding": "chess-packed-v2-spatial",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 576,
+              "losses": 0,
+              "draws": 576,
+              "truncated": 2944,
+              "plies": 7040,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 28160,
+          "informative_groups": 175.0,
+          "mean_gradient_norms": {
+            "log_w": 0.014808812152551809,
+            "bias": 0.096525566619448,
+            "leak_logit": 0.003938794249819466,
+            "w_in": 0.0547371189182968
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "suffix": {
+              "games": 512,
+              "wins": 60,
+              "losses": 0,
+              "draws": 44,
+              "truncated": 408,
+              "plies": 964,
+              "illegal_attempts": 0
+            },
+            "mate2": {
+              "games": 512,
+              "wins": 20,
+              "losses": 0,
+              "draws": 65,
+              "truncated": 427,
+              "plies": 1957,
+              "illegal_attempts": 0
+            },
+            "matched": {
+              "games": 1024,
+              "wins": 199,
+              "losses": 0,
+              "draws": 125,
+              "truncated": 700,
+              "plies": 1724,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 18580,
+          "informative_groups": 69.0,
+          "mean_gradient_norms": {
+            "log_w": 0.010915161903540138,
+            "bias": 0.06528331781737506,
+            "leak_logit": 0.0029459035940817557,
+            "w_in": 0.04110359548940323
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 132.26141775
+    },
+    "stage-11": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "loo",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "c26eeb2774b041c583b26b22f42bb8d4eb1d4fba9c6c195bd3ea66bcf8589126",
+          "91cdaca346b6f66c5734670feba6bc9a7613feaedd543094c39fefeaf7d0022d"
+        ],
+        "seed": 11,
+        "encoding": "chess-stage-only-control-v1",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 309,
+              "losses": 0,
+              "draws": 546,
+              "truncated": 3241,
+              "plies": 7337,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 29348,
+          "informative_groups": 155.0,
+          "mean_gradient_norms": {
+            "log_w": 0.0031053909685851977,
+            "bias": 0.08127535497624194,
+            "leak_logit": 0.0012676623264837872,
+            "w_in": 0.01662064753327286
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "suffix": {
+              "games": 512,
+              "wins": 37,
+              "losses": 0,
+              "draws": 12,
+              "truncated": 463,
+              "plies": 982,
+              "illegal_attempts": 0
+            },
+            "matched": {
+              "games": 1024,
+              "wins": 100,
+              "losses": 0,
+              "draws": 137,
+              "truncated": 787,
+              "plies": 1811,
+              "illegal_attempts": 0
+            },
+            "mate2": {
+              "games": 512,
+              "wins": 10,
+              "losses": 0,
+              "draws": 48,
+              "truncated": 454,
+              "plies": 1966,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 19036,
+          "informative_groups": 58.0,
+          "mean_gradient_norms": {
+            "log_w": 0.003014687463064547,
+            "bias": 0.06959171037306078,
+            "leak_logit": 0.0013726267926585933,
+            "w_in": 0.014142760139293387
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 137.003356625
+    },
+    "zero-11": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "zero",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "c26eeb2774b041c583b26b22f42bb8d4eb1d4fba9c6c195bd3ea66bcf8589126",
+          "91cdaca346b6f66c5734670feba6bc9a7613feaedd543094c39fefeaf7d0022d"
+        ],
+        "seed": 11,
+        "encoding": "chess-packed-v2-spatial",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 336,
+              "losses": 0,
+              "draws": 564,
+              "truncated": 3196,
+              "plies": 7292,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 29168,
+          "informative_groups": 164.0,
+          "mean_gradient_norms": {
+            "log_w": 3.5550249776861165e-05,
+            "bias": 0.00030227494846712943,
+            "leak_logit": 8.77385830477806e-06,
+            "w_in": 0.000128540941460642
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "suffix": {
+              "games": 512,
+              "wins": 26,
+              "losses": 0,
+              "draws": 40,
+              "truncated": 446,
+              "plies": 967,
+              "illegal_attempts": 0
+            },
+            "mate2": {
+              "games": 512,
+              "wins": 2,
+              "losses": 0,
+              "draws": 42,
+              "truncated": 468,
+              "plies": 1989,
+              "illegal_attempts": 0
+            },
+            "matched": {
+              "games": 1024,
+              "wins": 33,
+              "losses": 0,
+              "draws": 175,
+              "truncated": 816,
+              "plies": 1840,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 19184,
+          "informative_groups": 54.0,
+          "mean_gradient_norms": {
+            "log_w": 8.458350308160334e-06,
+            "bias": 9.9599126542671e-05,
+            "leak_logit": 1.8828141357118966e-06,
+            "w_in": 3.203388405381702e-05
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 209.136715
+    },
+    "loo-23": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "loo",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "23226e54abccafb3303d4849eaf231d449a897a7690beb5cb15ed88f1208edd1",
+          "ea8f62a4beaf05debed3b9afcd833ef91c7ae5ef8732e4dd85331ece4f7365ee"
+        ],
+        "seed": 23,
+        "encoding": "chess-packed-v2-spatial",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 628,
+              "losses": 0,
+              "draws": 482,
+              "truncated": 2986,
+              "plies": 7082,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 28328,
+          "informative_groups": 164.0,
+          "mean_gradient_norms": {
+            "log_w": 0.014490800614794352,
+            "bias": 0.09803544231726846,
+            "leak_logit": 0.004139436834009302,
+            "w_in": 0.058597535834451264
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "matched": {
+              "games": 1024,
+              "wins": 184,
+              "losses": 0,
+              "draws": 65,
+              "truncated": 775,
+              "plies": 1799,
+              "illegal_attempts": 0
+            },
+            "mate2": {
+              "games": 512,
+              "wins": 22,
+              "losses": 0,
+              "draws": 79,
+              "truncated": 411,
+              "plies": 1951,
+              "illegal_attempts": 0
+            },
+            "suffix": {
+              "games": 512,
+              "wins": 50,
+              "losses": 0,
+              "draws": 91,
+              "truncated": 371,
+              "plies": 955,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 18820,
+          "informative_groups": 68.0,
+          "mean_gradient_norms": {
+            "log_w": 0.014133255115666543,
+            "bias": 0.09028591604146641,
+            "leak_logit": 0.00406902126451314,
+            "w_in": 0.05514097629202297
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 136.62467825
+    },
+    "ema-23": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "ema",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "23226e54abccafb3303d4849eaf231d449a897a7690beb5cb15ed88f1208edd1",
+          "ea8f62a4beaf05debed3b9afcd833ef91c7ae5ef8732e4dd85331ece4f7365ee"
+        ],
+        "seed": 23,
+        "encoding": "chess-packed-v2-spatial",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 630,
+              "losses": 0,
+              "draws": 499,
+              "truncated": 2967,
+              "plies": 7063,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 28252,
+          "informative_groups": 164.0,
+          "mean_gradient_norms": {
+            "log_w": 0.01378568924337742,
+            "bias": 0.09461357656982727,
+            "leak_logit": 0.003934841893169505,
+            "w_in": 0.05546597387001384
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "mate2": {
+              "games": 512,
+              "wins": 25,
+              "losses": 0,
+              "draws": 79,
+              "truncated": 408,
+              "plies": 1953,
+              "illegal_attempts": 0
+            },
+            "suffix": {
+              "games": 512,
+              "wins": 50,
+              "losses": 0,
+              "draws": 88,
+              "truncated": 374,
+              "plies": 956,
+              "illegal_attempts": 0
+            },
+            "matched": {
+              "games": 1024,
+              "wins": 182,
+              "losses": 0,
+              "draws": 72,
+              "truncated": 770,
+              "plies": 1794,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 18812,
+          "informative_groups": 68.0,
+          "mean_gradient_norms": {
+            "log_w": 0.011354426809703,
+            "bias": 0.07552388106705621,
+            "leak_logit": 0.0032393947140008095,
+            "w_in": 0.04623900624574162
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 133.788529
+    },
+    "stage-23": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "loo",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "23226e54abccafb3303d4849eaf231d449a897a7690beb5cb15ed88f1208edd1",
+          "ea8f62a4beaf05debed3b9afcd833ef91c7ae5ef8732e4dd85331ece4f7365ee"
+        ],
+        "seed": 23,
+        "encoding": "chess-stage-only-control-v1",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 342,
+              "losses": 0,
+              "draws": 523,
+              "truncated": 3231,
+              "plies": 7327,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 29308,
+          "informative_groups": 171.0,
+          "mean_gradient_norms": {
+            "log_w": 0.003945363639630273,
+            "bias": 0.10578793764534566,
+            "leak_logit": 0.0017779449772703515,
+            "w_in": 0.020633261097430022
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "matched": {
+              "games": 1024,
+              "wins": 108,
+              "losses": 0,
+              "draws": 107,
+              "truncated": 809,
+              "plies": 1833,
+              "illegal_attempts": 0
+            },
+            "suffix": {
+              "games": 512,
+              "wins": 36,
+              "losses": 0,
+              "draws": 27,
+              "truncated": 449,
+              "plies": 972,
+              "illegal_attempts": 0
+            },
+            "mate2": {
+              "games": 512,
+              "wins": 22,
+              "losses": 0,
+              "draws": 42,
+              "truncated": 448,
+              "plies": 1969,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 19096,
+          "informative_groups": 75.0,
+          "mean_gradient_norms": {
+            "log_w": 0.0034058309211104643,
+            "bias": 0.08561563031980768,
+            "leak_logit": 0.001636353501908161,
+            "w_in": 0.01572494198626373
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 136.820115667
+    },
+    "zero-23": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "zero",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "23226e54abccafb3303d4849eaf231d449a897a7690beb5cb15ed88f1208edd1",
+          "ea8f62a4beaf05debed3b9afcd833ef91c7ae5ef8732e4dd85331ece4f7365ee"
+        ],
+        "seed": 23,
+        "encoding": "chess-packed-v2-spatial",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 365,
+              "losses": 0,
+              "draws": 520,
+              "truncated": 3211,
+              "plies": 7307,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 29228,
+          "informative_groups": 166.0,
+          "mean_gradient_norms": {
+            "log_w": 3.801863504548919e-05,
+            "bias": 0.00033078450894663547,
+            "leak_logit": 9.862935543836215e-06,
+            "w_in": 0.00013923970797691254
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "mate2": {
+              "games": 512,
+              "wins": 2,
+              "losses": 0,
+              "draws": 33,
+              "truncated": 477,
+              "plies": 1993,
+              "illegal_attempts": 0
+            },
+            "matched": {
+              "games": 1024,
+              "wins": 46,
+              "losses": 0,
+              "draws": 133,
+              "truncated": 845,
+              "plies": 1869,
+              "illegal_attempts": 0
+            },
+            "suffix": {
+              "games": 512,
+              "wins": 18,
+              "losses": 0,
+              "draws": 48,
+              "truncated": 446,
+              "plies": 965,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 19308,
+          "informative_groups": 49.0,
+          "mean_gradient_norms": {
+            "log_w": 9.517556563309881e-06,
+            "bias": 0.00012206792621327622,
+            "leak_logit": 1.9709618435115317e-06,
+            "w_in": 3.784062283784806e-05
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 209.946313167
+    },
+    "loo-37": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "loo",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "c09fd3eaaab3185eba08bcba1dfb52260dc123b5051eb920087d7f3f067c608f",
+          "974cd164d5520bb54ee0aa51e971382b5693f6c41a838bdd442e886c7f2dd698"
+        ],
+        "seed": 37,
+        "encoding": "chess-packed-v2-spatial",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 607,
+              "losses": 0,
+              "draws": 526,
+              "truncated": 2963,
+              "plies": 7059,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 28236,
+          "informative_groups": 118.0,
+          "mean_gradient_norms": {
+            "log_w": 0.013319468718492544,
+            "bias": 0.07246316918508455,
+            "leak_logit": 0.004127636998020989,
+            "w_in": 0.043102210443407785
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "mate2": {
+              "games": 512,
+              "wins": 6,
+              "losses": 0,
+              "draws": 53,
+              "truncated": 453,
+              "plies": 1990,
+              "illegal_attempts": 0
+            },
+            "matched": {
+              "games": 1024,
+              "wins": 143,
+              "losses": 0,
+              "draws": 142,
+              "truncated": 739,
+              "plies": 1763,
+              "illegal_attempts": 0
+            },
+            "suffix": {
+              "games": 512,
+              "wins": 25,
+              "losses": 0,
+              "draws": 78,
+              "truncated": 409,
+              "plies": 975,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 18912,
+          "informative_groups": 46.0,
+          "mean_gradient_norms": {
+            "log_w": 0.010024632757222207,
+            "bias": 0.053052107740768406,
+            "leak_logit": 0.0031906165326063274,
+            "w_in": 0.03267984768763199
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 136.563394458
+    },
+    "ema-37": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "ema",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "c09fd3eaaab3185eba08bcba1dfb52260dc123b5051eb920087d7f3f067c608f",
+          "974cd164d5520bb54ee0aa51e971382b5693f6c41a838bdd442e886c7f2dd698"
+        ],
+        "seed": 37,
+        "encoding": "chess-packed-v2-spatial",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 631,
+              "losses": 0,
+              "draws": 527,
+              "truncated": 2938,
+              "plies": 7034,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 28136,
+          "informative_groups": 116.0,
+          "mean_gradient_norms": {
+            "log_w": 0.011591985082986866,
+            "bias": 0.06285035192013311,
+            "leak_logit": 0.003465169255946421,
+            "w_in": 0.03849430196441972
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "suffix": {
+              "games": 512,
+              "wins": 26,
+              "losses": 0,
+              "draws": 78,
+              "truncated": 408,
+              "plies": 973,
+              "illegal_attempts": 0
+            },
+            "matched": {
+              "games": 1024,
+              "wins": 145,
+              "losses": 0,
+              "draws": 136,
+              "truncated": 743,
+              "plies": 1767,
+              "illegal_attempts": 0
+            },
+            "mate2": {
+              "games": 512,
+              "wins": 8,
+              "losses": 0,
+              "draws": 53,
+              "truncated": 451,
+              "plies": 1993,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 18932,
+          "informative_groups": 48.0,
+          "mean_gradient_norms": {
+            "log_w": 0.010990192968165502,
+            "bias": 0.05848116384004243,
+            "leak_logit": 0.0034358670382061973,
+            "w_in": 0.03589486000419129
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 133.52330545799998
+    },
+    "stage-37": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "loo",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "c09fd3eaaab3185eba08bcba1dfb52260dc123b5051eb920087d7f3f067c608f",
+          "974cd164d5520bb54ee0aa51e971382b5693f6c41a838bdd442e886c7f2dd698"
+        ],
+        "seed": 37,
+        "encoding": "chess-stage-only-control-v1",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 382,
+              "losses": 0,
+              "draws": 565,
+              "truncated": 3149,
+              "plies": 7245,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 28980,
+          "informative_groups": 145.0,
+          "mean_gradient_norms": {
+            "log_w": 0.003573266553502208,
+            "bias": 0.08372434299008091,
+            "leak_logit": 0.0016395907350528205,
+            "w_in": 0.017230093554644554
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "suffix": {
+              "games": 512,
+              "wins": 23,
+              "losses": 0,
+              "draws": 75,
+              "truncated": 414,
+              "plies": 970,
+              "illegal_attempts": 0
+            },
+            "mate2": {
+              "games": 512,
+              "wins": 5,
+              "losses": 0,
+              "draws": 45,
+              "truncated": 462,
+              "plies": 1997,
+              "illegal_attempts": 0
+            },
+            "matched": {
+              "games": 1024,
+              "wins": 100,
+              "losses": 0,
+              "draws": 143,
+              "truncated": 781,
+              "plies": 1805,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 19088,
+          "informative_groups": 49.0,
+          "mean_gradient_norms": {
+            "log_w": 0.0026990669728093053,
+            "bias": 0.05306493753778341,
+            "leak_logit": 0.0012192953192311506,
+            "w_in": 0.01202035416781655
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 135.993697417
+    },
+    "zero-37": {
+      "config": {
+        "algorithm": "outcome-grouped-v1",
+        "reward_arithmetic": "integer-v2",
+        "method": "zero",
+        "corpus_sha256": "03f91a6096957bc75ea34fec8d25d08fdc9ac6a1602fe32f520a31f423c2a785",
+        "source_sha256": [
+          "c09fd3eaaab3185eba08bcba1dfb52260dc123b5051eb920087d7f3f067c608f",
+          "974cd164d5520bb54ee0aa51e971382b5693f6c41a838bdd442e886c7f2dd698"
+        ],
+        "seed": 37,
+        "encoding": "chess-packed-v2-spatial",
+        "games": 128,
+        "group_size": 8,
+        "matched_updates": 32,
+        "easy_updates": 8,
+        "lr": 0.003,
+        "entropy": 0.0005,
+        "gamma": 1.0,
+        "chunk": 64,
+        "size": "tiny"
+      },
+      "phases": {
+        "matched": {
+          "tiers": {
+            "matched": {
+              "games": 4096,
+              "wins": 407,
+              "losses": 0,
+              "draws": 592,
+              "truncated": 3097,
+              "plies": 7193,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 28772,
+          "informative_groups": 148.0,
+          "mean_gradient_norms": {
+            "log_w": 4.1622198679647227e-05,
+            "bias": 0.0003017310832547082,
+            "leak_logit": 1.3417566410822701e-05,
+            "w_in": 0.00014858533256756346
+          }
+        },
+        "mixed": {
+          "tiers": {
+            "suffix": {
+              "games": 512,
+              "wins": 25,
+              "losses": 0,
+              "draws": 62,
+              "truncated": 425,
+              "plies": 945,
+              "illegal_attempts": 0
+            },
+            "mate2": {
+              "games": 512,
+              "wins": 9,
+              "losses": 0,
+              "draws": 28,
+              "truncated": 475,
+              "plies": 2008,
+              "illegal_attempts": 0
+            },
+            "matched": {
+              "games": 1024,
+              "wins": 33,
+              "losses": 0,
+              "draws": 190,
+              "truncated": 801,
+              "plies": 1825,
+              "illegal_attempts": 0
+            }
+          },
+          "total_neural_stages": 19112,
+          "informative_groups": 54.0,
+          "mean_gradient_norms": {
+            "log_w": 1.759614507079732e-05,
+            "bias": 0.0002000716533530067,
+            "leak_logit": 4.35484488292559e-06,
+            "w_in": 7.093896840615344e-05
+          }
+        }
+      },
+      "updates": 48,
+      "fixed_structure_unchanged": true,
+      "elapsed_seconds": 206.83300341700001
+    }
+  },
+  "reward_validation": {
+    "audit": {
+      "games": 72,
+      "own_turn_rewards": 543,
+      "exact_rational_zeros": 399,
+      "integer_false_nonzeros": 0,
+      "legacy_false_nonzeros": 8,
+      "integer_max_absolute_error": 4.163336342344337e-17,
+      "legacy_max_absolute_error": 2.8210940528072825e-16
+    },
+    "reward_only_gradients": {
+      "float-v1": {
+        "loss": 0.07507459242697223,
+        "grad_norm": 0.09267716854810715,
+        "moves": 272,
+        "reward": 0.005451388888888881,
+        "mean_return": 0.004189226911764697,
+        "episodes": 72,
+        "nonzero_reward_episodes": 39,
+        "gradient_norms": {
+          "log_w": 0.011291860602796078,
+          "bias": 0.07444413006305695,
+          "leak_logit": 0.0029880350921303034,
+          "w_in": 0.05395085737109184
+        },
+        "parameter_deltas": {
+          "log_w": 0.0,
+          "bias": 0.0,
+          "leak_logit": 0.0,
+          "w_in": 0.0
+        },
+        "forced_stages": 424,
+        "stages": 1094
+      },
+      "integer-v2": {
+        "loss": 0.07507459242697223,
+        "grad_norm": 0.09267716854810715,
+        "moves": 272,
+        "reward": 0.00545138888888889,
+        "mean_return": 0.004189226911764705,
+        "episodes": 72,
+        "nonzero_reward_episodes": 39,
+        "gradient_norms": {
+          "log_w": 0.011291860602796078,
+          "bias": 0.07444413006305695,
+          "leak_logit": 0.0029880350921303034,
+          "w_in": 0.05395085737109184
+        },
+        "parameter_deltas": {
+          "log_w": 0.0,
+          "bias": 0.0,
+          "leak_logit": 0.0,
+          "w_in": 0.0
+        },
+        "forced_stages": 424,
+        "stages": 1094
+      }
+    },
+    "sources": [
+      "flies/chess/artifacts/learning/spatial-11/checkpoint_0060_0.pt",
+      "flies/chess/artifacts/learning/spatial-11/checkpoint_0060_1.pt"
+    ],
+    "corpus_sha256": "6694f1b96feff6f603699c709738507f1adb3ae3436f5cb604a11d2d001b2d2f",
+    "models_unchanged": true,
+    "note": "Actual independent FlyBrain validation games; rational oracle scores only; lr=0, entropy=0. No training or test evaluation."
+  },
+  "replication": [
+    {
+      "seed": 11,
+      "all_model_tensors_identical": true,
+      "optimizers_identical": true,
+      "numpy_rng_identical": true
+    },
+    {
+      "seed": 23,
+      "all_model_tensors_identical": true,
+      "optimizers_identical": true,
+      "numpy_rng_identical": true
+    },
+    {
+      "seed": 37,
+      "all_model_tensors_identical": true,
+      "optimizers_identical": true,
+      "numpy_rng_identical": true
+    }
+  ],
+  "pilot": {
+    "parent": {
+      "adaptation": 0.011493809532708404,
+      "correct_mass": 0.08798366662692218
+    },
+    "ema8": {
+      "adaptation": 0.021568304224306032,
+      "correct_mass": 0.10943436531100954
+    },
+    "ema16": {
+      "adaptation": 0.01887825194241661,
+      "correct_mass": 0.10057510024049399
+    },
+    "loo8": {
+      "adaptation": 0.022198133035982743,
+      "correct_mass": 0.11506712423813327
+    },
+    "loo16": {
+      "adaptation": 0.019408268639352917,
+      "correct_mass": 0.10637308354335558
+    },
+    "zero8": {
+      "adaptation": 0.01767798281657677,
+      "correct_mass": 0.11352379827953707
+    },
+    "zero16": {
+      "adaptation": 0.006001449958097443,
+      "correct_mass": 0.08030989233091586
+    },
+    "loo16_minus_ema16_validation_adaptation": {
+      "mean": 0.0005300166969363014,
+      "interval": [
+        -0.0017998545535003409,
+        0.002769099527282224
+      ],
+      "confidence": 0.95,
+      "training_seeds": 1,
+      "position_families": 24,
+      "bootstrap_draws": 5000
+    }
+  },
+  "limitations": [
+    "Three warm-start seeds; intervals are nominal bootstrap approximations.",
+    "Known curated-start families are excluded; all historical warm-start visits were not recorded.",
+    "Only one validation suffix; curated suffix reward opportunities are not an isolated causal intervention.",
+    "Short curated tactical games against fixed untrained opponents do not measure general chess strength.",
+    "Repeated replay games verify logging only and are not independent evidence."
+  ],
+  "terminal_gradient_diagnostics": {
+    "terminal_gradient": {
+      "checkpoint": "flies/chess/artifacts/mechanism/loo-11/checkpoint_0048_0.pt",
+      "reports": {
+        "matched": {
+          "games": 96,
+          "starting_positions": 48,
+          "families": 24,
+          "wins": 13,
+          "metrics": {
+            "loss": 0.15024600038304925,
+            "grad_norm": 0.1501690000295639,
+            "moves": 96,
+            "reward": 0.13541666666666666,
+            "mean_return": 0.13541666666666666,
+            "episodes": 96,
+            "nonzero_reward_episodes": 13,
+            "gradient_norms": {
+              "log_w": 0.01770196110010147,
+              "bias": 0.13310882449150085,
+              "leak_logit": 0.004977204371243715,
+              "w_in": 0.0670420452952385
+            },
+            "parameter_deltas": {
+              "log_w": 0.0,
+              "bias": 0.0,
+              "leak_logit": 0.0,
+              "w_in": 0.0
+            },
+            "forced_stages": 111,
+            "stages": 384
+          },
+          "parameters_unchanged": true
+        },
+        "suffix": {
+          "games": 8,
+          "starting_positions": 1,
+          "families": 1,
+          "wins": 5,
+          "metrics": {
+            "loss": 0.7354651689529419,
+            "grad_norm": 1.5543900728225708,
+            "moves": 8,
+            "reward": 0.625,
+            "mean_return": 0.625,
+            "episodes": 8,
+            "nonzero_reward_episodes": 5,
+            "gradient_norms": {
+              "log_w": 0.16332322359085083,
+              "bias": 0.8053545355796814,
+              "leak_logit": 0.046590398997068405,
+              "w_in": 0.5679419636726379
+            },
+            "parameter_deltas": {
+              "log_w": 0.0,
+              "bias": 0.0,
+              "leak_logit": 0.0,
+              "w_in": 0.0
+            },
+            "forced_stages": 8,
+            "stages": 32
+          },
+          "parameters_unchanged": true
+        },
+        "mate2": {
+          "games": 96,
+          "starting_positions": 12,
+          "families": 12,
+          "wins": 2,
+          "metrics": {
+            "loss": 0.06259187869727612,
+            "grad_norm": 0.03567696735262871,
+            "moves": 184,
+            "reward": 0.020833333333333332,
+            "mean_return": 0.021739130434782608,
+            "episodes": 96,
+            "nonzero_reward_episodes": 2,
+            "gradient_norms": {
+              "log_w": 0.003737068735063076,
+              "bias": 0.025134161114692688,
+              "leak_logit": 0.0008578679990023375,
+              "w_in": 0.025028349831700325
+            },
+            "parameter_deltas": {
+              "log_w": 0.0,
+              "bias": 0.0,
+              "leak_logit": 0.0,
+              "w_in": 0.0
+            },
+            "forced_stages": 224,
+            "stages": 736
+          },
+          "parameters_unchanged": true
+        }
+      },
+      "reward_gradient_cosines": {
+        "matched/matched": 0.9999999999999946,
+        "matched/suffix": 0.5627406036976453,
+        "matched/mate2": 0.37736532120803246,
+        "suffix/matched": 0.5627406036976453,
+        "suffix/suffix": 0.9999999999999973,
+        "suffix/mate2": 0.21854537465120533,
+        "mate2/matched": 0.37736532120803246,
+        "mate2/suffix": 0.21854537465120533,
+        "mate2/mate2": 0.9999999999999962
+      },
+      "note": "Existing validation only; terminal outcomes only; zero baseline, entropy0, SGD lr0. Neither model updated. One checkpoint/seed and few reward-bearing games; cosines are exploratory, not evidence of causal interference."
+    },
+    "terminal_gradient_parent": {
+      "checkpoint": "flies/chess/artifacts/mechanism/replication-11/checkpoint_0056_0.pt",
+      "reports": {
+        "matched": {
+          "games": 96,
+          "starting_positions": 48,
+          "families": 24,
+          "wins": 11,
+          "metrics": {
+            "loss": 0.17255326244048774,
+            "grad_norm": 0.24981644749641418,
+            "moves": 96,
+            "reward": 0.11458333333333333,
+            "mean_return": 0.11458333333333333,
+            "episodes": 96,
+            "nonzero_reward_episodes": 11,
+            "gradient_norms": {
+              "log_w": 0.032400984317064285,
+              "bias": 0.21976250410079956,
+              "leak_logit": 0.009301619604229927,
+              "w_in": 0.11391380429267883
+            },
+            "parameter_deltas": {
+              "log_w": 0.0,
+              "bias": 0.0,
+              "leak_logit": 0.0,
+              "w_in": 0.0
+            },
+            "forced_stages": 117,
+            "stages": 384
+          },
+          "parameters_unchanged": true
+        },
+        "suffix": {
+          "games": 8,
+          "starting_positions": 1,
+          "families": 1,
+          "wins": 3,
+          "metrics": {
+            "loss": 0.6164242625236511,
+            "grad_norm": 1.7643377780914307,
+            "moves": 8,
+            "reward": 0.375,
+            "mean_return": 0.375,
+            "episodes": 8,
+            "nonzero_reward_episodes": 3,
+            "gradient_norms": {
+              "log_w": 0.14923857152462006,
+              "bias": 0.8325356841087341,
+              "leak_logit": 0.04410059377551079,
+              "w_in": 0.5316634774208069
+            },
+            "parameter_deltas": {
+              "log_w": 0.0,
+              "bias": 0.0,
+              "leak_logit": 0.0,
+              "w_in": 0.0
+            },
+            "forced_stages": 8,
+            "stages": 32
+          },
+          "parameters_unchanged": true
+        },
+        "mate2": {
+          "games": 96,
+          "starting_positions": 12,
+          "families": 12,
+          "wins": 1,
+          "metrics": {
+            "loss": 0.02212958037853241,
+            "grad_norm": 0.013196801766753197,
+            "moves": 182,
+            "reward": 0.010416666666666666,
+            "mean_return": 0.01098901098901099,
+            "episodes": 96,
+            "nonzero_reward_episodes": 1,
+            "gradient_norms": {
+              "log_w": 0.0016072170110419393,
+              "bias": 0.008372556418180466,
+              "leak_logit": 0.0003277203650213778,
+              "w_in": 0.010068034753203392
+            },
+            "parameter_deltas": {
+              "log_w": 0.0,
+              "bias": 0.0,
+              "leak_logit": 0.0,
+              "w_in": 0.0
+            },
+            "forced_stages": 231,
+            "stages": 728
+          },
+          "parameters_unchanged": true
+        }
+      },
+      "reward_gradient_cosines": {
+        "matched/matched": 1.0,
+        "matched/suffix": 0.7790703208371561,
+        "matched/mate2": -0.16358338758089228,
+        "suffix/matched": 0.7790703208371561,
+        "suffix/suffix": 0.9999999999999947,
+        "suffix/mate2": -0.05825912550864378,
+        "mate2/matched": -0.16358338758089228,
+        "mate2/suffix": -0.05825912550864378,
+        "mate2/mate2": 0.9999999999999944
+      },
+      "note": "Existing validation only; terminal outcomes only; zero baseline, entropy0, SGD lr0. Neither model updated. One checkpoint/seed and few reward-bearing games; cosines are exploratory, not evidence of causal interference."
+    }
+  },
+  "study_counts": {
+    "integer_replication_training_games": 9216,
+    "pilot_training_games": 6144,
+    "main_training_games": 73728,
+    "distinct_budget_training_games": 89088,
+    "duplicate_audit_replay_games": 18432,
+    "heldout_sampled_evaluation_games": 11520
+  },
+  "verification": {
+    "archive_reanalysis_exact": true,
+    "python_tests": 58,
+    "real_tiny_integration": true,
+    "core_check": "PASS",
+    "javascript_logic": "PASS",
+    "browser": "Safari: recording URL load, initial/full-position render, next-move replay, activity/provenance, equal rank layout verified",
+    "gpu_jobs": 0,
+    "remote_commands": 0
+  },
+  "evidence_sha256": "7146ce89141f9696d1e490857c566d63618a35f40f6972192477ba85d72a4c7a"
+}

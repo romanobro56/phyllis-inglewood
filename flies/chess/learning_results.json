@@ -1,0 +1,383 @@
+{
+  "protocol": "EXPERIMENTS.md",
+  "graph": {
+    "preset": "tiny",
+    "neurons": 5000,
+    "synthetic": false,
+    "graph_hash": "cc2e5ce35f"
+  },
+  "pooled": {
+    "rates": {
+      "trained": {
+        "mean": 0.18001302083333334,
+        "interval": [
+          0.138671875,
+          0.22428385416666666
+        ],
+        "confidence": 0.95,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 10000
+      },
+      "initial": {
+        "mean": 0.03515625,
+        "interval": [
+          0.020182291666666668,
+          0.052083333333333336
+        ],
+        "confidence": 0.95,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 10000
+      },
+      "random_legal": {
+        "mean": 0.056640625,
+        "interval": [
+          0.0390625,
+          0.076171875
+        ],
+        "confidence": 0.95,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 10000
+      },
+      "lesioned": {
+        "mean": 0.06315104166666667,
+        "interval": [
+          0.0419921875,
+          0.08626302083333333
+        ],
+        "confidence": 0.95,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 10000
+      },
+      "shuffled_board": {
+        "mean": 0.16243489583333334,
+        "interval": [
+          0.12466634114583335,
+          0.20149739583333334
+        ],
+        "confidence": 0.95,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 10000
+      }
+    },
+    "simultaneous_differences": {
+      "initial": {
+        "mean": 0.14485677083333334,
+        "interval": [
+          0.09195760091145834,
+          0.2041015625
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 10000
+      },
+      "random_legal": {
+        "mean": 0.12337239583333333,
+        "interval": [
+          0.06705729166666667,
+          0.185546875
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 10000
+      },
+      "lesioned": {
+        "mean": 0.11686197916666667,
+        "interval": [
+          0.07014770507812501,
+          0.16862386067708357
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 10000
+      },
+      "shuffled_board": {
+        "mean": 0.017578125,
+        "interval": [
+          -0.0029296875,
+          0.046875
+        ],
+        "confidence": 0.9875,
+        "training_seeds": 3,
+        "position_families": 128,
+        "bootstrap_draws": 10000
+      }
+    },
+    "per_seed": {
+      "trained": [
+        0.1767578125,
+        0.193359375,
+        0.169921875
+      ],
+      "initial": [
+        0.0390625,
+        0.0341796875,
+        0.0322265625
+      ],
+      "random_legal": [
+        0.056640625,
+        0.056640625,
+        0.056640625
+      ],
+      "lesioned": [
+        0.05859375,
+        0.064453125,
+        0.06640625
+      ],
+      "shuffled_board": [
+        0.154296875,
+        0.166015625,
+        0.1669921875
+      ]
+    },
+    "tactical_improvement_supported": true,
+    "state_dependence_supported": false,
+    "games_per_condition": 3072,
+    "corpus_sha256": "79f2b27708f8f96ed5c2c1629aa3f95e47baea2ed95f8ad7ce79c5a4f0e93965",
+    "input_reports": [
+      "flies/chess/artifacts/learning/test-spatial-11/evaluation.json",
+      "flies/chess/artifacts/learning/test-spatial-23/evaluation.json",
+      "flies/chess/artifacts/learning/test-spatial-37/evaluation.json"
+    ]
+  },
+  "validation_curve": [
+    {
+      "update": 0,
+      "mean": 0.029947916666666668,
+      "individual": [
+        0.03125,
+        0.03125,
+        0.0234375,
+        0.0234375,
+        0.03125,
+        0.0390625
+      ]
+    },
+    {
+      "update": 10,
+      "mean": 0.049479166666666664,
+      "individual": [
+        0.0390625,
+        0.046875,
+        0.0546875,
+        0.0625,
+        0.0390625,
+        0.0546875
+      ]
+    },
+    {
+      "update": 20,
+      "mean": 0.09114583333333333,
+      "individual": [
+        0.0703125,
+        0.1171875,
+        0.078125,
+        0.1171875,
+        0.0859375,
+        0.078125
+      ]
+    },
+    {
+      "update": 30,
+      "mean": 0.11848958333333333,
+      "individual": [
+        0.1171875,
+        0.1171875,
+        0.1171875,
+        0.140625,
+        0.125,
+        0.09375
+      ]
+    },
+    {
+      "update": 40,
+      "mean": 0.13411458333333334,
+      "individual": [
+        0.1484375,
+        0.140625,
+        0.125,
+        0.1328125,
+        0.1484375,
+        0.109375
+      ]
+    },
+    {
+      "update": 50,
+      "mean": 0.13671875,
+      "individual": [
+        0.15625,
+        0.140625,
+        0.1484375,
+        0.1171875,
+        0.15625,
+        0.1015625
+      ]
+    },
+    {
+      "update": 60,
+      "mean": 0.14192708333333334,
+      "individual": [
+        0.171875,
+        0.09375,
+        0.171875,
+        0.140625,
+        0.1640625,
+        0.109375
+      ]
+    }
+  ],
+  "encoding_ablation": {
+    "spatial": 0.1767578125,
+    "packed": 0.154296875,
+    "paired_difference": {
+      "mean": 0.0224609375,
+      "ci95": [
+        0.005859375,
+        0.041015625
+      ],
+      "clusters": 128,
+      "bootstrap_draws": 5000
+    },
+    "note": "One-seed exploratory encoding ablation",
+    "identical_initial_state_dicts": [
+      true,
+      true
+    ]
+  },
+  "stage_ablation": {
+    "spatial": 0.1767578125,
+    "stage_only": 0.1201171875,
+    "paired_difference": {
+      "mean": 0.056640625,
+      "ci95": [
+        0.029296875,
+        0.0859375
+      ],
+      "clusters": 128,
+      "bootstrap_draws": 5000
+    },
+    "exploratory": true,
+    "note": "Post-test one-seed diagnostic, not a confirmatory contrast",
+    "training_seconds": 573.5107582090001,
+    "fixed_architecture_equal": [
+      true,
+      true
+    ]
+  },
+  "diagnostics": [
+    {
+      "run": "spatial-11",
+      "seed": 11,
+      "seconds": 236.373261541,
+      "updates": 60,
+      "games": 7680,
+      "mates": 1265,
+      "illegal_attempts": 0,
+      "fixed_architecture_equal": [
+        true,
+        true
+      ],
+      "gradient_norm_mean": {
+        "log_w": 0.013206956086893722,
+        "w_in": 0.06662931882116634,
+        "bias": 0.1320757433810892,
+        "leak_logit": 0.0034428623132043866
+      }
+    },
+    {
+      "run": "spatial-23",
+      "seed": 23,
+      "seconds": 233.46575066600002,
+      "updates": 60,
+      "games": 7680,
+      "mates": 1477,
+      "illegal_attempts": 0,
+      "fixed_architecture_equal": [
+        true,
+        true
+      ],
+      "gradient_norm_mean": {
+        "log_w": 0.013262320682406426,
+        "w_in": 0.06696946875502666,
+        "bias": 0.12822441182409725,
+        "leak_logit": 0.0038697838885127568
+      }
+    },
+    {
+      "run": "spatial-37",
+      "seed": 37,
+      "seconds": 237.96862174999998,
+      "updates": 60,
+      "games": 7680,
+      "mates": 1312,
+      "illegal_attempts": 0,
+      "fixed_architecture_equal": [
+        true,
+        true
+      ],
+      "gradient_norm_mean": {
+        "log_w": 0.010308427905086622,
+        "w_in": 0.05299094544461695,
+        "bias": 0.10511707055848092,
+        "leak_logit": 0.0028975365009197653
+      }
+    },
+    {
+      "run": "packed-11",
+      "seed": 11,
+      "seconds": 242.11465408299998,
+      "updates": 60,
+      "games": 7680,
+      "mates": 988,
+      "illegal_attempts": 0,
+      "fixed_architecture_equal": [
+        true,
+        true
+      ],
+      "gradient_norm_mean": {
+        "log_w": 0.00828602356777992,
+        "w_in": 0.04718497242623319,
+        "bias": 0.13051719309296458,
+        "leak_logit": 0.002430358585903984
+      }
+    }
+  ],
+  "stratified_descriptive": {
+    "KQK": {
+      "trained": 0.14895833333333333,
+      "initial": 0.026041666666666668,
+      "random_legal": 0.03125,
+      "lesioned": 0.041666666666666664,
+      "shuffled_board": 0.13854166666666667
+    },
+    "KQRK": {
+      "trained": 0.19412878787878787,
+      "initial": 0.039299242424242424,
+      "random_legal": 0.06818181818181818,
+      "lesioned": 0.07291666666666667,
+      "shuffled_board": 0.17329545454545456
+    }
+  },
+  "verification": {
+    "python_tests": 34,
+    "python_test_seconds": 9.926,
+    "actual_graph_integration": true,
+    "core_check": "PASS",
+    "javascript_logic": "PASS",
+    "gpu_experiments": false
+  },
+  "conclusion": "Improved held-out tactical success under the engineered coordinate/masking interface. Board-state dependence and general chess competence are not established.",
+  "board_dependence_followup": {
+    "report": "RESEARCH_RESULTS.md",
+    "results": "research_results.json",
+    "evidence": "research_evidence.json",
+    "conclusion": "Matched-board adaptation remains inconclusive; no supported mate-two or general-game improvement. No GPU scaling recommended."
+  }
+}
