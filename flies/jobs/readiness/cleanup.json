@@ -1,0 +1,71 @@
+{
+  "removed": [
+    {
+      "path": "flies/jobs/__pycache__",
+      "reason": "Rebuildable Python bytecode cache",
+      "files": 27
+    },
+    {
+      "path": "flies/jobs/artifacts/workday_phase1_smoke/learning_curve_unavailable.txt",
+      "reason": "Stale warning; SVG learning curve now exists"
+    }
+  ],
+  "retained_experiments": [
+    {
+      "path": "flies/jobs/artifacts/audit_v5",
+      "bytes": 91419970,
+      "purpose": "Historical experiment/evaluation retained for reproducibility",
+      "transfer_for_fresh_gpu_training": false
+    },
+    {
+      "path": "flies/jobs/artifacts/audit_v6",
+      "bytes": 52094381,
+      "purpose": "Historical experiment/evaluation retained for reproducibility",
+      "transfer_for_fresh_gpu_training": false
+    },
+    {
+      "path": "flies/jobs/artifacts/pilot",
+      "bytes": 40481084,
+      "purpose": "Historical experiment/evaluation retained for reproducibility",
+      "transfer_for_fresh_gpu_training": false
+    },
+    {
+      "path": "flies/jobs/artifacts/reward_v4",
+      "bytes": 25097050,
+      "purpose": "Historical experiment/evaluation retained for reproducibility",
+      "transfer_for_fresh_gpu_training": false
+    },
+    {
+      "path": "flies/jobs/artifacts/workday_phase1_smoke",
+      "bytes": 563676045,
+      "purpose": "Historical experiment/evaluation retained for reproducibility",
+      "transfer_for_fresh_gpu_training": false
+    },
+    {
+      "path": "flies/jobs/artifacts/workday_phase1_smoke_evaluation",
+      "bytes": 3367094,
+      "purpose": "Historical experiment/evaluation retained for reproducibility",
+      "transfer_for_fresh_gpu_training": false
+    },
+    {
+      "path": "flies/jobs/artifacts/workday_phase1_v1",
+      "bytes": 105586936,
+      "purpose": "Historical experiment/evaluation retained for reproducibility",
+      "transfer_for_fresh_gpu_training": false
+    },
+    {
+      "path": "flies/jobs/artifacts/workday_phase1_v2",
+      "bytes": 298973914,
+      "purpose": "Current Workday smoke checkpoint; not proficient",
+      "transfer_for_fresh_gpu_training": false
+    }
+  ],
+  "preserved": [
+    "Legacy entry points and their dependency modules",
+    "Original PDF and profiles",
+    "Job URL file",
+    "Application history",
+    "Historical weights and audit results"
+  ],
+  "unrelated_repository_changes": "Untouched"
+}

@@ -2,14 +2,14 @@
 import os
 import unittest
 import numpy as np
-from flies.jobs.task import JobsFly
+from flies.jobs.legacy_task import JobsFly
 
 
 @unittest.skipUnless(os.environ.get('PLAYWRIGHT_BROWSERS_PATH'), 'Chromium integration is opt-in')
 class BrowserTests(unittest.TestCase):
     def test_dom_sensors_and_selected_actions_have_no_answer_repair(self):
         from playwright.sync_api import sync_playwright
-        from flies.jobs.browser import BrowserMirror
+        from flies.jobs.legacy_browser import BrowserMirror
         rng = np.random.default_rng(17)
         env = JobsFly(difficulty=.1)
         env.reset(rng)

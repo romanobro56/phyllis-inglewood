@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "2026-11-14T20:06:55.443289+00:00",
+  "tests_run": 6,
+  "passed": 6,
+  "failures": [],
+  "errors": [],
+  "skipped": [],
+  "successful": true,
+  "mode": "local Chromium, employer network blocked"
+}

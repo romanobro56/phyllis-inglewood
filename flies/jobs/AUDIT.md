@@ -1,3 +1,5 @@
+> Historical five-field (v6) experiment. The current Workday-inspired deployment status is in [GPU_TRAINING_READINESS.md](../../GPU_TRAINING_READINESS.md).
+
 # Learning audit
 
 The three historical completions are **practice records**, not evidence of

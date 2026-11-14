@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 import numpy as np
-from flies.jobs.task import JobsFly
+from flies.jobs.legacy_task import JobsFly
 from flies.jobs.history import History
 from flies.jobs.forms import encode
 from flies.jobs.jobs import load_jobs, job_id

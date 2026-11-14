@@ -1,0 +1,145 @@
+{
+  "timestamp_utc": "2026-11-14T20:10:52.019026+00:00",
+  "runs": [
+    {
+      "name": "core_check",
+      "command": [
+        "python",
+        "-m",
+        "core.check",
+        "jobs"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 45.122
+    },
+    {
+      "name": "cpu_preflight",
+      "command": [
+        "python",
+        "-m",
+        "flies.jobs.preflight",
+        "--size",
+        "tiny",
+        "--device",
+        "cpu",
+        "--batch-size",
+        "4"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 3.679
+    },
+    {
+      "name": "cuda_preflight",
+      "command": [
+        "python",
+        "-m",
+        "flies.jobs.preflight",
+        "--size",
+        "full",
+        "--device",
+        "cuda",
+        "--batch-size",
+        "64"
+      ],
+      "returncode": 2,
+      "expected_returncode": 2,
+      "passed": true,
+      "seconds": 2.282
+    },
+    {
+      "name": "training_initialize",
+      "command": [
+        "python",
+        "-m",
+        "flies.jobs.learning",
+        "--out",
+        "flies/jobs/artifacts/readiness_smoke_20261114T200911Z",
+        "--size",
+        "tiny",
+        "--device",
+        "cpu",
+        "--updates",
+        "2",
+        "--episodes",
+        "2",
+        "--eval-every",
+        "100",
+        "--eval-episodes",
+        "2",
+        "--checkpoint-every",
+        "10",
+        "--minutes",
+        "0.5"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 21.809
+    },
+    {
+      "name": "training_resume",
+      "command": [
+        "python",
+        "-m",
+        "flies.jobs.learning",
+        "--out",
+        "flies/jobs/artifacts/readiness_smoke_20261114T200911Z",
+        "--resume",
+        "--device",
+        "cpu",
+        "--updates",
+        "1",
+        "--eval-every",
+        "100",
+        "--eval-episodes",
+        "2",
+        "--minutes",
+        "0.5"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 14.057
+    },
+    {
+      "name": "evaluation_plumbing",
+      "command": [
+        "python",
+        "-m",
+        "flies.jobs.evaluate",
+        "--checkpoint",
+        "flies/jobs/artifacts/readiness_smoke_20261114T200911Z",
+        "--out",
+        "flies/jobs/artifacts/readiness_smoke_20261114T200911Z/heldout_smoke",
+        "--device",
+        "cpu",
+        "--episodes",
+        "2",
+        "--levels",
+        "1"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "passed": true,
+      "seconds": 10.83
+    }
+  ],
+  "resume_checks": {
+    "updates_before": 2,
+    "updates_after": 3,
+    "episodes_before": 4,
+    "episodes_after": 6,
+    "untrained_file_unchanged": true,
+    "new_model_hash_matches_saved_state": true,
+    "resume_loaded_prior_hash": true,
+    "optimizer_has_state": true,
+    "paired_control_forms_identical": true
+  },
+  "experiment": "flies/jobs/artifacts/readiness_smoke_20261114T200911Z",
+  "gpu_status": "not_executed_no_cuda",
+  "purpose": "Pipeline initialization and resume only; not proficiency training"
+}

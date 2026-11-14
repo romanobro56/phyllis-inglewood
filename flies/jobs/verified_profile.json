@@ -1,0 +1,56 @@
+{
+  "provenance": "Elton_Inglewood_Fly_Resume.pdf and existing profile.json email; null means not supplied, never infer eligibility or dates.",
+  "personal": {
+    "first_name": "Elton",
+    "last_name": "Inglewood",
+    "email": "eltoninglewood@gmail.com",
+    "phone": "5082089276",
+    "address": "700 Boylston Street, Boston, MA 02116, USA",
+    "location": null,
+    "website": null
+  },
+  "experience": [
+    {
+      "title": "Independent Airspace Operator",
+      "organization": "Residential and Commercial Environments",
+      "description": "Executed high-frequency takeoffs, sharp turns, and precision landings across windowsills, countertops, and ceilings.",
+      "start_date": null,
+      "end_date": null,
+      "current": null
+    },
+    {
+      "title": "Food and Organic Matter Scout",
+      "organization": "Open-Air Markets, Gardens, and Kitchens",
+      "description": "Located potential food sources using chemical cues detected by antennae and sensory receptors.",
+      "start_date": null,
+      "end_date": null,
+      "current": null
+    }
+  ],
+  "education": [
+    {
+      "program": "Complete Metamorphosis Program",
+      "institution": null,
+      "degree": null,
+      "field_of_study": "Adult flight operations, sensory navigation, and opportunistic resource acquisition",
+      "status": "Completed",
+      "start_date": null,
+      "end_date": null
+    }
+  ],
+  "answers": {
+    "work_authorization": null,
+    "sponsorship": null,
+    "availability": null,
+    "operating_environment": "Indoor / Outdoor",
+    "experience_summary": "Independent Airspace Operator; Food and Organic Matter Scout"
+  },
+  "simulation_only_fields": [
+    "personal.address"
+  ],
+  "field_sources": {
+    "personal.phone": "Supplied by user in this conversation",
+    "personal.email": "Confirmed by user in this conversation",
+    "personal.address": "Public building fixture requested by user; Boston Public Library, https://www.bpl.org/locations/central/; not verified residence"
+  }
+}

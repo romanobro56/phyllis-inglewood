@@ -1,0 +1,38 @@
+{
+  "timestamp_utc": "2026-11-14T20:17:36.254990+00:00",
+  "tests_run": 42,
+  "passed": 35,
+  "failures": [],
+  "errors": [],
+  "skipped": [
+    {
+      "test": "test_dom_sensors_and_selected_actions_have_no_answer_repair (test_browser.BrowserTests.test_dom_sensors_and_selected_actions_have_no_answer_repair)",
+      "reason": "Chromium integration is opt-in"
+    },
+    {
+      "test": "test_browser_auth_and_upload_controls_use_selected_values (test_workday_browser.WorkdayBrowserTests.test_browser_auth_and_upload_controls_use_selected_values)",
+      "reason": "set PLAYWRIGHT_BROWSERS_PATH for Chromium tests"
+    },
+    {
+      "test": "test_browser_reads_dom_and_executes_exact_rejected_values (test_workday_browser.WorkdayBrowserTests.test_browser_reads_dom_and_executes_exact_rejected_values)",
+      "reason": "set PLAYWRIGHT_BROWSERS_PATH for Chromium tests"
+    },
+    {
+      "test": "test_real_radio_controls_execute_literal_option_selections (test_workday_browser.WorkdayBrowserTests.test_real_radio_controls_execute_literal_option_selections)",
+      "reason": "set PLAYWRIGHT_BROWSERS_PATH for Chromium tests"
+    },
+    {
+      "test": "test_secrets_remain_redacted_even_when_selected_for_the_wrong_field (test_workday_browser.WorkdayBrowserTests.test_secrets_remain_redacted_even_when_selected_for_the_wrong_field)",
+      "reason": "set PLAYWRIGHT_BROWSERS_PATH for Chromium tests"
+    },
+    {
+      "test": "test_station_consumes_same_event_and_does_not_serve_secrets (test_workday_browser.WorkdayBrowserTests.test_station_consumes_same_event_and_does_not_serve_secrets)",
+      "reason": "set PLAYWRIGHT_BROWSERS_PATH for Chromium tests"
+    },
+    {
+      "test": "test_cuda_forward_backward (test_workday_learning.LearningTests.test_cuda_forward_backward)",
+      "reason": "CUDA GPU unavailable on this local host"
+    }
+  ],
+  "successful": true
+}

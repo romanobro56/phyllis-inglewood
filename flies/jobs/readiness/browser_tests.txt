@@ -1,0 +1,11 @@
+test_browser_auth_and_upload_controls_use_selected_values (flies.jobs.test_workday_browser.WorkdayBrowserTests.test_browser_auth_and_upload_controls_use_selected_values) ... ok
+test_browser_reads_dom_and_executes_exact_rejected_values (flies.jobs.test_workday_browser.WorkdayBrowserTests.test_browser_reads_dom_and_executes_exact_rejected_values) ... ok
+test_real_radio_controls_execute_literal_option_selections (flies.jobs.test_workday_browser.WorkdayBrowserTests.test_real_radio_controls_execute_literal_option_selections) ... ok
+test_secrets_remain_redacted_even_when_selected_for_the_wrong_field (flies.jobs.test_workday_browser.WorkdayBrowserTests.test_secrets_remain_redacted_even_when_selected_for_the_wrong_field) ... ok
+test_station_consumes_same_event_and_does_not_serve_secrets (flies.jobs.test_workday_browser.WorkdayBrowserTests.test_station_consumes_same_event_and_does_not_serve_secrets) ... ok
+test_dom_sensors_and_selected_actions_have_no_answer_repair (flies.jobs.test_browser.BrowserTests.test_dom_sensors_and_selected_actions_have_no_answer_repair) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 10.492s
+
+OK

@@ -1,0 +1,16 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-aarch64-with-glibc2.39",
+  "machine": "aarch64",
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "playwright": "1.65.2"
+  },
+  "cuda_available": false,
+  "torch_cuda_build": null,
+  "installed_graphs": [
+    "tiny.npz"
+  ]
+}
