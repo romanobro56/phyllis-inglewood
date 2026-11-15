@@ -1,7 +1,22 @@
-# flyhack: 13 fruit-fly brains doing silly jobs
+# flyhack: fruit-fly brains doing silly jobs
 
 Each fly is a copy of the real *Drosophila* connectome (FlyWire v783: 134,181 neurons,
-2.7M connections), trained overnight for one task and shown live in a three.js world.
+2.7M connections), trained on a GPU for one task and shown live in a three.js world.
+
+**The world (live, on the GPU):** https://ape9a1r3z9a8ef-8000.proxy.runpod.net/web/ while the pod runs
+(`python scripts/remote.py world-status` prints the current address).
+
+| Fly | Folder | Job | Brain in the world |
+| --- | --- | --- | --- |
+| Bard | `flies/bard` | types Shakespeare one word at a time from a tray of 8 | full, trained (teacher) |
+| Chess | `flies/chess` | plays White against a random Black, 4-5 neuron decisions per move | full, trained |
+| Gordo (critic) | `flies/critic` | tastes the dish you feed it and scores it | full, trained (teacher) |
+| Marlo (gym) | `flies/gym` | reps versus fatigue | full, trained |
+| Inbox | `flies/inbox` | archive, reply, flag or unsubscribe | full, trained (teacher) |
+| Elton (jobs) | `flies/jobs` | fills in simulated Workday applications | full, best held-out checkpoint |
+| Mona Lisa | `flies/painting` | paints a 64-cell Mona Lisa from 8 pigments | full, trained |
+| Scrolly (reels) | `flies/reels` | likes, comments or scrolls reels | full, trained |
+| The Fly Band (5 flies) | `flies/band` | four players each hear one part of a song, a fifth conducts | spiking 8,161-neuron brains, in your browser |
 Use the < > buttons (or click a fly) to visit each fly and watch its live brain at the top; ^ shows the pods.
 
 **Why "the fly decided" is true here**
@@ -65,7 +80,28 @@ python scripts/remote.py pull        # get everyone's trained brains from the GP
 python -m server.serve               # open http://localhost:8000/web/
 ```
 
-Flies without a trained brain still appear, running an **untrained** brain and labelled as such. A fly with no `station.js` gets a placeholder pad. Inference runs on CPU, so the demo laptop doesn't need a GPU. It does need every preset that was used for training (`python -m core.graph --size all`).
+Flies without a trained brain still appear, running an **untrained** brain and labelled as such. A fly with no `station.js` gets a placeholder pad. Locally inference runs on CPU (`--device cuda` if you have one). It needs every preset that was used for training (`python -m core.graph --size all`).
+
+### On the GPU pod (the production world)
+
+```bash
+python scripts/remote.py deploy        # GPU owner: push the committed code, restart the world on CUDA, print the URL
+python scripts/remote.py world-status  # is it up, GPU memory, the public URL
+python scripts/remote.py world-logs -f
+```
+
+`deploy` uploads only git-tracked files (never local state, secrets or raw media) and runs
+`server.serve --device cuda` on port 8000, which Runpod exposes at `https://<pod id>-8000.proxy.runpod.net/web/`.
+The brains it runs are the pod's own `runs/<fly>/` (trained there), so nothing has to be copied back first.
+
+### Hooks a fly can use in the world (all optional)
+
+- `world_checkpoint = "<path in runs/<fly>/>"`: run this checkpoint instead of `brain.pt` (the jobs fly runs its best one).
+- `world_args = {...}`: constructor arguments for the world's copy of the task (the bard writes freely, jobs uses level 1).
+- `view()`: a small dict of what the fly is choosing between, sent to `station.play` as `ctx.view` (the bard's word tray).
+- `step()`'s info dict reaches `station.play` as `ctx.info` when it is JSON-able and under 50 kB (the chess board).
+- A folder with `station.js` and **no** `task.py` is a browser exhibit: shown in the world, never trained or run by the
+  server. Its station may call `setCaption(text)` from `build()` and gets `focus(true/false)` when it is visited (the band).
 
 ## Repo map
 
@@ -80,7 +116,7 @@ core/queue.py      job queue on the shared GPU
 scripts/remote.py  submit / status / logs / pull from your laptop
 server/serve.py    runs all brains live + serves the web world
 web/               three.js world + views/nav (main.js), live brain point clouds (brain.js), the pod tower (pods.js), fly model (lib/fly.js)
-flies/<name>/      ONE FOLDER PER FLY: task.py, station.js, demos.npz
+flies/<name>/      ONE FOLDER PER FLY: task.py, station.js, demos.npz (flies/band: a browser exhibit, see above)
 docs/COMPUTE.md    setting up and sharing the GPU
 ```
 
