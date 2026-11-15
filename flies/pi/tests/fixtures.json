@@ -1,0 +1,202 @@
+[
+  {
+    "action": "choose_0",
+    "caption": "π1 1:1 | group 0 | P0:_ | S0 W0 R0.00 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:2 | 0 ✗ | P0:_ | S0 W1 R-0.20 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:3 | group 0 | P0:_ | S0 W1 R-0.20 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:4 | 1 ✗ | P0:_ | S0 W2 R-0.40 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:5 | group 0 | P0:_ | S0 W2 R-0.40 | live"
+  },
+  {
+    "action": "choose_2",
+    "caption": "π1 1:6 | 2 ✗ | P0:_ | S0 W3 R-0.60 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:7 | group 0 | P0:_ | S0 W3 R-0.60 | live"
+  },
+  {
+    "action": "choose_3",
+    "caption": "π1 1:8 | 3 ✓ | P1:3 | S1 W3 R0.40 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:9 | group 0 | P1:3 | S1 W3 R0.40 | live"
+  },
+  {
+    "action": "choose_4",
+    "caption": "π1 1:10 | 4 ✗ | P1:3 | S0 W4 R0.20 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:11 | group 1 | P1:3 | S0 W4 R0.20 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:12 | 5 ✗ | P1:3 | S0 W5 R-0.00 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:13 | group 1 | P1:3 | S0 W5 R-0.00 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:14 | 6 ✗ | P1:3 | S0 W6 R-0.20 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:15 | group 1 | P1:3 | S0 W6 R-0.20 | live"
+  },
+  {
+    "action": "choose_2",
+    "caption": "π1 1:16 | 7 ✗ | P1:3 | S0 W7 R-0.40 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:17 | group 1 | P1:3 | S0 W7 R-0.40 | live"
+  },
+  {
+    "action": "choose_3",
+    "caption": "π1 1:18 | 8 ✗ | P1:3 | S0 W8 R-0.60 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:19 | group 1 | P1:3 | S0 W8 R-0.60 | live"
+  },
+  {
+    "action": "choose_4",
+    "caption": "π1 1:20 | 9 ✗ | P1:3 | S0 W9 R-0.80 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:21 | group 1 | P1:3 | S0 W9 R-0.80 | live"
+  },
+  {
+    "action": "choose_4",
+    "caption": "π1 1:22 | 9 ✗ | P1:3 | S0 W10 R-1.00 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:23 | group 1 | P1:3 | S0 W10 R-1.00 | live"
+  },
+  {
+    "action": "choose_4",
+    "caption": "π1 1:24 | 9 ✗ | P1:3 | S0 W11 R-1.20 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:25 | group 0 | P1:3 | S0 W11 R-1.20 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:26 | 1 ✓ | P2:31 | S1 W11 R-0.20 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:27 | group 0 | P2:31 | S1 W11 R-0.20 | live"
+  },
+  {
+    "action": "choose_4",
+    "caption": "π1 1:28 | 4 ✓ | P3:314 | S2 W11 R0.90 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:29 | group 0 | P3:314 | S2 W11 R0.90 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:30 | 1 ✓ | P4:3141 | S3 W11 R2.10 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:31 | group 1 | P4:3141 | S3 W11 R2.10 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:32 | 5 ✓ | P5:31415 | S4 W11 R3.40 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:33 | group 1 | P5:31415 | S4 W11 R3.40 | live"
+  },
+  {
+    "action": "choose_4",
+    "caption": "π1 1:34 | 9 ✓ | P6:314159 | S5 W11 R4.80 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:35 | group 0 | P6:314159 | S5 W11 R4.80 | live"
+  },
+  {
+    "action": "choose_2",
+    "caption": "π1 1:36 | 2 ✓ | P7:141592 | S6 W11 R6.30 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:37 | group 1 | P7:141592 | S6 W11 R6.30 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:38 | 6 ✓ | P8:415926 | S7 W11 R7.90 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:39 | group 1 | P8:415926 | S7 W11 R7.90 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:40 | 5 ✓ | P9:159265 | S8 W11 R9.60 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:41 | group 0 | P9:159265 | S8 W11 R9.60 | live"
+  },
+  {
+    "action": "choose_3",
+    "caption": "π1 1:42 | 3 ✓ | P10:592653 | S9 W11 R11.40 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:43 | group 1 | P10:592653 | S9 W11 R11.40 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 1:44 | 5 ✓ | P11:926535 | S10 W11 R13.30 | live"
+  },
+  {
+    "action": "choose_1",
+    "caption": "π1 1:45 | group 1 | P11:926535 | S10 W11 R13.30 | live"
+  },
+  {
+    "action": "choose_3",
+    "caption": "π1 1:46 | 8 ✓ | P12:265358 | S11 W11 R15.30 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 2:1 | group 0 | P0:_ | S0 W0 R0.00 | live"
+  },
+  {
+    "action": "choose_3",
+    "caption": "π1 2:2 | 3 ✓ | P1:3 | S1 W0 R1.00 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 2:3 | group 0 | P1:3 | S1 W0 R1.00 | live"
+  },
+  {
+    "action": "choose_0",
+    "caption": "π1 2:4 | 0 ✗ | P1:3 | S0 W1 R0.80 | live"
+  }
+]

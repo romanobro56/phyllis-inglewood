@@ -1,0 +1,5 @@
+artifacts/*.pt
+__pycache__/
+tests/__pycache__/
+
+/artifacts/
