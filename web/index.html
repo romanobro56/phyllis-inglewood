@@ -25,11 +25,7 @@
   #world { position: fixed; inset: 0; }
   button { font: inherit; color: inherit; }
 
-  /* overview text */
-  #hud { position: fixed; left: 22px; top: 18px; max-width: 400px; font-size: 13px; line-height: 1.55; color: var(--muted);
-         transition: opacity .4s; pointer-events: none; }
-  #hud h1 { font-size: 20px; font-weight: 600; color: var(--ink); margin: 0 0 4px; letter-spacing: -.01em; }
-  #hud b { color: var(--ink); font-weight: 600; }
+  /* status line */
   #status { position: fixed; right: 18px; bottom: 16px; font: 11px var(--mono); color: var(--muted); letter-spacing: .04em; }
 
   /* labels floating over the stations */
@@ -105,7 +101,6 @@
   #wallhud .rec { color: #ff2a3e; }
   #wallhud .rec i { display: inline-block; width: 8px; height: 8px; background: #ff2a3e; border-radius: 50%; margin-right: 6px; animation: blink 1s infinite; }
   body.wall #wallhud { opacity: 1; }
-  body.wall #hud, body.fly #hud { opacity: 0; }
   body.wall #status { color: #b0606b; }
   .plaque { font: 8px/1.45 var(--mono); color: #ff9aa5; background: rgba(12, 2, 4, .82); border-left: 2px solid #c0182c;
             padding: 4px 7px; letter-spacing: .04em; pointer-events: none; width: 104px; }
@@ -166,12 +161,6 @@
 <div id="world"></div>
 <div id="wallfx"></div>
 
-<div id="hud">
-  <h1>Fly Brain World</h1>
-  Every fly runs on its own copy of the real fruit-fly connectome (FlyWire, 134k neurons).
-  Each thing you see a fly do was chosen by its descending neurons a moment ago.<br>
-  <b>&lsaquo; &rsaquo;</b> visit each fly and watch its brain live. <b>&#710;</b> see where they really are.
-</div>
 <div id="status">connecting...</div>
 
 <div id="panel">

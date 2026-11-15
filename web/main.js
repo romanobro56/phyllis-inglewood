@@ -9,11 +9,14 @@ import { Fly, tween, wait, box } from "./lib/fly.js";
 import { BrainActivity, brainMaterial, brainShared, loadPreset, pointSize, ACTION_COLORS, hex } from "./brain.js";
 import { PodWall, WALL_CENTER } from "./pods.js";
 
+// The world's set dressing (floor, cubicles, lights, the back wall, post-processing): a fly-sized office at night.
+import look from "./looks/overtime.js";
+
 const WS_URL = `${location.protocol === "https:" ? "wss" : "ws"}://${location.host}/ws`; // same port as the page
 const SPACING = 6.2;       // gap between neighbouring stations along the half circle (the widest stations are ~4 wide)
 const PLAY_TIMEOUT = 4000; // a stuck station never stalls its fly for longer than this
-const BG = 0xecbbab;       // Claude orange #d97757, five 10% tints lighter (50% toward white)
-const FOG = { ground: [32, 140], wall: [16, 115] };
+const BG = look.bg;
+const FOG = look.fog;
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
 // --- renderer, world --------------------------------------------------------
@@ -37,24 +40,9 @@ camera.position.set(0, 12, 18);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-scene.add(new THREE.HemisphereLight(0xfff3ee, 0x9a5a48, 1.5));
-const sun = new THREE.DirectionalLight(0xfff2ea, 2.2);
-sun.position.set(14, 30, 12);
-sun.castShadow = true;
-sun.shadow.mapSize.set(2048, 2048);
-Object.assign(sun.shadow.camera, { left: -38, right: 38, top: 38, bottom: -38, far: 120 });
-scene.add(sun);
-const ground = new THREE.Mesh(new THREE.PlaneGeometry(600, 600), new THREE.MeshStandardMaterial({ color: 0xf6d2c4, roughness: 1 }));
-ground.rotation.x = -Math.PI / 2;
-ground.receiveShadow = true;
-scene.add(ground);
-const grid = new THREE.GridHelper(200, 100, 0xd97757, 0xe0a593);
-grid.material.transparent = true;
-grid.material.opacity = 0.35;
-grid.position.y = 0.002;
-scene.add(grid);
 
 const wall = new PodWall(scene);
+await look.build({ THREE, scene, renderer, camera });
 
 // --- the brain panel (its own little scene, drawn into the top band) ----------
 const panelEl = document.getElementById("panel");
@@ -71,6 +59,7 @@ const THEMES = {
   light: { band: 0xf4d6cb, base: 0x8a5446, hot: 0xb0250f, input: 0x0b7285, baseAlpha: 0.13, additive: false },
   dark: { band: 0x120406, base: 0x6a1424, hot: 0xfff0f2, input: 0x39d0d0, baseAlpha: 0.3, additive: true },
 };
+Object.assign(THEMES.light, look.panel);
 let panel = { fly: null, points: null, theme: "light", yaw: 0, drag: null };
 
 function resize() {
@@ -80,6 +69,7 @@ function resize() {
   camera.updateProjectionMatrix();
   const ph = Math.round(Math.min(360, Math.max(230, innerHeight * 0.34)));
   document.documentElement.style.setProperty("--ph", ph + "px");
+  look.resize(innerWidth, innerHeight);
 }
 addEventListener("resize", resize);
 resize();
@@ -180,15 +170,8 @@ function arcSlot(i, n) {
   const centre = new THREE.Vector3(0, 0, R * 0.35);
   return { pos, yaw: Math.atan2(centre.x - pos.x, centre.z - pos.z) };
 }
-function overviewPose() {
-  // far enough back that the whole half circle (plus a station's width at each end) fits across the screen
-  const R = arcRadius(order.length);
-  const halfFov = Math.atan(Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * Math.min(camera.aspect, 2));
-  const d = Math.max(9, (R + 3.6) / Math.tan(halfFov));
-  const target = new THREE.Vector3(0, 0.3, -R * 0.2);
-  const tilt = THREE.MathUtils.degToRad(38);
-  return { pos: target.clone().add(new THREE.Vector3(0, d * Math.sin(tilt), d * Math.cos(tilt))), target };
-}
+// the whole half circle, low and from the front, with the back wall behind it (see looks/overtime.js)
+function overviewPose() { return look.overviewPose(arcRadius(order.length), camera); }
 // in front of the station, in its own frame (stations are built to be seen from their +z side)
 function flyPose(name) {
   const g = flies[name].group;
@@ -219,7 +202,7 @@ function setControlLimits() {
   const wallMode = view.mode === "wall";
   controls.maxPolarAngle = wallMode ? Math.PI * 0.85 : Math.PI * 0.47;
   controls.minDistance = wallMode ? 2 : 1.5;
-  controls.maxDistance = wallMode ? 45 : 70;
+  controls.maxDistance = wallMode ? 45 : look.maxDistance;
 }
 
 function go(mode, idx = -1) {
@@ -247,6 +230,7 @@ function go(mode, idx = -1) {
     try { f.station.focus?.(mode === "fly" && n === name); } catch (e) { console.error(`${n}: station focus() crashed`, e); }
   }
   send({ type: "inspect", flies: mode === "wall" ? order : name ? [name] : [] });
+  look.onView?.(mode, name, ms);
   updateNavLabel();
 }
 
@@ -506,6 +490,7 @@ function connect() {
       const all = [...m.flies, ...(m.exhibits || []).map((e) => ({ ...e, exhibit: true, trained: true, actions: [], menu: null }))];
       await Promise.all(all.map((info, i) => addFly(info, i, all.length)));
       order = all.map((f) => f.name);
+      try { look.place(order.map((n) => flies[n])); } catch (e) { console.error("world dressing place() crashed", e); }
       wall.setLive(order.filter((n) => flies[n].brain).map((n) => ({ name: n, ...flies[n] })));
       updateWallHud();
       const untrained = m.flies.filter((f) => !f.trained).length;
@@ -530,6 +515,7 @@ renderer.setAnimationLoop(() => {
   brainShared.uTime.value = t;
   for (const f of Object.values(flies)) f.brain?.update(now, dt);
   wall.update(t, dt, camera);
+  look.update(t, dt, camera, view.mode);
   if (camMoving) camera.lookAt(controls.target);
   else controls.update();
 
@@ -543,7 +529,7 @@ renderer.setAnimationLoop(() => {
   renderer.setViewport(0, 0, W, H);
   renderer.setClearColor(BG, 1);
   renderer.clear();
-  renderer.render(scene, camera);
+  look.render(renderer, scene, camera, view.mode);
 
   if (band > 1) {
     renderer.setScissorTest(true);
