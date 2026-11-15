@@ -104,7 +104,8 @@ def upload_tracked(paths):
 
 
 WORLD_PORT = 8000     # exposed by the pod as https://<pod id>-8000.proxy.runpod.net
-WORLD_PIDS = f"$(pgrep -f '[s]erver[.]serve .*--port {WORLD_PORT}' | tr '\\n' ' ')"   # [s]: never matches this shell
+# anchored at the start of the command line, so it never matches the ssh shell that runs these commands
+WORLD_PIDS = f"$(pgrep -f '^python[0-9.]* -m server[.]serve .*--port {WORLD_PORT}' | tr '\\n' ' ')"
 WORLD_URL = ("echo https://$(tr '\\0' '\\n' < /proc/1/environ | sed -n 's/^RUNPOD_POD_ID=//p')"
              f"-{WORLD_PORT}.proxy.runpod.net/web/")
 
@@ -204,7 +205,7 @@ def main():
     elif a.cmd == "world-stop":
         run(f"kill {WORLD_PIDS} 2>/dev/null; echo stopped")
     elif a.cmd == "world-status":
-        run("pgrep -af '[s]erver[.]serve' || echo 'world not running'; "
+        run("pgrep -af '^python[0-9.]* -m server[.]serve' || echo 'world not running'; "
             "nvidia-smi --query-gpu=name,memory.used,utilization.gpu --format=csv,noheader; " + WORLD_URL)
     elif a.cmd == "world-logs":
         run("tail -n 40 " + ("-f " if a.follow else "") + "world.log", tty=a.follow)
