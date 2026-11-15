@@ -6,7 +6,7 @@ const xy = (sq) => ({ x: ((sq.charCodeAt(0) - 97) - 3.5) * 0.48,
   z: (3.5 - (Number(sq[1]) - 1)) * 0.48 });
 
 export default {
-  title: "Chess Fly · vs random demo",
+  title: "Bobby Inglewood",
   blurb: "Four or five descending-neuron decisions per move. Black is random here; two-brain matches use the chess runner.",
 
   build({ THREE, group, fly }) {

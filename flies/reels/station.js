@@ -1,4 +1,4 @@
-// Reels station: Scrolly McScrollface lounges on a beanbag in front of a giant phone running a reels app.
+// Reels station: Ferrari Inglewood lounges on a beanbag in front of a giant phone running a reels app.
 // The phone screen is a live canvas: real videos from flies/reels/raw/<kind>/ (indexed by media.py) or, for
 // kinds with no videos, drawn cartoon reels (cats, cooking, dances, fails, lectures, ads), with the usual UI on top. The fly flies up and touches the glass: double-tap to like, tap the bubble to open the
 // comments (scroll them a set amount, then close), or watch N more seconds from the beanbag and swipe up.
@@ -528,7 +528,7 @@ class ReelsApp {
 }
 
 export default {
-  title: "Scrolly McScrollface",
+  title: "Ferrari Inglewood",
   blurb: "Like it, read the comments, or swipe after 1-10 s? The fly's neurons run the doomscroll.",
   playTimeout: 16000, // the longest watch (10 s) plus flying up to swipe
 

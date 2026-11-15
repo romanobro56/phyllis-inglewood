@@ -1,7 +1,7 @@
 import { tween, wait, box, cylinder } from "/web/lib/fly.js";
 
 export default {
-  title: "Mona Lisa fly",
+  title: "Mona Inglewood",
   blurb: "64 daubs, eight pigments, one connectome. Repeated inference, not live learning.",
 
   build({ THREE, group, fly }) {

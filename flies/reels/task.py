@@ -1,4 +1,4 @@
-"""Reels fly (Scrolly McScrollface): a fruit fly doomscrolling short videos on a giant phone.
+"""Reels fly (Ferrari Inglewood): a fruit fly doomscrolling short videos on a giant phone.
 
 Each reel is a cat video, a cooking video, a dance, a fail compilation, a lecture or an ad. For every reel
 the fly can double-tap to like it, open the comments (open, scroll down a set amount, close), or keep

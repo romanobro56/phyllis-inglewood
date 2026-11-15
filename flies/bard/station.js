@@ -9,7 +9,7 @@ const ROW_Z = [0.42, 0.05];        // front row (slots 0-3), back row (slots 4-7
 const INK = "#2a1c12";
 
 export default {
-  title: "Bard fly",
+  title: "Willoughby Inglewood",
   blurb: "A fruit fly at a typewriter, picking Shakespeare one word at a time.",
   playTimeout: 3000,
 

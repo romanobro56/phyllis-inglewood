@@ -3,7 +3,7 @@
 import { tween, wait, box } from "/web/lib/fly.js";
 
 export default {
-  title: "Inbox fly",
+  title: "Doris Inglewood",
   blurb: "Archive, reply, flag or unsubscribe: the fly triages your email.",
 
   build({ THREE, group, fly }) {

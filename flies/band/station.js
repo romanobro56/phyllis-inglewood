@@ -22,7 +22,7 @@ const LEVEL = { rec: 1, ant: 0.5, song: 0.5, re: 1 };
 const HEAR = { rec: "The song", ant: "Their antennae", song: "Their songs", re: "Their recreation" };
 
 export default {
-  title: "The Fly Band",
+  title: "The Inglewoods",
   blurb: "Four flies each hear one part of a song, a fifth conducts. Their own spiking brains run in your browser.",
   playTimeout: 0,
 
@@ -141,7 +141,7 @@ export default {
         #band-panel .chip b { color: #2b1a14; display: block; font-size: 12px; }
         #band-panel a { color: #a8432a; }
       </style>
-      <div class="top"><b class="t">The Fly Band</b><span class="st"></span>
+      <div class="top"><b class="t">The Inglewoods</b><span class="st"></span>
         <button data-go>Play</button><button data-up>Upload a song</button></div>
       <div class="row"><span class="lab">LISTEN TO</span>${KINDS.map((k) => `<button data-hear="${k}">${HEAR[k]}</button>`).join("")}
         <span class="lab" style="margin-left:10px">WIRING</span><button data-scr="0">Real</button><button data-scr="1">Scrambled</button></div>

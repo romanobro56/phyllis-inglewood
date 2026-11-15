@@ -1,6 +1,6 @@
 import {box,tween,wait} from '/web/lib/fly.js';
 export default {
- title:'Elton — simulated candidate',
+ title:'Elton Inglewood',
  blurb:'Displays selected neural actions. Checkpoint provenance is provided by the local runner.',
  build({THREE,group,fly}) {
   group.add(box(3.8,.12,2.6,0x203c58,[0,.06,0]));this.cards=[];
