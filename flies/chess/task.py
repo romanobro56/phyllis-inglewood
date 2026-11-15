@@ -2,7 +2,6 @@
 
 Genuine two-FlyBrain matches live in selfplay.py, never in step().
 """
-import json
 
 from core.task import FlyTask
 from flies.chess.chess_env import ACTIONS, OBS_DIM, STAGES, ChessEnv
@@ -58,4 +57,4 @@ class ChessFly(FlyTask):
     def caption(self, action):
         moves = " / ".join(e["san"] for e in self.last["events"])
         text = moves or f"chooses {self.actions[action]}"
-        return f"Chess vs random: {text} |CHESS|" + json.dumps(self.last, separators=(",", ":"))
+        return f"Chess vs random: {text}"   # the board state reaches the station as step info (ctx.info)

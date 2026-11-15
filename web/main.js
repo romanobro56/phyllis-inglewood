@@ -10,7 +10,7 @@ import { BrainActivity, brainMaterial, brainShared, loadPreset, pointSize, ACTIO
 import { PodWall, WALL_CENTER } from "./pods.js";
 
 const WS_URL = `${location.protocol === "https:" ? "wss" : "ws"}://${location.host}/ws`; // same port as the page
-const SPACING = 5.2;       // gap between neighbouring stations along the half circle (20 flies -> radius ~31)
+const SPACING = 6.2;       // gap between neighbouring stations along the half circle (the widest stations are ~4 wide)
 const PLAY_TIMEOUT = 4000; // a stuck station never stalls its fly for longer than this
 const BG = 0xecbbab;       // Claude orange #d97757, five 10% tints lighter (50% toward white)
 const FOG = { ground: [32, 140], wall: [16, 115] };
@@ -150,7 +150,8 @@ async function onDecision(m) {
   wall.onDecision(m);
   if (panel.fly === m.fly) showDecision(m);
   if (menu.fly === m.fly) menuTasted(m);
-  const ctx = { THREE, group: f.group, fly: f.fly, view: m.view };   // view: optional task.view() before the step
+  // view: optional task.view() before the step; info: the dict step() returned (when JSON-able and small)
+  const ctx = { THREE, group: f.group, fly: f.fly, view: m.view, info: m.info };
   try {
     // a station may allow itself longer (e.g. the gym's rests), but never stalls its fly forever
     await Promise.race([f.station.play(m.action, m.caption, ctx), wait(Math.max(PLAY_TIMEOUT, f.station.playTimeout || 0))]);

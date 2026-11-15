@@ -16,7 +16,7 @@ from flies.chess.train_selfplay import policy_update
 def fixed_hash(model):
     h=hashlib.sha256()
     for key in FIXED:
-        h.update(key.encode());h.update(model.state_dict()[key].cpu().contiguous().numpy().tobytes())
+        h.update(key.encode());h.update(getattr(model, key).cpu().contiguous().numpy().tobytes())
     return h.hexdigest()
 
 

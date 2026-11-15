@@ -51,7 +51,7 @@ class SelfplayTests(BrainTest):
         self.assertEqual(state_hash(black), before)
         self.assertTrue(all(p.grad is None for p in black.parameters()))
         for key in ("edge_index", "sign", "groups", "input_idx"):
-            self.assertTrue(torch.equal(white.state_dict()[key], black.state_dict()[key]))
+            self.assertTrue(torch.equal(getattr(white, key), getattr(black, key)))
         with self.assertRaises(ValueError):
             play_game(white, white, max_plies=2)
 
@@ -67,7 +67,8 @@ class SelfplayTests(BrainTest):
                 ck = copy.deepcopy(brain_payload(brain)); ck[field] = value
                 with self.assertRaises(ValueError):
                     validate_and_load(other, ck)
-            ck = copy.deepcopy(brain_payload(brain)); ck["state_dict"]["sign"][0] *= -1
+            ck = copy.deepcopy(brain_payload(brain)); ck["state_dict"]["sign"] = other.sign.clone()
+            ck["state_dict"]["sign"][0] *= -1          # a checkpoint that carries tampered wiring is still refused
             with self.assertRaisesRegex(ValueError, "fixed biological"):
                 validate_and_load(other, ck)
 

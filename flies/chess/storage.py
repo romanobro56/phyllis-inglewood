@@ -81,9 +81,16 @@ def validate_and_load(brain, ck):
             or ck.get("encoding", ENCODING) != getattr(brain, "encoding", ENCODING)):
         raise ValueError("Incompatible chess checkpoint: graph, encoding, preset, or action dimensions")
     state = ck["state_dict"]
+    own = brain.state_dict()
     for key in FIXED:
-        if key not in state or not torch.equal(state[key].cpu(), brain.state_dict()[key].cpu()):
+        # core now rebuilds the wiring from data/<preset>.npz instead of saving it (non-persistent buffers);
+        # whenever a checkpoint or the brain does carry it, it must still match exactly
+        mine = own[key] if key in own else getattr(brain, key, None)
+        if key in own and key not in state:
             raise ValueError(f"Checkpoint changed fixed biological architecture: {key}")
+        if key in state and (mine is None or not torch.equal(state[key].cpu(), mine.cpu())):
+            raise ValueError(f"Checkpoint changed fixed biological architecture: {key}")
+    state = {k: v for k, v in state.items() if k in own}
     for value in state.values():
         if value.is_floating_point() and not torch.isfinite(value).all():
             raise ValueError("Nonfinite checkpoint")

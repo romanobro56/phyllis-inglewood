@@ -157,7 +157,7 @@ class TransportTests(unittest.TestCase):
         h=Handler.__new__(Handler)
         h.wfile=io.BytesIO();h.send_response=lambda value:setattr(h,'status',value)
         h.send_header=lambda *args:None;h.end_headers=lambda:None
-        for path,status in [('/web/lib/fly.js',200),('/web/matrix.js',200),
+        for path,status in [('/web/lib/fly.js',200),('/vendor/matrix.js',200),('/vendor/matrix_host.html',200),
                             ('/data/tiny.meta.json',200),('/data/tiny.npz',404),
                             ('/../AGENTS.md',404),('/artifacts/none.pt',404),('/',200)]:
             h.path=path;h.do_GET();self.assertEqual(h.status,status,path)

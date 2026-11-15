@@ -103,7 +103,7 @@ def train(corpus, sources, output, seed=11, updates=48, method='loo', encoding=S
         raise ValueError('Invalid training configuration')
     torch.set_num_threads(1); torch.manual_seed(seed); rng = np.random.default_rng(seed)
     models = [clone_source(p, encoding, size=size) for p in sources]
-    initial_fixed = [{key: m.state_dict()[key].clone() for key in FIXED} for m in models]
+    initial_fixed = [{key: getattr(m, key).clone() for key in FIXED} for m in models]   # wiring buffers (not all persisted)
     opts = [torch.optim.Adam(m.parameters(), lr=lr) for m in models]
     config = dict(algorithm='outcome-grouped-v1', reward_arithmetic='integer-v2', method=method,
                   corpus_sha256=corpus['sha256'], source_sha256=[file_hash(p) for p in sources],
@@ -167,7 +167,7 @@ def train(corpus, sources, output, seed=11, updates=48, method='loo', encoding=S
                                   plies=sum(g['plies'] for g in subset), illegal_attempts=sum(g['illegal_attempts'] for g in subset))
         history.append(dict(update=update+1, outcomes=outcomes, metrics=metrics, elapsed=time.monotonic()-t0))
         for model, fixed in zip(models, initial_fixed):
-            assert all(torch.equal(model.state_dict()[key], value) for key, value in fixed.items())
+            assert all(torch.equal(getattr(model, key), value) for key, value in fixed.items())
         atomic_write(output/'resume.pt', dict(config=config, update=update+1, brains=[cpu_snapshot(m) for m in models],
                      optimizers=[o.state_dict() for o in opts], priors=priors, history=history, rng=rng_state(rng)), binary=True)
         if update+1 in (8, 16, 32, 40, 48) or update+1 == updates:

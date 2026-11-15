@@ -10,6 +10,8 @@ export default {
   blurb: "Four or five descending-neuron decisions per move. Black is random here; two-brain matches use the chess runner.",
 
   build({ THREE, group, fly }) {
+    // built at about 1.7x the other stations; shrink it so it sits in the shared world at the same scale
+    const board = new THREE.Group(); board.scale.setScalar(0.6); group.add(board); group = board;
     this.THREE = THREE; this.group = group; this.pieces = new Map(); this.fen = null;
     group.add(box(4.05, 0.12, 4.05, 0x604936, [0, 0.08, 0]));
     this.squares = [];
@@ -24,7 +26,7 @@ export default {
     sign.scale.set(4.2, 0.65, 1); sign.position.set(0, 0.9, -2.2); group.add(sign);
     this.label("FlyBrain White · random legal Black", "Board from actual FEN captions");
     this.renderFen(START);
-    fly.root.position.set(-2.35, 0.12, 1.6);
+    fly.root.position.set(-1.45, 0.07, 1.0);
     fly.face({ x: 0, z: 0 });
   },
 
@@ -77,7 +79,7 @@ export default {
     this.fen = fen;
   },
 
-  async play(action, caption, { fly }) {
+  async play(action, caption, { fly, info }) {
     let slot;
     switch (action) {
       case "slot_0": slot = 0; break;
@@ -90,9 +92,9 @@ export default {
       case "slot_7": slot = 7; break;
       default: throw new Error(`Unknown chess action: ${action}`);
     }
-    const marker = caption.indexOf("|CHESS|");
-    if (marker < 0) throw new Error("Chess caption is missing authoritative board state");
-    const data = JSON.parse(caption.slice(marker + 7));
+    const marker = caption.indexOf("|CHESS|");          // older servers sent the board inside the caption
+    const data = info?.fen ? info : marker >= 0 ? JSON.parse(caption.slice(marker + 7)) : null;
+    if (!data) throw new Error("Chess decision is missing authoritative board state");
     for (const square of this.squares) square.material.emissive.setHex(0);
     for (const event of data.events) {
       for (const square of this.squares) square.material.emissive.setHex(0);

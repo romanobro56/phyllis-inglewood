@@ -26,7 +26,7 @@ async def verify(seconds, url):
             message = json.loads(await asyncio.wait_for(ws.recv(), 10))
             assert message["type"] == "decision" and message["fly"] == "chess"
             assert message["action"] in [f"slot_{i}" for i in range(8)]
-            payload = json.loads(message["caption"].split("|CHESS|")[1])
+            payload = message["info"]                    # step info, sent alongside the caption
             assert payload["mode"] == "fly-vs-random-demo"
             for event in payload["events"]:
                 board = chess.Board(event["before"])

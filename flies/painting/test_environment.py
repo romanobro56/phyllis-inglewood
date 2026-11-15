@@ -7,6 +7,7 @@ import unittest
 from unittest.mock import patch
 
 import numpy as np
+import numpy.testing  # noqa: F401  load before the no-I/O block (newer numpy imports it lazily from disk)
 
 from core.registry import load_task, fly_names
 

@@ -2,12 +2,12 @@
 export class Inspector {
   constructor(api,onClose,onLive){this.api=api;this.onClose=onClose;this.onLive=onLive;this.side=null;this.serial=Promise.resolve();this.generation=0;this.last=null;this.live=false;this.packets={};}
   async initialize(){
-    const response=await fetch('/web/index.html');if(!response.ok)throw Error('Shared brain viewer host unavailable');
+    const response=await fetch('/vendor/matrix_host.html');if(!response.ok)throw Error('Shared brain viewer host unavailable');
     const host=new DOMParser().parseFromString(await response.text(),'text/html');
     const style=document.createElement('style');style.textContent=host.querySelector('style').textContent;document.head.prepend(style);
     document.body.append(document.importNode(host.getElementById('matrix'),true));
     const context=document.createElement('aside');context.id='neural-context';document.body.append(context);this.context=context;
-    const {Matrix}=await import('/web/matrix.js');
+    const {Matrix}=await import('/vendor/matrix.js');
     this.matrix=new Matrix({onClose:()=>{this.side=null;this.generation++;context.classList.remove('open');document.body.classList.remove('inspecting');this.onClose();},onLesion:()=>{}});
     this.matrix.renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));
     const lesion=document.getElementById('m-lesion');lesion.disabled=true;lesion.textContent='Live inspection · weights fixed';

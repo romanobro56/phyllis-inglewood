@@ -30,7 +30,8 @@ class EnvironmentTests(unittest.TestCase):
             self.assertTrue(np.isfinite(obs).all())
             action = int(rng.choice(np.flatnonzero(task.mask())))
             obs, reward, done, info = task.step(action, rng)
-            data = json.loads(task.caption(action).split("|CHESS|")[1])
+            data = info                                  # board state travels as step info (ctx.info in the world)
+            self.assertNotIn("|CHESS|", task.caption(action))
             self.assertEqual(data["fen"], task.env.board.fen())
             self.assertTrue(np.isfinite(reward))
             if done:

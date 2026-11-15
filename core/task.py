@@ -32,6 +32,7 @@ class FlyTask:
     # Optional, world only:
     #   view() -> small JSON-able dict of what the fly is choosing between right now (sent to station.play
     #             as ctx.view, taken just before the step), e.g. the bard's tray of words.
+    #   step()'s info dict also reaches station.play, as ctx.info (if it is JSON-able and under 50 kB).
     #   world_checkpoint = "path/in/runs/<fly>/brain.pt"   which checkpoint the world runs (default brain.pt)
     #   world_args = {...}                                  constructor arguments for the world's copy
 

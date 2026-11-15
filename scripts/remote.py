@@ -13,6 +13,9 @@ Everyone, all night:
     python scripts/remote.py shell                                       # interactive ssh
 
 GPU owner only:
+    python scripts/remote.py deploy            # push the committed code (core, server, web, every fly) and
+                                               # restart the 3D world on the GPU; prints its public URL
+    python scripts/remote.py world-status | world-logs [-f] | world-stop
     python scripts/remote.py bootstrap         # first time: upload repo, install, build data, start worker
     python scripts/remote.py add-key "ssh-ed25519 AAAA... alice@laptop"   # give a teammate access
     python scripts/remote.py sync-core         # push your latest core/, server/, scripts/, web/
@@ -87,6 +90,32 @@ def upload(paths):
     run("tar xzf - --no-same-owner", stdin=tar_bytes(paths))
 
 
+def upload_tracked(paths):
+    """Upload only the files git tracks under `paths` (never local state, secrets, raw media or caches)."""
+    files = subprocess.run(["git", "ls-files", "-z", "--", *paths], cwd=ROOT, capture_output=True,
+                           check=True).stdout.decode().split("\0")
+    buf = io.BytesIO()
+    with tarfile.open(fileobj=buf, mode="w:gz") as t:
+        for f in filter(None, files):
+            if (ROOT / f).is_file():
+                t.add(ROOT / f, arcname=f)
+    run("tar xzf - --no-same-owner", stdin=buf.getvalue())
+    return sum(1 for f in files if f)
+
+
+WORLD_PORT = 8000     # exposed by the pod as https://<pod id>-8000.proxy.runpod.net
+WORLD_PIDS = f"$(pgrep -f '[s]erver[.]serve .*--port {WORLD_PORT}' | tr '\\n' ' ')"   # [s]: never matches this shell
+WORLD_URL = ("echo https://$(tr '\\0' '\\n' < /proc/1/environ | sed -n 's/^RUNPOD_POD_ID=//p')"
+             f"-{WORLD_PORT}.proxy.runpod.net/web/")
+
+
+def world_start(device):
+    run(f"kill {WORLD_PIDS} 2>/dev/null; sleep 1; "
+        f"setsid nohup python -m server.serve --host 0.0.0.0 --port {WORLD_PORT} --device {device} "
+        f"> world.log 2>&1 < /dev/null & "
+        f"for i in $(seq 90); do grep -q 'Open http' world.log && break; sleep 2; done; cat world.log; {WORLD_URL}")
+
+
 def remote_py(args):
     return "python -m core.queue " + " ".join(shlex.quote(a) for a in args)
 
@@ -109,6 +138,10 @@ def main():
     sub.add_parser("bootstrap")
     sub.add_parser("sync-core")
     sub.add_parser("worker-start"); sub.add_parser("worker-stop")
+    dp = sub.add_parser("deploy"); dp.add_argument("--device", default="cuda")
+    ws = sub.add_parser("world-start"); ws.add_argument("--device", default="cuda")
+    sub.add_parser("world-stop"); sub.add_parser("world-status")
+    wl = sub.add_parser("world-logs"); wl.add_argument("-f", "--follow", action="store_true")
     ak = sub.add_parser("add-key"); ak.add_argument("pubkey")
     a = ap.parse_args()
 
@@ -157,6 +190,24 @@ def main():
         run("nohup python -m core.queue worker > jobs_worker.log 2>&1 & sleep 2; python -m core.queue status")
     elif a.cmd == "worker-stop":
         run("kill $(cat jobs/worker.pid) 2>/dev/null; rm -f jobs/worker.pid; echo stopped")
+    elif a.cmd == "deploy":
+        dirty = subprocess.run(["git", "status", "--porcelain", "--untracked-files=no"], cwd=ROOT,
+                               capture_output=True, text=True).stdout.strip()
+        if dirty:
+            print("note: uncommitted changes are NOT deployed (only committed files go up):\n" + dirty)
+        n = upload_tracked(CORE_PARTS + ["flies"])
+        print(f"uploaded {n} files; installing requirements ...")
+        run("python -m pip install -q --break-system-packages -r requirements.txt 2>&1 | grep -v 'as the .root' || true")
+        world_start(a.device)
+    elif a.cmd == "world-start":
+        world_start(a.device)
+    elif a.cmd == "world-stop":
+        run(f"kill {WORLD_PIDS} 2>/dev/null; echo stopped")
+    elif a.cmd == "world-status":
+        run("pgrep -af '[s]erver[.]serve' || echo 'world not running'; "
+            "nvidia-smi --query-gpu=name,memory.used,utilization.gpu --format=csv,noheader; " + WORLD_URL)
+    elif a.cmd == "world-logs":
+        run("tail -n 40 " + ("-f " if a.follow else "") + "world.log", tty=a.follow)
     elif a.cmd == "add-key":
         key = a.pubkey.strip()
         if not key.startswith(("ssh-ed25519 ", "ssh-rsa ", "ecdsa-")) or "PRIVATE" in key:

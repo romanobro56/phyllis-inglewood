@@ -87,7 +87,7 @@ class Session:
         probs = torch.softmax(logits[0], -1).cpu().numpy()
         a = int(probs.argmax()) if f.cls.greedy else int(self.rng.choice(k, p=probs / probs.sum()))
         shown = env.view() if hasattr(env, "view") else None   # optional: what the fly was choosing between
-        obs, reward, done, _ = env.step(a, self.rng)
+        obs, reward, done, step_info = env.step(a, self.rng)
         caption = env.caption(a)
         self.obs[name] = np.asarray(obs, np.float32)
         if done:
@@ -98,6 +98,12 @@ class Session:
                    lesioned=self.lesion[name], mean_rate=info["mean_rate"])
         if shown is not None:
             msg["view"] = shown
+        if step_info:                                          # what step() reported, for the station (if small)
+            try:
+                if len(json.dumps(step_info)) < 50_000:
+                    msg["info"] = step_info
+            except (TypeError, ValueError):
+                pass
         if record:
             r = info["rates"][:, 0, :].cpu().numpy()                 # (STEPS, N)
             q = np.clip(np.sqrt(np.clip(r, 0, None) / 2.0) * 255, 0, 255).astype(np.uint8)
