@@ -25,7 +25,7 @@ from websockets.datastructures import Headers
 from websockets.http11 import Response
 
 from core.brain import FlyBrain, load_brain, pick_device
-from core.registry import fly_names, load_task, run_dir
+from core.registry import exhibit_names, fly_names, load_task, run_dir
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -112,13 +112,14 @@ class Session:
         return msg
 
 
-async def handler(ws, flies):
+async def handler(ws, flies, exhibits=()):
     s = Session(flies)
     async for raw in ws:
         m = json.loads(raw)
         t = m.get("type")
         if t == "hello":
-            await ws.send(json.dumps(dict(type="init", flies=[f.info() for f in flies.values()])))
+            await ws.send(json.dumps(dict(type="init", flies=[f.info() for f in flies.values()],
+                                          exhibits=[dict(name=n) for n in exhibits])))
         elif t == "ready" and m.get("fly") in flies:
             n = m["fly"]
             if not flies[n].cls.menu:                          # normal flies decide again right away
@@ -173,8 +174,12 @@ def static_files(connection, request):
 
 async def main_async(a):
     device = pick_device(a.device)
-    flies = {n: Fly(n, device, a.untrained_size) for n in (a.only or fly_names())}
-    async with serve(lambda ws: handler(ws, flies), a.host, a.port, max_size=None,
+    names = a.only or fly_names() + exhibit_names()
+    exhibits = [n for n in names if n in exhibit_names()]
+    flies = {n: Fly(n, device, a.untrained_size) for n in names if n not in exhibits}
+    for n in exhibits:
+        print(f"[{n}] browser exhibit (its brains run in the viewer's page)")
+    async with serve(lambda ws: handler(ws, flies, exhibits), a.host, a.port, max_size=None,
                      process_request=static_files):
         shown = "localhost" if a.host in ("127.0.0.1", "0.0.0.0") else a.host
         print(f"\nOpen http://{shown}:{a.port}/web/", flush=True)

@@ -14,6 +14,14 @@ def fly_names():
                   if p.is_dir() and not p.name.startswith(("_", ".")) and (p / "task.py").exists())
 
 
+def exhibit_names():
+    """Flies that run entirely in the browser (flies/<name>/station.js and no task.py), e.g. the band, whose
+    spiking brains are simulated by its own engine in the viewer's page. Shown in the world, never trained here."""
+    return sorted(p.name for p in FLIES.iterdir()
+                  if p.is_dir() and not p.name.startswith(("_", ".")) and (p / "station.js").exists()
+                  and not (p / "task.py").exists())
+
+
 def load_task(name):
     path = FLIES / name / "task.py"
     if not path.exists():

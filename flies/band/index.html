@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Fly Band, by Ear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ui/style.css">
+
+</head>
+<body>
+<div class="app">
+  <main class="stage" id="stage">
+    <canvas id="cv" aria-label="Four fruit-fly heads in a row, seen from the front, one for each part of the song: drums, bass, vocals and keys. Neurons light up as they fire."></canvas>
+    <div class="title"><h1>The Fly Band, by Ear</h1><p>Your song is split into four parts and each is played to one fly. Hear what its antennae feel, what it sings, and what its brain would rebuild.</p></div>
+    <div class="status" id="status" aria-live="polite"></div>
+    <details class="note"><summary>What's real here?</summary><div id="note"></div></details>
+    <div class="legend" id="legend">
+      <span style="--c: var(--joA)"><i></i>hearing: fast vibration</span>
+      <span style="--c: var(--joB)"><i></i>hearing: slow vibration</span>
+      <span style="--c: var(--joC)"><i></i>wind and gravity: pushed forward</span>
+      <span style="--c: var(--joE)"><i></i>wind and gravity: pushed back</span>
+      <span style="--c: var(--out)"><i></i>output neurons to the body</span>
+      <span>· the two feathered antennae are its ears, the wing held out is its voice</span>
+    </div>
+    <div id="chips"></div>
+    <div class="score" id="score">
+      <div class="lab"><span style="color:#ff7a5c">Drums</span><span style="color:#ffbf47">Bass</span><span style="color:#c6f36b">Vocals</span><span style="color:#6cc9ff">Keys</span></div>
+      <canvas id="sc" aria-label="Loudness over time for each part: faint is the part as played, bright is what you are listening to. Click to jump."></canvas>
+      <div class="cap" id="cap"></div>
+    </div>
+  </main>
+  <nav class="bar">
+    <div class="grp"><span>&nbsp;</span><button class="up" id="upload">Upload a song</button></div>
+    <div class="grp"><span>BRAIN WIRING</span>
+      <div class="seg" role="group" aria-label="Brain wiring" id="wiring">
+        <button data-scr="0" aria-pressed="true" title="The fly's actual wiring">Real</button>
+        <button data-scr="1" aria-pressed="false" title="Same neurons and connection strengths, but every connection lands on a random neuron">Scrambled</button>
+      </div></div>
+    <div class="grp"><span>LISTEN TO</span>
+      <div class="seg" role="group" aria-label="Listen to" id="hear">
+        <button data-hear="rec" aria-pressed="true" disabled title="The record, in its four parts">Your song</button>
+        <button data-hear="ant" aria-pressed="false" disabled title="The movement of each fly's antennae, as sound">Their antennae</button>
+        <button data-hear="song" aria-pressed="false" disabled title="Each fly's own song, driven by its output neurons">Their songs</button>
+        <button data-hear="re" aria-pressed="false" disabled title="Each part rebuilt from other moments of itself that the fly's brain found most alike">Their recreation</button>
+      </div></div>
+    <div class="grp"><span>&nbsp;</span><button id="go"><svg viewBox="0 0 14 14" aria-hidden="true"><path id="go-icon" d="M3 1.5v11l9.5-5.5z" fill="currentColor"/></svg><span id="go-tx">Start the band</span></button></div>
+    <input id="file" class="sr" type="file" accept="audio/*" aria-label="Choose a song file">
+  </nav>
+</div>
+
+<!-- Data (data/*.json) and the engine (engine/*.js) are loaded by ui/app.js. Serve this folder over HTTP: see README.md. -->
+<script src="ui/app.js"></script>
+</body>
+</html>

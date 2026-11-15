@@ -111,8 +111,10 @@ async function addFly(info, i, total) {
   scene.add(group);
   const fly = new Fly();
   group.add(fly.root);
+  let capEl = null;                                // a station may write its own caption (exhibits do)
+  const setCaption = (t) => { if (capEl) capEl.textContent = t; };
   try {
-    station.build({ THREE, group, fly });
+    station.build({ THREE, group, fly, setCaption });
   } catch (e) {
     console.error(`${info.name}: station build() crashed`, e);
   }
@@ -122,6 +124,7 @@ async function addFly(info, i, total) {
   const div = document.createElement("div");
   div.className = "label" + (info.trained ? "" : " untrained");
   div.innerHTML = `<b>${title}</b>${info.trained ? "" : " (untrained)"}<span class="cap">${info.menu ? "hungry \u00b7 waiting to be fed" : "..."}</span>`;
+  capEl = div.querySelector(".cap");
   const labelObj = new CSS2DObject(div);
   labelObj.position.set(0, 1.4, 0);
   fly.root.add(labelObj);
@@ -131,7 +134,7 @@ async function addFly(info, i, total) {
   fly.root.add(brainIcon);
 
   let brain = null;
-  try {
+  if (!info.exhibit) try {                         // exhibits run their own brains in the page
     brain = new BrainActivity(info, await loadPreset(info.preset));
   } catch (e) {
     console.warn(`${info.name}: no brain point data for preset ${info.preset} (run python -m core.graph --size ${info.preset})`, e);
@@ -239,7 +242,10 @@ function go(mode, idx = -1) {
   tweenFog(mode === "wall" ? FOG.wall : FOG.ground, ms);
   for (const f of Object.values(flies)) f.labelObj.visible = mode !== "wall";
   wall.setLabelsVisible(mode === "wall", mode === "wall" ? name : null);
-  setPanel(name, mode === "wall" ? "dark" : "light");
+  setPanel(name && flies[name]?.info.exhibit ? null : name, mode === "wall" ? "dark" : "light");
+  for (const [n, f] of Object.entries(flies)) {    // stations may react to being visited (the band shows its controls)
+    try { f.station.focus?.(mode === "fly" && n === name); } catch (e) { console.error(`${n}: station focus() crashed`, e); }
+  }
   send({ type: "inspect", flies: mode === "wall" ? order : name ? [name] : [] });
   updateNavLabel();
 }
@@ -496,12 +502,15 @@ function connect() {
       menu.tasting.clear();
       for (const f of Object.values(flies)) scene.remove(f.group);
       for (const k of Object.keys(flies)) delete flies[k];
-      await Promise.all(m.flies.map((info, i) => addFly(info, i, m.flies.length)));
-      order = m.flies.map((f) => f.name);
+      // exhibits: flies whose brains run in this page (e.g. the band), placed among the others
+      const all = [...m.flies, ...(m.exhibits || []).map((e) => ({ ...e, exhibit: true, trained: true, actions: [], menu: null }))];
+      await Promise.all(all.map((info, i) => addFly(info, i, all.length)));
+      order = all.map((f) => f.name);
       wall.setLive(order.filter((n) => flies[n].brain).map((n) => ({ name: n, ...flies[n] })));
       updateWallHud();
       const untrained = m.flies.filter((f) => !f.trained).length;
-      status.textContent = `${m.flies.length} flies live` + (untrained ? ` · ${untrained} untrained` : "");
+      status.textContent = `${m.flies.length} flies live` + (untrained ? ` · ${untrained} untrained` : "") +
+        (m.exhibits?.length ? ` · ${m.exhibits.length} in-browser` : "");
       if (view.mode === "wall") go("wall", Math.min(view.idx, order.length - 1));
       else go(view.mode === "fly" && view.idx < order.length ? "fly" : "overview", view.idx < order.length ? view.idx : -1);
       for (const info of m.flies) send({ type: "ready", fly: info.name });
